@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>基础用法 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/addons/rigging/rigify/basics.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/js/version_switch.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../copyright.html" />
+    <link rel="next" title="骨骼定位指南" href="bone_positioning.html" />
+    <link rel="prev" title="简介" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">插件</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#add-ons-category-listings">插件类别列表</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../3d_view/index.html">3D 视图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../add_curve/index.html">添加曲线</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../add_mesh/index.html">添加网格</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../baking/index.html">烘焙</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../camera/index.html">摄像机</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../development/index.html">开发</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../import_export/index.html">导入 - 导出</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lighting/index.html">光照</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../materials/index.html">材质</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mesh/index.html">网格</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../node/index.html">节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../object/index.html">物体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../paint/index.html">绘制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">绑定</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Rigify</a><ul class="current">
+<li class="toctree-l5 current"><a class="reference internal" href="index.html#basics">基础</a><ul class="current">
+<li class="toctree-l6"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l6 current"><a class="current reference internal" href="#">基础用法</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#basic-rig-generation">基础绑定生成</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="#add-a-predefined-meta-rig">添加一个预定义元骨骼</a></li>
+<li class="toctree-l8"><a class="reference internal" href="#edit-bone-positions">编辑骨骼位置</a><ul>
+<li class="toctree-l9"><a class="reference internal" href="#rigify-human-alignment-tips">Rigify 人类对齐技巧</a></li>
+</ul>
+</li>
+<li class="toctree-l8"><a class="reference internal" href="#pose-mode-matching-basic">姿态模式匹配 (基础)</a></li>
+<li class="toctree-l8"><a class="reference internal" href="#edit-mode-matching-advanced">编辑模式匹配 (高级)</a></li>
+<li class="toctree-l8"><a class="reference internal" href="#generating-the-rig">生成绑定</a></li>
+<li class="toctree-l8"><a class="reference internal" href="#binding-the-geometry-to-the-rig">将几何体绑定到骨架</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="#advanced-rig-generation">高级绑定生成</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="#advanced-options-features">高级选项功能</a></li>
+<li class="toctree-l8"><a class="reference internal" href="#advanced-options-sub-panel">高级选项子面板</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="#library-linking">库链接</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="bone_positioning.html">骨骼定位指南</a></li>
+<li class="toctree-l6"><a class="reference internal" href="rig_features.html">生成的绑定功能</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="index.html#customization">个性化定制</a></li>
+<li class="toctree-l5"><a class="reference internal" href="index.html#extensions">扩展</a></li>
+<li class="toctree-l5"><a class="reference internal" href="index.html#development">开发</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../sequencer/index.html">序列编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../system/index.html">系统</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../uv/index.html">UV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../video_tools/index.html">视频工具</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">插件</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">绑定</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Rigify</a></li>
+      <li class="breadcrumb-item active">基础用法</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="basic-usage">
+<h1>基础用法<a class="headerlink" href="#basic-usage" title="Permalink to this heading"></a></h1>
+<section id="basic-rig-generation">
+<span id="bpy-ops-pose-rigify-generate"></span><h2>基础绑定生成<a class="headerlink" href="#basic-rig-generation" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>从 <span class="menuselection">添加 ‣ 骨架</span> 菜单添加一个元骨骼。</p></li>
+<li><p>编辑骨骼位置以匹配角色几何体。</p></li>
+<li><p>在骨架属性面板中点击 <em>生成绑定</em> 按钮来生成绑定。</p></li>
+</ol>
+<section id="add-a-predefined-meta-rig">
+<h3>添加一个预定义元骨骼<a class="headerlink" href="#add-a-predefined-meta-rig" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>物体模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">添加 ‣ 骨架</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">A</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>Rigify 存储所有依赖信息用于生成复杂的绑定控制，这些存储信息的骨架称之为 &quot;元骨骼&quot;。</p>
+<p>预定义的元骨骼可在 <em>添加</em> 菜单中找到。当前可用的元骨骼类型有：</p>
+<ul class="simple">
+<li><p>基础人类（不包括面部和手指）</p></li>
+<li><p>基础四足动物</p></li>
+<li><p>人类</p></li>
+<li><p>猫</p></li>
+<li><p>狼</p></li>
+<li><p>马</p></li>
+<li><p>鲨鱼</p></li>
+</ul>
+</section>
+<section id="edit-bone-positions">
+<h3>编辑骨骼位置<a class="headerlink" href="#edit-bone-positions" title="Permalink to this heading"></a></h3>
+<p>为了正确匹配您的角色，元骨骼必须移动到正确的位置。可以通过两种不同的方式实现：姿态模式或编辑模式。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Rigify 假设 1 个单位对应 1 米。所以一个人大约有 2 个单位高。如果您的角色处于不同的缩放值，并且您更熟悉建模而不是绑定，建议在定位元骨骼之前将其缩放到 Rigify 尺寸。如果您想缩放角色几何体，我们建议您在物体模式下缩放角色，然后使用 <em>应用缩放</em> 工具应用几何体缩放。</p>
+</div>
+<section id="rigify-human-alignment-tips">
+<h4>Rigify 人类对齐技巧<a class="headerlink" href="#rigify-human-alignment-tips" title="Permalink to this heading"></a></h4>
+<ul>
+<li><p>四肢：在前视图中让双腿尽可能保持笔直使用（Rigify 进行人体绑定在可预测的情况下效果更好）。给膝盖和肘部一个轻微的弯曲角度（Rigify 需要知道你的膝盖 / 肘部指向哪里）。</p></li>
+<li><p>躯干：在前视图中尽可能保持脊柱笔直（在可预测的情况下 Rigify 的人体效果更好）。脊柱的最后一块骨头是头。默认情况下，接下来的两块骨头（从上到下）被认为是颈部骨骼。建议在编辑时尽可能保持颈部骨头对齐。</p></li>
+<li><p>Face: Positioning face bones can be tricky if you are not an expert in bone editing and
+they are almost useless if you plan to make facial animation through shape keys.
+Consider removing face features from your character if they aren't really needed.
+If you don't need the face all the face bones can be deleted.
+All the face bones are on the first armature layer by default.
+You can select them by displaying only bone layer 1, selecting all of its content and
+then deleting the bones in Edit Mode to correctly remove the face.</p>
+<p>If you want to scale all the face bones at once, consider scaling the face master bone
+in Pose Mode (see Pose Mode matching method).
+The face master bone is placed in the same position of the head bone.
+To select it easily, hide all other bone layers.</p>
+<p>更多技巧，请查看 <a class="reference internal" href="bone_positioning.html"><span class="doc">骨骼定位指南</span></a>。</p>
+</li>
+</ul>
+</section>
+</section>
+<section id="pose-mode-matching-basic">
+<h3>姿态模式匹配 (基础)<a class="headerlink" href="#pose-mode-matching-basic" title="Permalink to this heading"></a></h3>
+<p>进入元骨骼姿态模式。在正确的位置旋转、缩放和平移骨骼。当骨骼处于正确位置时 (始终保持在姿态模式下)，使用 <span class="menuselection">应用 ‣ 将当前姿态应用为静置姿态</span>。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>连接的骨骼不能在姿态模式下移动，您可以缩放父骨骼以匹配一般长度，然后细化子骨骼缩放比例。骨架模式的更多详细信息，请参阅 <a class="reference internal" href="../../../animation/armatures/bones/editing/introduction.html"><span class="doc">骨架部分</span></a>。</p>
+</div>
+</section>
+<section id="edit-mode-matching-advanced">
+<h3>编辑模式匹配 (高级)<a class="headerlink" href="#edit-mode-matching-advanced" title="Permalink to this heading"></a></h3>
+<p>在进入骨骼编辑模式之前，建议进行一些基本的骨架显示设置。</p>
+<p>元骨骼选定后，进入属性编辑器点击物体选项卡，向下滚到显示面板，启用 在前面，然后在 <em>最大绘制类型</em> 选择器中选择 <em>线框</em>。这样，骨骼将始终绘制在几何体前面并以线框显示。</p>
+<p>然后，继续点击属性中的骨架选项卡，在显示中勾选 <em>轴向</em>。这样在编辑过程中将显示出骨骼的旋转轴。</p>
+<p>对于骨架显示方式的更详细信息，请参考 <a class="reference internal" href="../../../animation/armatures/properties/display.html"><span class="doc">显示面板页面</span></a>。</p>
+</section>
+<section id="generating-the-rig">
+<h3>生成绑定<a class="headerlink" href="#generating-the-rig" title="Permalink to this heading"></a></h3>
+<p>当骨骼处于正确位置时，返回至物体模式，进入骨架选项卡，向下滚动到底部，然后点击 <em>生成绑定</em> 按钮即可完成绑定的创建。生成过程将花费几秒钟到一分钟的时间，具体取决于绑定的复杂性和你的机器的硬件规格。如果生成的绑定需要调整，你可以相应地修改元骨骼，然后再次点击生成按钮。如果绑定已经存在，Rigify 将简单地覆盖它，保留你所有的修改器和约束，并且在可能的情况下保留所有之前生成的特征。</p>
+<p>有关更多的生成选项内容，查看 <a class="reference internal" href="#advanced-rig-generation">高级骨架生成</a> 部分。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If the metarig uses the legacy <a class="reference internal" href="rig_types/faces.html"><span class="doc">face rig</span></a>, you can use the
+<em>Upgrade Face Rig</em> button that appears above <em>Generate Rig</em> to automatically upgrade
+to the new modular face system.</p>
+<p>升级将保持与现有蒙皮的兼容性，但由于控制行为的细微变化，现有姿态和动画可能不兼容。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>想要创建预期的绑定覆盖工作，再生成前你需要拥有绑定和元骨骼 <strong>两者</strong> 显示，Rigify将尝试将它们显示出来，但如果失败，将中止生成。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>与所有 Python 插件一样，Blender 的界面在 Python 脚本执行结束之前无法更新。只有绑定出现才能看到结果。</p>
+</div>
+</section>
+<section id="binding-the-geometry-to-the-rig">
+<h3>将几何体绑定到骨架<a class="headerlink" href="#binding-the-geometry-to-the-rig" title="Permalink to this heading"></a></h3>
+<p>要将几何体绑定到骨架，使用首选工具。你只需要知道几件事：</p>
+<ul class="simple">
+<li><p>All the deforming bones are on the armature layer 30.</p></li>
+<li><p>旧版面部的眼睛和牙齿骨骼不参与形变。应该通过“子级”约束绑定眼睛和牙齿几何体。</p></li>
+<li><p>通常，如果正确放置骨骼（并且有足够的拓扑结构可供使用！），自动权重的骨架形变会非常出色地做到开箱即用。</p></li>
+</ul>
+<p>For more detailed information on armature layers, Armature modifier and weight painting refer to the Blender manual.</p>
+</section>
+</section>
+<section id="advanced-rig-generation">
+<span id="bpy-types-armature-rigify"></span><h2>高级绑定生成<a class="headerlink" href="#advanced-rig-generation" title="Permalink to this heading"></a></h2>
+<section id="advanced-options-features">
+<h3>高级选项功能<a class="headerlink" href="#advanced-options-features" title="Permalink to this heading"></a></h3>
+<p>通过使用“高级”子面板中的选项，你可以：</p>
+<ul class="simple">
+<li><p>每个场景生成多个绑定。</p></li>
+<li><p>更新/覆盖 特定绑定。</p></li>
+<li><p>强制覆盖以前生成的小部件物体。</p></li>
+<li><p>选择是否对左侧和右侧小部件使用链接副本。</p></li>
+<li><p>生成后执行脚本数据块。</p></li>
+</ul>
+</section>
+<section id="advanced-options-sub-panel">
+<h3>高级选项子面板<a class="headerlink" href="#advanced-options-sub-panel" title="Permalink to this heading"></a></h3>
+<p>默认情况下，高级绑定生成选项隐藏在子面板中。单击 <em>高级</em> 行可展开显示。</p>
+<p>如果生成绑定时没有值，则 Rigify 会自动设置其中一些选项，而其他选项则完全由用户控制。</p>
+<dl>
+<dt>目标绑定 <span class="guilabel">自动</span></dt><dd><p>此选项指定从该元骨骼重新生成时，覆盖生成的绑定。</p>
+<p>If the option is not set, Rigify will generate a new rig object and store it in this option.
+The new object will be named based on the name of the metarig according to the following rules:</p>
+<ul class="simple">
+<li><p>如果名称包含 <code class="docutils literal notranslate"><span class="pre">META</span></code>，则将替换为 <code class="docutils literal notranslate"><span class="pre">RIG</span></code>。</p></li>
+<li><p>如果名称包含 <code class="docutils literal notranslate"><span class="pre">metarig</span></code>，则将替换为 <code class="docutils literal notranslate"><span class="pre">rig</span></code>。</p></li>
+<li><p>否则，<code class="docutils literal notranslate"><span class="pre">RIG-</span></code> 被添加到名称前面。</p></li>
+</ul>
+<p>When overwriting an existing rig object specified by the option, its name is not changed,
+allowing it to be freely renamed if the default naming scheme doesn't fit.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>如果该选项未设置，Rigify 将创建一个全新的绑定物体，即使已经存在具有匹配名称的对象。</p>
+</div>
+</dd>
+<dt>绑定 UI 脚本 <span class="guilabel">自动</span></dt><dd><p>此选项指定重新生成时要覆盖的生成脚本数据块，其工作方式与 <em>目标绑定</em> 相同。</p>
+<p>The script controls the UI in the 3D Viewport that allows conveniently switching visible
+bone layers, changing custom properties, converting between IK and FK and so on.</p>
+</dd>
+<dt>小部件集合 <span class="guilabel">自动</span></dt><dd><p>指定了包含生成的小部件的集合，其工作方式与 <em>目标绑定</em> 相同。</p>
+</dd>
+<dt>Force Widget Update</dt><dd><p>如启用，Rigify 将在每次重新生成绑定时生成新的小部件。默认情况下，它会尝试重用小部件集合中已经生成的小部件物体，允许手动编辑它们以更好地适应角色。</p>
+</dd>
+<dt>镜像小部件</dt><dd><p>启用后，Rigify 会为左侧和右侧骨骼生成小部件作为链接副本，使用负X缩放来翻转右侧内容。这加强了对称性，并减少了调整以适应角色的网格数量。</p>
+<p>当重新使用已生成的小部件时，Rigify 会通过检查物体比例来检测它是否最初是镜像生成的，以避免翻转现有小部件。因此，为现有角色切换到镜像小部件需要删除右侧小部件，或 <em>强制小部件更新</em>。</p>
+</dd>
+<dt>运行脚本</dt><dd><p>当生成后可以运行一个文本数据块中的 Python 脚本来配置 Rigify，以便应用用户的自定义内容。该脚本在生成的绑定处于活动状态并在物体模式下选定的情况下执行。</p>
+<p>最简单的用法可能是在 Rigify 绑定类型没有任何相关元骨骼设置时调整生成约束的属性。这可以通过在属性上使用上下文菜单中的 <em>复制完整数据路径</em>，将其粘贴到脚本中并进行赋值来完成，例如:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">bpy</span>
+
+<span class="n">bpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">objects</span><span class="p">[</span><span class="s2">&quot;rig&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">pose</span><span class="o">.</span><span class="n">bones</span><span class="p">[</span><span class="s2">&quot;MCH-spine.003&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">constraints</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">influence</span> <span class="o">=</span> <span class="mf">0.6</span>
+</pre></div>
+</div>
+<p>通过脚本进行此类更改可确保在重新生成绑定时不会丢失这些更改。</p>
+<p>Users familiar with <a class="reference external" href="https://wiki.blender.org/wiki/Process/Addons/Rigify">Rigify scripting</a>
+can import Rigify utility modules, and access the generator instance through <code class="docutils literal notranslate"><span class="pre">rigify.get_generator()</span></code>.
+Yet note that, since generation is already finished, the only use of that is reading data created
+in the generation process.</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="library-linking">
+<h2>库链接<a class="headerlink" href="#library-linking" title="Permalink to this heading"></a></h2>
+<p>当将一个绑定链接到另一个文件时，通常想要创建一个集合，其中包括生成的绑定和角色网格物体。不需要元骨骼或小部件物体集合。然后链接该集合并运行 <a class="reference internal" href="../../../files/linked_libraries/library_overrides.html#bpy-ops-object-make-override-library"><span class="std std-ref">创建库重写</span></a>。</p>
+<p><code class="docutils literal notranslate"><span class="pre">rig_ui_template.py</span></code> 文本数据块将与绑定自动链接，你无需单独链接它。但是，在你从文本编辑器中手动运行它或者保存并重启 Blender 之前，脚本是不会运行的。</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="bone_positioning.html" class="btn btn-neutral float-right" title="骨骼定位指南" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/addons/rigging/rigify/basics.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/addons/rigging/rigify/basics.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Faddons/rigging/rigify/basics.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Faddons/rigging/rigify/basics.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

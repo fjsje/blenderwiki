@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>文件浏览器 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/file_browser.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/js/version_switch.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="next" title="资产浏览器" href="asset_browser.html" />
+    <link rel="prev" title="属性" href="properties_editor.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3dview/index.html">3D 视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="image/index.html">图像编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uv/index.html">UV 编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compositor.html">合成器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texture_node/index.html">纹理节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry_node.html">几何节点编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shader_editor.html">着色器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="video_sequencer/index.html">视频序列编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clip/index.html">影片剪辑编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dope_sheet/index.html">动画摄影表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timeline.html">时间线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="graph_editor/index.html">曲线编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drivers_editor.html">驱动器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nla/index.html">非线性动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="text_editor.html">文本编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_console.html">Python 控制台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="info_editor.html">信息编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outliner/index.html">大纲视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="properties_editor.html">属性</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">文件浏览器</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#interface">界面</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#main-region">主区块</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#previews">预览</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#file-path-region">文件路径区块</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#display-settings">显示设置</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#filter-settings">过滤设置</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#execution-region">执行区块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#source-list-region">资源列表区块</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#volumes">体积（卷标）</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#system">系统</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#bookmarks">书签</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#recent">最近打开的</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#operator-options-region">操作选项区块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#header-region">标题栏区块</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#navigating">导航</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#file-drop">文件拖拽</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#selecting">选择</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#arrow-keys">方向键</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#editing">编辑</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="asset_browser.html">资产浏览器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="spreadsheet.html">电子表格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preferences/index.html">偏好设置</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">编辑器</a></li>
+      <li class="breadcrumb-item active">文件浏览器</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="file-browser">
+<span id="bpy-types-spacefilebrowser"></span><span id="bpy-types-fileselectparams"></span><span id="bpy-ops-file"></span><span id="index-0"></span><h1>文件浏览器<a class="headerlink" href="#file-browser" title="Permalink to this heading"></a></h1>
+<p>The File Browser is used in all the file-related operations. These include:</p>
+<ul class="simple">
+<li><p>打开和保存 blend 文件。</p></li>
+<li><p>Browsing inside other blend-files, when appending or linking data-blocks,
+see <a class="reference internal" href="../files/linked_libraries/index.html"><span class="doc">Linked Libraries</span></a>.</p></li>
+<li><p>导入/导出其他文件格式。</p></li>
+<li><p>Picking new locations for existing file paths (images, videos, fonts...).</p></li>
+</ul>
+<p>The most common way to use this editor is through modal operators (like opening or saving a blend-file).
+The File Browser will appear in a new window, waiting for the operation to complete,
+and then close returning the main window.</p>
+<p>You can use the File Browser as any other editor type, to browse through the file system.
+The main purpose of this is to be able to drag-and-drop from the File Browser into other editors.</p>
+<ul class="simple">
+<li><p>Images into the <a class="reference internal" href="3dview/index.html#editors-3dview-index"><span class="std std-ref">3D 视图</span></a> (to set as background or apply as material texture).</p></li>
+<li><p>将媒体文件放入<a class="reference internal" href="../video_editing/index.html"><span class="doc">视频编辑</span></a>。</p></li>
+</ul>
+<figure class="align-default" id="id1">
+<img alt="../_images/editors_file-browser_editor.png" src="../_images/editors_file-browser_editor.png" />
+<figcaption>
+<p><span class="caption-text">文件浏览器。</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<section id="interface">
+<h2>界面<a class="headerlink" href="#interface" title="Permalink to this heading"></a></h2>
+<section id="main-region">
+<h3>主区块<a class="headerlink" href="#main-region" title="Permalink to this heading"></a></h3>
+<p>The main region of the File Browser acts similar to the file browser built into you operating system.
+The region contains an array of files, folders, or internal blend-file data in a grid or list of items.
+<a class="reference internal" href="#navigating">Navigating</a>, <a class="reference internal" href="#selecting">selecting</a>, and <a class="reference internal" href="#editing">editing</a> of these items works just as it would in your operating system's file
+browser.</p>
+<section id="previews">
+<span id="file-browser-previews"></span><h4>预览<a class="headerlink" href="#previews" title="Permalink to this heading"></a></h4>
+<p>在 <em>缩略图</em> 显示模式下，文件浏览器支持多种类型的预览。其中包括：</p>
+<ul class="simple">
+<li><p>图像和视频格式</p></li>
+<li><p>字体</p></li>
+<li><p>Blend 文件</p></li>
+<li><p>内部<a class="reference internal" href="../files/data_blocks.html"><span class="doc">数据块</span></a></p></li>
+</ul>
+<p>In order to get previews for data-block, there previews must be generated.
+See <a class="reference internal" href="../files/blend/previews.html"><span class="doc">Blend-files Previews</span></a> for how to generate and manage Blender data previews.</p>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../_images/editors_file-browser_previews.png"><img alt="../_images/editors_file-browser_previews.png" src="../_images/editors_file-browser_previews.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-text">文件浏览器处于 <em>缩略图</em> 模式。</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="file-path-region">
+<h3>文件路径区块<a class="headerlink" href="#file-path-region" title="Permalink to this heading"></a></h3>
+<p>The File Path is above the main region and can aid in navigating and adjust how items are displayed.</p>
+<dl class="simple" id="bpy-ops-file-previous">
+<dt>上一个文件夹 <kbd class="kbd docutils literal notranslate">回退键</kbd>、<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">左←</kbd></kbd></dt><dd><p>Move to previous folder (in navigation history).</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-ops-file-next">
+<dt>下一个文件夹 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">回退键</kbd></kbd>、<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">右→</kbd></kbd></dt><dd><p>Move to next folder (in navigation history).</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-ops-file-parent">
+<dt>父级文件 <kbd class="kbd docutils literal notranslate">P</kbd> 或 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">上↑</kbd></kbd></dt><dd><p>移动到父级目录。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-ops-file-refresh">
+<dt>刷新文件列表 <kbd class="kbd docutils literal notranslate">R</kbd> 或 <kbd class="kbd docutils literal notranslate">数字键盘句号.</kbd></dt><dd><p>刷新当前文件夹。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-ops-file-directory-new">
+<dt>创建新的目录 <kbd class="kbd docutils literal notranslate">I</kbd></dt><dd><p>Will ask you to confirm and create a new directory inside current one,
+scroll to it in the main view, and let you enter its name.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-fileselectparams-directory">
+<dt>文件路径 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">L</kbd></kbd></dt><dd><p>Text field for the current folder path.
+<kbd class="kbd docutils literal notranslate">Tab</kbd> will auto-complete an existing path.
+If you type a nonexistent directory path, you will be prompted to create that new directory.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-fileselectparams-filter-search">
+<dt>搜索 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">F</kbd></kbd></dt><dd><p>Filter items by name.
+The wildcard <code class="docutils literal notranslate"><span class="pre">*</span></code> will match anything, e.g. <code class="docutils literal notranslate"><span class="pre">bl*er</span></code> will match both <code class="docutils literal notranslate"><span class="pre">blender</span></code> and <code class="docutils literal notranslate"><span class="pre">blogger</span></code>.
+There is always an implicit wildcard at start and end of the search text,
+so <code class="docutils literal notranslate"><span class="pre">blender</span></code> will also match <code class="docutils literal notranslate"><span class="pre">test_blender_file.blend</span></code>.
+This field can also be used to filter some specific file extension (e.g. <code class="docutils literal notranslate"><span class="pre">.png</span></code> will list all PNG files).</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-fileselectparams-display-type">
+<dt>显示模式</dt><dd><p>控制文件的显示方式。</p>
+<dl class="field-list simple">
+<dt class="field-odd">垂直列表<span class="colon">:</span></dt>
+<dd class="field-odd"><p>在垂直列表中显示文件和文件夹。</p>
+</dd>
+<dt class="field-even">水平列表<span class="colon">:</span></dt>
+<dd class="field-even"><p>在水平列表中显示文件和文件夹。</p>
+</dd>
+<dt class="field-odd">缩略图<span class="colon">:</span></dt>
+<dd class="field-odd"><p>显示<a class="reference internal" href="#file-browser-previews"><span class="std std-ref">预览</span></a>。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<section id="display-settings">
+<h4>显示设置<a class="headerlink" href="#display-settings" title="Permalink to this heading"></a></h4>
+<dl class="simple" id="bpy-types-fileselectparams-display-size">
+<dt>显示尺寸</dt><dd><p>缩略图的大小，或列的宽度。</p>
+</dd>
+</dl>
+<dl id="bpy-types-fileselectparams-recursion-level">
+<dt>递归</dt><dd><p>一次展开显示的目录级别数。</p>
+<dl class="field-list simple">
+<dt class="field-odd">无<span class="colon">:</span></dt>
+<dd class="field-odd"><p>仅列出当前目录内容。</p>
+</dd>
+<dt class="field-even">blend 文件<span class="colon">:</span></dt>
+<dd class="field-even"><p>列出 blend 文档的全部内容（仅在关联或追加数据块时可用）。</p>
+</dd>
+<dt class="field-odd">一个层级<span class="colon">:</span></dt>
+<dd class="field-odd"><p>列出所有子目录的内容，一个递归级别。</p>
+</dd>
+<dt class="field-even">两个层级<span class="colon">:</span></dt>
+<dd class="field-even"><p>列出所有子目录的内容，两个递归级别。</p>
+</dd>
+<dt class="field-odd">三个层级<span class="colon">:</span></dt>
+<dd class="field-odd"><p>列出所有子目录的内容，三个递归级别。</p>
+</dd>
+</dl>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>一次显示几个级别的目录非常方便，例如，可以看到你的全部纹理集合，即使你已经把它们排列在一组很好的目录中，以避免在一个地方有数百个文件。</p>
+<p>In the <em>Append/Link</em> case, showing the content of the whole blend-file will allow you
+to link different types of data-blocks in a single operation.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The more levels you show at once, the more time it will take to list them all
+(typically, it will be exponential, showing three levels at once
+may take three orders of magnitude more time to be fully listed).</p>
+</div>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-fileselectparams-sort-method">
+<dt>排序依据</dt><dd><p>按以下四种方法之一对项目进行排序：</p>
+<dl class="field-list simple">
+<dt class="field-odd">名称<span class="colon">:</span></dt>
+<dd class="field-odd"><p>按文件名字母顺序排序。</p>
+</dd>
+<dt class="field-even">扩展(名)<span class="colon">:</span></dt>
+<dd class="field-even"><p>按扩展名/类型对文件列表进行排序。</p>
+</dd>
+<dt class="field-odd">修改日期<span class="colon">:</span></dt>
+<dd class="field-odd"><p>按修改时间对文件进行排序。</p>
+</dd>
+<dt class="field-even">尺寸<span class="colon">:</span></dt>
+<dd class="field-even"><p>按文件大小排序。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+<section id="filter-settings">
+<span id="bpy-types-fileselectparams-use-filter"></span><h4>过滤设置<a class="headerlink" href="#filter-settings" title="Permalink to this heading"></a></h4>
+<p>On the right side of the file path are the filtering options.
+The toggle with the funnel icon controls whether filtering is enabled or not.</p>
+<dl class="simple">
+<dt>文件类型</dt><dd><p>按分类过滤文件，如文件夹、blend 文件、图像等。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-fileselectidfilter">
+<dt>Blender ID</dt><dd><p>在追加或关联时，还可以按数据块类别（如场景、动画、材质等）进行筛选。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-fileselectparams-show-hidden">
+<dt>显示隐藏项 <kbd class="kbd docutils literal notranslate">H</kbd></dt><dd><p>显示隐藏文件（以 <code class="docutils literal notranslate"><span class="pre">.</span></code> 开始的）。</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="execution-region">
+<h3>执行区块<a class="headerlink" href="#execution-region" title="Permalink to this heading"></a></h3>
+<dl id="bpy-types-fileselectparams-filename">
+<dt>文件名</dt><dd><p>Text field to edit the file name and extension.
+When saving, if the background is red, a file with same name already exists in the folder.
+<kbd class="kbd docutils literal notranslate">Tab</kbd> will auto-complete to existing names in the current directory.</p>
+<dl class="simple">
+<dt>增量文件名 <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">+</span></code></dt><dd><p>Removes/Decreases or adds/increases a trailing number to your file name
+(used e.g. to store different versions of a file).</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="simple" id="bpy-ops-file-cancel">
+<dt>取消 <kbd class="kbd docutils literal notranslate">Esc</kbd></dt><dd><p>Cancels the file selection (and the underlying operation), and closes the File Browser.
+Using the <em>Back to Previous</em> button in the <a class="reference internal" href="../interface/window_system/topbar.html"><span class="doc">Topbar</span></a>
+will have the same effect.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-ops-file-execute">
+<dt>确认 <kbd class="kbd docutils literal notranslate">回车</kbd></dt><dd><p>The main button to validate the operation, which defines its name.
+Double-clicking on a non-directory item will have the same effect.</p>
+</dd>
+</dl>
+</section>
+<section id="source-list-region">
+<h3>资源列表区块<a class="headerlink" href="#source-list-region" title="Permalink to this heading"></a></h3>
+<p>The left region displays different ways to quickly access some directories.
+The region is divided into separate panels each containing a <a class="reference internal" href="../interface/controls/templates/list_view.html#ui-list-view"><span class="std std-ref">UI List</span></a> of directories.
+Clicking on one of the directories will immediately navigate to that folder.</p>
+<section id="volumes">
+<span id="bpy-types-spacefilebrowser-system-folders"></span><h4>体积（卷标）<a class="headerlink" href="#volumes" title="Permalink to this heading"></a></h4>
+<p>Contains all OS-defined available volumes, e.g. drives or network mounts.</p>
+</section>
+<section id="system">
+<span id="bpy-types-spacefilebrowser-system-bookmarks"></span><h4>系统<a class="headerlink" href="#system" title="Permalink to this heading"></a></h4>
+<p>Contains OS-defined common directories, like the main user folder...</p>
+</section>
+<section id="bookmarks">
+<span id="bpy-types-spacefilebrowser-bookmarks"></span><h4>书签<a class="headerlink" href="#bookmarks" title="Permalink to this heading"></a></h4>
+<p>Contains folders that you want to be able to access often without having to navigate to them in the File Browser.
+To the right of that list are buttons to perform basic management actions on your bookmarks,
+e.g. add/remove an entry, move it up or down in the list, etc.</p>
+</section>
+<section id="recent">
+<span id="bpy-types-spacefilebrowser-recent-folders"></span><h4>最近打开的<a class="headerlink" href="#recent" title="Permalink to this heading"></a></h4>
+<p>包含最近访问的文件夹。</p>
+<p id="bpy-ops-file-reset-recent">The <code class="docutils literal notranslate"><span class="pre">X</span></code> button to the right allows you to fully erase this list.</p>
+<p>您可以使用设置中<a class="reference internal" href="preferences/save_load.html#prefs-save-load"><span class="std std-ref">保存&amp;加载</span></a>选项卡的 <em>最近打开的文件</em> 选项来控制此列表中显示的文件夹数。</p>
+</section>
+</section>
+<section id="operator-options-region">
+<h3>操作选项区块<a class="headerlink" href="#operator-options-region" title="Permalink to this heading"></a></h3>
+<p>The right region shows the options of the calling operator.
+Besides common actions listed below, many import/export add-ons will also expose their options there.</p>
+<dl class="simple">
+<dt>打开、保存、另存为 Blender 文件</dt><dd><p>见<a class="reference internal" href="../files/blend/open_save.html"><span class="doc">打开 &amp; 保存</span></a>。</p>
+</dd>
+<dt>打开、替换、另存为图像</dt><dd><p>见<a class="reference internal" href="../files/media/image_formats.html"><span class="doc">支持的图像格式</span></a>。</p>
+</dd>
+<dt>从库中关联/追加</dt><dd><p>见<a class="reference internal" href="../files/linked_libraries/index.html"><span class="doc">关联库</span></a>。</p>
+</dd>
+</dl>
+<p>对于普通选项：</p>
+<dl class="simple">
+<dt>相对路径</dt><dd><p>见<a class="reference internal" href="../files/blend/open_save.html#files-blend-relative-paths"><span class="std std-ref">相对路径</span></a>。</p>
+</dd>
+</dl>
+</section>
+<section id="header-region">
+<h3>标题栏区块<a class="headerlink" href="#header-region" title="Permalink to this heading"></a></h3>
+<p>The header only contains two menus, one with you standard editor <em>View</em> controls
+and the other to list a few <a class="reference internal" href="#selecting">Selecting</a> operators for the sake of discoverability.
+Often it is hidden as most of the functionality is contained in the regions described previously.</p>
+</section>
+</section>
+<section id="navigating">
+<h2>导航<a class="headerlink" href="#navigating" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>输入目录</dt><dd><p>A single <kbd class="kbd docutils literal notranslate">LMB</kbd> click on a directory enters it.</p>
+</dd>
+<dt>父目录 <kbd class="kbd docutils literal notranslate">P</kbd></dt><dd><p>让你到上一级目录。</p>
+</dd>
+</dl>
+<section id="file-drop">
+<h3>文件拖拽<a class="headerlink" href="#file-drop" title="Permalink to this heading"></a></h3>
+<p>You can also drag and drop a file or directory from your file manager into the Blender File Browser.
+This will move it to the directory of the dropped file, and the file will be selected.</p>
+</section>
+</section>
+<section id="selecting">
+<h2>选择<a class="headerlink" href="#selecting" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>选择</dt><dd><p>Both <kbd class="kbd docutils literal notranslate">LMB</kbd> and <kbd class="kbd docutils literal notranslate">RMB</kbd> clicks work.
+Holding <kbd class="kbd docutils literal notranslate">Shift</kbd> will extend the items selection.</p>
+</dd>
+<dt>全选/全弃选 <kbd class="kbd docutils literal notranslate">A</kbd></dt><dd><p>切换选择所有文件。</p>
+</dd>
+<dt>拖拽</dt><dd><p>按着 <kbd class="kbd docutils literal notranslate">鼠标左键</kbd> 拖动将启动<a class="reference internal" href="../interface/selecting.html#tool-select-box"><span class="std std-ref">框选</span></a>。</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You can always select several entries in the File Browser,
+the last selected one is considered as the active one.
+If the calling operation expects a single path (like e.g. the main blend-file <em>Open</em> one),
+it will get that active item's path, other selected ones will just be ignored.</p>
+</div>
+<section id="arrow-keys">
+<h3>方向键<a class="headerlink" href="#arrow-keys" title="Permalink to this heading"></a></h3>
+<p>也可以通过使用方向键 “走步” 来选择/取消选择文件：</p>
+<ul class="simple">
+<li><p>Just using an arrow key, the next file in the chosen direction will be selected and all others deselected.</p></li>
+<li><p>Holding down <kbd class="kbd docutils literal notranslate">Shift</kbd> while doing this does not deselect anything so it extends to the selection,
+plus it allows to deselect files by navigating into a block
+of already selected ones (minimum two files in sequence).</p></li>
+<li><p>Holding down <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Ctrl</kbd></kbd> further selects/deselects all files in between.</p></li>
+</ul>
+<p>如果未选择文件，方向键导航会根据箭头方向选择目录中的第一个或最后一个文件。</p>
+<p>If you select a directory and hit <kbd class="kbd docutils literal notranslate">Return</kbd>, you will go into that directory
+(and highlighting 'parent' <code class="docutils literal notranslate"><span class="pre">..</span></code> entry will bring you up one level).</p>
+</section>
+</section>
+<section id="editing">
+<h2>编辑<a class="headerlink" href="#editing" title="Permalink to this heading"></a></h2>
+<dl class="simple" id="bpy-ops-file-external-operation">
+<dt>外部</dt><dd><p>使用操作系统对文件或目录执行操作。以下选项并非所有操作系统都提供。</p>
+<dl class="field-list simple">
+<dt class="field-odd">打开<span class="colon">:</span></dt>
+<dd class="field-odd"><p>打开文件。</p>
+</dd>
+<dt class="field-even">打开文件夹<span class="colon">:</span></dt>
+<dd class="field-even"><p>打开文件夹。</p>
+</dd>
+<dt class="field-odd">编辑<span class="colon">:</span></dt>
+<dd class="field-odd"><p>编辑文件。</p>
+</dd>
+<dt class="field-even">新建<span class="colon">:</span></dt>
+<dd class="field-even"><p>创建一个此类型文件。</p>
+</dd>
+<dt class="field-odd">查找文件<span class="colon">:</span></dt>
+<dd class="field-odd"><p>搜索此类型的文件。</p>
+</dd>
+<dt class="field-even">显示<span class="colon">:</span></dt>
+<dd class="field-even"><p>显示文件。</p>
+</dd>
+<dt class="field-odd">播放<span class="colon">:</span></dt>
+<dd class="field-odd"><p>播放此文件。</p>
+</dd>
+<dt class="field-even">浏览<span class="colon">:</span></dt>
+<dd class="field-even"><p>浏览此文件。</p>
+</dd>
+<dt class="field-odd">预览<span class="colon">:</span></dt>
+<dd class="field-odd"><p>预览此文件。</p>
+</dd>
+<dt class="field-even">打印<span class="colon">:</span></dt>
+<dd class="field-even"><p>打印此文件。</p>
+</dd>
+<dt class="field-odd">安装<span class="colon">:</span></dt>
+<dd class="field-odd"><p>安装此文件。</p>
+</dd>
+<dt class="field-even">用户身份运行<span class="colon">:</span></dt>
+<dd class="field-even"><p>以特定用户运行。</p>
+</dd>
+<dt class="field-odd">属性<span class="colon">:</span></dt>
+<dd class="field-odd"><p>显示此项目的系统属性。</p>
+</dd>
+<dt class="field-even">在文件夹中查找<span class="colon">:</span></dt>
+<dd class="field-even"><p>在此文件夹搜索项目。</p>
+</dd>
+<dt class="field-odd">命令提示符于此<span class="colon">:</span></dt>
+<dd class="field-odd"><p>在这里打开命令提示符。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl id="bpy-ops-file-delete">
+<dt>删除文件 <kbd class="kbd docutils literal notranslate">Delete</kbd> 或 <kbd class="kbd docutils literal notranslate">X</kbd></dt><dd><p>通过将当前选定的文件或目录移动到操作系统的 “回收站” 来删除它们。</p>
+<p>注意，在 Linux 删除目录需要 KDE 或 GNOME 。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-ops-file-rename">
+<dt>重命名 <kbd class="kbd docutils literal notranslate">F2</kbd></dt><dd><p>Change the name for the currently selected file or directory.</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="properties_editor.html" class="btn btn-neutral float-left" title="属性" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="asset_browser.html" class="btn btn-neutral float-right" title="资产浏览器" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/editors/file_browser.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/editors/file_browser.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Feditors/file_browser.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Feditors/file_browser.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collada &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/files/import_export/collada.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="通用场景描述（USD）" href="usd.html" />
+    <link rel="prev" title="Alembic" href="alembic.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">资产、文件 &amp; 数据系统</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blend/index.html">Blender 文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_blocks.html">数据块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom_properties.html">自定义属性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linked_libraries/index.html">关联库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../asset_libraries/index.html">资产库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../media/index.html">媒体格式</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../import_export.html">导入 &amp; 导出文件</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="alembic.html">Alembic</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Collada</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#collada-exporter">Collada 导出</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#main">主标签</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#global-orientation">全局坐标系</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#texture-options">纹理选项</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#geometry">几何数据</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#export-data-options">导出数据选项</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#armature">骨架</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#armature-options">骨架选项</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#animation">动画</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#extra">附加</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#collada-options">Collada 选项</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#collada-importer">Collada 导入</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#import-data-options">导入数据选项</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#id1">骨架选项</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#technical-details">技术细节</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#mesh">网格</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#import">导入</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#export">导出</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#light">灯光</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#id2">导入</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#id3">导出</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#id4">动画</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#export-import">导出 &amp; 导入</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="usd.html">通用场景描述（USD）</a></li>
+<li class="toctree-l3"><a class="reference internal" href="obj.html">Wavefront OBJ</a></li>
+<li class="toctree-l3"><a class="reference internal" href="ply.html">斯坦福 PLY</a></li>
+<li class="toctree-l3"><a class="reference internal" href="stl.html">STL</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grease_pencil_svg.html">可缩放矢量图形 (SVG) 为蜡笔</a></li>
+<li class="toctree-l3"><a class="reference internal" href="grease_pencil_pdf.html">便携式文档格式 (PDF) 为蜡笔</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">资产、文件 &amp; 数据系统</a></li>
+          <li class="breadcrumb-item"><a href="../import_export.html">导入 &amp; 导出文件</a></li>
+      <li class="breadcrumb-item active">Collada</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="collada">
+<h1>Collada<a class="headerlink" href="#collada" title="Permalink to this heading"></a></h1>
+<p>COLLADA™ 模块已被实现为用于导出和导入 <code class="docutils literal notranslate"><span class="pre">.dae</span></code> 文件的一个灵活的工具。设计目标是提供一组参数，这些参数可以从/向各种工具导出/导入 Collada 文件。但请注意，Collada 模块仍在开发中。因此，你的特定应用场景可能尚不受支持。</p>
+<section id="collada-exporter">
+<h2>Collada 导出<a class="headerlink" href="#collada-exporter" title="Permalink to this heading"></a></h2>
+<figure class="align-right">
+<img alt="../../_images/files_import-export_collada_export.png" src="../../_images/files_import-export_collada_export.png" />
+</figure>
+<p class="rubric">操作项预设</p>
+<p>对于 &quot;第二人生&quot;（SL）用户，有两种操作预设（请参阅侧栏顶部）：</p>
+<ul class="simple">
+<li><p><em>Second Life 静态</em> -- 适用于导出静态网格物体。</p></li>
+<li><p><em>Second Life 绑定</em> -- 适用于导出SL默认角色。</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>虚拟世界用户特别说明：</p>
+<ul class="simple">
+<li><p>请使用操作项预设。所有其它导出设置将不适用于 Second Life 。</p></li>
+<li><p>角色定位需要使角色看向X轴正向。</p></li>
+<li><p>必须在导出前应用缩放和旋转！</p></li>
+</ul>
+</div>
+<section id="main">
+<h3>主标签<a class="headerlink" href="#main" title="Permalink to this heading"></a></h3>
+<dl>
+<dt>仅选中项</dt><dd><p>如果启用 <em>仅选中项</em>，则仅导出所选物体。否则，整个场景中所有可见和不可见的物体都会被导出。</p>
+</dd>
+<dt>包含子物体</dt><dd><p>启用此选项后，无论选择状态如何，所选物体的所有子物体都会被导出。</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>您只能选择一个骨架，然后使用此选项，连接到骨架的所有绑定网格也将导出。</p>
+</div>
+</dd>
+<dt>包含骨架</dt><dd><p>启用此选项后，无论选择状态如何，都将导出与所选物体相关的所有骨骼。</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>您可以只选择物体，然后在导出器中启用此选项以导出骨架数据。</p>
+</div>
+</dd>
+<dt>包括形态键</dt><dd><p>包括通过导出具有当前形态键配置的网格来应用形态键。</p>
+</dd>
+</dl>
+<section id="global-orientation">
+<h4>全局坐标系<a class="headerlink" href="#global-orientation" title="Permalink to this heading"></a></h4>
+<p>待补充。</p>
+</section>
+<section id="texture-options">
+<h4>纹理选项<a class="headerlink" href="#texture-options" title="Permalink to this heading"></a></h4>
+<dl>
+<dt>仅选中的 UV 贴图</dt><dd><p>当网格包含多个 UV 层时，Blender 默认会导出所有层。此选项允许您仅导出活动（选定）的 UV 层。</p>
+</dd>
+<dt>复制</dt><dd><p>导出图像时，基于材质的图像纹理，导出器会在导出文件中创建绝对文件引用。</p>
+<p>但是，如果启用了 <em>复制</em> 选项，导出器将创建图像的副本，并将副本放在导出文件之外。在这种情况下，文件引用是相对的。</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="geometry">
+<h3>几何数据<a class="headerlink" href="#geometry" title="Permalink to this heading"></a></h3>
+<section id="export-data-options">
+<h4>导出数据选项<a class="headerlink" href="#export-data-options" title="Permalink to this heading"></a></h4>
+<dl>
+<dt>三角化</dt><dd><p>网格可以动态进行三角化。三角化基于与 <em>三角化面</em> 工具中使用的相同参数，用于对当前选择的面进行三角化。要完全控制三角化，您可以在导出之前手动执行此操作。但是，此选项仅允许对导出的数据应用三角化，网格本身不受影响。</p>
+</dd>
+<dt>应用修改器</dt><dd><p>使用评估后的网格导出物体，即所有<a class="reference internal" href="../../modeling/modifiers/index.html"><span class="doc">修改器</span></a>被计算后的网格。</p>
+<dl class="simple">
+<dt>分辨率</dt><dd><p>控制是否将 3D 视口分辨率或渲染分辨率应用于提供预览模式和渲染模式的修改器。</p>
+</dd>
+</dl>
+</dd>
+<dt>变换</dt><dd><p>Collada 支持两种类型的转换矩阵规范。可以是 <code class="docutils literal notranslate"><span class="pre">&lt;Matrix&gt;</span></code>，也可以是一组变换分解（用于移动、旋转和缩放）。需要注意的是，导出器不会严格遵循此选项设置，而是将其作为提示尽可能使用该选项。之所以如此，是因为某些导出的数据类型具有关于如何导出转换矩阵的特定规则。这部分功能还在开发过程中，将来可能会提供一种不那么模糊的方法。</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="armature">
+<h3>骨架<a class="headerlink" href="#armature" title="Permalink to this heading"></a></h3>
+<section id="armature-options">
+<h4>骨架选项<a class="headerlink" href="#armature-options" title="Permalink to this heading"></a></h4>
+<dl>
+<dt>仅变形骨骼</dt><dd><p>启用此选项后，导出器将从导出的骨架中去除所有未变形的骨骼。当骨架包含控制骨骼（实际上不是角色骨架的一部分）时，此选项很有用。例如，您可以在启用此选项的情况下导出 Avastar 装备。由此产生的导出装配器与 &quot;第二人生&quot; 兼容。但请注意以下进一步的限制。</p>
+</dd>
+<dt>导出至 SL/OpenSim</dt><dd><p>启用此选项后，具有骨骼方向的一些问题将以不同的方式计算，并设计用于导出到 Second Life 或 OpenSim 。</p>
+<p>这只与绑定的网格相关，对于静态网格，它什么都不做。</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="animation">
+<h3>动画<a class="headerlink" href="#animation" title="Permalink to this heading"></a></h3>
+</section>
+<section id="extra">
+<h3>附加<a class="headerlink" href="#extra" title="Permalink to this heading"></a></h3>
+<section id="collada-options">
+<h4>Collada 选项<a class="headerlink" href="#collada-options" title="Permalink to this heading"></a></h4>
+<dl>
+<dt>使用物体的实例</dt><dd><p>在 Blender 中，你可以为多个物体重用相同的网格。这被称为 &quot;物体实例化&quot;。启用此选项后，Blender 会将物体实例化到 Collada 文件中。</p>
+</dd>
+<dt>使用Blender轮廓</dt><dd><p>Collada 可以使用工具特定的数据（配置文档）进行扩展。Blender 有自己的（非官方）配置文档，允许将装配器信息导出到 Collada 文档中。稍后，当需要将 dae 文档导入到 Blender 中时，它可用于重建装备。</p>
+</dd>
+<dt>按物体名称排序</dt><dd><p>数据的导出顺序绑定到内部物体顺序，并且不能以可靠的方式影响它。此选项可确保按字母顺序导出几何节点和物体节点。</p>
+</dd>
+<dt>保持绑定信息</dt><dd><p>将装备导入 Blender 时，装备的绑定姿态将用作 Blender 的静置姿态。因此，原始静置姿态的所有矩阵信息都将丢失。但在某些情况下，您可能希望保留原始绑定信息。此选项检查每个骨骼是否具有两个数组：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rest_mat</span></code> -- 一个由16个浮点数组成的数组，表示骨骼的原始静置姿态矩阵。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bind_mat</span></code> -- 一个由16个浮点数组成的数组，表示骨骼的原始绑定姿态矩阵。</p></li>
+</ul>
+<p>如果数组存在，则将使用那些数组而不是当前的静置姿态/绑定姿态。这两个数组要么是由先前的 Collada 导入创建的（请参阅下文的 <a class="reference internal" href="#collada-importer">Collada 导入</a>），要么可以手动创建，也可以通过插件（基于脚本）创建。</p>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+<section id="collada-importer">
+<h2>Collada 导入<a class="headerlink" href="#collada-importer" title="Permalink to this heading"></a></h2>
+<figure class="align-right">
+<img alt="../../_images/files_import-export_collada_import.png" src="../../_images/files_import-export_collada_import.png" />
+</figure>
+<p>Collada 导入功能主要由需要导入的数据驱动。有一个控制导入单位的选项：</p>
+<section id="import-data-options">
+<h3>导入数据选项<a class="headerlink" href="#import-data-options" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>自定义法向</dt><dd><p>使用 collada 文件中定义的网格法向，如果他们已被定义。否则 Blender 将在导入过程中重新计算。</p>
+</dd>
+<dt>导入单位</dt><dd><p>如果未启用，则将根据当前使用的单位系统重新调整导入的数据。如果启用此选项，则 Blender 将自行调整为 Collada 文件提供的单位系统。</p>
+</dd>
+</dl>
+</section>
+<section id="id1">
+<h3>骨架选项<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<dl>
+<dt>修正叶骨</dt><dd><p>Collada 只记录了 &quot;关节&quot;，这主要类似于 Blender 的骨骼头部。但是，当您导入 Collada 文档时，不会定义骨头/骨尾。这对于连接的骨骼无关紧要，因为骨骼父级只有一个子级。在这种情况下，父级骨的末端位置将调整为子级骨的关节位置。但是，特别是对于未连接的骨骼和有一个以上子级的骨骼，就会出现问题。</p>
+<p>当启用了 <em>修复叶骨</em> 选项时，Blender 会尝试猜测未连接的骨骼的骨头/尾巴最好放置在哪里。如果禁用该选项，则骨头/尾将沿 Y 轴放置在偏移处。这就是为什么骨骼经常指向 Y 轴的原因。</p>
+</dd>
+<dt>查找骨骼链</dt><dd><p>当骨骼有多个子骨骼时，则不会定义哪个（如果有）子骨骼应连接到父骨骼。当启用 <em>查找骨骼链</em> 选项时，Blender 会确定每个骨骼的最长骨链（对于子骨骼），在此链上的所有骨骼将自动连接。</p>
+<p>如果禁用该选项，则当父骨骼只有一个子骨骼是才会将子骨骼接到父骨骼。但请参阅下面的 <em>自动连接</em> 选项。</p>
+</dd>
+<dt>自动连接</dt><dd><p>启用此选项后，如果父骨骼只有一个子骨骼，则子骨骼将自动连接到其父骨骼。</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<dl>
+<dt>保持绑定信息</dt><dd><p>启用此选项后，导入功能会为每个骨骼创建两个自定义属性：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">rest_mat</span></code> -- 一个由16个浮点数组成的数组，表示骨骼的原始静置姿态矩阵。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bind_mat</span></code> -- 一个由16个浮点数组成的数组，表示骨骼的原始绑定姿态矩阵。</p></li>
+</ul>
+<p>当你想再次导出绑定时，可以使用这两个数组，并确保必须使用原始的静置姿态/绑定姿态组合。</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="technical-details">
+<h2>技术细节<a class="headerlink" href="#technical-details" title="Permalink to this heading"></a></h2>
+<section id="mesh">
+<h3>网格<a class="headerlink" href="#mesh" title="Permalink to this heading"></a></h3>
+<section id="import">
+<h4>导入<a class="headerlink" href="#import" title="Permalink to this heading"></a></h4>
+<p>支持的几何类型包括：</p>
+<ul class="simple">
+<li><p>Tris（未经测试）</p></li>
+<li><p>Polylist</p></li>
+<li><p>Polygons</p></li>
+<li><p>多边形</p></li>
+<li><p>Tri-fans（未经测试）</p></li>
+<li><p>线</p></li>
+</ul>
+</section>
+<section id="export">
+<h4>导出<a class="headerlink" href="#export" title="Permalink to this heading"></a></h4>
+<p>网格数据导出为 <code class="docutils literal notranslate"><span class="pre">&lt;polylist&gt;</span></code>、<code class="docutils literal notranslate"><span class="pre">&lt;lines&gt;</span></code> 和 <code class="docutils literal notranslate"><span class="pre">&lt;vertices&gt;</span></code>。</p>
+</section>
+</section>
+<section id="light">
+<h3>灯光<a class="headerlink" href="#light" title="Permalink to this heading"></a></h3>
+<section id="id2">
+<h4>导入<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h4>
+<p>Blender 尽最大努力从 .dae 文件导入灯光。如果检测到 Blender 的灯光配置文件，将使用配置文件中的值，确保完整导入 Blender 导出的 .dae 文件。在 Blender 2.57 中添加了 <code class="docutils literal notranslate"><span class="pre">&lt;extra&gt;</span></code> 支持。</p>
+</section>
+<section id="id3">
+<h4>导出<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h4>
+<p>通过 <code class="docutils literal notranslate"><span class="pre">&lt;extra&gt;</span></code> 标签添加了 Blender 的灯光配置文件。Blender 的整个灯光结构将通过此配置文件导出，但光线曲线衰减除外。</p>
+</section>
+</section>
+<section id="id4">
+<h3>动画<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<section id="export-import">
+<h4>导出 &amp; 导入<a class="headerlink" href="#export-import" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>支持物体（网格、摄像机、灯光）变换动画。只能导出欧拉旋转（这是物体的默认选项）。对于骨架动画，支持欧拉和四元数旋转类型。</p></li>
+<li><p>支持导入和导出以下参数的动画：</p>
+<ul>
+<li><p>灯光</p></li>
+<li><p>摄像机</p></li>
+<li><p>材质效果</p></li>
+</ul>
+</li>
+<li><p>非面板控制骨骼动画。</p></li>
+<li><p>面板变形骨骼的骨架动画。</p></li>
+<li><p>物体模式中的骨架动画。</p></li>
+<li><p>完全固定的骨架动画（指 Rigify 插件）。导出固定的骨架动画：</p>
+<ul>
+<li><p>运行<a class="reference internal" href="../../editors/nla/editing.html#bpy-ops-nla-bake"><span class="std std-ref">烘焙动作</span></a>运算符。</p></li>
+<li><p>如果您只选择了变形骨骼，请选中 <em>仅选中项</em>。这将给出更小的 dae 。否则取消选中 <em>仅选中项</em>。</p></li>
+<li><p>检查 <em>清除约束</em>。</p></li>
+<li><p>烘焙操作。</p></li>
+<li><p>选择网格和变形骨骼。然后导出到 Collada，同时仅检查选定的选项。（仅选择网格和骨骼并非绝对必要，仅选择和导出选定的会给出较小的 dae 。）</p></li>
+<li><p><a class="reference external" href="https://www.youtube.com/watch?v=GTlmmd13J1w">示例视频</a></p></li>
+</ul>
+</li>
+</ul>
+<p>对于作为骨架中叶节点的骨节点，或者如果骨骼具有多个子节点，则为这些节点添加带有 <code class="docutils literal notranslate"><span class="pre">&lt;extra&gt;</span></code> 标签的 Blender 配置文件。在重新导入时正确导出骨骼到尾端位置。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>要记住的重要事情</p>
+<ul class="simple">
+<li><p>物体和数据块名称约束为21个字符（字节）。</p></li>
+<li><p>UV层名称约束为32个字符（字节）。</p></li>
+<li><p>只有网格上的骨架动画，单个面板装配器。</p></li>
+<li><p>尚不支持修改器。</p></li>
+</ul>
+<p>导入导出时具有 <code class="docutils literal notranslate"><span class="pre">&lt;instance_node&gt;</span></code> 的 .dae 文件时，这些信息基本上会丢失，这些节点将是 <code class="docutils literal notranslate"><span class="pre">&lt;node&gt;</span></code>。</p>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="alembic.html" class="btn btn-neutral float-left" title="Alembic" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="usd.html" class="btn btn-neutral float-right" title="通用场景描述（USD）" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/files/import_export/collada.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/files/import_export/collada.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Ffiles/import_export/collada.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Ffiles/import_export/collada.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

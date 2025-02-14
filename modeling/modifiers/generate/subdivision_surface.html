@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>表面细分修改器 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/subdivision_surface.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/js/version_switch.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../copyright.html" />
+    <link rel="next" title="三角化修改器" href="triangulate.html" />
+    <link rel="prev" title="实体化修改器" href="solidify.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">网格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">文本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../volumes/index.html">体积（卷标）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../empties.html">空物体</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">修改器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../common_options.html">常见的修改器选项</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#modify">修改</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#generate">生成</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="array.html">阵列修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bevel.html">倒角修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="booleans.html">布尔修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="build.html">建形修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="decimate.html">精简修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="edge_split.html">拆边修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geometry_nodes.html">几何节点修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mask.html">遮罩修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh_to_volume.html">网格转体积修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mirror.html">镜像修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="multiresolution.html">多级精度修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="remesh.html">重构网格修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="screw.html">螺旋修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="skin.html">蒙皮修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="solidify.html">实体化修改器</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">表面细分修改器</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#options">选项</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#advanced">高级</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#keyboard-shortcuts">键盘快捷键</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#control">控制</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#weighted-edge-creases">加权边折痕</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#edge-loops">边循环</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#known-limitations">已知局限</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#non-contiguous-normals">非连续法线</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="triangulate.html">三角化修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="volume_to_mesh.html">体积到网格修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="weld.html">焊接修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wireframe.html">线框修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#deform">形变</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#physics">物理</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../geometry_nodes/index.html">几何节点</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">建模</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">修改器</a></li>
+      <li class="breadcrumb-item active">表面细分修改器</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="subdivision-surface-modifier">
+<span id="bpy-types-subsurfmodifier"></span><span id="index-0"></span><h1>表面细分修改器<a class="headerlink" href="#subdivision-surface-modifier" title="Permalink to this heading"></a></h1>
+<p>The <em>Subdivision Surface</em> modifier (often shorten to &quot;Subdiv&quot;)
+is used to split the faces of a mesh into smaller faces, giving it a smooth appearance.
+It enables you to create complex smooth surfaces while modeling simple, low-vertex meshes.
+It avoids the need to save and maintain huge amounts of data,
+and gives a smooth &quot;organic&quot; look to the object.</p>
+<p>与任何修改器一样，执行顺序（在 <a class="reference internal" href="../introduction.html#modifier-stack"><span class="std std-ref">修改器队列</span></a> 中的位置）对结果有重要影响。</p>
+<p>请记住，这是与相似的 <a class="reference internal" href="../../meshes/editing/mesh/shading.html#modeling-meshes-editing-normals-shading"><span class="std std-ref">平滑着色</span></a> 是不同的操作。您可以在下面的网格图中看到两者之间的差异。</p>
+<figure class="align-default" id="id1">
+<img alt="../../../_images/modeling_modifiers_generate_subdivision-surface_grid.png" src="../../../_images/modeling_modifiers_generate_subdivision-surface_grid.png" />
+<figcaption>
+<p><span class="caption-text">细分等级分别为 0 到 3，在有和没有平滑着色的两种情况下。</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><em>表面细分</em> 修改器不允许在不应用它之前编辑新的细分几何体，但是 <a class="reference internal" href="multiresolution.html"><span class="doc">多级精度修改器</span></a> 可以（雕刻模式中）。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>此修改器使用 <a class="reference external" href="https://graphics.pixar.com/opensubdiv/docs/intro.html">OpenSubdiv library</a> 作为后端。</p>
+</div>
+<section id="options">
+<h2>选项<a class="headerlink" href="#options" title="Permalink to this heading"></a></h2>
+<figure class="align-right" id="id2">
+<a class="reference internal image-reference" href="../../../_images/modeling_modifiers_generate_subdivision-surface_panel.png"><img alt="../../../_images/modeling_modifiers_generate_subdivision-surface_panel.png" src="../../../_images/modeling_modifiers_generate_subdivision-surface_panel.png" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-text">表面细分修改器。</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<dl>
+<dt>Catmull-Clark</dt><dd><p>默认选项，细分并平滑曲面。根据它的 <a class="reference external" href="https://en.wikipedia.org/wiki/Catmull%E2%80%93Clark_subdivision_surface">Wikipedia 页面</a>，“任意查找公式是由 Catmull 和 Clark 选择的，它基于最终表面的美学外观而不是数学推导得出的。”</p>
+</dd>
+<dt>简单型</dt><dd><p>只细分表面，这通常不提供任何平滑，除非曲面是<a class="reference internal" href="../../../glossary/index.html#term-Coplanar"><span class="xref std std-term">非共面的</span></a>（与<a class="reference internal" href="../../meshes/editing/edge/subdivide.html#bpy-ops-mesh-subdivide"><span class="std std-ref">细分</span></a>操作符相同，在编辑模式）。为了解决非共面几何体的这一行为，<a class="reference internal" href="triangulate.html"><span class="doc">三角化</span></a>以确保所有几何体都是共面的。</p>
+<p>例如，在使用位移图时，可以使用简单模式来提高基础网格的分辨率。</p>
+</dd>
+<dt>层级-视图/渲染</dt><dd><p>在3D视图或最终渲染里显示的细分级数。</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>更高的细分级别会导致更多的顶点，这意味着更高的内存消耗（包括系统内存，以及用于显示的视频内存）。如果没有足够的内存，这可能导致Blender无响应或崩溃。</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>这些设置的正确组合将使您在与3D视图交互时保持模型的快速轻量级近似，但在渲染时使用更高质量的版本。</p>
+<p>小心不要设置 <em>视图</em> 细分值高于 <em>渲染</em> 细分值，这样做的意思是在3D视图里的质量高于渲染的质量。</p>
+</div>
+</dd>
+<dt>优化显示</dt><dd><p>在渲染此对象的线框时，将跳过新细分边缘的线（仅显示原始几何图形的边缘）。</p>
+</dd>
+</dl>
+<section id="advanced">
+<h3>高级<a class="headerlink" href="#advanced" title="Permalink to this heading"></a></h3>
+<dl>
+<dt>使用极限表面</dt><dd><p>将顶点放置在将以无限细分级别（最平滑的形状）生成的曲面上。</p>
+</dd>
+<dt>品质</dt><dd><p>启用 <em>使用极限表面</em> 时，此属性控制顶点在极限表面上的精确定位方式（相对于其无限细分网格的理论位置）。可以降低它以获得更好的性能。</p>
+<p>使用较高的值并不一定意味着质量的真正提高，理想的结果可能在最大 <em>质量</em> 值之前就已经达到。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>此值可能会影响 <a class="reference internal" href="#modifiers-generate-subsurf-creases"><span class="std std-ref">边缘折痕</span></a> 的准确性，使用较高的 <em>Quality</em> 值将允许更大范围的折痕值准确工作。</p>
+</div>
+</dd>
+<dt>UV平滑</dt><dd><p>控制如何将细分平滑应用于 UV。</p>
+<dl class="field-list simple">
+<dt class="field-odd">无<span class="colon">:</span></dt>
+<dd class="field-odd"><p>UV保持不变。</p>
+</dd>
+<dt class="field-even">保留拐角<span class="colon">:</span></dt>
+<dd class="field-even"><p>UV岛是平滑的，但它们的边界保持不变。</p>
+</dd>
+<dt class="field-odd">保留拐角、交汇点<span class="colon">:</span></dt>
+<dd class="field-odd"><p>UV被平滑，不连续边界上的拐角和三个或更多区域的交汇点保持清晰。</p>
+</dd>
+<dt class="field-even">保留拐角、交汇点、凹面<span class="colon">:</span></dt>
+<dd class="field-even"><p>UV平滑，不连续边界上的角，三个或更多区域的交界处以及飞镖和凹角保持清晰。</p>
+</dd>
+<dt class="field-odd">保留边界<span class="colon">:</span></dt>
+<dd class="field-odd"><p>UV平滑，边界保持清晰。</p>
+</dd>
+<dt class="field-even">全部<span class="colon">:</span></dt>
+<dd class="field-even"><p>平滑处理UV和UV边界。</p>
+</dd>
+</dl>
+</dd>
+<dt>边界平滑</dt><dd><p>控制开放边界（和拐角）的平滑方式。</p>
+<dl class="field-list simple">
+<dt class="field-odd">全部<span class="colon">:</span></dt>
+<dd class="field-odd"><p>平滑边界，包括拐角在内。</p>
+</dd>
+<dt class="field-even">保留拐角<span class="colon">:</span></dt>
+<dd class="field-even"><p>平滑边界，但拐角保持锐利。</p>
+</dd>
+</dl>
+</dd>
+<dt>使用折痕</dt><dd><p>使用存储在边中的 <a class="reference internal" href="#modifiers-generate-subsurf-creases"><span class="std std-ref">加权边折痕</span></a> 值来控制它们的平滑程度。</p>
+</dd>
+<dt>使用自定义法向</dt><dd><p>Interpolates existing <a class="reference internal" href="../../meshes/structure.html#modeling-meshes-normals-custom"><span class="std std-ref">自定义拆边法向</span></a> of the resulting mesh.
+Otherwise, new faces will have the overall normal orientation of that original face.</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="keyboard-shortcuts">
+<h2>键盘快捷键<a class="headerlink" href="#keyboard-shortcuts" title="Permalink to this heading"></a></h2>
+<p>要快速向一个或多个对象添加一个 <em>表面细分</em> 修改器，请选择对象并按 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">1</kbd></kbd> 。这将添加一个表面细分修改器，将 <em>视图</em> 细分级数设置为 1 。您也可以使用其他数字，如 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">2</kbd></kbd>、<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">3</kbd></kbd> 等，以添加一个修改器与该数字的细分级数。以这种方式添加 <em>表面细分</em> 修改器不会修改 <em>渲染</em> 细分级数。</p>
+<p>如果物体已经有一个 <em>表面细分</em> 修改器，这么做只会简单地改变其细分级别，而不会添加另一个修改器。</p>
+</section>
+<section id="control">
+<h2>控制<a class="headerlink" href="#control" title="Permalink to this heading"></a></h2>
+<p>Catmull-Clark 细分会对边进行磨圆，往往这不是你想要的。有几种解决方案可以控制细分。</p>
+<section id="weighted-edge-creases">
+<span id="modifiers-generate-subsurf-creases"></span><h3>加权边折痕<a class="headerlink" href="#weighted-edge-creases" title="Permalink to this heading"></a></h3>
+<p>表面细分的加权边折痕允许您更改 <em>表面细分</em> 修改器细分几何体的方式，使边具有平滑或锐利的外观。</p>
+<figure class="align-default" id="id3">
+<img alt="../../../_images/modeling_modifiers_generate_subdivision-surface_withcrease.png" src="../../../_images/modeling_modifiers_generate_subdivision-surface_withcrease.png" />
+<figcaption>
+<p><span class="caption-text">一个细分表面的立方体，带折痕边。</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>所选边的折痕权重可以在 3D 视图的侧栏的 <em>变换</em> 面板中更改。类似缩放工具的 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">E</kbd></kbd> 也可以用来调整折痕的权重。数值越大，边缘越 “锐利”，对细分曲面的平滑效果越有抵抗力。</p>
+</section>
+<section id="edge-loops">
+<h3>边循环<a class="headerlink" href="#edge-loops" title="Permalink to this heading"></a></h3>
+<figure class="align-default" id="id4">
+<img alt="../../../_images/modeling_modifiers_generate_subdivision-surface_cube-with-edge-loops.png" src="../../../_images/modeling_modifiers_generate_subdivision-surface_cube-with-edge-loops.png" />
+<figcaption>
+<p><span class="caption-text">细分等级为2的立方体，与有一个额外的循环边的立方体，与有六个额外循环边的立方体。</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p><em>表面细分</em> 修改器说明了为什么良好、干净的拓扑如此重要。如图所示，它对默认立方体产生了巨大影响。在添加其他循环（例如<a class="reference internal" href="../../meshes/editing/edge/loopcut_slide.html#bpy-ops-mesh-loopcut-slide"><span class="std std-ref">循环剪切和滑动</span></a>）之前，形状几乎无法识别为立方体。</p>
+<p>具有深思熟虑拓扑的网格的循环边具有良好位置，允许放置（或删除）更多循环边来控制最终的网格的尖锐度/光滑度。</p>
+</section>
+</section>
+<section id="known-limitations">
+<h2>已知局限<a class="headerlink" href="#known-limitations" title="Permalink to this heading"></a></h2>
+<section id="non-contiguous-normals">
+<h3>非连续法线<a class="headerlink" href="#non-contiguous-normals" title="Permalink to this heading"></a></h3>
+<p>Abrupt normal changes will prevent portions of the mesh from producing a smooth subdivision.
+Instead, these portions with non-contiguous normals will be subdivided using the &quot;Simple&quot; subdivision method.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id5">
+<a class="reference internal image-reference" href="../../../_images/modeling_modifiers_generate_subdivision-surface_normal-orientation-1.png"><img alt="../../../_images/modeling_modifiers_generate_subdivision-surface_normal-orientation-1.png" src="../../../_images/modeling_modifiers_generate_subdivision-surface_normal-orientation-1.png" style="width: 320px;" /></a>
+<figcaption>
+<p><span class="caption-text">比较好的法线和坏的法线。</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id6">
+<a class="reference internal image-reference" href="../../../_images/modeling_modifiers_generate_subdivision-surface_normal-orientation-2.png"><img alt="../../../_images/modeling_modifiers_generate_subdivision-surface_normal-orientation-2.png" src="../../../_images/modeling_modifiers_generate_subdivision-surface_normal-orientation-2.png" style="width: 320px;" /></a>
+<figcaption>
+<p><span class="caption-text">左侧图形的侧视图。</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<p>A quick way to fix this is to <a class="reference internal" href="../../meshes/editing/mesh/normals.html"><span class="doc">Recalculate Normals</span></a>.
+If this does not work you may have to <a class="reference internal" href="../../meshes/editing/mesh/normals.html"><span class="doc">manually flip the normals</span></a>.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="solidify.html" class="btn btn-neutral float-left" title="实体化修改器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="triangulate.html" class="btn btn-neutral float-right" title="三角化修改器" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/modeling/modifiers/generate/subdivision_surface.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/modeling/modifiers/generate/subdivision_surface.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fmodeling/modifiers/generate/subdivision_surface.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fmodeling/modifiers/generate/subdivision_surface.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>线条画修改器 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/grease_pencil/modifiers/generate/line_art.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/js/version_switch.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../copyright.html" />
+    <link rel="next" title="镜像修改器" href="mirror.html" />
+    <link rel="prev" title="长度修改器" href="length.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">蜡笔</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../object.html">物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../structure.html">结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../primitives.html">基本体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../selecting.html">选择</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multiframe.html">多重帧</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../properties/index.html">属性</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">修改器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">生成</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="array.html">阵列修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="build.html">建形修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dash.html">点划线修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="envelope.html">封套修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="length.html">长度修改器</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">线条画修改器</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#options">选项</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#edge-types">边类型</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#light-reference">灯参考</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#geometry-processing">几何处理</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#occlusion">遮挡</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#material-mask">材质遮罩</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#intersection">交叉</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#face-mark-filtering">面标记过滤</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#chaining">链形</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#vertex-weight-transfer">顶点权重传递</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#composition">合成</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#bake">烘焙</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="mirror.html">镜像修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="multiple_strokes.html">多重笔画</a></li>
+<li class="toctree-l4"><a class="reference internal" href="outline.html">轮廓修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="simplify.html">简化修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subdivide.html">细分修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../deform/index.html">形变</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../color/index.html">颜色</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../modify/index.html">修改</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../visual_effects/index.html">视觉效果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../materials/index.html">材质</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#modes">模式</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">蜡笔</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">修改器</a></li>
+          <li class="breadcrumb-item"><a href="index.html">生成</a></li>
+      <li class="breadcrumb-item active">线条画修改器</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="line-art-modifier">
+<span id="bpy-types-lineartgpencilmodifier"></span><span id="index-0"></span><h1>线条画修改器<a class="headerlink" href="#line-art-modifier" title="Permalink to this heading"></a></h1>
+<p>The <em>Line Art</em> modifier generates stylized line art from the scene or selected source collection or objects.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>由于当前缺少全局缓存，每个线条画修改器将自行运行整个遮挡计算。因此，如果您有多个线条艺术修改器来选择场景的不同部分（以应用不同的样式等），则评估将花费更长的时间。有计划将来纠正这一点，但这是目前已知的局限性。</p>
+</div>
+<section id="options">
+<h2>选项<a class="headerlink" href="#options" title="Permalink to this heading"></a></h2>
+<figure class="align-right" id="id1">
+<img alt="../../../_images/grease-pencil_modifiers_generate_line-art_panel.png" src="../../../_images/grease-pencil_modifiers_generate_line-art_panel.png" />
+<figcaption>
+<p><span class="caption-text">线条画修改器。</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<dl id="bpy-types-lineartgpencilmodifier-use-cache">
+<dt>使用缓存</dt><dd><p>通过使用堆栈中第一个线条画修改器的缓存场景数据来优化渲染。这个选项有一个缺点，某些设置会变得不可用。</p>
+<p>此选项仅在同一修改器堆栈中有多个线条画修改器，并且修改器不是堆栈中的第一个线条画修改器时可用。</p>
+</dd>
+<dt>源类型</dt><dd><p>从哪种类型的几何源生成线条画。</p>
+<p>场景、集合、物体</p>
+</dd>
+<dt>物体/集合</dt><dd><p>根据源类型，可以选择集合或物体作为源几何体。</p>
+<dl class="simple" id="bpy-types-lineartgpencilmodifier-use-invert-collection">
+<dt>反转集合过滤</dt><dd><p>从指定集合中选择除行之外的所有内容。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>除非在物体或集合中指定其他方式，否则线条画仍将加载并计算整个可见场景以产生正确的遮挡结果。</p>
+</div>
+<dl class="simple">
+<dt>层</dt><dd><p>The Grease Pencil <a class="reference internal" href="../../properties/layers.html#bpy-types-gpencillayer"><span class="std std-ref">层</span></a> to put the result in.</p>
+</dd>
+<dt>材质</dt><dd><p>蜡笔 <a class="reference internal" href="../../materials/index.html#bpy-types-materialgpencilstyle"><span class="std std-ref">材质</span></a> 以生成笔画。</p>
+</dd>
+<dt>线条宽度</dt><dd><p>使用此厚度值生成线条笔画。</p>
+</dd>
+<dt>不透明度</dt><dd><p>使用此不透明度生成线条笔画。</p>
+</dd>
+</dl>
+<section id="edge-types">
+<h3>边类型<a class="headerlink" href="#edge-types" title="Permalink to this heading"></a></h3>
+<p>线条画 可以识别不同的边类型。所选的边类型将包含在结果中。</p>
+<dl class="simple" id="bpy-types-lineartgpencilmodifier-shadow-region-filtering">
+<dt>照明过滤</dt><dd><p>选择来自光照或阴影区域的特征线。不会影响投影阴影和光线轮廓，因为它们位于边框处。</p>
+<dl class="field-list simple">
+<dt class="field-odd">无<span class="colon">:</span></dt>
+<dd class="field-odd"><p>不根据照明区域过滤任何线条。</p>
+</dd>
+<dt class="field-even">照亮<span class="colon">:</span></dt>
+<dd class="field-even"><p>仅从被照亮区域选择线条。</p>
+</dd>
+<dt class="field-odd">着色<span class="colon">:</span></dt>
+<dd class="field-odd"><p>仅从着色的区域中选择线条。</p>
+</dd>
+<dt class="field-even">照亮（封闭形状）<span class="colon">:</span></dt>
+<dd class="field-even"><p>仅从被照亮区域选择线条，并将轮廓、光线轮廓和阴影线组合到封闭形状内。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p class="rubric">创建</p>
+<span id="bpy-types-lineartgpencilmodifier-silhouette-filtering"></span><span id="bpy-types-lineartgpencilmodifier-use-contour"></span><dl class="simple" id="bpy-types-lineartgpencilmodifier-use-invert-silhouette">
+<dt>轮廓</dt><dd><p>从轮廓线生成笔画。当边缘变成正面/背面的分离线时。也可以通过单击反转按钮来反转轮廓。</p>
+<dl class="field-list simple">
+<dt class="field-odd">轮廓<span class="colon">:</span></dt>
+<dd class="field-odd"><p>从轮廓生成线条。</p>
+</dd>
+<dt class="field-even">剪影<span class="colon">:</span></dt>
+<dd class="field-even"><p>仅从整个源对象的轮廓生成线条。</p>
+</dd>
+<dt class="field-odd">单个剪影<span class="colon">:</span></dt>
+<dd class="field-odd"><p>从源对象的各个轮廓生成线条。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl id="bpy-types-lineartgpencilmodifier-use-crease">
+<dt>折痕</dt><dd><p>在边缘角度足够小的地方生成笔画。</p>
+<dl class="simple" id="bpy-types-lineartgpencilmodifier-crease-threshold">
+<dt>折痕阈值</dt><dd><p>Angles smaller than this will be treated as creases.
+Crease angle priority: object line art crease override &gt; mesh auto smooth angle &gt; line art default crease.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-lineartgpencilmodifier-use-intersection">
+<dt>交集</dt><dd><p>在面与面之间线条相交的地方生成笔画。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-lineartgpencilmodifier-use-material">
+<dt>材质边界</dt><dd><p>在用不同的材质分隔的交界线处生成笔画。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-lineartgpencilmodifier-use-edge-mark">
+<dt>边标记</dt><dd><p>从 Freestyle 边标记生成描边。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-lineartgpencilmodifier-use-loose">
+<dt>松散</dt><dd><p>为不形成 <a class="reference internal" href="../../../glossary/index.html#term-Face"><span class="xref std std-term">面</span></a> 的边生成笔画。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-lineartgpencilmodifier-use-light-contour">
+<dt>灯光轮廓</dt><dd><p>Generate light/shadow separation lines from a reference
+<a class="reference internal" href="#bpy-types-lineartgpencilmodifier-light-contour-object"><span class="std std-ref">Light Object</span></a>.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-lineartgpencilmodifier-use-shadow">
+<dt>投射阴影</dt><dd><p>使用光源物体投影轮廓线。</p>
+</dd>
+</dl>
+<p class="rubric">选项</p>
+<dl class="simple" id="bpy-types-lineartgpencilmodifier-use-overlap-edge-type-support">
+<dt>允许重叠类型</dt><dd><p>允许边缘具有多个重叠类型。这将为每个重叠类型创建单独的笔画。</p>
+</dd>
+</dl>
+</section>
+<section id="light-reference">
+<h3>灯参考<a class="headerlink" href="#light-reference" title="Permalink to this heading"></a></h3>
+<dl class="simple" id="bpy-types-lineartgpencilmodifier-light-contour-object">
+<dt>灯光物体</dt><dd><p>Use this light object to generate <a class="reference internal" href="#bpy-types-lineartgpencilmodifier-use-light-contour"><span class="std std-ref">Light Contour</span></a>.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-lineartgpencilmodifier-shadow-camera-size">
+<dt>阴影摄像机尺寸</dt><dd><p>此值表示正交摄像机的 &quot;正交缩放&quot;。如果将此缩放值的摄像机放在灯光位置，它将表示阴影 &quot;摄像机&quot; 的覆盖范围。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-lineartgpencilmodifier-shadow-camera-near">
+<dt>近端</dt><dd><p>阴影摄像机的近裁距离。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-lineartgpencilmodifier-shadow-camera-far">
+<dt>远端</dt><dd><p>阴影摄像机的远裁距离</p>
+</dd>
+</dl>
+</section>
+<section id="geometry-processing">
+<h3>几何处理<a class="headerlink" href="#geometry-processing" title="Permalink to this heading"></a></h3>
+<span id="bpy-types-lineartgpencilmodifier-source-camera"></span><dl class="simple" id="bpy-types-lineartgpencilmodifier-use-custom-camera">
+<dt>自定义</dt><dd><p>Use custom camera instead of the active camera for calculating strokes.
+Useful when baking multiple shots in different angles as well as for motion graphics effects.</p>
+</dd>
+<dt>重叠边作为轮廓</dt><dd><p>此选项允许将重叠边缘（例如来自边缘拆分修改器或导入的几何体，其中两个边缘占据完全相同的空间）绘制为轮廓。启用此选项将稍微减慢计算速度，但它将处理边缘重叠的情况，而不会产生错误的遮挡结果。</p>
+</dd>
+<dt>实例物体</dt><dd><p>此选项使粒子和其他实例化对象能够加载用于线条艺术计算。场景中存在大量实例化对象时，将对性能产生影响。</p>
+</dd>
+<dt>截断区间</dt><dd><p>启用后，线条艺术将在近或远裁剪平面切割模型的位置以轮廓类型生成裁剪线。否则不会有线条。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-lineartgpencilmodifier-use-crease-on-smooth">
+<dt>平滑上的折痕</dt><dd><p>允许在光滑的表面内部显示折痕边。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-lineartgpencilmodifier-use-crease-on-sharp">
+<dt>锐边上的折痕</dt><dd><p>允许在尖锐的边缘出现折痕。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-lineartgpencilmodifier-use-back-face-culling">
+<dt>强制背面剔除</dt><dd><p>移除所有背面以加快计算速度，这将创建与禁用时不同的遮挡级别的边缘。</p>
+</dd>
+</dl>
+</section>
+<section id="occlusion">
+<h3>遮挡<a class="headerlink" href="#occlusion" title="Permalink to this heading"></a></h3>
+<figure class="align-right" id="id2">
+<img alt="../../../_images/grease-pencil_modifiers_generate_line-art_occlusion-panel.png" src="../../../_images/grease-pencil_modifiers_generate_line-art_occlusion-panel.png" />
+<figcaption>
+<p><span class="caption-text">遮挡子面板。</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<dl class="simple">
+<dt>范围</dt><dd><p>如果启用，修改器将选择在起始值和结束值之间具有遮挡级别的线。</p>
+</dd>
+<dt>水平</dt><dd><p>希望遮挡级别被选择为线条画结果。值为0表示可见线（无遮挡）。值为1意味着选择正好被一层面遮挡的线。</p>
+</dd>
+</dl>
+<section id="material-mask">
+<h4>材质遮罩<a class="headerlink" href="#material-mask" title="Permalink to this heading"></a></h4>
+<p>如果启用，Line Art将仅选择材质已设置特定遮挡掩码的某些面遮挡的线条。</p>
+<dl class="simple">
+<dt>遮罩组</dt><dd><p>要选择已被选定的 <a class="reference internal" href="../../../render/materials/line_art.html#bpy-types-materiallineart-use-material-mask-bits"><span class="std std-ref">材质遮罩</span></a> 遮挡的边缘。</p>
+</dd>
+<dt>完全匹配</dt><dd><p>如果启用，将仅选择使用精确遮罩位组合遮挡的线。否则，将选择被任何一个指定的材质遮罩遮挡的线条。</p>
+</dd>
+</dl>
+<figure class="align-right" id="id3">
+<img alt="../../../_images/grease-pencil_modifiers_generate_line-art_transparency-mask.png" src="../../../_images/grease-pencil_modifiers_generate_line-art_transparency-mask.png" />
+<figcaption>
+<p><span class="caption-text">演示材质遮罩的使用。</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="intersection">
+<h3>交叉<a class="headerlink" href="#intersection" title="Permalink to this heading"></a></h3>
+<p>允许您选择两个集合之间相交的边缘。</p>
+<dl class="simple" id="bpy-types-lineartgpencilmodifier-use-intersection-mask">
+<dt>集合遮罩</dt><dd><p>从 <a class="reference internal" href="../../../scene_layout/collections/collections.html#bpy-types-collection-lineart-intersection-mask"><span class="std std-ref">线条画集合</span></a> 属性中匹配的遮罩位。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-lineartgpencilmodifier-use-intersection-match">
+<dt>完全匹配</dt><dd><p>需要匹配所有交叉遮罩，而非仅仅一个。</p>
+</dd>
+</dl>
+<figure class="align-default" id="id4">
+<img alt="../../../_images/grease-pencil_modifiers_generate_line-art_collection-mask.png" src="../../../_images/grease-pencil_modifiers_generate_line-art_collection-mask.png" />
+<figcaption>
+<p><span class="caption-text">集合遮罩的用法演示。</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="face-mark-filtering">
+<span id="bpy-types-lineartgpencilmodifier-use-face-mark"></span><h3>面标记过滤<a class="headerlink" href="#face-mark-filtering" title="Permalink to this heading"></a></h3>
+<figure class="align-default" id="id5">
+<img alt="../../../_images/grease-pencil_modifiers_generate_line-art_face-mark-filtering-panel.png" src="../../../_images/grease-pencil_modifiers_generate_line-art_face-mark-filtering-panel.png" />
+<figcaption>
+<p><span class="caption-text">面标记过滤子面板。</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p><em>面标记过滤</em> 可用于通过使用Freestyle面标记手动控制哪些功能边缘产生笔画。</p>
+<dl class="simple" id="bpy-types-lineartgpencilmodifier-use-face-mark-invert">
+<dt>反转</dt><dd><p>反转面标记过滤。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-lineartgpencilmodifier-use-face-mark-boundaries">
+<dt>边界</dt><dd><p>基于面标记边界过滤特征线。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-lineartgpencilmodifier-use-face-mark-keep-contour">
+<dt>保持轮廓</dt><dd><p>过滤时保留等高线。</p>
+</dd>
+</dl>
+<figure class="align-default">
+<img alt="../../../_images/grease-pencil_modifiers_generate_line-art_face-mark-filtering-example.png" src="../../../_images/grease-pencil_modifiers_generate_line-art_face-mark-filtering-example.png" />
+</figure>
+</section>
+<section id="chaining">
+<h3>链形<a class="headerlink" href="#chaining" title="Permalink to this heading"></a></h3>
+<figure class="align-right" id="id6">
+<img alt="../../../_images/grease-pencil_modifiers_generate_line-art_chaining-panel.png" src="../../../_images/grease-pencil_modifiers_generate_line-art_chaining-panel.png" />
+<figcaption>
+<p><span class="caption-text">链形子面板。</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<dl>
+<dt>链</dt><dd><dl>
+<dt>与轮廓的交集</dt><dd><p>允许将交叉线与轮廓线链接在一起。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>启用此选项将导致交叉边缘类型不明确。无法与附近的任何轮廓线连锁的交叉线将保持为交叉线。</p>
+</div>
+</dd>
+<dt>全部线条</dt><dd><p>启用此选项将导致所有线条具有相同类型的轮廓并被链接在一起。</p>
+</dd>
+<dt>松散边</dt><dd><p>允许将不构成面的浮动边链接在一起。</p>
+</dd>
+<dt>松散边作为轮廓</dt><dd><p>不形成面的边将被归类为轮廓线。</p>
+</dd>
+<dt>保留细节</dt><dd><p>不要在每次遮挡变化时分开，保持最初链条上的小细节。当不保存细节时，将产生更顺畅的结果。</p>
+</dd>
+<dt>几何空间</dt><dd><p>对链式而非图像空间使用几何距离。</p>
+</dd>
+</dl>
+</dd>
+<dt>图像阈值</dt><dd><p>如果二维图像间距在指定的阈值内，则允许将短段的端点链接在一起。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-lineartgpencilmodifier-smooth-tolerance">
+<dt>平滑容差</dt><dd><p>应用于锯齿状链条的平滑强度。</p>
+</dd>
+<dt>拐角拆分</dt><dd><p>以此角度指定的尖锐 &quot;转弯&quot; 点分割链条。</p>
+</dd>
+</dl>
+</section>
+<section id="vertex-weight-transfer">
+<h3>顶点权重传递<a class="headerlink" href="#vertex-weight-transfer" title="Permalink to this heading"></a></h3>
+<figure class="align-right" id="id7">
+<img alt="../../../_images/grease-pencil_modifiers_generate_line-art_vertex-weight-panel.png" src="../../../_images/grease-pencil_modifiers_generate_line-art_vertex-weight-panel.png" />
+<figcaption>
+<p><span class="caption-text">顶点权重传递子面板。</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<dl class="simple">
+<dt>过滤源</dt><dd><p>如果源网格具有名称以此文本开头的顶点组，则顶点权重信息将传输到蜡笔笔画中的权重组中。</p>
+</dd>
+<dt>匹配输出</dt><dd><p>将过滤的对象顶点权重传输到蜡笔权重组中，其名称与过滤的对象顶点权重组名称相同。</p>
+</dd>
+<dt>目标</dt><dd><p>如果 <em>匹配输出</em> 关闭，则必须指定目标顶点组。如果有多个权重组复制到目标中，则将最大权重值复制到目标中。</p>
+</dd>
+</dl>
+</section>
+<section id="composition">
+<h3>合成<a class="headerlink" href="#composition" title="Permalink to this heading"></a></h3>
+<figure class="align-default" id="id8">
+<img alt="../../../_images/grease-pencil_modifiers_generate_line-art_composition-panel.png" src="../../../_images/grease-pencil_modifiers_generate_line-art_composition-panel.png" />
+<figcaption>
+<p><span class="caption-text">合成子面板。</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<dl id="bpy-types-lineartgpencilmodifier-overscan">
+<dt>过扫描</dt><dd><p>为了优化渲染，Blender仅渲染处于相机视图中的对象边缘的笔触。然而，这种优化可能会导致笔画在图像的边缘处突然结束。</p>
+<p>此值通过在摄像机视图外添加边距以继续计算笔画来防止此错误。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-lineartgpencilmodifier-use-image-boundary-trimming">
+<dt>图像边界修剪</dt><dd><p>修剪图像边界上的所有边线（包括过扫描区域）。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-lineartgpencilmodifier-stroke-depth-offset">
+<dt>深度偏移</dt><dd><p>稍微将笔画朝向摄像机移动，以避免剪裁，同时保留视口的深度。此选项不可用，除非 <a class="reference internal" href="../../../scene_layout/object/properties/display.html#bpy-types-object-show-in-front"><span class="std std-ref">显示在前面</span></a> 被禁用。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-lineartgpencilmodifier-use-offset-towards-custom-camera">
+<dt>朝向自定义摄像机</dt><dd><p>将笔画偏移到所选相机（参见上面的 <em>自定义相机</em> ）而不是活动相机。</p>
+</dd>
+</dl>
+</section>
+<section id="bake">
+<h3>烘焙<a class="headerlink" href="#bake" title="Permalink to this heading"></a></h3>
+<figure class="align-right" id="id9">
+<img alt="../../../_images/grease-pencil_modifiers_generate_line-art_baking-panel.png" src="../../../_images/grease-pencil_modifiers_generate_line-art_baking-panel.png" />
+<figcaption>
+<p><span class="caption-text">烘焙选项。</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<dl>
+<dt>烘焙线条画</dt><dd><p>Bakes Line Art strokes for active Grease Pencil object within the <em>start</em>, <em>end</em> frame range in scene.
+Bake Line Art (All) bakes all Grease Pencil objects that contains at least one Line Art modifier.
+After baking, baked Line Art modifiers will be deactivated automatically.</p>
+</dd>
+<dt>清除已烘焙线条画</dt><dd><p>Clears baked line art frames within the scene frame range for active Grease Pencil object.
+Clear Baked Line Art (All) applies the same operation for all Grease Pencil objects that
+contains at least one Line Art modifier.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>如果您手动绘制了线条画运行位置的帧范围中的任何内容，此操作也将清除这些笔画！</p>
+</div>
+</dd>
+<dt>不清除继续</dt><dd><p>在不清除烘焙笔画的情况下重新激活特定的线条画修改器。这对于分开处理框架的多个部分非常有用。</p>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="length.html" class="btn btn-neutral float-left" title="长度修改器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mirror.html" class="btn btn-neutral float-right" title="镜像修改器" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/grease_pencil/modifiers/generate/line_art.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/grease_pencil/modifiers/generate/line_art.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fgrease_pencil/modifiers/generate/line_art.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fgrease_pencil/modifiers/generate/line_art.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

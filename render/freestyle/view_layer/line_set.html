@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>线条集 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/freestyle/view_layer/line_set.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/js/version_switch.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../copyright.html" />
+    <link rel="next" title="线条样式" href="line_style/index.html" />
+    <link rel="prev" title="Freestyle" href="freestyle.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../eevee/index.html">EEVEE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cycles/index.html">Cycles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../workbench/index.html">工作台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cameras.html">摄像机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lights/index.html">灯光</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../materials/index.html">材质</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../shader_nodes/index.html">着色节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../color_management.html">色彩管理</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Freestyle</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../render.html">渲染属性</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">视图层属性</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="freestyle.html">Freestyle</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">线条集</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#visibility">可见性</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#edge-types">边类型</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#edge-marks">边标记</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#face-marks">面标记</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#collection">集合</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="line_style/index.html">线条样式</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../material.html">材质属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../python.html">Python 脚本</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../layers/index.html">层 &amp; 通道</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../output/index.html">渲染输出</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">渲染</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">Freestyle</a></li>
+          <li class="breadcrumb-item"><a href="index.html">视图层属性</a></li>
+      <li class="breadcrumb-item active">线条集</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="line-set">
+<span id="bpy-types-freestylelineset"></span><span id="bpy-types-linesets"></span><h1>线条集<a class="headerlink" href="#line-set" title="Permalink to this heading"></a></h1>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">属性 ‣ 视图层 ‣ Freestyle 线条集</span></p>
+</dd>
+</dl>
+</div>
+<p>在 Freestyle 检测到的线条（边缘）中，线条集选择哪些线条（边缘）将通过各种方法使用其附加的 <a class="reference internal" href="line_style/introduction.html"><span class="doc">线条样式</span></a> 进行渲染。</p>
+<figure class="align-default" id="id2">
+<img alt="../../../_images/render_freestyle_parameter-editor_line-set_panel.png" src="../../../_images/render_freestyle_parameter-editor_line-set_panel.png" />
+<figcaption>
+<p><span class="caption-text">Freestyle 线条集面板。</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<dl class="simple" id="bpy-types-freestylelineset-select-by-image-border">
+<dt>选择依据</dt><dd><dl class="simple">
+<dt>图像边界</dt><dd><p>使 Freestyle 在计算线条时仅考虑图像边框内的几何图形。这减少了渲染时间，但在将几何体移出摄像机视图并移入摄像机视图时会增加连续性问题。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<section id="visibility">
+<h2>可见性<a class="headerlink" href="#visibility" title="Permalink to this heading"></a></h2>
+<dl id="bpy-types-freestylelineset-visibility">
+<dt>类型</dt><dd><p>确定如何使用可见性进行要素边选择。</p>
+<dl class="field-list">
+<dt class="field-odd">可见<span class="colon">:</span></dt>
+<dd class="field-odd"><p>仅渲染被没有曲面遮挡的线条。</p>
+</dd>
+<dt class="field-even">隐藏<span class="colon">:</span></dt>
+<dd class="field-even"><p>将渲染被至少一个曲面遮挡的线条。</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../../../_images/render_freestyle_parameter-editor_line-set_visibility-hidden-edges.png"><img alt="../../../_images/render_freestyle_parameter-editor_line-set_visibility-hidden-edges.png" src="../../../_images/render_freestyle_parameter-editor_line-set_visibility-hidden-edges.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-text">Proof of concept of visible and hidden edges by LightBWK
+(<a class="reference external" href="https://archive.blender.org/wiki/index.php/File:HiddenCreaseEdgeMark.zip">blend-file</a>).</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</dd>
+<dt class="field-odd">QI 范围<span class="colon">:</span></dt>
+<dd class="field-odd"><p>QI stands for <em>Quantitative Invisibility</em>. Lines occluded by
+a number of surfaces in the given range are rendered.</p>
+<span id="bpy-types-freestylelineset-qi-start"></span><dl class="simple" id="bpy-types-freestylelineset-qi-end">
+<dt>起始、结束</dt><dd><p>要渲染的线条的最小/最大遮挡表面数。</p>
+</dd>
+</dl>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../../../_images/render_freestyle_parameter-editor_line-set_visibility-qi-range.png"><img alt="../../../_images/render_freestyle_parameter-editor_line-set_visibility-qi-range.png" src="../../../_images/render_freestyle_parameter-editor_line-set_visibility-qi-range.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-text">QI Range proof of concept demo, Start: 3, End: 7, by LightBWK
+(<a class="reference external" href="https://archive.blender.org/wiki/index.php/File:QI-Range.zip">blend-file</a>).</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+<section id="edge-types">
+<span id="bpy-types-freestylelineset-select-by-edge-types"></span><span id="bpy-types-freestylelineset-exclude"></span><h2>边类型<a class="headerlink" href="#edge-types" title="Permalink to this heading"></a></h2>
+<p>边类型是从几何中选择线的基本算法。使用参数编辑器时，必须至少选择一种边缘类型才能获得渲染输出，但可以将几种边缘类型组合在一个行集中。还可以通过按边类型旁边的 <em>X</em> 从计算中排除这些边类型。</p>
+<figure class="align-center" id="id5">
+<a class="reference internal image-reference" href="../../../_images/render_freestyle_parameter-editor_line-set_edge-types-basic.png"><img alt="../../../_images/render_freestyle_parameter-editor_line-set_edge-types-basic.png" src="../../../_images/render_freestyle_parameter-editor_line-set_edge-types-basic.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-text">Examples of some basic edge types:
+Silhouette (green), Crease (black), Border (blue) and Edge Marks (red)
+(<a class="reference external" href="https://archive.blender.org/wiki/index.php/File:EdgeType.zip">blend-file</a> by LightBWK).</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<dl id="bpy-types-freestylelineset-select-silhouette">
+<dt>类型</dt><dd><dl class="simple">
+<dt>剪影</dt><dd><p>通过渲染表面法线在指向摄像机和远离摄像机之间过渡的线条，在封闭对象周围绘制轮廓。它通常对有机物体（如苏珊娜和球体）有好处，而对锋利的边缘（如盒子）则不好。它无法渲染打开的网格对象，如开放的圆柱体和平面。</p>
+</dd>
+</dl>
+<dl id="bpy-types-freestylelineset-select-crease">
+<dt>折痕</dt><dd><p>仅显示其相邻面形成的角度比定义的视图的 <em>折痕角度</em> 更尖锐的边缘。</p>
+<figure class="align-center" id="id6">
+<a class="reference internal image-reference" href="../../../_images/render_freestyle_parameter-editor_line-set_edge-types-crease.png"><img alt="../../../_images/render_freestyle_parameter-editor_line-set_edge-types-crease.png" src="../../../_images/render_freestyle_parameter-editor_line-set_edge-types-crease.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-text">Crease Angle proof of concept for 121° by LightBWK
+(<a class="reference external" href="https://archive.blender.org/wiki/index.php/File:CreaseAngle.zip">blend-file</a>).</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-freestylelineset-select-border">
+<dt>边界</dt><dd><p>边框显示打开的网格边，即仅属于一个面的边。一个开放的圆柱体在顶部和底部有开放的边缘，一个平面在周围都是开放的。苏珊娜的眼眶是一个开放的边缘。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-freestylelineset-select-edge-mark">
+<dt>边标记</dt><dd><p>渲染标记的边缘。有关详细信息，请参阅 <a class="reference internal" href="#edge-marks">边标记</a>。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-freestylelineset-select-contour">
+<dt>轮廓</dt><dd><p>在每个对象周围绘制线条，将其与后面的其他对象或场景背景分开。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-freestylelineset-select-external-contour">
+<dt>外部轮廓</dt><dd><p>在所有对象周围绘制线条，将它们与场景背景分开，但不彼此分离。</p>
+</dd>
+</dl>
+<figure class="align-center" id="id7">
+<a class="reference internal image-reference" href="../../../_images/render_freestyle_parameter-editor_line-set_edge-types-contour.png"><img alt="../../../_images/render_freestyle_parameter-editor_line-set_edge-types-contour.png" src="../../../_images/render_freestyle_parameter-editor_line-set_edge-types-contour.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-text">左对：轮廓；右对：外部轮廓。</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<dl class="simple" id="bpy-types-freestylelineset-select-material-boundary">
+<dt>材质边界</dt><dd><p>绘制两种材质在同一对象上相交的线条。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-freestylelineset-select-suggestive-contour">
+<dt>影射轮廓</dt><dd><p>Draws some lines which would form the <em>Silhouette</em> of the mesh if the view point was shifted.
+Depends on your view map settings for <em>Kr Derivative Epsilon</em> and <em>Sphere Radius</em>
+(further information: <a class="reference external" href="https://archive.blender.org/wiki/index.php/File:Manual-2.6-Render-Freestyle-PrincetownLinestyle.pdf">File:Manual-2.6-Render-Freestyle-PrincetownLinestyle.pdf</a>).</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-freestylelineset-select-ridge-valley">
+<dt>脊线 &amp; 谷线</dt><dd><p>绘制标记山脊和山谷波峰的线条，即表面曲率处于最小或最大值的位置。取决于您的 <em>球体半径</em> 视图地图设置。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<section id="edge-marks">
+<h3>边标记<a class="headerlink" href="#edge-marks" title="Permalink to this heading"></a></h3>
+<p>在编辑模式下，您可以标记 &quot;Freestyl 边&quot;，就像将 &quot;缝合边&quot; 标记用于UV展开或 &quot;锐边&quot; 用于边缘分割一样。当您选择 <em>边标记</em> 时，可以渲染这些标记的边缘。</p>
+<p>具体操作如下：</p>
+<ol class="arabic simple">
+<li><p>选择网格对象并进入 <em>编辑模式</em>。</p></li>
+<li><p>选择要标记的边缘。</p></li>
+<li><p>按下 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">E</kbd></kbd> 然后选择 <em>标记 Freestyle 边</em>。</p></li>
+</ol>
+<p>当您想要沿特定网格边缘绘制线条时，边缘标记非常有用。下面的示例说明了边缘标记的使用。</p>
+<figure class="align-center" id="id8">
+<a class="reference internal image-reference" href="../../../_images/render_freestyle_parameter-editor_line-set_edge-marks-mark-freestyle-edge.png"><img alt="../../../_images/render_freestyle_parameter-editor_line-set_edge-marks-mark-freestyle-edge.png" src="../../../_images/render_freestyle_parameter-editor_line-set_edge-marks-mark-freestyle-edge.png" style="width: 60%;" /></a>
+<figcaption>
+<p><span class="caption-text">在编辑模式下标记 Freestyle 边，边标记以绿色突出显示。</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>启用 <em>边标记</em> 后，将始终呈现以前标记的线条。您可以看到黑色等高线和用边缘标记制成的蓝色线条。</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id9">
+<img alt="../../../_images/render_freestyle_parameter-editor_line-set_edge-marks-example-1.png" src="../../../_images/render_freestyle_parameter-editor_line-set_edge-marks-example-1.png" />
+<figcaption>
+<p><span class="caption-text">不带边缘标记的渲染。</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id10">
+<img alt="../../../_images/render_freestyle_parameter-editor_line-set_edge-marks-example-2.png" src="../../../_images/render_freestyle_parameter-editor_line-set_edge-marks-example-2.png" />
+<figcaption>
+<p><span class="caption-text">在启用边缘标记的情况下进行渲染。</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<p>边缘标记有什么好处？</p>
+<ul class="simple">
+<li><p>当需要在几乎平坦的平面上渲染标记时，当其他边类型无法检测到任何线条时。</p></li>
+<li><p>当您想要完全控制边缘渲染时。通常用于方形形状的边缘。</p></li>
+<li><p>标记要渲染的整个基础网格以进行基础网格预览。</p></li>
+</ul>
+<p>边缘标记有什么不好用？</p>
+<ul class="simple">
+<li><p>圆形外边缘（改用 <em>轮廓/外部轮廓/剪影</em>）。</p></li>
+</ul>
+</section>
+</section>
+<section id="face-marks">
+<span id="bpy-types-freestylelineset-select-by-face-marks"></span><h2>面标记<a class="headerlink" href="#face-marks" title="Permalink to this heading"></a></h2>
+<p>面标对于从网格的某些区域移除线条非常有用。</p>
+<p>要设置面标记：</p>
+<ol class="arabic simple">
+<li><p>选择网格对象并进入 <em>编辑模式</em>。</p></li>
+<li><p>选择要标记的面。</p></li>
+<li><p>按下 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">F</kbd></kbd> 然后选择 <span class="menuselection">面数据 ‣ 标记 Freestyle 面</span>。</p></li>
+</ol>
+<p>在此示例中，默认立方体的两个面被标记为类似于左侧的图像。右侧是未激活人脸标记的渲染。</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id11">
+<img alt="../../../_images/render_freestyle_parameter-editor_line-set_face-marks-example-1.png" src="../../../_images/render_freestyle_parameter-editor_line-set_face-marks-example-1.png" />
+<figcaption>
+<p><span class="caption-text">已标记的面（编辑模式）。</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id12">
+<img alt="../../../_images/render_freestyle_parameter-editor_line-set_face-marks-example-2.png" src="../../../_images/render_freestyle_parameter-editor_line-set_face-marks-example-2.png" />
+<figcaption>
+<p><span class="caption-text">渲染输出。</span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<p>可以通过包含和面选项来控制线选择：</p>
+<dl class="simple" id="bpy-types-freestylelineset-face-mark-negation">
+<dt>否定</dt><dd><p>是否包括或排除与线集中定义的面标记条件匹配的边。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-freestylelineset-face-mark-condition">
+<dt>条件</dt><dd><dl class="field-list simple">
+<dt class="field-odd">单面<span class="colon">:</span></dt>
+<dd class="field-odd"><p>（取消）选择所有两个相邻面都被标记的边。</p>
+</dd>
+<dt class="field-even">双面<span class="colon">:</span></dt>
+<dd class="field-even"><p>(De)select all edges which have both of their neighbor faces marked.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id13">
+<img alt="../../../_images/render_freestyle_parameter-editor_line-set_face-marks-example-3.png" src="../../../_images/render_freestyle_parameter-editor_line-set_face-marks-example-3.png" />
+<figcaption>
+<p><span class="caption-text">包容，一面。</span><a class="headerlink" href="#id13" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id14">
+<img alt="../../../_images/render_freestyle_parameter-editor_line-set_face-marks-example-4.png" src="../../../_images/render_freestyle_parameter-editor_line-set_face-marks-example-4.png" />
+<figcaption>
+<p><span class="caption-text">包容，双面。</span><a class="headerlink" href="#id14" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+<tr class="row-even"><td><figure class="align-default" id="id15">
+<img alt="../../../_images/render_freestyle_parameter-editor_line-set_face-marks-example-5.png" src="../../../_images/render_freestyle_parameter-editor_line-set_face-marks-example-5.png" />
+<figcaption>
+<p><span class="caption-text">独家，一张脸。</span><a class="headerlink" href="#id15" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id16">
+<img alt="../../../_images/render_freestyle_parameter-editor_line-set_face-marks-example-6.png" src="../../../_images/render_freestyle_parameter-editor_line-set_face-marks-example-6.png" />
+<figcaption>
+<p><span class="caption-text">独家，双面。</span><a class="headerlink" href="#id16" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="collection">
+<span id="bpy-types-freestylelineset-select-by-collection"></span><h2>集合<a class="headerlink" href="#collection" title="Permalink to this heading"></a></h2>
+<p>根据对象属于 <a class="reference internal" href="../../../scene_layout/collections/index.html"><span class="doc">集合</span></a>，包含或排除对象以进行行计算。</p>
+<dl class="simple" id="bpy-types-freestylelineset-collection">
+<dt>线条集集合</dt><dd><p>要使用的对象集合的名称。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-freestylelineset-collection-negation">
+<dt>否定</dt><dd><p>是否在此行集中的这些对象中包括或排除行。</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="freestyle.html" class="btn btn-neutral float-left" title="Freestyle" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="line_style/index.html" class="btn btn-neutral float-right" title="线条样式" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/render/freestyle/view_layer/line_set.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/render/freestyle/view_layer/line_set.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Frender/freestyle/view_layer/line_set.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Frender/freestyle/view_layer/line_set.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

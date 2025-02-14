@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>图像为平面 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/addons/import_export/images_as_planes.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="导入调色板（Import Palettes）" href="palettes.html" />
+    <link rel="prev" title="FBX" href="scene_fbx.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">插件</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#add-ons-category-listings">插件类别列表</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../3d_view/index.html">3D 视图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../add_curve/index.html">添加曲线</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../add_mesh/index.html">添加网格</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../baking/index.html">烘焙</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../camera/index.html">摄像机</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../development/index.html">开发</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">导入 - 导出</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="node_shaders_info.html">节点着色器的导入与导出</a></li>
+<li class="toctree-l4"><a class="reference internal" href="coat3D.html">3D-Coat 应用链接</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh_atomic.html">Atomic Blender (PDB/XYZ)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="anim_bvh.html">生物视觉运动捕捉 (BVH)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scene_dxf.html">AutoCAD DXF</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scene_3ds.html">Autodesk 3DS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="anim_camera.html">摄像机动画</a></li>
+<li class="toctree-l4"><a class="reference internal" href="paper_model.html">纸模型（Paper Model）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pc2.html">点缓存（Pointcache (pc2)）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scene_fbx.html">FBX</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">图像为平面</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#properties">属性</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#import-options">导入选项</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#compositing-nodes">合成节点</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#material-settings">材质设置</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#texture-settings">纹理设置</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#position">位置</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#plane-dimensions">平面尺寸</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#orientation">坐标系</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="palettes.html">导入调色板（Import Palettes）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shape_mdd.html">NewTek MDD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="anim_nuke_chan.html">Nuke 动画 (chan)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh_stl.html">STL</a></li>
+<li class="toctree-l4"><a class="reference internal" href="curve_svg.html">可缩放矢量图形 (SVG)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh_ply.html">斯坦福 PLY</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh_uv_layout.html">UV布局</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scene_obj.html">Wavefront OBJ</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scene_x3d.html">Web3D X3D/VRML2</a></li>
+<li class="toctree-l4"><a class="reference internal" href="scene_gltf2.html">glTF 2.0</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../interface/index.html">界面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lighting/index.html">光照</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../materials/index.html">材质</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/index.html">网格</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node/index.html">节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../object/index.html">物体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../paint/index.html">绘制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sequencer/index.html">序列编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../system/index.html">系统</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../uv/index.html">UV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../video_tools/index.html">视频工具</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">插件</a></li>
+          <li class="breadcrumb-item"><a href="index.html">导入 - 导出</a></li>
+      <li class="breadcrumb-item active">图像为平面</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="images-as-planes">
+<h1>图像为平面<a class="headerlink" href="#images-as-planes" title="Permalink to this heading"></a></h1>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">类别<span class="colon">:</span></dt>
+<dd class="field-odd"><p>导入 - 导出</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">文件 ‣ 导入 ‣ 图像为平面</span>，<span class="menuselection">3D 视口 ‣ 添加 ‣ 图像 ‣ 图像为平面</span></p>
+</dd>
+</dl>
+</div>
+<figure class="align-right" id="id2">
+<a class="reference internal image-reference" href="../../_images/addons_import-export_images-as-planes_panel.png"><img alt="../../_images/addons_import-export_images-as-planes_panel.png" src="../../_images/addons_import-export_images-as-planes_panel.png" style="width: 200px;" /></a>
+<figcaption>
+<p><span class="caption-text">属性面板。</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>这个插件导入图像并以它们作为纹理创建平面。它可以自动创建一个平面，调整它的大小以适应图像的尺寸，并为其添加具有图像纹理的材质。平面、材质和纹理的名称来自图像名称。</p>
+<p>你可以导入单张图片、多张图片，或者一个图片序列/电影剪辑。选择单张图片将创建单个平面，选择多张图片将创建与所选图片相同数量的平面，可以相互叠加，也可以相互间隔。选择一个电影片段或一个图像序列将创建一个带有动画的单一平面。</p>
+<section id="properties">
+<h2>属性<a class="headerlink" href="#properties" title="Permalink to this heading"></a></h2>
+<p>你可以将导入的当前设置保存为一个<a class="reference internal" href="../../interface/window_system/tabs_panels.html#ui-presets"><span class="std std-ref">操作预设</span></a>。</p>
+<section id="import-options">
+<h3>导入选项<a class="headerlink" href="#import-options" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>相对路径</dt><dd><p>使用<a class="reference internal" href="../../files/blend/open_save.html#files-blend-relative-paths"><span class="std std-ref">相对文件路径</span></a>链接到图像文件。</p>
+</dd>
+<dt>强制重载</dt><dd><p>如果图像文件已作为图像数据块存在，则将其重新载入。</p>
+</dd>
+<dt>动画图像序列</dt><dd><p>以动画<a class="reference internal" href="../../video_editing/edit/montage/strips/image.html"><span class="doc">图像序列</span></a>的形式导入按顺序编号的图像，而不是导入单独的平面。它们将作为单一平面上的 <em>裁剪</em> 纹理导入。帧范围将自动设置，但可以稍后更改。</p>
+</dd>
+</dl>
+</section>
+<section id="compositing-nodes">
+<h3>合成节点<a class="headerlink" href="#compositing-nodes" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>设置拐角钉固</dt><dd><p>Add a compositing setup of the Image Texture, Scale, and <a class="reference internal" href="../../compositing/types/distort/corner_pin.html"><span class="doc">Corner Pin</span></a>
+nodes to inject a warped view of the image into the compositor output. The add-on adds drivers to
+the corner values of the Corner Pin node so that transforms of the plane and camera drive them.
+Make sure to have an active camera in the scene before the import.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>You may want to disable the plane object from the final render to prevent it from overlapping the image in
+the composite.</p>
+</div>
+</section>
+<section id="material-settings">
+<h3>材质设置<a class="headerlink" href="#material-settings" title="Permalink to this heading"></a></h3>
+<p>“图像为平面” 设置一个材质用以显示图像。您可以在导入前指定材质的类型及相关设置。</p>
+<dl>
+<dt>材质类型</dt><dd><dl class="field-list">
+<dt class="field-odd">原理化<span class="colon">:</span></dt>
+<dd class="field-odd"><p>材质将使用一个<a class="reference internal" href="../../render/shader_nodes/shader/principled.html"><span class="doc">原理化 BSDF</span></a> 着色器节点作为其主要构成。一个链接着导入图像的图像纹理节点将连接到原理化 BSDF 节点的基础色接口。</p>
+</dd>
+<dt class="field-even">无明暗<span class="colon">:</span></dt>
+<dd class="field-even"><p>无明暗材质是指对来自其他对象的光线不作响应，并且在任何照明环境中总是保持相同的颜色。此选项创建一个材质，其节点组是由光程节点控制的、漫射 BSDF 着色器与自发光着色器的混合。</p>
+</dd>
+<dt class="field-odd">自发光<span class="colon">:</span></dt>
+<dd class="field-odd"><p>此材质以一个原理化 BSDF 着色器作为其主要构成，但图像纹理节点的颜色输出将连接到自发光颜色接口而非基础色接口。</p>
+<dl class="simple">
+<dt>强度</dt><dd><p>设置自发光的强度。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>混合模式</em> 和 <em>阴影模式</em> 选项专门针对 EEVEE 渲染器。 对各选项的解释详见<span class="xref std std-doc">材质设置</span>。</p>
+</div>
+<dl class="simple">
+<dt>混合模式</dt><dd><p>设置材质的透明混合模式。</p>
+</dd>
+<dt>显示背面</dt><dd><p>显示透明部分的背面。</p>
+</dd>
+<dt>阴影模式</dt><dd><p>设置材质的阴影模式。</p>
+</dd>
+<dt>背面剔除</dt><dd><p>隐藏平面的背面。</p>
+</dd>
+<dt>覆盖材质</dt><dd><p>插件会根据导入图像的名称来设置新材质的名称。然而，如果已经存在一个同名材质，Blender 将在材质名称后附加一串数字以避免冲突。此 <em>覆盖材质</em> 选项可使其在此情况下覆盖同名的已存在材质。</p>
+</dd>
+</dl>
+</section>
+<section id="texture-settings">
+<h3>纹理设置<a class="headerlink" href="#texture-settings" title="Permalink to this heading"></a></h3>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>对各选项的详细解释请参见<a class="reference internal" href="../../render/shader_nodes/textures/image.html"><span class="doc">图像纹理节点</span></a>。</p>
+</div>
+<dl class="simple">
+<dt>插值</dt><dd><p>设置缩放图像的方式。</p>
+</dd>
+<dt>扩展(名)</dt><dd><p>设置图像超出原始边界后的处理方式。</p>
+</dd>
+<dt>使用 Alpha</dt><dd><p>使用图像的 alpha 通道以实现透明。</p>
+</dd>
+<dt>自动刷新</dt><dd><p>在帧变化时自动刷新 3D 视图中图像。</p>
+</dd>
+</dl>
+</section>
+<section id="position">
+<h3>位置<a class="headerlink" href="#position" title="Permalink to this heading"></a></h3>
+<p>“图像到平面” 在 3D 游标位置创建平面。通过 <em>偏移平面</em>，多个平面沿着 <em>局部轴向</em> 设置的轴向，起始于 3D 游标位置，通过 <em>偏移量</em> 设置的间隔距离来放置。</p>
+<dl class="simple">
+<dt>偏移平面</dt><dd><p>通过设置偏移量来放置多个平面。如果禁用，则将在同一位置创建所有平面。</p>
+</dd>
+<dt>局部轴</dt><dd><p>选择一个局部轴向（不是世界轴向）用以偏移平面。例如，如果您选择了 <em>X+</em>，平面将沿着其自身 X 正方向轴向放置。</p>
+</dd>
+<dt>偏移量</dt><dd><p>设置各平面间的距离。</p>
+</dd>
+</dl>
+</section>
+<section id="plane-dimensions">
+<h3>平面尺寸<a class="headerlink" href="#plane-dimensions" title="Permalink to this heading"></a></h3>
+<p>设置如何定义平面的尺寸。</p>
+<dl>
+<dt>绝对</dt><dd><p>平面尺寸将取决于 <em>高度</em> 中设置的数值。宽度将与高度成正比例。例如，当高度是默认值 1 米时，一个 800 x 600 像素的图像对应宽度为 1 / 600 × 800 即 1.33 米。</p>
+<dl class="simple">
+<dt>高度</dt><dd><p>设置平面的高度。</p>
+</dd>
+</dl>
+</dd>
+<dt>摄像机相对</dt><dd><p>平面尺寸将被设置为适应或填充摄像机框。这将自动把 <em>对齐</em> 选项设置为 <em>面向摄像机</em>。请确保在导入图像前已有一个活动摄像机。</p>
+<dl class="field-list simple">
+<dt class="field-odd">适配<span class="colon">:</span></dt>
+<dd class="field-odd"><p>在不改变宽高比的前提下，缩放图像以适应摄像机。</p>
+</dd>
+<dt class="field-even">填充<span class="colon">:</span></dt>
+<dd class="field-even"><p>缩放图像，使其填满整个摄像机视图而不改变宽高比，但部分图像可能溢出摄像机框外。</p>
+</dd>
+</dl>
+</dd>
+<dt><abbr title="Dots per inch">DPI</abbr></dt><dd><p>平面的尺寸将取决于 <em>单位像素</em> 中设置的每英寸像素数。当 <em>单位系统</em> 设置为 <em>公制</em> 且默认 <em>单位像素</em> 设置为 600 时，一个 800 x 600 像素图像的尺寸将被设置为 0.0339 × 0.0254 单位，600 像素被定义为 1 英寸（0.0254 米）。</p>
+<dl class="simple">
+<dt>单位像素</dt><dd><p>设置 1 英寸对应的像素数。</p>
+</dd>
+</dl>
+</dd>
+<dt>点/BU</dt><dd><p>平面的尺寸将取决于 <em>单位像素</em> 中设置的每 Blender 单位像素数。当默认 <em>单位像素</em> 设置为 600 时，一个 800 x 600 像素图像的尺寸将被设置为 1.33 × 1 单位。</p>
+<dl class="simple">
+<dt>单位像素</dt><dd><p>设置 1 个 Blender 单位对应的像素数。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+<section id="orientation">
+<h3>坐标系<a class="headerlink" href="#orientation" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>对齐</dt><dd><p>设置平面的旋转。</p>
+<dl class="field-list simple">
+<dt class="field-odd">主轴<span class="colon">:</span></dt>
+<dd class="field-odd"><p>平面将与一个最适合的、面向摄像机视图方向的主轴对齐。如果场景中没有摄像机，则平面将面向 Z+（向上）轴。</p>
+</dd>
+<dt class="field-even">面向摄像机<span class="colon">:</span></dt>
+<dd class="field-even"><p>类似于 <em>主轴</em>，但平面将被旋转以直接面对摄像机视图方向。</p>
+</dd>
+<dt class="field-odd">Z- (下), Y-, X-, Z+ (上), Y+, X+<span class="colon">:</span></dt>
+<dd class="field-odd"><p>平面将被旋转到朝向选定的轴。</p>
+</dd>
+</dl>
+</dd>
+<dt>追踪摄像机</dt><dd><p>添加一个<a class="reference internal" href="../../animation/constraints/tracking/locked_track.html"><span class="doc">锁定追踪</span></a>约束以使平面始终朝向摄像机，即使摄像机移动。此选项仅在 <em>对齐</em> 选项设置为 <em>主轴</em> 或 <em>面向摄像机</em> 时可用。</p>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="scene_fbx.html" class="btn btn-neutral float-left" title="FBX" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="palettes.html" class="btn btn-neutral float-right" title="导入调色板（Import Palettes）" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/addons/import_export/images_as_planes.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/addons/import_export/images_as_planes.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Faddons/import_export/images_as_planes.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Faddons/import_export/images_as_planes.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

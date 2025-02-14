@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VR场景检查 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/addons/3d_view/vr_scene_inspection.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="添加曲线" href="../add_curve/index.html" />
+    <link rel="prev" title="已保存的视图（Stored Views）" href="stored_views.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">插件</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#add-ons-category-listings">插件类别列表</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">3D 视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="3d_navigation.html">3D 导航</a></li>
+<li class="toctree-l4"><a class="reference internal" href="math_vis_console.html">数学可视化控制台</a></li>
+<li class="toctree-l4"><a class="reference internal" href="measureit.html">测量（MeasureIt）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="precision_drawing_tools/index.html">精密绘图工具（PDT）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stored_views.html">已保存的视图（Stored Views）</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">VR场景检查</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#activation">激活</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#interface">界面</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#vr-session">VR 会话</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#view">视图</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#landmarks">地标</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#action-maps">动作映射</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#viewport-feedback">视口反馈</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../add_curve/index.html">添加曲线</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../add_mesh/index.html">添加网格</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../baking/index.html">烘焙</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../camera/index.html">摄像机</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../development/index.html">开发</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../import_export/index.html">导入 - 导出</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../interface/index.html">界面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lighting/index.html">光照</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../materials/index.html">材质</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/index.html">网格</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node/index.html">节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../object/index.html">物体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../paint/index.html">绘制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sequencer/index.html">序列编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../system/index.html">系统</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../uv/index.html">UV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../video_tools/index.html">视频工具</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">插件</a></li>
+          <li class="breadcrumb-item"><a href="index.html">3D 视图</a></li>
+      <li class="breadcrumb-item active">VR场景检查</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="vr-scene-inspection">
+<h1>VR场景检查<a class="headerlink" href="#vr-scene-inspection" title="Permalink to this heading"></a></h1>
+<p><abbr title="Virtual Reality 虚拟现实">VR</abbr> 场景检查插件在用户界面中发布并扩展了 Blender 的本地虚拟现实功能。该功能集仅限于场景检测使用案例。通过 Blender 内部的进一步开发，可以实现更高级的使用案例。</p>
+<p>Blender 中的 VR 支持基于 OpenXR 规范，需要一些设置步骤。这些在<a class="reference internal" href="../../getting_started/configuration/hardware.html#hardware-head-mounted-displays"><span class="std std-ref">头戴式显示器 (HMD)</span></a> 部分有解释。</p>
+<section id="activation">
+<h2>激活<a class="headerlink" href="#activation" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>打开 Blender 并转到 “偏好设置”，然后转到 “插件” 选项卡。</p></li>
+<li><p>选择 “3D视图” 类别，然后勾选 “VR 场景检查” 以启用插件。</p></li>
+</ul>
+</section>
+<section id="interface">
+<h2>界面<a class="headerlink" href="#interface" title="Permalink to this heading"></a></h2>
+<p>位于 <span class="menuselection">3D 视图 ‣ 侧栏 ‣ VR 标签</span>。</p>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/addons_3d-view_vr-scene-inspection_interface.jpg"><img alt="../../_images/addons_3d-view_vr-scene-inspection_interface.jpg" src="../../_images/addons_3d-view_vr-scene-inspection_interface.jpg" style="width: 220px;" /></a>
+</figure>
+<section id="vr-session">
+<h3>VR 会话<a class="headerlink" href="#vr-session" title="Permalink to this heading"></a></h3>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/addons_3d-view_vr-scene-inspection_vr-session.jpg"><img alt="../../_images/addons_3d-view_vr-scene-inspection_vr-session.jpg" src="../../_images/addons_3d-view_vr-scene-inspection_vr-session.jpg" style="width: 220px;" /></a>
+</figure>
+<dl class="simple">
+<dt>开始 VR 会话</dt><dd><p>尝试建立与 OpenXR 平台的连接，与一个 <a class="reference internal" href="../../getting_started/configuration/hardware.html#hardware-head-mounted-displays"><span class="std std-ref">HMD（头戴式显示器）</span></a>共享视口。</p>
+</dd>
+<dt>跟踪</dt><dd><dl class="simple">
+<dt>位置上的</dt><dd><p>只跟踪头部的旋转变化，不允许 HMD 影响观看者在虚拟空间的位置。</p>
+</dd>
+<dt>绝对</dt><dd><p>跳过眼睛偏移，通常是为了将观众准确地放置在地标。这允许独立于 HMD 位置来定义跟踪原点。</p>
+</dd>
+</dl>
+</dd>
+<dt>使用控制器动作</dt><dd><p>为视角导航、控制器跟踪和触觉启用默认的控制器动作。</p>
+</dd>
+</dl>
+</section>
+<section id="view">
+<h3>视图<a class="headerlink" href="#view" title="Permalink to this heading"></a></h3>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/addons_3d-view_vr-scene-inspection_view.jpg"><img alt="../../_images/addons_3d-view_vr-scene-inspection_view.jpg" src="../../_images/addons_3d-view_vr-scene-inspection_view.jpg" style="width: 220px;" /></a>
+</figure>
+<dl class="simple">
+<dt>显示</dt><dd><dl class="simple">
+<dt>基面</dt><dd><p>在 VR 视图中设置地平面的可见性。</p>
+</dd>
+<dt>标注</dt><dd><p>在 VR 视图中设置标注笔画的可见性。</p>
+</dd>
+<dt>选择</dt><dd><p>设置 VR 视图中选择轮廓的可见性。</p>
+</dd>
+<dt>控制器</dt><dd><p>设置 VR 运动控制器的可见性。需要启用<a class="reference internal" href="#vr-session">使用控制器动作</a>选项。</p>
+</dd>
+<dt>自定义叠加层</dt><dd><p>设置自定义操作员绘图的可见性（例如，默认的传送光束）。</p>
+</dd>
+<dt>物体杂项</dt><dd><p>设置物体杂项的可见性，包括空物体、灯光和摄像机。</p>
+</dd>
+<dt>物体类型可见性 <code class="docutils literal notranslate"><span class="pre">👁</span></code></dt><dd><p>按类设置物体的可见性。</p>
+</dd>
+</dl>
+</dd>
+<dt>控制器样式</dt><dd><p>优选的可视化 VR 运动控制器。</p>
+</dd>
+<dt>裁剪起始/结束</dt><dd><p>VR 视图的裁剪值，<a class="reference internal" href="../../editors/3dview/sidebar.html#bpy-types-spaceview3d-clip-start"><span class="std std-ref">如同 3D 视口</span></a>。</p>
+</dd>
+</dl>
+</section>
+<section id="landmarks">
+<h3>地标<a class="headerlink" href="#landmarks" title="Permalink to this heading"></a></h3>
+<p>地标用于为虚拟空间中的查看者存储可重用的基本姿势（位置和旋转）。此外，还可以为自定义对象和自定义姿势类型的地标设置基本查看器参考比例。</p>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/addons_3d-view_vr-scene-inspection_landmarks.jpg"><img alt="../../_images/addons_3d-view_vr-scene-inspection_landmarks.jpg" src="../../_images/addons_3d-view_vr-scene-inspection_landmarks.jpg" style="width: 220px;" /></a>
+</figure>
+<dl>
+<dt>地标</dt><dd><p>一个<a class="reference internal" href="../../interface/controls/templates/list_view.html#ui-list-view"><span class="std std-ref">列表视图</span></a>。</p>
+<dl class="simple">
+<dt>已选中地标</dt><dd><p>定义哪个地标的设置会显示在列表下面。改变选定的地标对 VR 视图没有影响。</p>
+</dd>
+<dt>激活 <code class="docutils literal notranslate"><span class="pre">〇</span></code></dt><dd><p>激活一个地标，使其改变VR视图的基本姿态。</p>
+</dd>
+<dt>添加 <code class="docutils literal notranslate"><span class="pre">+</span></code></dt><dd><p>创建一个地标。</p>
+</dd>
+<dt>移除 <code class="docutils literal notranslate"><span class="pre">-</span></code></dt><dd><p>删除已选中地标。</p>
+</dd>
+<dt>从会话中添加 <code class="docutils literal notranslate"><span class="pre">⊕</span></code></dt><dd><p>从正在运行的VR会话的观察者姿势中创建一个地标。</p>
+</dd>
+<dt>地标控制 <code class="docutils literal notranslate"><span class="pre">v</span></code></dt><dd><dl class="simple">
+<dt>从会话中添加摄像机和 VR 地标</dt><dd><p>从正在运行的 VR 会话的观察者姿势创建一个新的摄像机和地标。</p>
+</dd>
+<dt>从摄像机添加地标</dt><dd><p>从活动摄像机添加一个新的地标。</p>
+</dd>
+<dt>更新自定义的地标</dt><dd><p>根据当前的 VR 观察者姿势更新所选的地标。</p>
+</dd>
+<dt>游标到地标</dt><dd><p>将 3D 游标移动到所选的地标。</p>
+</dd>
+<dt>场景摄像机到地标</dt><dd><p>将场景摄像机定位在选定的地标上。</p>
+</dd>
+<dt>地标的摄像机</dt><dd><p>从选定的地标创建一个新的相机。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>类型</dt><dd><dl class="simple">
+<dt>场景摄像机</dt><dd><p>按照场景的<a class="reference internal" href="../../scene_layout/scene/properties.html#bpy-types-scene-camera"><span class="std std-ref">活动摄像机</span></a>来定义观察者的基本姿势。</p>
+</dd>
+<dt>自定义物体</dt><dd><p>设置任意一个物体来定义观察者的基本姿态。</p>
+</dd>
+<dt>自定义姿势</dt><dd><p>手动定义一个位置和旋转，作为观察者的基本姿势。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+<section id="action-maps">
+<h3>动作映射<a class="headerlink" href="#action-maps" title="Permalink to this heading"></a></h3>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/addons_3d-view_vr-scene-inspection_action-maps.jpg"><img alt="../../_images/addons_3d-view_vr-scene-inspection_action-maps.jpg" src="../../_images/addons_3d-view_vr-scene-inspection_action-maps.jpg" style="width: 220px;" /></a>
+</figure>
+<dl>
+<dt>游戏手柄</dt><dd><p>使用游戏手柄（微软 Xbox 控制器）的输入，而不是运动控制器进行 VR 操作，如视口导航。</p>
+</dd>
+<dt>扩展</dt><dd><p>启用额外的控制器绑定，以确保正确的输入到行动的映射。请注意，一个给定的扩展可能不被所有的 <a class="reference internal" href="../../getting_started/configuration/hardware.html#hardware-head-mounted-displays"><span class="std std-ref">VR 平台</span></a> 支持。</p>
+<dl class="simple">
+<dt>HP Reverb G2</dt><dd><p>启用 HP Reverb G2 控制器的绑定。</p>
+</dd>
+<dt>HTC Vive Cosmos</dt><dd><p>启用与 HTC Vive Cosmos 控制器的绑定。</p>
+</dd>
+<dt>HTC Vive Focus</dt><dd><p>启动与 HTC Vive Focus 3 控制器的绑定。</p>
+</dd>
+<dt>华为</dt><dd><p>启动与华为控制器的绑定。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+<section id="viewport-feedback">
+<h3>视口反馈<a class="headerlink" href="#viewport-feedback" title="Permalink to this heading"></a></h3>
+<figure class="align-right">
+<a class="reference internal image-reference" href="../../_images/addons_3d-view_vr-scene-inspection_viewport-feedback.jpg"><img alt="../../_images/addons_3d-view_vr-scene-inspection_viewport-feedback.jpg" src="../../_images/addons_3d-view_vr-scene-inspection_viewport-feedback.jpg" style="width: 220px;" /></a>
+</figure>
+<dl class="simple">
+<dt>显示VR摄像机</dt><dd><p>在当前 3D 视口中加入一个指示图标，展示当前 VR 查看器的姿势（在虚拟空间中的位置和旋转）。</p>
+</dd>
+<dt>显示VR控制器</dt><dd><p>在当前 3D 视口中绘制跟踪的VR运动控制器的指示器。需要启用<a class="reference internal" href="#vr-session">使用控制器动作</a>选项。</p>
+</dd>
+<dt>显示地标</dt><dd><p>在当前 3D 视口中绘制<a class="reference internal" href="#landmarks">地标</a>标志。</p>
+</dd>
+<dt>镜像VR会话</dt><dd><p>使当前的 3D 视口跟随 VR 视图的视角。</p>
+</dd>
+</dl>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">类别<span class="colon">:</span></dt>
+<dd class="field-odd"><p>3D 视图</p>
+</dd>
+<dt class="field-even">描述<span class="colon">:</span></dt>
+<dd class="field-even"><p>用虚拟现实眼镜（头戴式显示器）查看 3D 视口。</p>
+</dd>
+<dt class="field-odd">位置<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">3D视图 ‣ 侧栏 ‣ VR 标签</span></p>
+</dd>
+<dt class="field-even">文件<span class="colon">:</span></dt>
+<dd class="field-even"><p>viewport_vr_preview 文件夹</p>
+</dd>
+<dt class="field-odd">作者<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Julian Eisel, Sebastian Koenig, Peter Kim</p>
+</dd>
+<dt class="field-even">维护者<span class="colon">:</span></dt>
+<dd class="field-even"><p>Julian Eisel, Peter Kim</p>
+</dd>
+<dt class="field-odd">许可证<span class="colon">:</span></dt>
+<dd class="field-odd"><p>通用公共许可证</p>
+</dd>
+<dt class="field-even">支持级别<span class="colon">:</span></dt>
+<dd class="field-even"><p>官方</p>
+</dd>
+<dt class="field-odd">说明<span class="colon">:</span></dt>
+<dd class="field-odd"><p>此插件与 Blender 捆绑在一起。</p>
+</dd>
+</dl>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="stored_views.html" class="btn btn-neutral float-left" title="已保存的视图（Stored Views）" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../add_curve/index.html" class="btn btn-neutral float-right" title="添加曲线" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/addons/3d_view/vr_scene_inspection.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/addons/3d_view/vr_scene_inspection.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Faddons/3d_view/vr_scene_inspection.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Faddons/3d_view/vr_scene_inspection.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

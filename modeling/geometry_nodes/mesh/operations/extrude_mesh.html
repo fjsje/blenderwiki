@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>挤出网格 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/geometry_nodes/mesh/operations/extrude_mesh.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../../_static/js/version_switch.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../../copyright.html" />
+    <link rel="next" title="翻转面" href="flip_faces.html" />
+    <link rel="prev" title="边路径到选中项" href="edge_paths_to_selection.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../meshes/index.html">网格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../surfaces/index.html">面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../texts/index.html">文本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../volumes/index.html">体积（卷标）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../empties.html">空物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html">修改器</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">几何节点</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../inspection.html">检视</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../attributes_reference.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../fields.html">场</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../instances.html">实例项</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html#node-types">节点类型</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../attribute/index.html">属性节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../input/index.html">输入节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../output/index.html">输出节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../geometry/index.html">几何节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../curve/index.html">曲线节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../instances/index.html">实例节点</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">网格节点</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="../read/index.html">读取</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../sample/index.html">采样</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../write/index.html">写入</a></li>
+<li class="toctree-l5 current"><a class="reference internal" href="index.html">操作</a><ul class="current">
+<li class="toctree-l6"><a class="reference internal" href="dual_mesh.html">对偶网格</a></li>
+<li class="toctree-l6"><a class="reference internal" href="edge_paths_to_curves.html">边路径到曲线</a></li>
+<li class="toctree-l6"><a class="reference internal" href="edge_paths_to_selection.html">边路径到选中项</a></li>
+<li class="toctree-l6 current"><a class="current reference internal" href="#">挤出网格</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#inputs">输入</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#properties">属性</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#output">输出</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#examples">示例</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#attribute-propagation">属性传播</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="#vertex-mode">顶点模式</a></li>
+<li class="toctree-l8"><a class="reference internal" href="#edge-mode">边模式</a></li>
+<li class="toctree-l8"><a class="reference internal" href="#face-mode">面模式</a></li>
+<li class="toctree-l8"><a class="reference internal" href="#individual-face-mode">各面模式</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="flip_faces.html">翻转面</a></li>
+<li class="toctree-l6"><a class="reference internal" href="mesh_boolean.html">网格布尔</a></li>
+<li class="toctree-l6"><a class="reference internal" href="mesh_to_curve.html">网格 转换为 曲线</a></li>
+<li class="toctree-l6"><a class="reference internal" href="mesh_to_points.html">网格 转换为 点</a></li>
+<li class="toctree-l6"><a class="reference internal" href="mesh_to_volume.html">网格 转 体积</a></li>
+<li class="toctree-l6"><a class="reference internal" href="scale_elements.html">缩放元素</a></li>
+<li class="toctree-l6"><a class="reference internal" href="split_edges.html">拆分边</a></li>
+<li class="toctree-l6"><a class="reference internal" href="subdivide_mesh.html">细分网格</a></li>
+<li class="toctree-l6"><a class="reference internal" href="subdivision_surface.html">表面细分</a></li>
+<li class="toctree-l6"><a class="reference internal" href="triangulate.html">三角化</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../primitives/index.html">基本体</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../topology/index.html">拓扑</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../uv/index.html">UV</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../point/index.html">点节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../volume/index.html">体积节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../simulation/simulation_zone.html">模拟区</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../material/index.html">材质节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../texture/index.html">纹理节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../utilities/index.html">实用工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../group.html">组</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../hair/index.html">毛发节点</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">建模</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">几何节点</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">网格节点</a></li>
+          <li class="breadcrumb-item"><a href="index.html">网格操作节点</a></li>
+      <li class="breadcrumb-item active">挤出网格</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="extrude-mesh-node">
+<span id="bpy-types-geometrynodeextrudemesh"></span><span id="index-0"></span><h1>挤出网格<a class="headerlink" href="#extrude-mesh-node" title="Permalink to this heading"></a></h1>
+<figure class="align-right">
+<img alt="挤出网格节点。" src="../../../../_images/node-types_GeometryNodeExtrudeMesh.webp" />
+</figure>
+<p>The <em>Extrude Mesh Node</em> generates new vertices, edges, or faces, on selected geometry
+and transforms them based on an offset.</p>
+<p>这些操作类似于 <a class="reference internal" href="../../../meshes/editing/mesh/extrude.html"><span class="doc">挤出工具</span></a> 在网格编辑模式下，尽管有一些差异。最重要的是，该节点从未将挤压的背面保持在适当位置，它们总是被移除。属性传播规则也可以是不同的。</p>
+<section id="inputs">
+<h2>输入<a class="headerlink" href="#inputs" title="Permalink to this heading"></a></h2>
+<dl>
+<dt>网格</dt><dd><p>标准的几何体输入。</p>
+</dd>
+<dt>选择</dt><dd><p>Whether to extrude each element.
+True values mean elements will be extruded, false values mean elements will remain unchanged.</p>
+</dd>
+<dt>偏移量</dt><dd><p>The amount to translate the new geometry on each axis. The default value of the &quot;Offset&quot; input
+is the mesh's <a class="reference internal" href="../../geometry/read/normal.html"><span class="doc">normals</span></a>. To change the distance,
+the <em>Scale</em> input can be used. However, when an input is computed for this directly, the length
+of the input vectors is used.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Because the default input is the mesh's normals, they may need to be calculated just for this node.
+If the extrusion is only in one direction anyway, a potential performance improvement is to connect
+a <a class="reference internal" href="../../input/constant/vector.html"><span class="doc">矢量节点</span></a> instead.</p>
+</div>
+</dd>
+<dt>比例|缩放</dt><dd><p>The factor used to scale elements or groups of elements.</p>
+</dd>
+<dt>各面 <span class="guilabel">仅限面模式</span></dt><dd><p>Whether to extrude each face individually rather than extruding connected groups of faces together as regions.
+A quad side face will be generated on each side of every selected face.</p>
+</dd>
+</dl>
+</section>
+<section id="properties">
+<h2>属性<a class="headerlink" href="#properties" title="Permalink to this heading"></a></h2>
+<dl>
+<dt>模式</dt><dd><dl class="field-list">
+<dt class="field-odd">顶点<span class="colon">:</span></dt>
+<dd class="field-odd"><p>This mode is quite simple, it just attaches new edges and vertices to the selected vertices.</p>
+</dd>
+<dt class="field-even">边<span class="colon">:</span></dt>
+<dd class="field-even"><p>Attach new quad faces to the selected edges. Vertices shared by the
+original selected vertices are also shared in the duplicated edges.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Depending on the situation, the normals of the new faces may be arbitrary. If the selected
+edges only have one selected face, then the node can pick a consistent orientation for the
+new faces, but if there is more than one connected face, or no connected faces, the normals
+may have to be adjusted afterwards.</p>
+</div>
+</dd>
+<dt class="field-odd">面<span class="colon">:</span></dt>
+<dd class="field-odd"><p>根据 <em>单个</em> 布尔输入，单独挤出选定面或每个选定面的连续区域。</p>
+<p>When the <em>Individual</em> input is false, the node will find regions of connected faces and generate
+new &quot;side&quot; faces on the boundaries of those regions. If the whole mesh is selected and it is already
+a <a class="reference internal" href="../../../../glossary/index.html#term-Manifold"><span class="xref std std-term">Manifold</span></a> shape, then result will just be that the whole mesh moves. Any vertices, edges
+or faces on the <em>inside</em> of the face regions are just moved, they are not duplicated.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+<section id="output">
+<h2>输出<a class="headerlink" href="#output" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>网格</dt><dd><p>标准的几何体输出。</p>
+</dd>
+<dt>顶视图</dt><dd><p>A boolean field output containing the top new top geometry. The <a class="reference internal" href="../../attributes_reference.html#attribute-domains"><span class="std std-ref">domain</span></a>
+depends on the selected mode. In <em>Vertex</em> mode, this is a selection of the new vertices.
+In <em>Edge</em> mode, this is a selection of the duplicated edges
+and in <em>Face</em> mode, it is a selection of the new faces.</p>
+</dd>
+<dt>侧面</dt><dd><p>A boolean field output containing the &quot;side&quot; of the new geometry. In <em>Vertex</em> mode, it selects
+the new edges, in <em>Edge</em> mode, the new faces, and in <em>Face</em> mode, the new side faces are selected,
+which are all of the new faces that aren't in the <em>Top</em> selection.</p>
+</dd>
+</dl>
+</section>
+<section id="examples">
+<h2>示例<a class="headerlink" href="#examples" title="Permalink to this heading"></a></h2>
+<figure class="align-center">
+<img alt="../../../../_images/modeling_geometry-nodes_extrude-mesh_sphere-materials.png" src="../../../../_images/modeling_geometry-nodes_extrude-mesh_sphere-materials.png" />
+</figure>
+<p>Here, the selection outputs are used to set materials on certain faces of the mesh.
+A <a class="reference internal" href="../../utilities/random_value.html"><span class="doc">随机值</span></a> node can be used to limit the
+extrusion to a random set of faces.</p>
+</section>
+<section id="attribute-propagation">
+<h2>属性传播<a class="headerlink" href="#attribute-propagation" title="Permalink to this heading"></a></h2>
+<p>属性将传输到具有特定规则的新元素。属性将永远不会更改生成的网格上的域。<code class="docutils literal notranslate"><span class="pre">id</span></code> 属性没有任何特殊处理。</p>
+<p>通常，布尔属性用 &quot;或&quot; 传播，这意味着为其他类型混合的任何连接的 &quot;true&quot;值也将导致新值为 &quot;true&quot;。</p>
+<p>以下章节描述：</p>
+<section id="vertex-mode">
+<h3>顶点模式<a class="headerlink" href="#vertex-mode" title="Permalink to this heading"></a></h3>
+<figure class="align-center" id="id1">
+<a class="reference internal image-reference" href="../../../../_images/modeling_geometry-nodes_extrude-mesh_attributes-vertex-new-edges.png"><img alt="../../../../_images/modeling_geometry-nodes_extrude-mesh_attributes-vertex-new-edges.png" src="../../../../_images/modeling_geometry-nodes_extrude-mesh_attributes-vertex-new-edges.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-text">在顶点模式下创建的新边缘使用所有连接边缘的平均值。</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>New <strong>vertices</strong> have copied values from their original vertices</p></li>
+<li><p>新的 <strong>边缘</strong> 具有任何连接的原始边缘的平均值。对于布尔属性，如果选择了任何连接的边缘，则选择边缘。</p></li>
+</ul>
+</section>
+<section id="edge-mode">
+<h3>边模式<a class="headerlink" href="#edge-mode" title="Permalink to this heading"></a></h3>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../../../_images/modeling_geometry-nodes_extrude-mesh_attributes-edge-connecting-edges.png"><img alt="../../../../_images/modeling_geometry-nodes_extrude-mesh_attributes-edge-connecting-edges.png" src="../../../../_images/modeling_geometry-nodes_extrude-mesh_attributes-edge-connecting-edges.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-text">新的连接边缘（垂直黄色边缘）的属性传播。最终值是两个中间蓝色边缘的值的混合。不使用图像下方的较暗的栗色边缘。</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>新的 <strong>顶点</strong> 已从其原始顶点复制值。</p></li>
+<li><p>垂直连接 <strong>边线</strong> 从任何连接的挤出边获取平均值。对于布尔值，如果选择了任何连接的挤出边，则会选中边。（<em>传播规则如上图所示</em>）</p></li>
+<li><p>水平复制 <strong>边缘</strong> 已从其原始边缘复制值。</p></li>
+<li><p>新的 <strong>面</strong> 获取连接到选定边缘的所有面平均值。对于布尔值，如果选择了任何连接的原始面，则选择面。</p></li>
+<li><p>新的 <strong>面角</strong> 获取连接到选定边缘的所有面中相应角的平均值。对于布尔值，如果选择了其中一个角，则选择角。</p></li>
+</ul>
+</section>
+<section id="face-mode">
+<h3>面模式<a class="headerlink" href="#face-mode" title="Permalink to this heading"></a></h3>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../../../../_images/modeling_geometry-nodes_extrude-mesh_attributes-face-connecting-edges.png"><img alt="../../../../_images/modeling_geometry-nodes_extrude-mesh_attributes-face-connecting-edges.png" src="../../../../_images/modeling_geometry-nodes_extrude-mesh_attributes-face-connecting-edges.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-text">新的连接边缘（垂直黄色边缘）的属性传播。最终值是两个中间蓝色边缘的值的混合。不使用来自未选择的面与挤出区域顶部之间较暗的栗色边缘的值。</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>新的 <strong>顶点</strong> 已从其原始顶点复制值。</p></li>
+<li><p>垂直连接 <strong>边缘</strong> 从任何连接的挤出边缘获取平均值，不包括挤出区域的 &quot;顶部&quot; 边缘。对于布尔值，如果选择了任何这些连接的边缘，则会选择边缘。（<em>传播规则如上图所示</em>）</p></li>
+<li><p>水平复制 <strong>边缘</strong> 已从其原始边缘复制值。</p></li>
+<li><p>新的 <strong>面</strong> 已从相应的挤出面复制值。</p></li>
+<li><p>新的 <strong>面拐角</strong> 已从相应的挤出面角复制值。</p></li>
+</ul>
+</section>
+<section id="individual-face-mode">
+<h3>各面模式<a class="headerlink" href="#individual-face-mode" title="Permalink to this heading"></a></h3>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../../../../_images/modeling_geometry-nodes_extrude-mesh_attributes-face-individual-connecting-edges.png"><img alt="../../../../_images/modeling_geometry-nodes_extrude-mesh_attributes-face-individual-connecting-edges.png" src="../../../../_images/modeling_geometry-nodes_extrude-mesh_attributes-face-individual-connecting-edges.png" style="width: 400px;" /></a>
+<figcaption>
+<p><span class="caption-text">新连接边缘的属性传播。每个边使用其挤出面上的两个相邻边的平均值。</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<ul class="simple">
+<li><p>新的 <strong>顶点</strong> 已从其原始顶点复制值。</p></li>
+<li><p>垂直连接 <strong>边</strong> 获取每个挤出面上两个相邻边的平均值。对于布尔值，当选择挤出面上的至少一个邻项时，选择边。</p></li>
+<li><p>水平复制 <strong>边缘</strong> 已从其原始边缘复制值。</p></li>
+<li><p>新侧 <strong>面</strong> 已从其相应的选定面复制值。</p></li>
+<li><p>新的 <strong>面转角</strong> 已从所选面部的相应角落复制值。</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="edge_paths_to_selection.html" class="btn btn-neutral float-left" title="边路径到选中项" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="flip_faces.html" class="btn btn-neutral float-right" title="翻转面" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/modeling/geometry_nodes/mesh/operations/extrude_mesh.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/modeling/geometry_nodes/mesh/operations/extrude_mesh.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fmodeling/geometry_nodes/mesh/operations/extrude_mesh.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fmodeling/geometry_nodes/mesh/operations/extrude_mesh.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>散焦节点 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/compositing/types/filter/defocus.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/js/version_switch.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../copyright.html" />
+    <link rel="next" title="降噪节点" href="denoise.html" />
+    <link rel="prev" title="散景模糊节点" href="bokeh_blur.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">合成</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../sidebar.html">侧栏</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../realtime_compositor.html">实时合成器</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#node-types">节点类型</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../input/index.html">输入节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../output/index.html">输出节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../color/index.html">颜色节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../converter/index.html">转换类节点</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">滤镜（过滤）节点</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="anti_aliasing.html">抗锯齿节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bilateral_blur.html">双边模糊节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="blur_node.html">模糊节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bokeh_blur.html">散景模糊节点</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">散焦节点</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#inputs">输入</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#properties">属性</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#outputs">输出</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#examples">示例</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#no-z-buffer-examples">无Z缓冲例子</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#camera-settings">摄影机设置</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#hints">提示</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="denoise.html">降噪节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="despeckle.html">去斑节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dilate_erode.html">膨胀/腐蚀节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="directional_blur.html">定向模糊节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="filter_node.html">滤镜节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="glare.html">辉光节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="inpaint.html">瑕疵修复节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pixelate.html">像素化节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sun_beams.html">太阳光束节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vector_blur.html">矢量（运动）模糊节点</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../vector/index.html">矢量节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../matte/index.html">Matte Nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../distort/index.html">畸变类节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../groups.html">组</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../layout/index.html">布局类节点</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">合成</a></li>
+          <li class="breadcrumb-item"><a href="index.html">滤镜（过滤）节点</a></li>
+      <li class="breadcrumb-item active">散焦节点</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="defocus-node">
+<span id="bpy-types-compositornodedefocus"></span><span id="index-0"></span><h1>散焦节点<a class="headerlink" href="#defocus-node" title="Permalink to this heading"></a></h1>
+<figure class="align-right">
+<img alt="散焦节点。" src="../../../_images/compositing_node-types_CompositorNodeDefocus.webp" />
+</figure>
+<p><span class="guilabel">仅限 CPU 合成器</span></p>
+<p>The <em>Defocus Node</em> blurs areas of an image based on a map/mask input.</p>
+<p>此节点一个典型应用是运用 Z-缓冲区输入连接端口在后期合成中模拟景深 (<a class="reference internal" href="../../../glossary/index.html#term-DOF"><span class="xref std std-term">DOF</span></a>) 效果。当然也可以不连接 Z 深度通道端口对图像进行模糊操作。</p>
+<section id="inputs">
+<h2>输入<a class="headerlink" href="#inputs" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>图像</dt><dd><p>标准颜色输入。</p>
+</dd>
+<dt>Z</dt><dd><p>Z-缓冲区输入连接端口，可以用一张（灰度）图作为遮罩，或者是一个单独数值作为输入值。</p>
+</dd>
+</dl>
+</section>
+<section id="properties">
+<h2>属性<a class="headerlink" href="#properties" title="Permalink to this heading"></a></h2>
+<dl>
+<dt>散景类型</dt><dd><p>模拟摄影机的光圈叶片数量。</p>
+<p>圆状（模拟完美圆形），三角形（3个叶片），正方形（4个叶片），五边形（5个叶片），六边形（6个叶片），七边形（7个叶片），八边形（8个叶片）。</p>
+</dd>
+<dt>角度</dt><dd><p>当散景类型为圆状时，此按钮无效果。可用来给散景形状添加一个旋转偏移。数值为角度值。</p>
+</dd>
+<dt>伽玛校正</dt><dd><p>在对图像进行模糊之前对图像颜色进行伽玛校正。</p>
+</dd>
+<dt>光圈级数</dt><dd><p>此选项和真实摄影机类似，用于控制光圈焦点模糊程度。它模拟真实镜头的光圈 <em>f</em> 值，而不用修改图像的亮度信息。默认值128设定为无穷远：即所有物体都在焦点内。当数值减为原来一半，图像将产生基于原始图像效果两倍的模糊。若 <em>无Z缓冲</em> 选项开启，此按钮无效果。</p>
+</dd>
+<dt>最大模糊</dt><dd><p>此值限定由模糊半径设置的最大值的模糊数量。可用来优化画面显示效果。默认值0含义为无限制。</p>
+</dd>
+<dt>阈值</dt><dd><p>如果像素之间的模糊差异过大，可能产生一些人为效果，比如边缘出血。此值控制多大的模糊差异值才是安全可靠的。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>如果焦距准确的物体发生了不可预知的问题，可仅修改此值。</p>
+</div>
+</dd>
+<dt>预览</dt><dd><p>在渲染预览时，启用此按钮将随机采样数量减半。这种采样方式可能产生额外的杂点，但不影响最终渲染输出的结果品质。</p>
+</dd>
+<dt>场景</dt><dd><p>选择要关联的场景。</p>
+</dd>
+<dt>无Z缓冲</dt><dd><p>激活Z深度通道的无Z-缓冲区功能。当Z深度通道没有连接输入图像时，无Z-缓冲区选项自动被勾选启用。</p>
+</dd>
+<dt>Z缩放</dt><dd><p>只有当启用 <em>无Z缓冲区</em> 时才会激活。当使用 <em>无Z缓冲区</em> 时，输入用来直接控制模糊半径（和无Z缓冲时的 <em>光圈级</em> 类似）。此参数可用来控制缩放Z深度输入值的范围。</p>
+</dd>
+</dl>
+</section>
+<section id="outputs">
+<h2>输出<a class="headerlink" href="#outputs" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>图像</dt><dd><p>标准颜色输出。</p>
+</dd>
+</dl>
+</section>
+<section id="examples">
+<h2>示例<a class="headerlink" href="#examples" title="Permalink to this heading"></a></h2>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../../_images/compositing_types_filter_defocus_example.jpg"><img alt="../../../_images/compositing_types_filter_defocus_example.jpg" src="../../../_images/compositing_types_filter_defocus_example.jpg" style="width: 300px;" /></a>
+</figure>
+<p>In this <a class="reference external" href="https://archive.blender.org/wiki/uploads/7/79/Doftest.blend">blend-file example</a>,
+the ball array image is blurred as if it was taken by a camera with an f-stop of 2.8 resulting
+in a fairly narrow depth of field centered on 7.5 units from the camera.
+As the balls recede into the distance, they get blurrier.</p>
+<section id="no-z-buffer-examples">
+<h3>无Z缓冲例子<a class="headerlink" href="#no-z-buffer-examples" title="Permalink to this heading"></a></h3>
+<p>有时可能希望有更多的控制来模糊图像。例如，您可能只想模糊一个对象，而不理会其他所有对象（或相反），或者您想一次均匀地模糊整个图像。因此，该节点允许您使用除实际 Z 缓冲区之外的其他内容作为 Z 输入。例如，您可以连接一个图像节点并使用灰度图像，其中颜色指定在该点模糊图像的程度，其中白色是最大模糊，黑色是无模糊。或者，您可以使用时间节点统一模糊图像，其中时间值控制该帧的最大模糊。它还可以用于通过使用伪造的深度着色图像而不是 Z 缓冲区来获得可能稍微更好的 DoF 模糊。（创虚假深度着色图像的典型方法是对场景中的所有对象使用线性混合纹理或使用 &quot;雾/雾&quot; 虚假深度着色方法。）这也具有虚假深度图像的优点可以有 <a class="reference internal" href="../../../glossary/index.html#term-Anti-Aliasing"><span class="xref std std-term">抗锯齿</span></a>，这对于真正的 Z 缓冲区是不可能的。</p>
+<p>参数 <em>无Z缓冲</em>，主要进行模糊控制。输入的图像信息被缩放，因为在通常情况下贴图的纹理值在 0.0 到 1.0 范围内。</p>
+</section>
+<section id="camera-settings">
+<h3>摄影机设置<a class="headerlink" href="#camera-settings" title="Permalink to this heading"></a></h3>
+<figure class="align-default" id="id1">
+<img alt="../../../_images/compositing_types_filter_defocus_depth-of-field-panel.png" src="../../../_images/compositing_types_filter_defocus_depth-of-field-panel.png" />
+<figcaption>
+<p><span class="caption-text">摄影机景深面板距离参数设置。</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>若应用一个 <em>渲染层</em> 节点，<em>散焦</em> 节点将使用场景中实际摄影机数据。</p>
+<p>设置聚焦点，摄影机现在有一个 <em>距离</em> 参数，是设置景深距离的简易方法。使用此摄影机参数设置摄影机的焦点平面（物体景深距离相距焦点摄影机）。在主 <em>摄影机</em> 编辑面板设置 <em>距离</em> 参数；按钮在 <em>景深</em> 的右下角。</p>
+<p>为使焦点可见，启用摄影机 <em>限制</em> 复选框，在沿着摄影机方向出现一个黄颜色的线使焦点可视。</p>
+</section>
+<section id="hints">
+<h3>提示<a class="headerlink" href="#hints" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>预览</dt><dd><p>通常，使用预览模式，依据需要改变所需参数。只有在最终渲染时是不可以使用预览的。该节点需要高强度运算，所以注意控制台窗口，这里会显示每一个渲染扫描线的实时状态信息。</p>
+</dd>
+<dt>边界设置</dt><dd><p>对于边界的最低限度，设置场景在两个物体之间可见性既重叠但一些点又不至于距离过大，使距离呈现不同的层次。</p>
+</dd>
+<dt>&quot;拉焦&quot;</dt><dd><p>记住这不是真实的景深，只是后期合成的模拟。对于一些物体，完全实现真实的景深可能会有困难。比较典型的范例是有一些距离摄影机比较近的物体，摄影机的焦点在一些物体后面。在真实世界中，使用浅景深，使临近物体变得完全不可见也不是不可能实现，实际上，允许摄影机查看物体后面的内容。好莱坞摄影师使用这种视觉特性去实现 &quot;拍摄时变焦&quot; 的效果，摄影机焦点从附近移动到较远处，使一些不重要的物体视而不见。显然，通过单通道的后期合成方法是很难实现这种效果的，如果用户想实现此效果，比较理想的做法，如下所述：</p>
+<ul class="simple">
+<li><p>分割场景为 &quot;近处&quot; 和 &quot;远处&quot; 对象，在两个通道中分别渲染它们。</p></li>
+<li><p>现在对两个结果进行合并，每个结果带有自己的 &quot;散焦&quot; 节点并由相同的时间节点进行驱动，其中有一个时间节点是反转的。（比如使用大小为-1的 &quot;映射值&quot; 节点）当一个结果的散焦增加时，另一个结果的散焦以等比例减少，产生平滑过渡。</p></li>
+</ul>
+</dd>
+<dt>低光圈级的反锯齿</dt><dd><p>使用比较低的光圈级的数值，比如小于5，此节点会开始移除采样过密并且在景深距离到焦点变化非常剧烈的对象。如果对象和背景对比度明显，这将使画面产生阶梯状外观（锯齿），OSA的设置用来避免此种情况的出现。若用户陷入如下问题：</p>
+<ul class="simple">
+<li><p>采用比原图像大两倍的尺寸进行渲染，然后用自定义的OSA将渲染结果缩放回原图像实际渲染尺寸，使临近像素进行模糊融合。</p></li>
+<li><p>运用X和Y轴向参数为2的模糊节点。</p></li>
+<li><p>稍微将景深距离设置的过一点，使在焦点上的对象看起来有些微模糊。</p></li>
+<li><p>使用高光圈级数值执行模糊操作，然后无Z缓冲连接端口到映射值节点，再连接到模糊节点以增强模糊效果。</p></li>
+<li><p>使用低对比度背景重新排列场景中的物体对象。</p></li>
+</ul>
+</dd>
+<dt>不使用Z缓冲</dt><dd><p>最后要提醒的一句话，如果连接到节点的Z缓冲区无法被检测到，要 <strong>非常</strong> 小心是否启用 <em>不使用Z缓冲</em> 开关。如果 <em>Z缩放</em> 值过大，用户又忘记将其设置回较低的数值，这个较大的数值会导致突然解释为较大的模糊半径并在合成时产生突然激增的后果。</p>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="bokeh_blur.html" class="btn btn-neutral float-left" title="散景模糊节点" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="denoise.html" class="btn btn-neutral float-right" title="降噪节点" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/compositing/types/filter/defocus.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/compositing/types/filter/defocus.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fcompositing/types/filter/defocus.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fcompositing/types/filter/defocus.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

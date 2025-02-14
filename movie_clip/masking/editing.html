@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>编辑 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/movie_clip/masking/editing.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="侧栏" href="sidebar.html" />
+    <link rel="prev" title="选择" href="selecting.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">运动追踪 &amp; 遮罩</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tracking/index.html">运动追踪</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">遮罩</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="scurve.html">S曲线</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selecting.html">选择</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">编辑</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#transform">变换</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#clear-feather-weight">清除羽化权重</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#toggle-cyclic">切换闭合</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#set-handle-type">设置控制柄类型</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#recalculate-handles">重新计算控制柄</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#switch-direction">切换方向</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#copy-paste">复制粘贴</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#clear-parent">清空父级</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#make-parent">创建父级</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#animation">动画</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#show-hide">显示/隐藏</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#delete">删除</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#miscellaneous">杂项</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="sidebar.html">侧栏</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">运动追踪 &amp; 遮罩</a></li>
+          <li class="breadcrumb-item"><a href="index.html">遮罩</a></li>
+      <li class="breadcrumb-item active">编辑</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="editing">
+<h1>编辑<a class="headerlink" href="#editing" title="Permalink to this heading"></a></h1>
+<p>两个编辑器中可用于编辑遮罩的工具和面板都是相同的。遮罩样条线的编辑以类似于在GIMP或其他曲线编辑器中编辑贝塞尔曲线或路径的方式进行。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>为了获得关于遮罩的交互式反馈，可以将遮罩节点直接连接到合成器中的预览节点，然后这些节点将在编辑时不断更新合成结果。</p>
+</div>
+<section id="transform">
+<h2>变换<a class="headerlink" href="#transform" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>遮罩模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">遮罩 ‣ 变换</span></p>
+</dd>
+</dl>
+</div>
+<dl class="simple">
+<dt><a class="reference internal" href="../../scene_layout/object/editing/transform/move.html"><span class="doc">移动</span></a> <kbd class="kbd docutils literal notranslate">G</kbd></dt><dd><p>更改控制点的位置。控制点也可以使用 <kbd class="kbd docutils literal notranslate">鼠标左键</kbd> 移动。整个样条可以通过拖动带有 <kbd class="kbd docutils literal notranslate">鼠标左键</kbd> 的中心点来移动。</p>
+</dd>
+<dt><a class="reference internal" href="../../scene_layout/object/editing/transform/rotate.html"><span class="doc">旋转</span></a> <kbd class="kbd docutils literal notranslate">R</kbd></dt><dd><p>通过围绕一个支点的旋转来改变控制点的位置。</p>
+</dd>
+<dt><a class="reference internal" href="../../scene_layout/object/editing/transform/scale.html"><span class="doc">缩放</span></a> <kbd class="kbd docutils literal notranslate">S</kbd></dt><dd><p>通过扩大点之间的距离来改变控制点的位置。</p>
+</dd>
+<dt><a class="reference internal" href="../../modeling/meshes/editing/mesh/transform/to_sphere.html"><span class="doc">圆化</span></a> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">S</kbd></kbd></dt><dd><p>将控制点变形为圆的形状。</p>
+</dd>
+<dt><a class="reference internal" href="../../modeling/meshes/editing/mesh/transform/shear.html"><span class="doc">切变</span></a> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">S</kbd></kbd></dt><dd><p>沿着定义的轴线移动控制点，使平行的控制点互相移动。</p>
+</dd>
+<dt><a class="reference internal" href="../../modeling/meshes/editing/mesh/transform/push_pull.html"><span class="doc">推/拉</span></a></dt><dd><p>将控制点移近（推）或移远（拉）。</p>
+</dd>
+<dt>缩放羽化 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">S</kbd></kbd></dt><dd><p>将缩放羽化大小。</p>
+</dd>
+</dl>
+</section>
+<section id="clear-feather-weight">
+<span id="bpy-ops-mask-feather-weight-clear"></span><h2>清除羽化权重<a class="headerlink" href="#clear-feather-weight" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id2">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>遮罩模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">遮罩 ‣ 清除羽化权重</span></p>
+</dd>
+</dl>
+</div>
+<p>将羽化权重重置为零。</p>
+</section>
+<section id="toggle-cyclic">
+<span id="bpy-ops-mask-cyclic-toggle"></span><h2>切换闭合<a class="headerlink" href="#toggle-cyclic" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id3">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>遮罩模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">遮罩 ‣ 切换闭合</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">C</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>切换到创建关闭曲线或再次打开它。通过将最后一个控制点连接到第一个控制点来关闭遮罩。</p>
+</section>
+<section id="set-handle-type">
+<span id="bpy-ops-mask-handle-type-set"></span><h2>设置控制柄类型<a class="headerlink" href="#set-handle-type" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id4">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>遮罩模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">遮罩 ‣ 设置控制柄类型</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">V</kbd></p>
+</dd>
+</dl>
+</div>
+<p>为选定的样条点设置手柄类型。</p>
+</section>
+<section id="recalculate-handles">
+<span id="bpy-ops-mask-normals-make-consistent"></span><h2>重新计算控制柄<a class="headerlink" href="#recalculate-handles" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id5">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>遮罩模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">遮罩 ‣ 重新计算控制柄</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">N</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>使法线（处理方向）一致。</p>
+</section>
+<section id="switch-direction">
+<span id="bpy-ops-mask-switch-direction"></span><h2>切换方向<a class="headerlink" href="#switch-direction" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id6">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>遮罩模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">遮罩 ‣ 切换方向</span></p>
+</dd>
+</dl>
+</div>
+<p>切换手柄输入/输出方向。</p>
+</section>
+<section id="copy-paste">
+<span id="bpy-ops-mask-paste-splines"></span><span id="bpy-ops-mask-copy-splines"></span><h2>复制粘贴<a class="headerlink" href="#copy-paste" title="Permalink to this heading"></a></h2>
+<p>待补充。</p>
+</section>
+<section id="clear-parent">
+<span id="bpy-ops-mask-parent-clear"></span><h2>清空父级<a class="headerlink" href="#clear-parent" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id7">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>遮罩模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">遮罩 ‣ 清除父项</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">P</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>清除选定样条点的任何父子关系。</p>
+</section>
+<section id="make-parent">
+<span id="bpy-ops-mask-parent-set"></span><h2>创建父级<a class="headerlink" href="#make-parent" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id8">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>遮罩模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">遮罩 ‣ 创建父级</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">P</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>将一个或多个选定的样条点父项指定给活动的运动跟踪器。</p>
+</section>
+<section id="animation">
+<span id="bpy-ops-mask-shape-key-insert"></span><span id="bpy-ops-mask-shape-key-clear"></span><h2>动画<a class="headerlink" href="#animation" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id9">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>遮罩模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">遮罩 ‣ 动画</span></p>
+</dd>
+</dl>
+</div>
+<p>可以使用形态键控系统为遮罩设置动画。如果没有足够好的特征点来跟踪镜头，或者遮罩不是基于镜头的，这可能很有用。可以从 <em>摄影表的</em> 中编辑遮罩动画控制时间 <a class="reference internal" href="../../editors/dope_sheet/shape_key.html#dope-sheet-mask"><span class="std std-ref">遮罩</span></a> 模式编辑。</p>
+<dl class="simple">
+<dt>插入形态键 <kbd class="kbd docutils literal notranslate">I</kbd></dt><dd><p>将在当前帧处插入活动遮罩层的形态键。这适用于遮罩层级，因此插入一个形状键将为其中包含的所有样条线和点设置关键帧。</p>
+</dd>
+<dt>清除形态键 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">I</kbd></kbd></dt><dd><p>将清除当前帧处的活动遮罩层的形态键。</p>
+</dd>
+<dt>羽化重置动画</dt><dd><p>重置所有动画帧的羽化偏移量。</p>
+</dd>
+<dt>重置选中形状的点</dt><dd><p>在 <em>摄影表</em> 中选定的关键点范围内重新插入选定的点。</p>
+</dd>
+</dl>
+</section>
+<section id="show-hide">
+<span id="bpy-ops-mask-hide-view-set"></span><span id="bpy-ops-mask-hide-view-clear"></span><h2>显示/隐藏<a class="headerlink" href="#show-hide" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id10">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>遮罩模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">遮罩 ‣ 显示/隐藏</span></p>
+</dd>
+</dl>
+</div>
+<ul class="simple">
+<li><p>隐藏选中项 <kbd class="kbd docutils literal notranslate">H</kbd></p></li>
+<li><p>隐藏未选项 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">H</kbd></kbd></p></li>
+<li><p>清理视图中的限定区域 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">H</kbd></kbd></p></li>
+</ul>
+</section>
+<section id="delete">
+<span id="bpy-ops-mask-delete"></span><h2>删除<a class="headerlink" href="#delete" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id11">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>遮罩模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">遮罩 ‣ 删除</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">X</kbd></p>
+</dd>
+</dl>
+</div>
+<p>删除控制点。</p>
+</section>
+<section id="miscellaneous">
+<span id="bpy-ops-mask-add-feather-vertex-slide"></span><span id="bpy-ops-mask-add-vertex-slide"></span><span id="bpy-ops-mask-slide-spline-curvature"></span><h2>杂项<a class="headerlink" href="#miscellaneous" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>滑动样条线曲率 <kbd class="kbd docutils literal notranslate">鼠标左键</kbd></dt><dd><p>通过点击曲线和/或控制点并拖动来移动它们。</p>
+</dd>
+<dt>添加顶点和滑块 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">鼠标左键</kbd></kbd></dt><dd><p>插入新的控制点，并通过持续的鼠标拖动来定义手柄方向。如果选取了最后一个点，则双击也将关闭曲线。</p>
+</dd>
+<dt>添加羽化顶点并滑移 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">鼠标左键</kbd></kbd></dt><dd><p>插入新的羽化控制点，可以独立于主样条线曲线进行转换。如果没有使用羽化遮罩，这将为曲线建立一个基本的羽化遮罩。</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="selecting.html" class="btn btn-neutral float-left" title="选择" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="sidebar.html" class="btn btn-neutral float-right" title="侧栏" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/movie_clip/masking/editing.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/movie_clip/masking/editing.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fmovie_clip/masking/editing.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fmovie_clip/masking/editing.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

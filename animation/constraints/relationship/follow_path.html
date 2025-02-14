@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Follow Path Constraint 跟随路径约束 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/animation/constraints/relationship/follow_path.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/js/version_switch.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../copyright.html" />
+    <link rel="next" title="Pivot Constraint 轴心约束" href="pivot.html" />
+    <link rel="prev" title="Floor Constraint 基面约束" href="floor.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">动画 &amp; 绑定</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keyframes/index.html">关键帧</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../armatures/index.html">骨架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../lattice.html">晶格</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">约束</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#interface">界面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#motion-tracking">运动追踪</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#transform">变换</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#tracking">跟踪</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#relationship">关系</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="action.html">Action Constraint 动作关系约束</a></li>
+<li class="toctree-l4"><a class="reference internal" href="armature.html">骨架约束</a></li>
+<li class="toctree-l4"><a class="reference internal" href="child_of.html">Child Of Constraint 子级约束</a></li>
+<li class="toctree-l4"><a class="reference internal" href="floor.html">Floor Constraint 基面约束</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Follow Path Constraint 跟随路径约束</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#options">选项</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#example">例子</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="pivot.html">Pivot Constraint 轴心约束</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shrinkwrap.html">Shrinkwrap Constraint 缩裹约束</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../actions.html">动作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../drivers/index.html">驱动</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../markers.html">标记</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../shape_keys/index.html">形态键</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_paths.html">运动路径</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">动画 &amp; 绑定</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">约束</a></li>
+      <li class="breadcrumb-item active">Follow Path Constraint 跟随路径约束</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="follow-path-constraint">
+<span id="bpy-types-followpathconstraint"></span><span id="index-0"></span><h1>Follow Path Constraint 跟随路径约束<a class="headerlink" href="#follow-path-constraint" title="Permalink to this heading"></a></h1>
+<p><em>Follow Path Constraint 跟随路径约束</em> 的作用是把约束对象放在约束目标 <em>曲线</em> 上，并使它能沿着这个曲线 (或路径)移动。当勾选 <em>跟随曲线（Follow Curve）</em> 选项时，约束对象会顺得约束目标曲线路径来旋转自己。</p>
+<p>可以用于复杂的相机漫游，火车在轨道上和大多数其他车辆也可以作为 &quot;隐形&quot; 的轨道，还能做自行车车链条等。</p>
+<p>自身总是在全局（世界）空间中进行计算：</p>
+<ul class="simple">
+<li><p>它的位置（如 <em>变换</em> 面板中所示）用作与其路径上正常位置的偏移量。如果约束对象的位置在（1.0, 1.0, 0.0），这将使其沿着X和Y轴远离其在曲线正常位置的一个blend单位。因此，如果您希望你的约束对象 <em>在</em> 其目标路径，则使用 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">G</kbd></kbd> 将坐标归零！</p></li>
+<li><p>该位置的偏移量目标对象曲线的比例缩放影响。采取与上述相同的（1.0, 1.0, 0.0）偏移量，如果曲线的缩放为（2.0, 1.0, 1.0），约束对象将沿着 X 轴（和一个沿 Y 轴）偏移两个 blend 单位......</p></li>
+<li><p>当 <em>跟随曲线</em> 选项被启用时，它的旋转也会偏移到曲线给定的位置。例如，如果你想让你的对象的Y轴与曲线的方向对齐，它必须处于静止、非约束状态，与全局Y轴对齐。在这里，清除你的所有者的旋转 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">R</kbd></kbd> 可能是有用的......</p></li>
+</ul>
+<p>可以以两种不同的方式来控制约束对象沿着约束目标曲线/路径的移动：</p>
+<ul class="simple">
+<li><p>最简单的就是定义移动帧的数量，在曲线设置的 <a class="reference internal" href="../../../modeling/curves/properties/path_animation.html#curve-path-animation"><span class="std std-ref">路径动画</span></a>，通过数字按钮 <em>帧</em>，和它的开始帧通过约束的偏移选项（默认情况下，开始帧：1，偏移量为0，持续时间：100）。</p></li>
+<li><p>第二种方法，更加精确和强大，是为 <em>目标</em> 路径定义一条 <em>评估时间</em> 插值曲线（在 <em>图形编辑器</em> ）。参见 <a class="reference internal" href="../../../editors/graph_editor/fcurves/index.html"><span class="doc">图形编辑器章节</span></a> 以了解更多关于F-Curves的信息。</p></li>
+<li><p>如果你不希望你的主人沿着路径移动，你可以给目标曲线一个平坦的 <em>速度</em> F-曲线（其值将控制主人沿着路径的位置）。</p></li>
+</ul>
+<p><em>跟随路径</em> 约束和另一个<a class="reference internal" href="../tracking/locked_track.html"><span class="doc">锁定跟随</span></a>约束可以搭配一起工作。一个典型例子就是一个在路径中滑行的相机。为了控制相机的滚动角度，当相机沿着路径飞行时，你可以使用 <em>锁定跟踪</em> 和约束目标对象指定向上的方向。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>跟随路径</em> 和 <em>钳制</em></p>
+<p>不要混淆这两个约束。两者都是沿着曲线限制其自身的位置，但是 <em>跟随路径</em> 是一个 &quot;仅限动画&quot; 的约束，因为是通过时间（即当前帧）确定自身沿曲线的位置，而钳制到约束( <a class="reference internal" href="../tracking/clamp_to.html"><span class="doc">Clamp To</span></a> ) <em>约束</em> 通过使用其位置变换的一个值确定自身沿曲线的位置。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>请注意，您还需要路径的关键帧解算时间，选择曲线对象，转到属性面板曲线（curve）标签 <em>Path Animation（路径动画）</em> 栏，设置整个帧到路径的第一帧（例如帧1），设置解算时间的值到路径的第一帧（例如1），右键点击解算时间，选择创建关键帧（create keyframe），设置整个帧到路径的最后一帧（例如帧100），设置解算时间的值到路径的最后一帧（例如100），右键点击解算时间，选择创建关键帧（create keyframe）。</p>
+</div>
+<section id="options">
+<h2>选项<a class="headerlink" href="#options" title="Permalink to this heading"></a></h2>
+<figure class="align-default" id="id1">
+<img alt="../../../_images/animation_constraints_relationship_follow-path_panel.png" src="../../../_images/animation_constraints_relationship_follow-path_panel.png" />
+<figcaption>
+<p><span class="caption-text">Follow Path 跟随路径面板。</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<dl class="simple">
+<dt>目标</dt><dd><p><a class="reference internal" href="../../../interface/controls/templates/data_block.html#ui-data-id"><span class="std std-ref">数据 ID</span></a> 用于选择约束的目标，该目标 <em>必须</em> 是一个曲线对象，当它没有目标时就没有功能（红色状态）。参见 <a class="reference internal" href="../interface/common.html#rigging-constraints-interface-common-target"><span class="std std-ref">常见的约束属性</span></a> 以获得更多信息。</p>
+</dd>
+<dt>偏移量</dt><dd><p>从路径定义的 “动画” 偏移的帧数（默认情况下，从第 1 帧）。</p>
+</dd>
+<dt>前进轴</dt><dd><p>物体的轴线必须与路径的前进方向对齐（即与自身位置处的曲线相切）。</p>
+</dd>
+<dt>向上轴</dt><dd><p>物体的轴线必须（尽可能的）与世界Z轴对齐。事实上，这个选项激活，自身的行为与 <a class="reference internal" href="../tracking/locked_track.html"><span class="doc">锁定跟踪约束</span></a> 共用一些属性，路径为 &quot;轴&quot;，世界Z轴为 &quot;磁铁&quot;。</p>
+</dd>
+<dt>Fixed Position 固定位置</dt><dd><p>对象将保持锁定在曲线长度的某个地方，而不论时间如何变化。</p>
+</dd>
+<dt>曲线半径</dt><dd><p>通过曲率半径缩放对象。见 <a class="reference internal" href="../../../modeling/curves/properties/geometry.html"><span class="doc">曲线编辑</span></a>。</p>
+</dd>
+<dt>跟随曲线</dt><dd><p>如果这个选项没有被激活，主人的旋转就不会被曲线修改；否则，就会根据前进轴和上升轴受到影响。</p>
+</dd>
+<dt>Animate Path 动画路径</dt><dd><p>添加一个带有起始和结束帧选项的F-曲线。ToDo: 从上面开始。</p>
+</dd>
+<dt>影响</dt><dd><p>控制约束对对象的影响百分比。有关详细信息，请参阅 <a class="reference internal" href="../interface/common.html#bpy-types-constraint-influence"><span class="std std-ref">通用约束属性</span></a>。</p>
+</dd>
+</dl>
+</section>
+<section id="example">
+<h2>例子<a class="headerlink" href="#example" title="Permalink to this heading"></a></h2>
+<div class="peertube_wrapper" style="">
+<iframe allowfullscreen="true" src="https://video.blender.org/videos/embed/24507160-624d-423e-a8dd-5110ff8823d1?peertubeLink=0&amp;title=0&amp;warningTitle=0" style="aspect-ratio: 16/9; width: 100%">
+</iframe></div></section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="floor.html" class="btn btn-neutral float-left" title="Floor Constraint 基面约束" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="pivot.html" class="btn btn-neutral float-right" title="Pivot Constraint 轴心约束" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/animation/constraints/relationship/follow_path.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/animation/constraints/relationship/follow_path.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fanimation/constraints/relationship/follow_path.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fanimation/constraints/relationship/follow_path.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

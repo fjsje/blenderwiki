@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>曲线 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/curves/editing/curve.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/js/version_switch.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../copyright.html" />
+    <link rel="next" title="控制点" href="control_points.html" />
+    <link rel="prev" title="变换面板" href="transform_panel.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">网格</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">曲线</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tools/index.html">工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../structure.html">结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../primitives.html">基本体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../selecting.html">选择</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">编辑</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="transform_panel.html">变换面板</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">曲线</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#transform">变换</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#radius">半径</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#mirror">镜像</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#snap">吸附</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#spin">旋绕</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#add-duplicate">新增副本</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#split">拆分</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#separate">分离</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#toggle-cyclic">切换闭合</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#set-spline-type">设置样条类型</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#show-hide">显示/隐藏</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#cleanup">清理</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#decimate-curve">精简曲线</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#delete">删除</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="control_points.html">控制点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="segments.html">分段</a></li>
+<li class="toctree-l4"><a class="reference internal" href="other.html">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../curve_display.html">曲线显示</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">文本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../volumes/index.html">体积（卷标）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../empties.html">空物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html">修改器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../geometry_nodes/index.html">几何节点</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">建模</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">曲线</a></li>
+          <li class="breadcrumb-item"><a href="index.html">编辑</a></li>
+      <li class="breadcrumb-item active">曲线</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="curve">
+<h1>曲线<a class="headerlink" href="#curve" title="Permalink to this heading"></a></h1>
+<p>本页面涵盖了曲线编辑的基本内容。</p>
+<section id="transform">
+<span id="modeling-curves-transform"></span><h2>变换<a class="headerlink" href="#transform" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">曲线 ‣ 变换</span></p>
+</dd>
+</dl>
+</div>
+<p>通过变换控制点和控制柄的位置，可以编辑贝塞尔曲线。而 NURBS 曲线只需控制控制点。</p>
+<dl class="simple">
+<dt>移动，旋转，缩放</dt><dd><p>与 Blender 中的其他元素一样，曲线的控制点和控制柄可以移动、旋转或缩放，如<a class="reference internal" href="../../../scene_layout/object/editing/transform/introduction.html"><span class="doc">基础变换</span></a>所述。</p>
+</dd>
+<dt>球形化、切变、弯绕、弯曲、推/拉、随机化</dt><dd><p>这些变换工具在<a class="reference internal" href="../../meshes/editing/mesh/transform/index.html"><span class="doc">变换</span></a>小节中进行了详述。</p>
+</dd>
+<dt>移动/缩放纹理空间</dt><dd><p>和其他物体一样，曲线也有纹理空间并且可以被<a class="reference internal" href="../../meshes/uv/uv_texture_spaces.html#properties-texture-space-editing"><span class="std std-ref">编辑</span></a>。</p>
+</dd>
+</dl>
+<section id="radius">
+<span id="modeling-curve-radius"></span><h3>半径<a class="headerlink" href="#radius" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id2">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">工具<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">工具栏 ‣ 半径</span></p>
+</dd>
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">曲线 ‣ 变换 ‣ 半径</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">S</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>半径允许直接控制沿 &quot;脊柱&quot; 曲线挤出的宽度。半径将从一点插值到另一点（可以用法线检查）。点的 <em>半径</em> 是使用 <em>半径</em> 变换工具，或在侧栏 <em>变换</em> 面板中设置的。</p>
+<figure class="align-center" id="id14">
+<a class="reference internal image-reference" href="../../../_images/modeling_curves_editing_curve_extrude-radius.png"><img alt="../../../_images/modeling_curves_editing_curve_extrude-radius.png" src="../../../_images/modeling_curves_editing_curve_extrude-radius.png" style="width: 50%;" /></a>
+<figcaption>
+<p><span class="caption-text">一个控制点半径设为零。</span><a class="headerlink" href="#id14" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+<section id="mirror">
+<h2>镜像<a class="headerlink" href="#mirror" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id3">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">曲线 ‣ 镜像</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">M</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p><em>镜像</em> 工具也是可用的，其行为与<a class="reference internal" href="../../meshes/editing/mesh/mirror.html"><span class="doc">网格顶点</span></a>完全一样。</p>
+</section>
+<section id="snap">
+<h2>吸附<a class="headerlink" href="#snap" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id4">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">曲线 ‣ 吸附</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">S</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p><a class="reference internal" href="../../../editors/3dview/controls/snapping.html"><span class="doc">网格吸附</span></a>也适用于曲线组件。除了它们内部（活动曲线的其他组件）外，控制点及其控制柄都将受到吸附的影响。二维曲线也能够使用吸附，但点将限制在局部 XY 轴。</p>
+</section>
+<section id="spin">
+<h2>旋绕<a class="headerlink" href="#spin" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id5">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">曲线 ‣ 旋绕</span></p>
+</dd>
+</dl>
+</div>
+<p><em>旋绕</em> 操作只适用于一维<a class="reference internal" href="../../surfaces/index.html"><span class="doc">曲面</span></a>物体。目前不可能用于曲线，完整的功能被记录在<a class="reference internal" href="../../surfaces/editing/surface.html#bpy-ops-curve-spin"><span class="std std-ref">曲面编辑</span></a>中。</p>
+</section>
+<section id="add-duplicate">
+<span id="bpy-ops-curve-duplicate-move"></span><h2>新增副本<a class="headerlink" href="#add-duplicate" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id6">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">曲线 ‣ 新增副本</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">D</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>This tool duplicates the selected control points,
+along with the curve segments implicitly selected (if any).
+If only a handle is selected, the full point will be duplicated too.
+The copy is selected and placed in select mode, so you can move it to another place.</p>
+</section>
+<section id="split">
+<span id="bpy-ops-curve-split"></span><h2>拆分<a class="headerlink" href="#split" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id7">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">曲线 ‣ 拆分</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Y</kbd></p>
+</dd>
+</dl>
+</div>
+<p>The <em>Split</em> operator splits a selected segment of a curve from the rest of the curve.
+This curve can then be moved or altered without affecting the other curve.
+If a single control point is selected the <em>Split</em> operator will create a new singular loose control point;
+leaving the previously selected control point attached to the rest of the curve.</p>
+</section>
+<section id="separate">
+<span id="bpy-ops-curve-separate"></span><h2>分离<a class="headerlink" href="#separate" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id8">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">曲线 ‣ 分离</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">P</kbd></p>
+</dd>
+</dl>
+</div>
+<p>Curve objects that are made of multiple distinct curves can be separated into their own
+objects by selecting the desired segments and pressing <kbd class="kbd docutils literal notranslate">P</kbd>.
+Note, if there is only one curve in a Curve object,
+<em>Separate</em> will create a new Curve object with no control points.</p>
+</section>
+<section id="toggle-cyclic">
+<span id="modeling-curves-toggle-cyclic"></span><span id="bpy-ops-curve-cyclic-toggle"></span><h2>切换闭合<a class="headerlink" href="#toggle-cyclic" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id9">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">曲线 ‣ 切换闭合</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">C</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>This toggles between an open curve and closed curve (Cyclic).
+Only curves with at least one selected control point will be closed/open.
+The shape of the closing segment is based on the start and end handles for Bézier curves,
+and as usual on adjacent control points for NURBS.
+The only time a handle is adjusted after closing is if the handle is an <em>Auto</em> one.
+Fig. <a class="reference internal" href="#fig-curves-editing-open-close"><span class="std std-ref">开放和闭合的曲线。</span></a> is the same Bézier curve open and closed.</p>
+<p>此操作仅对原始起始控制点或添加的最后一个控制点有效。删除一个线段不会改变该操作的应用方式；它仍然只在两个始末控制点上操作。这意味着 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">C</kbd></kbd> 实际上可能合并两条曲线，而不是闭合一条曲线！记住，当 2D 曲线闭合时，它会创建一个可渲染的平面。</p>
+<figure class="align-default" id="id15">
+<span id="fig-curves-editing-open-close"></span><img alt="../../../_images/modeling_curves_editing_curve_open-closed-cyclic.png" src="../../../_images/modeling_curves_editing_curve_open-closed-cyclic.png" />
+<figcaption>
+<p><span class="caption-text">开放和闭合的曲线。</span><a class="headerlink" href="#id15" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="set-spline-type">
+<span id="curve-convert-type"></span><span id="bpy-ops-curve-spline-type-set"></span><h2>设置样条类型<a class="headerlink" href="#set-spline-type" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id10">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">曲线 ‣ 设置样条类型</span></p>
+</dd>
+</dl>
+</div>
+<p><em>Set Spline Type</em> converts splines in a curve object between Bézier, NURBS, and Poly curves.
+Note, this is not a &quot;smart&quot; conversion, i.e. Blender does not try to keep the same shape,
+nor the same number of control points. For example, when converting a NURBS to a Bézier,
+each group of three NURBS control points become a unique Bézier one (center point and two handles).</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="../../../scene_layout/object/editing/convert.html#object-convert-to"><span class="std std-ref">转换</span></a>自网格。</p>
+</div>
+</section>
+<section id="show-hide">
+<span id="curves-show-hide"></span><span id="bpy-ops-curve-hide"></span><span id="bpy-ops-curve-reveal"></span><h2>显示/隐藏<a class="headerlink" href="#show-hide" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id11">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">曲线 ‣ 显示/隐藏</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">H</kbd></kbd>, <kbd class="kbd docutils literal notranslate">H</kbd>, <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">H</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>在 <em>编辑模式</em> 下，可以隐藏和显示元素。只能显示或隐藏控制点，因为线段总是显示的，除非连接曲线的所有控制点都是隐藏的，在这种情况下，曲线是完全隐藏的。</p>
+<p>参见 <em>物体模式</em> 下的<a class="reference internal" href="../../../scene_layout/object/editing/show_hide.html#object-show-hide"><span class="std std-ref">显示/隐藏</span></a>。或者是<a class="reference internal" href="../curve_display.html"><span class="doc">曲线显示</span></a>面板。</p>
+</section>
+<section id="cleanup">
+<h2>清理<a class="headerlink" href="#cleanup" title="Permalink to this heading"></a></h2>
+<section id="decimate-curve">
+<span id="bpy-ops-curve-decimate"></span><h3>精简曲线<a class="headerlink" href="#decimate-curve" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id12">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">曲线 ‣ 清理 ‣ 精简曲线</span></p>
+</dd>
+</dl>
+</div>
+<p><em>精简曲线</em> 操作减少了控制点的数量，同时试图保持曲线的原始形状。这个操作的工作原理类似于在<a class="reference internal" href="../../meshes/editing/mesh/cleanup.html#bpy-ops-mesh-decimate"><span class="std std-ref">网格中的对等操作</span></a>。</p>
+<dl class="simple">
+<dt>比率</dt><dd><p>要删除的控制点的百分比。</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>这个工具只能精简贝塞尔曲线。</p>
+</div>
+</section>
+</section>
+<section id="delete">
+<span id="bpy-ops-curve-dissolve-verts"></span><span id="bpy-ops-curve-delete"></span><h2>删除<a class="headerlink" href="#delete" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id13">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">曲线 ‣ 删除...</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">X</kbd>, <kbd class="kbd docutils literal notranslate">Delete</kbd>; <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">X</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p><em>删除</em> 弹出式菜单的选项：</p>
+<dl class="simple">
+<dt>顶点</dt><dd><p>这将删除选定的控制点，<em>不</em> 破坏曲线（即删除中间点后，将直接连接相邻点）。记住，NURBS 曲线要求删除的顶点不能高于它的控制点数量，因此当您删除某个控制点时，它可能会减少。当然，当只剩下一个点时，就没有可见的曲线了，当所有点都被删除时，曲线本身也被删除了。</p>
+</dd>
+<dt>线段</dt><dd><p>删除连接所选控制点的线段，以断开连接控制点。</p>
+</dd>
+<dt>融并顶点 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">X</kbd></kbd></dt><dd><p>删除选定的控制点，而通过调整控制柄将剩余的线段拟合到删除的曲线上。</p>
+</dd>
+</dl>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id16">
+<img alt="../../../_images/modeling_curves_editing_curve_make-segment.png" src="../../../_images/modeling_curves_editing_curve_make-segment.png" />
+<figcaption>
+<p><span class="caption-text">删除前。</span><a class="headerlink" href="#id16" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id17">
+<img alt="../../../_images/modeling_curves_editing_curve_delete-vertices.png" src="../../../_images/modeling_curves_editing_curve_delete-vertices.png" />
+<figcaption>
+<p><span class="caption-text">删除顶点。</span><a class="headerlink" href="#id17" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+<tr class="row-even"><td><figure class="align-default" id="id18">
+<img alt="../../../_images/modeling_curves_editing_curve_delete-segment.png" src="../../../_images/modeling_curves_editing_curve_delete-segment.png" />
+<figcaption>
+<p><span class="caption-text">删除线段。</span><a class="headerlink" href="#id18" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id19">
+<img alt="../../../_images/modeling_curves_editing_curve_dissolve-vertices.png" src="../../../_images/modeling_curves_editing_curve_dissolve-vertices.png" />
+<figcaption>
+<p><span class="caption-text">融并顶点。</span><a class="headerlink" href="#id19" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="transform_panel.html" class="btn btn-neutral float-left" title="变换面板" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="control_points.html" class="btn btn-neutral float-right" title="控制点" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/modeling/curves/editing/curve.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/modeling/curves/editing/curve.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fmodeling/curves/editing/curve.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fmodeling/curves/editing/curve.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

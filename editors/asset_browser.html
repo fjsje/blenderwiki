@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>资产浏览器 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/asset_browser.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/js/version_switch.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="next" title="电子表格" href="spreadsheet.html" />
+    <link rel="prev" title="文件浏览器" href="file_browser.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="3dview/index.html">3D 视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="image/index.html">图像编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="uv/index.html">UV 编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="compositor.html">合成器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texture_node/index.html">纹理节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geometry_node.html">几何节点编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shader_editor.html">着色器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="video_sequencer/index.html">视频序列编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="clip/index.html">影片剪辑编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dope_sheet/index.html">动画摄影表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="timeline.html">时间线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="graph_editor/index.html">曲线编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="drivers_editor.html">驱动器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="nla/index.html">非线性动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="text_editor.html">文本编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="python_console.html">Python 控制台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="info_editor.html">信息编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outliner/index.html">大纲视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="properties_editor.html">属性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_browser.html">文件浏览器</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">资产浏览器</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#interface">界面</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#main-region">主区块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#source-list-region">资源列表区块</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#asset-details-region">资产详情区块</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#preview">预览</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#tags">标签</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#using-assets">使用资产</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#asset-previews">资产预览</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#asset-bundles">资产包</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="spreadsheet.html">电子表格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="preferences/index.html">偏好设置</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">编辑器</a></li>
+      <li class="breadcrumb-item active">资产浏览器</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="asset-browser">
+<span id="index-0"></span><h1>资产浏览器<a class="headerlink" href="#asset-browser" title="Permalink to this heading"></a></h1>
+<p>This section describes the <em>Asset Browser</em>, which is the main interface for organizing and using assets.</p>
+<p>The Asset Browser was introduced in Blender 3.0, and will be improved and
+expanded over multiple upcoming releases.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<dl class="simple">
+<dt><a class="reference internal" href="../files/asset_libraries/index.html"><span class="doc">资产库</span></a></dt><dd><p>有关 Blender 资产库系统的一般信息，包括如何<a class="reference internal" href="../files/asset_libraries/introduction.html#asset-create"><span class="std std-ref">创建</span></a>和<a class="reference internal" href="../files/asset_libraries/introduction.html#asset-edit"><span class="std std-ref">编辑</span></a>资产以及设计选择。</p>
+</dd>
+<dt><a class="reference internal" href="../files/asset_libraries/catalogs.html"><span class="doc">资产目录</span></a></dt><dd><p>用于组织资产。</p>
+</dd>
+<dt><a class="reference internal" href="../animation/armatures/posing/editing/pose_library.html"><span class="doc">姿态库</span></a></dt><dd><p>Build on top of the Asset Browser.</p>
+</dd>
+</dl>
+</div>
+<section id="interface">
+<span id="bpy-ops-asset-catalog-redo"></span><span id="bpy-ops-asset-catalog-undo"></span><h2>界面<a class="headerlink" href="#interface" title="Permalink to this heading"></a></h2>
+<figure class="align-default" id="id3">
+<img alt="../_images/asset_browser-gold-material.png" src="../_images/asset_browser-gold-material.png" />
+<figcaption>
+<p><span class="caption-text">资产浏览器，显示资产库中的材质。</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<section id="main-region">
+<h3>主区块<a class="headerlink" href="#main-region" title="Permalink to this heading"></a></h3>
+<p>The main region of the Asset Browser acts similar to the <a class="reference internal" href="file_browser.html"><span class="doc">文件浏览器</span></a> built into Blender.
+It shows the assets contained in the selected catalog.</p>
+<p>Click an asset to select and activate it. Box select by dragging <kbd class="kbd docutils literal notranslate">LMB</kbd> or
+extend the selection with <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> to select multiple assets.
+Every asset has a context menu.</p>
+</section>
+<section id="source-list-region">
+<h3>资源列表区块<a class="headerlink" href="#source-list-region" title="Permalink to this heading"></a></h3>
+<p>The Source List region can be used for navigating and <a class="reference internal" href="#using-assets">Using Assets</a>.</p>
+<dl class="simple" id="bpy-types-fileassetselectparams-asset-library-ref">
+<dt>姿产库</dt><dd><p>Shows the active <a class="reference internal" href="../files/asset_libraries/index.html"><span class="doc">asset library</span></a>,
+and allows switching between asset libraries.
+The library &quot;<a class="reference internal" href="../files/asset_libraries/introduction.html#asset-library-current-file"><span class="std std-ref">Current File</span></a>&quot; is special,
+and will always show the assets from the current blend-file,
+regardless of whether it is part of an asset library or not.</p>
+</dd>
+</dl>
+<dl id="bpy-ops-asset-bundle-install">
+<dt>将资产捆绑包复制到库</dt><dd><p>Shown when the Library selector is set to Current File,
+the current blend-file file is considered an <a class="reference internal" href="#asset-bundles"><span class="std std-ref">Asset Bundle</span></a>,
+and is not yet located inside any asset library.</p>
+<p>The Copy Asset Bundle operator makes it simple to copy the file into the asset library.
+The catalogs of the asset bundle will be merged into the asset library.</p>
+</dd>
+<dt>目录</dt><dd><p>Tree view that shows the <a class="reference internal" href="../files/asset_libraries/catalogs.html"><span class="doc">catalogs</span></a> of the active asset library.
+Selecting a catalog limits shown assets to assets only from the selected library.</p>
+<p>Catalogs can be renamed by double clicking on there name.
+Catalogs can also be nested inside others by dragging and dropping one catalog into another.
+The &quot;All&quot; catalogs is built-in asset library that contains all other asset libraries.</p>
+</dd>
+</dl>
+<p>插件和功能，如<a class="reference internal" href="../animation/armatures/posing/editing/pose_library.html"><span class="doc">姿态库</span></a>可以在这里显示自定义面板。</p>
+</section>
+<section id="asset-details-region">
+<span id="editing-asset-metadata"></span><span id="bpy-types-assetmetadata"></span><h3>资产详情区块<a class="headerlink" href="#asset-details-region" title="Permalink to this heading"></a></h3>
+<p>The Asset Details region on the right shows metadata of the active asset.
+<strong>Only metadata of assets contained in the current blend-file can be edited</strong>.</p>
+<dl class="simple">
+<dt>名称</dt><dd><p>The asset data-block name. This name is unique for the asset data type within
+the same blend-file.</p>
+</dd>
+</dl>
+<dl id="bpy-types-windowmanager-asset-path-dummy">
+<dt>源</dt><dd><p>包含资产的 blend 文件的完整路径。</p>
+<dl class="simple" id="bpy-ops-asset-open-containing-blend-file">
+<dt>打开 Blend 文件</dt><dd><p>This button will start a new Blender instance and open the blend-file that contains the asset.
+In the background Blender will keep monitoring that new Blender instance;
+when it is quit, the Asset Browser will be refreshed to show any updated assets.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-assetmetadata-description">
+<dt>描述</dt><dd><p>Optional field for the asset description. Not used by Blender itself.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-assetmetadata-author">
+<dt>作者</dt><dd><p>资产作者的可选字段。Blender 本身不会使用。</p>
+</dd>
+</dl>
+<section id="preview">
+<h4>预览<a class="headerlink" href="#preview" title="Permalink to this heading"></a></h4>
+<p>显示资产的预览图像。参见<a class="reference internal" href="#asset-previews"><span class="std std-ref">资产预览</span></a>。</p>
+<dl class="simple" id="bpy-ops-ed-lib-id-load-custom-preview">
+<dt>加载自定义预览</dt><dd><p>打开一个带有文件浏览器的窗口，以选择用于资产预览的图像。</p>
+</dd>
+</dl>
+<dl id="bpy-ops-ed-lib-id-generate-preview">
+<dt>生成预览</dt><dd><p>Generate/update a preview for the asset.</p>
+</dd>
+<dt>预览</dt><dd><p>额外预览操作的菜单。</p>
+<dl class="simple" id="bpy-ops-ed-lib-id-generate-preview-from-object">
+<dt>渲染活动物体</dt><dd><p>Generates a preview by based on the 3D Viewport's <a class="reference internal" href="../glossary/index.html#term-Active"><span class="xref std std-term">Active</span></a> object.
+This is useful for node groups, particularly for geometry nodes,
+which cannot automatically generate their own preview.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+<section id="tags">
+<span id="bpy-types-assetmetadata-active-tag"></span><span id="bpy-ops-asset-tag-remove"></span><span id="bpy-ops-asset-tag-add"></span><h4>标签<a class="headerlink" href="#tags" title="Permalink to this heading"></a></h4>
+<p>Panel for viewing and editing asset tags.
+These do not have any meaning to Blender, and can be chosen freely.
+When using the search field to filter the assets, those assets whose tags (partially) match
+the search term will also be shown.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>根据对象的当前模式和所选资产类型，可能会显示更多面板。例如，请参阅<a class="reference internal" href="../animation/armatures/posing/editing/pose_library.html"><span class="doc">姿态库</span></a>。</p>
+</div>
+</section>
+</section>
+</section>
+<section id="using-assets">
+<span id="assets-using"></span><h2>使用资产<a class="headerlink" href="#using-assets" title="Permalink to this heading"></a></h2>
+<p>一般来说，<strong>资产可以通过从资产浏览器拖动到所需位置来使用</strong>。物体和世界环境可以从资产浏览器拖到场景中。材质可以拖动到要使用它们的物体上。几何节点也可以拖到物体上以添加<a class="reference internal" href="../modeling/modifiers/generate/geometry_nodes.html"><span class="doc">几何节点修改器</span></a>。姿态资产的使用则有所不同，在<a class="reference internal" href="../animation/armatures/posing/editing/pose_library.html"><span class="doc">姿态库</span></a>章节中有描述。</p>
+<p>使用资产时可能会发生几种情况，具体取决于资产浏览器的以下配置：</p>
+<dl id="bpy-types-fileassetselectparams-import-type">
+<dt>导入方法</dt><dd><p>决定资产导入时的数据管理方式。该选项位于资产浏览器标题栏的中部。</p>
+<dl class="field-list">
+<dt class="field-odd">遵循偏好设置<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Use the import method set in the Preferences.</p>
+</dd>
+<dt class="field-even">关联<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>等同于</em> <span class="menuselection">文件 ‣ 关联...</span></p>
+<p>资产将关联到当前的 blend 文件，因此是只读的。以后对资产文件的更改将反映在关联到该文件的所有文件中。</p>
+</dd>
+<dt class="field-odd">追加<span class="colon">:</span></dt>
+<dd class="field-odd"><p><em>等同于</em> <span class="menuselection">文件 ‣ 追加...</span></p>
+<p>所有资产及其所有依赖项都将附加到当前文件中。将材质拖入场景三次将产生三个独立的副本。将物体拖入场景三次也会产生三个独立的副本。</p>
+<p>这里的 “依赖” 是指资产所涉及的一切。对于物体来说，这可以是它的网格和材质，也可以是修改器、约束或驱动器使用的其他物体。</p>
+<p>由于该文件现在有自己的资产副本，因此以后对资产文件的更改不会反映在其追加到的文件中。</p>
+</dd>
+<dt class="field-even">追加（重用数据）<span class="colon">:</span></dt>
+<dd class="field-even"><p><em>特定于资产浏览器</em>。</p>
+<p>第一次使用一个资产时，它将被追加，包括它的依赖关系，就像前面描述的那样。然而，Blender 会跟踪它的来源，下次使用该资产时，会尽可能多地重复使用数据。将一个材质拖入场景三次，只会加载一次，而且只是将同一个材质分配三次。将一个物体拖入场景三次将创建该物体的三个副本，但所有副本将共享它们的网格数据、材质等。</p>
+<p>由于该文件现在有自己的资产副本，因此以后对资产文件的更改不会反映在其追加到的文件中。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><strong>实例化集合</strong></p>
+<p><em>当</em> <a class="reference internal" href="../files/linked_libraries/link_append.html#bpy-ops-wm-append"><span class="std std-ref">从文件浏览器追加</span></a>时，模仿实例集合选项</p>
+<p>Some asset types such as collections can be created as an instanced collection.
+This is done by enabling the <em>Instance</em> option after dragging collection assets into the 3D Viewport.
+By enabling this option an empty object is added that uses an instance of the collection.
+If this option is disabled then the full collection hierarchy will be added to the scene.</p>
+<p>将始终实例化当前文件中的集合资产。</p>
+</div>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>请注意，所有常规的 Blender 操作都是在资产被添加到当前文件之后才可用的。例如，你可以选择将一个物体关联到场景中；这也将关联它的网格和材质。然后，你可以使物体本身成为本地的（<span class="menuselection">物体 ‣ 关系 ‣ 转为本地项... ‣ 选定的物体</span>），同时保持网格和材质与资产文件的关联。这将产生一个本地的、可编辑的物体，并使网格和材质自动与资产库的任何变化保持同步。</p>
+</section>
+<section id="asset-previews">
+<span id="id1"></span><h2>资产预览<a class="headerlink" href="#asset-previews" title="Permalink to this heading"></a></h2>
+<figure class="align-right" id="id4">
+<img alt="../_images/asset-browser-preview-panel.png" src="../_images/asset-browser-preview-panel.png" />
+<figcaption>
+<p><span class="caption-text">资产浏览器中的预览面板。</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Preview images are typically automatically generated when you
+<a class="reference internal" href="../files/asset_libraries/introduction.html#bpy-ops-asset-mark"><span class="std std-ref">mark a data-block as asset</span></a>. The auto-generated
+preview tries to capture the object from the front. However this only works if
+the geometry is laid out so that it matches what Blender considers to be the
+front. That is, the geometry that should be the front needs to point down the -Y
+axis of the object. The rotation may have to be applied to get the expected
+result. Collection assets use the global -Y  axis as the front (instead of the
+local one, as collections themselves don't have a rotation).</p>
+<p>It's also possible to load image files from drive, to replace the auto-generated previews.</p>
+<p>有关姿态资产的预览，请参阅<a class="reference internal" href="../animation/armatures/posing/editing/pose_library.html#poselib-preview-images"><span class="std std-ref">控制预览图像的外观</span></a>。</p>
+</section>
+<section id="asset-bundles">
+<span id="id2"></span><h2>资产包<a class="headerlink" href="#asset-bundles" title="Permalink to this heading"></a></h2>
+<p><em>资产包</em> 是不引用任何其他文件的 blend 文件，其名称以 <code class="docutils literal notranslate"><span class="pre">_bundle.blend</span></code> 结尾。任何纹理和其他外部文件都需要<a class="reference internal" href="../files/blend/packed_data.html"><span class="doc">打包</span></a>到当前的 blend 文件中。</p>
+<p>可以通过<a class="reference internal" href="#bpy-ops-asset-bundle-install"><span class="std std-ref">资产浏览器</span></a>将资产捆绑包复制到资产库：</p>
+<ul class="simple">
+<li><p>打开资产包 blend 文件。</p></li>
+<li><p>Switch its Asset Browser to <em>Current File</em> (if it's not set at that already).</p></li>
+<li><p>单击 <em>将捆绑包复制到资产库</em>。</p></li>
+<li><p>选择要将其复制到的资产库。</p></li>
+<li><p>A File Browser will open, showing the files of the selected asset library.
+Choose the desired location of the blend-file, and click the <em>Copy to Asset Library</em> button.</p></li>
+<li><p>blend 文件将保存在选定的位置，资产捆绑包的任何<a class="reference internal" href="../files/asset_libraries/catalogs.html"><span class="doc">目录</span></a>都将合并到目标资产库中。</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>&quot;资产&quot; 一词和 &quot;捆绑&quot; 一词都被广泛使用，不一定与这里所描述的含义相同。并非所有以 &quot;资产捆绑包&quot; 形式呈现的文件都具有 <em>复制到资产库</em> 功能；为此，捆绑包文件需要遵守上述定义。</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="file_browser.html" class="btn btn-neutral float-left" title="文件浏览器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="spreadsheet.html" class="btn btn-neutral float-right" title="电子表格" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/editors/asset_browser.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/editors/asset_browser.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Feditors/asset_browser.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Feditors/asset_browser.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

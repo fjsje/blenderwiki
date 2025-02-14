@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>简介 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/selecting/introduction.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/js/version_switch.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../copyright.html" />
+    <link rel="next" title="随机选择" href="random.html" />
+    <link rel="prev" title="选择" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">网格</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../structure.html">结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../primitives.html">基本体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tools/index.html">工具</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">选择</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">简介</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#selection-modes">选择模式</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#multiple-selection-modes">多选择模式</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#switching-select-mode">切换选择模式</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#expand-contract-selection">扩展/缩减选择</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#x-ray">透视</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#select-menu">选择菜单</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#known-issues">已知问题</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#dense-meshes">密集网格</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#n-gons-in-face-select-mode">面选择模式下的N边形面</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="random.html">随机选择</a></li>
+<li class="toctree-l4"><a class="reference internal" href="checker_deselect.html">间隔式弃选</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sharp_edges.html">选择锐边</a></li>
+<li class="toctree-l4"><a class="reference internal" href="similar.html">选择相似元素</a></li>
+<li class="toctree-l4"><a class="reference internal" href="all_by_trait.html">按特征全选</a></li>
+<li class="toctree-l4"><a class="reference internal" href="more_less.html">扩展选择/缩减选择</a></li>
+<li class="toctree-l4"><a class="reference internal" href="loops.html">选择循环</a></li>
+<li class="toctree-l4"><a class="reference internal" href="linked.html">选择相连元素</a></li>
+<li class="toctree-l4"><a class="reference internal" href="side_of_active.html">活动项的同侧</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mirror.html">选择镜像</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../editing/index.html">编辑</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../uv/index.html">UV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh_analysis.html">网格分析</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../retopology.html">重拓扑</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">文本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../volumes/index.html">体积（卷标）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../empties.html">空物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html">修改器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../geometry_nodes/index.html">几何节点</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">建模</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">网格</a></li>
+          <li class="breadcrumb-item"><a href="index.html">选择</a></li>
+      <li class="breadcrumb-item active">简介</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h1>
+<p>有很多选择网格元素的方式，而且可以使用什么样的选择工具还取决于您当前在什么 <em>网格选择模式</em> 下。首先我们简要了解一遍这些选择模式，然后将对基础的选择工具稍作了解。</p>
+<section id="selection-modes">
+<span id="bpy-ops-mesh-select-mode"></span><span id="bpy-types-toolsettings-mesh-select-mode"></span><h2>选择模式<a class="headerlink" href="#selection-modes" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">3D视图标题栏 ‣ 选择模式</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">1</kbd>, <kbd class="kbd docutils literal notranslate">2</kbd>, <kbd class="kbd docutils literal notranslate">3</kbd> (<kbd class="kbd docutils literal notranslate">Shift</kbd> <a class="reference internal" href="#multiple-selection-modes">多选择模式</a>, <kbd class="kbd docutils literal notranslate">Ctrl</kbd> <a class="reference internal" href="#expand-contract-selection">扩展/缩减选择</a>)。</p>
+</dd>
+</dl>
+</div>
+<p>在 <em>编辑模式下</em> 有三种不同的选择模式。您可通过选择标题栏中三个按钮中的某个来进入不同的选择模式。</p>
+<figure class="align-center" id="id2">
+<img alt="../../../_images/modeling_meshes_selecting_introduction_mode-buttons.png" src="../../../_images/modeling_meshes_selecting_introduction_mode-buttons.png" />
+<figcaption>
+<p><span class="caption-text">编辑模式选择按钮，从右到左。顶点、边缘、面。</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<dl class="simple">
+<dt>顶点</dt><dd><p>在此模式下，顶点显示为点。所选顶点以橙色显示，未选择的顶点以黑色显示，活动或上次选定的顶点以白色显示。</p>
+</dd>
+<dt>边</dt><dd><p>在此模式下，不显示顶点。相反，所选边缘以橙色显示，未选择的边显示为黑色，活动或上次选定的边缘显示为白色。</p>
+</dd>
+<dt>面</dt><dd><p>在此模式下，显示面时中间有一个选择点，用于选择面。所选面及其选择点以橙色显示，未选定面以黑色显示，活动或上次选定的面以白色高亮显示。</p>
+</dd>
+</dl>
+<p>当使用这些按钮时，可充分利用编辑键，详见：<a class="reference internal" href="#switching-select-mode">切换选择模式</a>。</p>
+<p>几乎所有的工具都可以在全部的三种选择模式下使用。所以您在所有的模式下都可以 <em>旋转</em>、<em>缩放</em>、<em>挤出</em> 等。当然，对单个 <em>顶点</em> 进行旋转和缩放是没有意义的（<em>除非</em> 将原点设在了另一个位置），所以某些工具在某些选择模式下可能更加适用或不太适用。</p>
+<p>不同选择模式示例详见参考图 <a class="reference internal" href="#fig-mesh-select-intro-selection-modes"><span class="std std-ref">选择模式。</span></a>。</p>
+<section id="multiple-selection-modes">
+<h3>多选择模式<a class="headerlink" href="#multiple-selection-modes" title="Permalink to this heading"></a></h3>
+<p>通过在选择模式时按住 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">鼠标左键</kbd></kbd>，您可以一次启用多个 <em>选择模式</em>。这使您可以快速选择顶点、边或面，而无需先切换模式。</p>
+<span id="fig-mesh-select-intro-selection-modes"></span><table class="docutils align-default" id="id3">
+<caption><span class="caption-text">选择模式。</span><a class="headerlink" href="#id3" title="Permalink to this table"></a></caption>
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id4">
+<a class="reference internal image-reference" href="../../../_images/modeling_meshes_selecting_introduction_vertex-mode-example.png"><img alt="../../../_images/modeling_meshes_selecting_introduction_vertex-mode-example.png" src="../../../_images/modeling_meshes_selecting_introduction_vertex-mode-example.png" style="width: 310px;" /></a>
+<figcaption>
+<p><span class="caption-text">顶点选择模式示例。</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id5">
+<a class="reference internal image-reference" href="../../../_images/modeling_meshes_selecting_introduction_edge-mode-example.png"><img alt="../../../_images/modeling_meshes_selecting_introduction_edge-mode-example.png" src="../../../_images/modeling_meshes_selecting_introduction_edge-mode-example.png" style="width: 310px;" /></a>
+<figcaption>
+<p><span class="caption-text">边选择模式示例。</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+<tr class="row-even"><td><figure class="align-default" id="id6">
+<a class="reference internal image-reference" href="../../../_images/modeling_meshes_selecting_introduction_face-mode-example.png"><img alt="../../../_images/modeling_meshes_selecting_introduction_face-mode-example.png" src="../../../_images/modeling_meshes_selecting_introduction_face-mode-example.png" style="width: 310px;" /></a>
+<figcaption>
+<p><span class="caption-text">面选择模式示例。</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id7">
+<a class="reference internal image-reference" href="../../../_images/modeling_meshes_selecting_introduction_mixed-mode-example.png"><img alt="../../../_images/modeling_meshes_selecting_introduction_mixed-mode-example.png" src="../../../_images/modeling_meshes_selecting_introduction_mixed-mode-example.png" style="width: 310px;" /></a>
+<figcaption>
+<p><span class="caption-text">混合选择模式示例。</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="switching-select-mode">
+<h3>切换选择模式<a class="headerlink" href="#switching-select-mode" title="Permalink to this heading"></a></h3>
+<p>当以 &quot;升级&quot; 的方式（换句话说就是由简单走向复杂）切换选择模式，从 <em>顶点</em> 切换到 <em>边</em> 以及从 <em>边</em> 切换到 <em>面</em>，如果选中元素能构成新的选择模式下的完整元素，其将保持选中状态。</p>
+<p>例如，如果一个面上所有四条边都被选中，由 <em>边</em> 选择模式切换到 <em>面</em> 选择模式下将会保持其构成的面处于被选中状态。所有未能够构成新选择模式下完整元素的内容将被弃选。</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id8">
+<a class="reference internal image-reference" href="../../../_images/modeling_meshes_selecting_introduction_edge-mode-example.png"><img alt="../../../_images/modeling_meshes_selecting_introduction_edge-mode-example.png" src="../../../_images/modeling_meshes_selecting_introduction_edge-mode-example.png" style="width: 310px;" /></a>
+<figcaption>
+<p><span class="caption-text">边选择模式，初始选择。</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id9">
+<a class="reference internal image-reference" href="../../../_images/modeling_meshes_selecting_introduction_face-mode-switched-from-edge.png"><img alt="../../../_images/modeling_meshes_selecting_introduction_face-mode-switched-from-edge.png" src="../../../_images/modeling_meshes_selecting_introduction_face-mode-switched-from-edge.png" style="width: 310px;" /></a>
+<figcaption>
+<p><span class="caption-text">切换到面选择模式。</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<p>因此，以 &quot;降级&quot; 的方式（换句话说就是由复杂走向简单）切换选择模式，所有定义 &quot;高级&quot; 元素（比如面）的元素将仍然处于选中状态（比如四边形的四个顶点或四条边）。</p>
+<section id="expand-contract-selection">
+<h4>扩展/缩减选择<a class="headerlink" href="#expand-contract-selection" title="Permalink to this heading"></a></h4>
+<p>通过在选择更高的选择模式时按住 <kbd class="kbd docutils literal notranslate">Ctrl</kbd>，将添加所有与当前选择接触的元素，即使所选内容没有形成完整的较高元素。或者在切换到较低模式时收缩选择。</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id10">
+<a class="reference internal image-reference" href="../../../_images/modeling_meshes_selecting_introduction_vertex-mode-example.png"><img alt="../../../_images/modeling_meshes_selecting_introduction_vertex-mode-example.png" src="../../../_images/modeling_meshes_selecting_introduction_vertex-mode-example.png" style="width: 310px;" /></a>
+<figcaption>
+<p><span class="caption-text">顶点选择模式，初始选择。</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id11">
+<a class="reference internal image-reference" href="../../../_images/modeling_meshes_selecting_introduction_edge-mode-expanding-from-vertex.png"><img alt="../../../_images/modeling_meshes_selecting_introduction_edge-mode-expanding-from-vertex.png" src="../../../_images/modeling_meshes_selecting_introduction_edge-mode-expanding-from-vertex.png" style="width: 310px;" /></a>
+<figcaption>
+<p><span class="caption-text">扩展边模式。</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+<section id="x-ray">
+<span id="bpy-ops-view3d-toggle-xray"></span><h2>透视<a class="headerlink" href="#x-ray" title="Permalink to this heading"></a></h2>
+<p><a class="reference internal" href="../../../editors/3dview/display/shading.html#dview-shading-xray"><span class="std std-ref">透视</span></a>设置不仅用于着色，还会影响选择。启用后，所选内容不会被物体几何遮挡（就像物体是实心的一样）。</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id12">
+<a class="reference internal image-reference" href="../../../_images/modeling_meshes_selecting_introduction_limit-selection-to-visible-off.png"><img alt="../../../_images/modeling_meshes_selecting_introduction_limit-selection-to-visible-off.png" src="../../../_images/modeling_meshes_selecting_introduction_limit-selection-to-visible-off.png" style="width: 310px;" /></a>
+<figcaption>
+<p><span class="caption-text">透视打开。</span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id13">
+<a class="reference internal image-reference" href="../../../_images/modeling_meshes_selecting_introduction_limit-selection-to-visible-on.png"><img alt="../../../_images/modeling_meshes_selecting_introduction_limit-selection-to-visible-on.png" src="../../../_images/modeling_meshes_selecting_introduction_limit-selection-to-visible-on.png" style="width: 310px;" /></a>
+<figcaption>
+<p><span class="caption-text">透视关闭。</span><a class="headerlink" href="#id13" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="select-menu">
+<h2>选择菜单<a class="headerlink" href="#select-menu" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>全部 <kbd class="kbd docutils literal notranslate">A</kbd></dt><dd><p>全部选择。</p>
+</dd>
+<dt>无 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">A</kbd></kbd></dt><dd><p>全不选。</p>
+</dd>
+<dt>反转 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">I</kbd></kbd></dt><dd><p>选择所有未选中的几何图形，并取消选择当前选中的组件。</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<dl class="simple">
+<dt><a class="reference internal" href="../../../interface/selecting.html#tool-select-box"><span class="std std-ref">框选</span></a> <kbd class="kbd docutils literal notranslate">B</kbd></dt><dd><p>交互式框选。</p>
+</dd>
+<dt><a class="reference internal" href="../../../interface/selecting.html#tool-select-circle"><span class="std std-ref">刷选</span></a> <kbd class="kbd docutils literal notranslate">C</kbd></dt><dd><p>交互式刷选。</p>
+</dd>
+<dt><a class="reference internal" href="../../../interface/selecting.html#tool-select-lasso"><span class="std std-ref">套索选择</span></a></dt><dd><p>交互式的自由选择。</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<dl class="simple">
+<dt><a class="reference internal" href="random.html#bpy-ops-mesh-select-random"><span class="std std-ref">随机选择</span></a></dt><dd><p>根据百分比随机选择一组顶点、边或面。</p>
+</dd>
+<dt><a class="reference internal" href="checker_deselect.html#bpy-ops-mesh-select-nth"><span class="std std-ref">间隔式弃选</span></a></dt><dd><p>从当前活动项开始间隔性地取消选择数个元素。</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<dl class="simple">
+<dt>选择锐边</dt><dd><p>该工具选择所有相邻面构成夹角大于一定角度值的边，给定角度值越大选中的边越尖锐。</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<dl class="simple">
+<dt><a class="reference internal" href="similar.html#bpy-ops-mesh-select-similar"><span class="std std-ref">选择相似</span></a> <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">G</kbd></kbd></dt><dd><p>选择与当前选中元素相似的元素。</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<dl class="simple">
+<dt><a class="reference internal" href="all_by_trait.html"><span class="doc">按特征全选</span></a></dt><dd><p>通过查询对象特征以选择网格。</p>
+</dd>
+</dl>
+<hr class="docutils" />
+<dl class="simple">
+<dt>扩展选择/缩减选择</dt><dd><dl class="simple">
+<dt>扩展选区 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">数字键盘加+</kbd></kbd></dt><dd><p>扩展到当前选择模式下与选中区域相连的区域。</p>
+</dd>
+<dt>缩减选区 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">数字键盘减-</kbd></kbd></dt><dd><p>从当前选择模式下选中区域相连的部分缩减选择。</p>
+</dd>
+<dt>下一活动元素 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">数字键盘加+</kbd></kbd></dt><dd><p>这将使用选择历史记录根据周围的拓扑选择下一个顶点、边或面。</p>
+</dd>
+<dt>上一活动元素 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">数字键盘减-</kbd></kbd></dt><dd><p>选择前一活动元素并取消对最后选择元素的选择状态。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<hr class="docutils" />
+<dl class="simple">
+<dt>选择循环</dt><dd><dl class="simple">
+<dt><a class="reference internal" href="loops.html#bpy-ops-mesh-loop-multi-select"><span class="std std-ref">循环边</span></a></dt><dd><p>选择相连边。</p>
+</dd>
+<dt><a class="reference internal" href="loops.html#modeling-meshes-selecting-face-loops"><span class="std std-ref">面循环</span></a></dt><dd><p>选择相连面。</p>
+</dd>
+<dt><a class="reference internal" href="loops.html#modeling-meshes-selecting-edge-rings"><span class="std std-ref">并排边</span></a></dt><dd><p>选择相连的并排边。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<hr class="docutils" />
+<dl class="simple">
+<dt>选择相连元素</dt><dd><dl class="simple">
+<dt><a class="reference internal" href="linked.html#bpy-ops-mesh-select-linked"><span class="std std-ref">选择相连元素</span></a></dt><dd><p>选择连接到当前所选内容的所有组件。</p>
+</dd>
+<dt><a class="reference internal" href="linked.html#bpy-ops-mesh-shortest-path-select"><span class="std std-ref">最短路径</span></a></dt><dd><p>两个元素之间的最短路径。</p>
+</dd>
+<dt>相连的平展面</dt><dd><p>按面与面的夹角阈值选择相连面。该功能对于选择平整的面片相当有用。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<hr class="docutils" />
+<dl class="simple">
+<dt>选择活动项的同侧</dt><dd><p>选择网格上与活动顶点处于相同单一轴向上的所有顶点。仅限于顶点选择模式。</p>
+</dd>
+<dt>选择镜像 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">M</kbd></kbd></dt><dd><p>选择指定轴向上镜像位置的元素。</p>
+</dd>
+</dl>
+</section>
+<section id="known-issues">
+<h2>已知问题<a class="headerlink" href="#known-issues" title="Permalink to this heading"></a></h2>
+<section id="dense-meshes">
+<h3>密集网格<a class="headerlink" href="#dense-meshes" title="Permalink to this heading"></a></h3>
+<p>在禁用透视模式的情况下选择密集的网格，有一个限制，密集的网格可能没有选择所有的元素。当用方框、选圈和套索选择区域时，顶点可能会相互重叠，导致一些顶点不能被选中。这是当前选择方法的一个限制，你可以通过放大或启用透视模式来解决这个问题。</p>
+</section>
+<section id="n-gons-in-face-select-mode">
+<h3>面选择模式下的N边形面<a class="headerlink" href="#n-gons-in-face-select-mode" title="Permalink to this heading"></a></h3>
+<figure class="align-default" id="id14">
+<img alt="../../../_images/modeling_meshes_selecting_introduction_face-mode-ngon-visual-problem.png" src="../../../_images/modeling_meshes_selecting_introduction_face-mode-ngon-visual-problem.png" />
+<figcaption>
+<p><span class="caption-text">中心点在其他面上的N边形面。</span><a class="headerlink" href="#id14" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>如前所述，在透视模式和线框模式下，面在中间标有一个点。使用 n-gons，在某些情况下可能导致令人困惑的显示。该示例显示 U 形 n-gon 的中心点位于 &quot;U&quot; 内椭圆形面的内侧。识别哪个点属于哪个面并不容易（图像中的橙色点是物体原点）。</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="选择" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="random.html" class="btn btn-neutral float-right" title="随机选择" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/modeling/meshes/selecting/introduction.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/modeling/meshes/selecting/introduction.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fmodeling/meshes/selecting/introduction.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fmodeling/meshes/selecting/introduction.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

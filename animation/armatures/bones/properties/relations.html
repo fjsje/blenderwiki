@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>关系 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/animation/armatures/bones/properties/relations.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../../_static/js/version_switch.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../../copyright.html" />
+    <link rel="next" title="反向动力学" href="inverse_kinematics.html" />
+    <link rel="prev" title="柔性骨骼" href="bendy_bones.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">动画 &amp; 绑定</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../keyframes/index.html">关键帧</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">骨架</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">骨骼</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../structure.html">结构</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tools/index.html">工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../selecting.html">选择</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../editing/index.html">编辑</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">属性</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l5"><a class="reference internal" href="transform.html">变换</a></li>
+<li class="toctree-l5"><a class="reference internal" href="bendy_bones.html">柔性骨骼</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">关系</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#bone-layers">骨骼层</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#moving-bones-between-layers">Moving Bones between Layers</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#parenting">父级</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#transformations">Transformations 变换</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="inverse_kinematics.html">反向动力学</a></li>
+<li class="toctree-l5"><a class="reference internal" href="deform.html">形变</a></li>
+<li class="toctree-l5"><a class="reference internal" href="display.html">视图显示</a></li>
+<li class="toctree-l5"><a class="reference internal" href="custom_properties.html">自定义属性</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure.html">结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../skinning/index.html">蒙皮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../posing/index.html">姿态</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lattice.html">晶格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../constraints/index.html">约束</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../actions.html">动作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../drivers/index.html">驱动</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../markers.html">标记</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../shape_keys/index.html">形态键</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_paths.html">运动路径</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">动画 &amp; 绑定</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">骨架</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">骨骼</a></li>
+          <li class="breadcrumb-item"><a href="index.html">属性</a></li>
+      <li class="breadcrumb-item active">关系</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="relations">
+<h1>关系<a class="headerlink" href="#relations" title="Permalink to this heading"></a></h1>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">面板<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">骨骼 ‣ 关系</span></p>
+</dd>
+</dl>
+</div>
+<figure class="align-default" id="id2">
+<img alt="../../../../_images/animation_armatures_bones_properties_relations_panel.png" src="../../../../_images/animation_armatures_bones_properties_relations_panel.png" />
+<figcaption>
+<p><span class="caption-text">关系面板。</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>In this panel you can arrange sets of bones in different layers for easier manipulation.</p>
+<section id="bone-layers">
+<span id="bpy-types-editbone-layers"></span><h2>骨骼层<a class="headerlink" href="#bone-layers" title="Permalink to this heading"></a></h2>
+<section id="moving-bones-between-layers">
+<h3>Moving Bones between Layers<a class="headerlink" href="#moving-bones-between-layers" title="Permalink to this heading"></a></h3>
+<p>Obviously, you have to be in <em>Edit Mode</em> or <em>Pose Mode</em> to move bones between layers.
+Note that as with objects, bones can lay in several layers at once,
+just use the usual <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">LMB</kbd></kbd> clicks...
+First of all, you have to select the chosen bone(s)!</p>
+<ul class="simple">
+<li><p>In the Properties, use the &quot;layer buttons&quot; of each selected bone Relations panel (<em>Bones</em> tab)
+to control in which layer(s) it lays.</p></li>
+<li><p>In the <em>3D Viewport</em>, use the menu <span class="menuselection">Armature ‣ Move Bone To Layer</span> or
+<span class="menuselection">Pose ‣ Move Bone To Layer</span> or press <kbd class="kbd docutils literal notranslate">M</kbd> to show the usual pop-up layers menu.
+Note that this way, you assign the same layers to all selected bones.</p></li>
+</ul>
+</section>
+</section>
+<section id="parenting">
+<h2>父级<a class="headerlink" href="#parenting" title="Permalink to this heading"></a></h2>
+<dl class="simple" id="bpy-types-editbone-parent">
+<dt>父级</dt><dd><p><a class="reference internal" href="../../../../interface/controls/templates/data_block.html#ui-data-id"><span class="std std-ref">数据 ID</span></a> 选择要设为父级的骨骼。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-bone-use-relative-parent">
+<dt>相对父级 <span class="guilabel">仅限姿态模式</span></dt><dd><p>更改骨骼的变换应用于其子对象的方式。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-posebone-bone-group">
+<dt>骨骼组 <span class="guilabel">仅姿态模式</span></dt><dd><p>To assign a selected bone to a given bone group use the <em>Bone Group</em> data ID.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-editbone-use-connect">
+<dt>相连项</dt><dd><p><em>相连项（Connected）</em>复选框设置要与其父级根部连接的骨骼。</p>
+</dd>
+</dl>
+<section id="transformations">
+<h3>Transformations 变换<a class="headerlink" href="#transformations" title="Permalink to this heading"></a></h3>
+<p>骨骼关系对变换行为的影响。</p>
+<p>默认情况下，子骨骼继承：</p>
+<ul class="simple">
+<li><p>其父位置与自身的偏移量。</p></li>
+<li><p>其父旋转的角度 (即他们保持恒定旋转相对于其父级)。</p></li>
+<li><p>其父缩放，与自身偏移量。</p></li>
+</ul>
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-text">父子/链接骨骼的变换示例。</span><a class="headerlink" href="#id3" title="Permalink to this table"></a></caption>
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id4">
+<a class="reference internal image-reference" href="../../../../_images/animation_armatures_bones_properties_relations_rest.png"><img alt="../../../../_images/animation_armatures_bones_properties_relations_rest.png" src="../../../../_images/animation_armatures_bones_properties_relations_rest.png" style="width: 200px;" /></a>
+<figcaption>
+<p><span class="caption-text">骨架在它的静置位置。</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id5">
+<a class="reference internal image-reference" href="../../../../_images/animation_armatures_bones_properties_relations_root-rotation.png"><img alt="../../../../_images/animation_armatures_bones_properties_relations_root-rotation.png" src="../../../../_images/animation_armatures_bones_properties_relations_root-rotation.png" style="width: 200px;" /></a>
+<figcaption>
+<p><span class="caption-text">根部骨的旋转。</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id6">
+<a class="reference internal image-reference" href="../../../../_images/animation_armatures_bones_properties_relations_root-scale.png"><img alt="../../../../_images/animation_armatures_bones_properties_relations_root-scale.png" src="../../../../_images/animation_armatures_bones_properties_relations_root-scale.png" style="width: 200px;" /></a>
+<figcaption>
+<p><span class="caption-text">根部骨骼的缩放。</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<p>就像标准的子对象。你可以 <em>骨骼</em> 标签的关系面板在前面的骨骼的基础上修改此行为：</p>
+<dl class="simple" id="bpy-types-editbone-use-local-location">
+<dt>锁定坐标</dt><dd><p>禁用时，将在父骨骼的局部空间中计算位置变换属性，而不是使用骨骼自身的 <em>静置姿态</em> 局部空间坐标。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-editbone-use-inherit-rotation">
+<dt>Inherit Rotation 继承旋转</dt><dd><p>禁用时，这将 &quot;破坏&quot; 与骨骼的父级的旋转关系。这意味着当它的父级旋转时，子级将在骨架对象空间中保持旋转。</p>
+</dd>
+</dl>
+<dl id="bpy-types-editbone-inherit-scale">
+<dt>继承缩放</dt><dd><p>指定骨骼继承的父级缩放效果：</p>
+<dl class="field-list">
+<dt class="field-odd">全部<span class="colon">:</span></dt>
+<dd class="field-odd"><p>骨骼继承父级缩放和剪切的所有效果。</p>
+</dd>
+<dt class="field-even">修复剪切<span class="colon">:</span></dt>
+<dd class="field-even"><p>将完整的父级效果应用于子级的静置状态，之后以保留骨骼方向、长度和体积的方式去除任何剪切，并且最小程度地影响平均滚动。结果与子级的自身变换相结合。</p>
+<p>如果继承的比例不均匀，这不会阻止剪切由于子级骨骼或其子级的局部旋转而重新出现。</p>
+</dd>
+<dt class="field-odd">对齐<span class="colon">:</span></dt>
+<dd class="field-odd"><p>父级缩放是继承的，如同子级的方向与父级相同，始终在子级 X缩放基础上应用父级 X 缩放，等等。</p>
+</dd>
+<dt class="field-even">平均<span class="colon">:</span></dt>
+<dd class="field-even"><p>继承表示父级体积总体变化的均匀缩放系数。</p>
+</dd>
+<dt class="field-odd">无<span class="colon">:</span></dt>
+<dd class="field-odd"><p>忽略父级的所有缩放和剪切。</p>
+</dd>
+<dt class="field-even">无（旧版）<span class="colon">:</span></dt>
+<dd class="field-even"><p>忽略所有缩放，前提是父级未被切。如果是，则不能保证。</p>
+<p>此选项将复制旧 “继承缩放” 复选框的行为，并可能在将来的版本中删除。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>这些继承行为将沿骨骼的层次结构传播。所以当你缩小骨骼时，它的所有后代子级按默认值相应缩小。但是，如果在此 &quot;系列&quot; 中设置了一个骨骼的 <em>继承缩放</em> 或 <em>继承旋转</em> 属性，这将打破继承传播，当你缩小它的祖先（父级）时，这个骨骼 <em>和它所有的后代（所有的子级）</em> 将不再受到影响。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>各种 <em>继承缩放</em> 选项作为工具提供，以避免由不均匀缩放与育儿和旋转结合引起的剪切。没有明显的最佳方式来实现这一目标，因此不同的选择对不同的局势是有用的。</p>
+<dl class="simple">
+<dt>无</dt><dd><p>Useful for gaining full control over the scaling of the child in order
+to e.g. manually overwrite it with constraints.</p>
+</dd>
+<dt>平均</dt><dd><p>Useful to block squash and stretch propagation between sub-rigs, while
+allowing uniform changes in the size and volume to pass through.</p>
+</dd>
+<dt>对齐</dt><dd><p>Can be used within bone chains, e.g. tentacles, in order to propagate
+lengthwise scaling as lengthwise, and sideways as sideways, no matter
+how the tentacle bends. Similar to using <em>None</em> with
+<a class="reference internal" href="../../../constraints/transform/copy_scale.html"><span class="doc">Copy Scale</span></a> from parent.</p>
+</dd>
+<dt>修复剪切</dt><dd><p>May be useful at the base of an appendage in order to reallocate squash and stretch
+between axes based on the difference in rest pose orientations of the parent and child.
+It behaves closest to <em>Full</em> while suppressing shear.</p>
+</dd>
+</dl>
+</div>
+<table class="docutils align-default" id="id7">
+<caption><span class="caption-text">将父子/连接的骨骼继承旋转禁用实例。</span><a class="headerlink" href="#id7" title="Permalink to this table"></a></caption>
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id8">
+<img alt="../../../../_images/animation_armatures_bones_properties_relations_inherit-rot-disabled.png" src="../../../../_images/animation_armatures_bones_properties_relations_inherit-rot-disabled.png" />
+<figcaption>
+<p><span class="caption-text">在骨架的黄色轮廓骨骼禁用继承旋转。</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id9">
+<img alt="../../../../_images/animation_armatures_bones_properties_relations_inherit-rot-disabled-descendant.png" src="../../../../_images/animation_armatures_bones_properties_relations_inherit-rot-disabled-descendant.png" />
+<figcaption>
+<p><span class="caption-text">禁用继承旋转的骨骼子级骨骼的旋转。</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id10">
+<img alt="../../../../_images/animation_armatures_bones_properties_relations_inherit-rot-disabled-scale.png" src="../../../../_images/animation_armatures_bones_properties_relations_inherit-rot-disabled-scale.png" />
+<figcaption>
+<p><span class="caption-text">禁用继承旋转的骨骼子级骨骼的缩放。</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<p>连接的骨骼具有另一种特异性：它们不能被移动。事实上，由于他们的头端必须在他们父级骨骼的尾端，如果你不移动父级骨骼，你不能移动子级骨骼的根，而只移动它的尖端，这导致子级旋转。这正是当您按下 <kbd class="kbd docutils literal notranslate">G</kbd> 并选择了连接骨骼时发生的情况，Blender会自动切换到旋转操作。</p>
+<p>骨骼关系也对多个骨骼的选择在变换时的行为有重要的影响。然而，有许多不同的情况可能不包括在这个名单上，这应该给出一个好主意的问题：</p>
+<ul>
+<li><p>通常，不相关的骨骼被独立化。</p></li>
+<li><p>当选择相同 &quot;族&quot; 的几个骨骼时，<em>只有</em> &quot;最父&quot; 的骨骼才真正被转换 -- 后代只是通过父关系过程处理，就好像它们没有被选中一样（见图 <a class="reference internal" href="#fig-rig-pose-edit-scale"><span class="std std-ref">缩放其中一些相关骨骼。</span></a> 第三个尖端骨骼，以黄色标出，仅通过父关系缩小，与未选择的一样，即使它被选中并激活。否则，它应该是两次小！）</p>
+<figure class="align-center" id="id11">
+<span id="fig-rig-pose-edit-scale"></span><a class="reference internal image-reference" href="../../../../_images/animation_armatures_bones_properties_relations_scale-related.png"><img alt="../../../../_images/animation_armatures_bones_properties_relations_scale-related.png" src="../../../../_images/animation_armatures_bones_properties_relations_scale-related.png" style="width: 320px;" /></a>
+<figcaption>
+<p><span class="caption-text">缩放其中一些相关骨骼。</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</li>
+<li><p>选择已连接和未连接的骨骼后，如果开始移动操作，则只会影响未连接的骨骼。</p></li>
+<li><p>当子级连接链骨骼选择时，&quot;最多父级&quot; 选择的那个是链接的，当你按 <kbd class="kbd docutils literal notranslate">G</kbd>，什么都没发生，因为Blender仍然在移动操作，这当然对连接的骨骼没有影响。</p></li>
+</ul>
+<p>So, when posing a chain of bones, you should always edit its elements from the root bone to the tip bone.
+This process is known as <a class="reference internal" href="../../../../glossary/index.html#term-Forward-Kinematics"><span class="xref std std-term">Forward Kinematics</span></a> (FK).
+We will see in a <a class="reference internal" href="../../posing/bone_constraints/index.html#bone-constraints-inverse-kinematics"><span class="std std-ref">later page</span></a>
+that Blender features another pose method, called <a class="reference internal" href="../../../../glossary/index.html#term-Inverse-Kinematics"><span class="xref std std-term">Inverse Kinematics</span></a> (IK),
+which allows you to pose a whole chain just by moving its tip.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>此功能在某种程度上受到来自于 <a class="reference internal" href="../../posing/editing/pose_library.html"><span class="doc">姿态库</span></a> 的扩展与完善。</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="bendy_bones.html" class="btn btn-neutral float-left" title="柔性骨骼" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="inverse_kinematics.html" class="btn btn-neutral float-right" title="反向动力学" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/animation/armatures/bones/properties/relations.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/animation/armatures/bones/properties/relations.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fanimation/armatures/bones/properties/relations.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fanimation/armatures/bones/properties/relations.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

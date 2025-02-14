@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>运算 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/geometry_nodes/utilities/math/math.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../../../_static/js/version_switch.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../../copyright.html" />
+    <link rel="next" title="混合节点" href="mix.html" />
+    <link rel="prev" title="映射范围节点" href="map_range.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../meshes/index.html">网格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../surfaces/index.html">面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../texts/index.html">文本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../volumes/index.html">体积（卷标）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../empties.html">空物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html">修改器</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">几何节点</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../inspection.html">检视</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../attributes_reference.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../fields.html">场</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../instances.html">实例项</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html#node-types">节点类型</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../attribute/index.html">属性节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../input/index.html">输入节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../output/index.html">输出节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../geometry/index.html">几何节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../curve/index.html">曲线节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../instances/index.html">实例节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../mesh/index.html">网格节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../point/index.html">点节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../volume/index.html">体积节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../simulation/simulation_zone.html">模拟区</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../material/index.html">材质节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../texture/index.html">纹理节点</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">实用工具</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="../color/index.html">颜色</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../text/index.html">文本</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../vector/index.html">矢量</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../field/index.html">力场</a></li>
+<li class="toctree-l5 current"><a class="reference internal" href="index.html">运算</a><ul class="current">
+<li class="toctree-l6"><a class="reference internal" href="boolean_math.html">布尔运算</a></li>
+<li class="toctree-l6"><a class="reference internal" href="clamp.html">钳制节点</a></li>
+<li class="toctree-l6"><a class="reference internal" href="compare.html">比较</a></li>
+<li class="toctree-l6"><a class="reference internal" href="float_curve.html">浮点曲线</a></li>
+<li class="toctree-l6"><a class="reference internal" href="float_to_integer.html">浮点数 转 整数</a></li>
+<li class="toctree-l6"><a class="reference internal" href="map_range.html">映射范围节点</a></li>
+<li class="toctree-l6 current"><a class="current reference internal" href="#">运算</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#inputs">输入</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#properties">属性</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#outputs">输出</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#examples">示例</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="#manual-z-mask">自定义Z深度通道节点设置</a></li>
+<li class="toctree-l8"><a class="reference internal" href="#using-sine-function-to-pulsate">使用正弦功能得到不断循环的变化数</a></li>
+<li class="toctree-l8"><a class="reference internal" href="#brightening-scaling-a-channel">提亮（缩放）通道</a></li>
+<li class="toctree-l8"><a class="reference internal" href="#restrict-color-selection-posterization">重新限定颜色选择（色调分离）</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="mix.html">混合节点</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../rotation/index.html">旋转</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../random_value.html">随机值</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../switch.html">切换</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../../group.html">组</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../hair/index.html">毛发节点</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">建模</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">几何节点</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">实用工具</a></li>
+          <li class="breadcrumb-item"><a href="index.html">运算实用工具节点</a></li>
+      <li class="breadcrumb-item active">运算</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <span class="target" id="index-0"></span><section id="math-node">
+<h1>运算<a class="headerlink" href="#math-node" title="Permalink to this heading"></a></h1>
+<figure class="align-right">
+<img alt="运算节点。" src="../../../../_images/compositing_node-types_CompositorNodeMath.webp" />
+</figure>
+<p><em>运算</em> 节点的功能是执行数学运算。</p>
+<section id="inputs">
+<h2>输入<a class="headerlink" href="#inputs" title="Permalink to this heading"></a></h2>
+<p>The inputs of the node are dynamic. Some inputs are only available in certain operations.
+For instance, the <em>Addend</em> input is only available in the <em>Multiply Add</em> operator.</p>
+<dl class="simple">
+<dt>数值</dt><dd><p>输入值。可以输入三角法则定义的弧度数值。</p>
+</dd>
+<dt>加数</dt><dd><p>输入加数。</p>
+</dd>
+<dt>基础(基数)</dt><dd><p>输入底数。</p>
+</dd>
+<dt>指数</dt><dd><p>输入幂（指数）。</p>
+</dd>
+<dt>Epsilon</dt><dd><p>输入对数的基数。</p>
+</dd>
+<dt>距离</dt><dd><p>输入距离。</p>
+</dd>
+<dt>最小值</dt><dd><p>输入最小值。</p>
+</dd>
+<dt>最大值</dt><dd><p>输入最大值。</p>
+</dd>
+<dt>增量</dt><dd><p>输入增量。</p>
+</dd>
+<dt>比例|缩放</dt><dd><p>输入比例。</p>
+</dd>
+<dt>角度</dt><dd><p>输入角度。</p>
+</dd>
+<dt>弧度</dt><dd><p>输入弧度。</p>
+</dd>
+</dl>
+</section>
+<section id="properties">
+<h2>属性<a class="headerlink" href="#properties" title="Permalink to this heading"></a></h2>
+<dl>
+<dt>操作</dt><dd><p>数学运算符将两侧的输入值按运算符表示的含义进行数学运算：</p>
+<dl class="simple">
+<dt>功能</dt><dd><dl class="field-list simple">
+<dt class="field-odd">相加<span class="colon">:</span></dt>
+<dd class="field-odd"><p>将运算符两侧的数值进行加法运算。</p>
+</dd>
+<dt class="field-even">相减<span class="colon">:</span></dt>
+<dd class="field-even"><p>对两侧的输入值进行减法运算。</p>
+</dd>
+<dt class="field-odd">正片叠底(相乘)<span class="colon">:</span></dt>
+<dd class="field-odd"><p>将两个输入值进行相乘运算。</p>
+</dd>
+<dt class="field-even">相除<span class="colon">:</span></dt>
+<dd class="field-even"><p>将第一个输入值作为被除数，第二个值作为除数进行相除数学运算。</p>
+</dd>
+<dt class="field-odd">乘后再加<span class="colon">:</span></dt>
+<dd class="field-odd"><p>将两个乘积值再次进行 <em>相加</em> 运算。</p>
+</dd>
+<dt class="field-even">能量（乘方）<span class="colon">:</span></dt>
+<dd class="field-even"><p>将 <em>底数</em> 进行 <em>乘方</em> 运算。</p>
+</dd>
+<dt class="field-odd">对数<span class="colon">:</span></dt>
+<dd class="field-odd"><p>以 <em>基数</em> 为基数的值的对数。</p>
+</dd>
+<dt class="field-even">平方根<span class="colon">:</span></dt>
+<dd class="field-even"><p>求输入值的平方根。</p>
+</dd>
+<dt class="field-odd">平方取倒<span class="colon">:</span></dt>
+<dd class="field-odd"><p>即用数字1除以一个数值的平方根所得的结果。</p>
+</dd>
+<dt class="field-even">绝对<span class="colon">:</span></dt>
+<dd class="field-even"><p>读取输入值而不考虑其符号。这会将负值转换为正值。</p>
+</dd>
+<dt class="field-odd">指数<span class="colon">:</span></dt>
+<dd class="field-odd"><p>提升<a class="reference external" href="https://zh.wikipedia.org/wiki/E_(数学常数)">欧拉数</a>为输入值的N次幂。备注：e，作为数学常数，是自然对数函数的底数。有时称它为欧拉数（Euler number）。</p>
+</dd>
+</dl>
+</dd>
+<dt>比较</dt><dd><dl class="field-list simple">
+<dt class="field-odd">最小值<span class="colon">:</span></dt>
+<dd class="field-odd"><p>比较输入值，将其中最小值作为结果输出。</p>
+</dd>
+<dt class="field-even">最大值<span class="colon">:</span></dt>
+<dd class="field-even"><p>将两个输入值比较，将最大的一个作为结果输出。</p>
+</dd>
+<dt class="field-odd">小于<span class="colon">:</span></dt>
+<dd class="field-odd"><p>如果第一个值小于第二个值，输出 1.0，反之输出 0.0 。</p>
+</dd>
+<dt class="field-even">大于<span class="colon">:</span></dt>
+<dd class="field-even"><p>如果第一个值大于第二个值，输出 1.0，反之输出 0.0 。</p>
+</dd>
+<dt class="field-odd">符号<span class="colon">:</span></dt>
+<dd class="field-odd"><p>识别输入值的符号情况，所有正数将输出值为 1.0。所有负数将输出值为 -1.0。0 值本身输出为 0。</p>
+</dd>
+<dt class="field-even">比较<span class="colon">:</span></dt>
+<dd class="field-even"><p>比较两个输入值的差值是否小于或等于参数艾普西隆（备注：Epsilon 是希腊语第五个字母艾普西隆的小写，写作 ϵ 或 ε，常用于数学参数等的命名。），符合即输出值为 1.0。</p>
+</dd>
+<dt class="field-odd">平滑最小值<span class="colon">:</span></dt>
+<dd class="field-odd"><p><a class="reference external" href="https://zh.wikipedia.org/wiki/平滑最大值">平滑最小值</a>。</p>
+</dd>
+<dt class="field-even">平滑最大值<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://zh.wikipedia.org/wiki/平滑最大值">平滑最大值</a>。</p>
+</dd>
+</dl>
+</dd>
+<dt>圆滑(取舍)</dt><dd><dl class="field-list simple">
+<dt class="field-odd">圆（四舍五入）<span class="colon">:</span></dt>
+<dd class="field-odd"><p>将输入值四舍五入到最接近的整数值。</p>
+</dd>
+<dt class="field-even">基面<span class="colon">:</span></dt>
+<dd class="field-even"><p>将输入值向下取最接近的整数值。</p>
+</dd>
+<dt class="field-odd">向上取整<span class="colon">:</span></dt>
+<dd class="field-odd"><p>将输入值向上取整到最接近的整数值。</p>
+</dd>
+<dt class="field-even">截断<span class="colon">:</span></dt>
+<dd class="field-even"><p>将一个 <em>输入值</em> 的整数部分进行输出，小数部分舍弃。</p>
+</dd>
+<dt class="field-odd">分数<span class="colon">:</span></dt>
+<dd class="field-odd"><p>返回输入 <em>值</em> 的分数部分。</p>
+</dd>
+<dt class="field-even">模数<span class="colon">:</span></dt>
+<dd class="field-even"><p>第一个输入值除以第二个输入值，输出所得结果的余数值（备注：取模运算（&quot;Modulus Operation&quot;）和取余运算（&quot;Remainder Operation&quot;）两个概念有重叠的部分但又不完全一致。主要的区别在于对负整数进行除法运算时操作不同。取模主要是用于计算机术语中。取余则更多是数学概念。参看百度百科 &quot;取模运算&quot;）。</p>
+</dd>
+<dt class="field-odd">循环<span class="colon">:</span></dt>
+<dd class="field-odd"><p>在输入值和小于最大值的最大整数倍数值之间，<em>最小值</em> 和 <em>最大值</em> 绝对值的差值之间取值进行输出。</p>
+</dd>
+<dt class="field-even">吸附<span class="colon">:</span></dt>
+<dd class="field-even"><p>将输入值向下舍入为最接近 <em>增量</em> 的整数倍。</p>
+</dd>
+<dt class="field-odd">乒–乓<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The output value is moved between 0.0 and the <em>Scale</em> based on the input value.</p>
+</dd>
+</dl>
+</dd>
+<dt>三角函数</dt><dd><dl class="field-list simple">
+<dt class="field-odd">正弦<span class="colon">:</span></dt>
+<dd class="field-odd"><p>输入值的<a class="reference external" href="https://en.wikipedia.org/wiki/Sine">正弦</a>。</p>
+</dd>
+<dt class="field-even">余弦<span class="colon">:</span></dt>
+<dd class="field-even"><p>输入值的<a class="reference external" href="https://en.wikipedia.org/wiki/Trigonometric_functions">余弦</a>。</p>
+</dd>
+<dt class="field-odd">切向 (正切)<span class="colon">:</span></dt>
+<dd class="field-odd"><p>输入值的<a class="reference external" href="https://en.wikipedia.org/wiki/Trigonometric_functions">正切</a>。</p>
+</dd>
+<dt class="field-even">反正弦<span class="colon">:</span></dt>
+<dd class="field-even"><p>输入值的<a class="reference external" href="https://en.wikipedia.org/wiki/Inverse_trigonometric_functions">反正弦</a>。</p>
+</dd>
+<dt class="field-odd">反余弦<span class="colon">:</span></dt>
+<dd class="field-odd"><p>输入值的<a class="reference external" href="https://en.wikipedia.org/wiki/Inverse_trigonometric_functions">反余弦</a>。</p>
+</dd>
+<dt class="field-even">反正切<span class="colon">:</span></dt>
+<dd class="field-even"><p>输入值的<a class="reference external" href="https://en.wikipedia.org/wiki/Inverse_trigonometric_functions">反正切</a>。</p>
+</dd>
+<dt class="field-odd">反正切2<span class="colon">:</span></dt>
+<dd class="field-odd"><p>按弧度制将第一个输入值和第二个输入值相除，输出<a class="reference external" href="https://en.wikipedia.org/wiki/Inverse_trigonometric_functions">反正切</a>。</p>
+</dd>
+<dt class="field-even">双曲正弦<span class="colon">:</span></dt>
+<dd class="field-even"><p>输入值的<a class="reference external" href="https://en.wikipedia.org/wiki/Hyperbolic_functions">双曲正弦</a>。</p>
+</dd>
+<dt class="field-odd">双曲余弦<span class="colon">:</span></dt>
+<dd class="field-odd"><p>输入值的<a class="reference external" href="https://en.wikipedia.org/wiki/Hyperbolic_functions">双曲余弦</a>。</p>
+</dd>
+<dt class="field-even">双曲正切<span class="colon">:</span></dt>
+<dd class="field-even"><p>输入值的<a class="reference external" href="https://en.wikipedia.org/wiki/Hyperbolic_functions">双曲正切</a>。</p>
+</dd>
+</dl>
+</dd>
+<dt>转换</dt><dd><dl class="field-list simple">
+<dt class="field-odd">到弧度<span class="colon">:</span></dt>
+<dd class="field-odd"><p>将输入值从角度数值转换为弧度数值。</p>
+</dd>
+<dt class="field-even">到角度<span class="colon">:</span></dt>
+<dd class="field-even"><p>将输入值从弧度数值转换为角度数值。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>钳制</dt><dd><p>限定输出数值的范围（0 到 1）。参见<a class="reference internal" href="../../../../glossary/index.html#term-Clamping"><span class="xref std std-term">钳制</span></a>。</p>
+</dd>
+</dl>
+</section>
+<section id="outputs">
+<h2>输出<a class="headerlink" href="#outputs" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>数值</dt><dd><p>数值输出。</p>
+</dd>
+</dl>
+</section>
+<section id="examples">
+<h2>示例<a class="headerlink" href="#examples" title="Permalink to this heading"></a></h2>
+<section id="manual-z-mask">
+<h3>自定义Z深度通道节点设置<a class="headerlink" href="#manual-z-mask" title="Permalink to this heading"></a></h3>
+<figure class="align-default" id="id1">
+<img alt="../../../../_images/compositing_types_converter_math_manual-z-mask.png" src="../../../../_images/compositing_types_converter_math_manual-z-mask.png" />
+<figcaption>
+<p><span class="caption-text">最大值与最小值功能举例。</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>This example has one scene input by the top <em>Render Layers</em> node,
+which has a cube that is about 10 units from the camera.
+The bottom <em>Render Layers</em> node inputs a scene
+with a plane that covers the left half of the view and is 7 units from the camera.
+Both are fed through their respective <em>Map Value</em> nodes to divide the Z-buffer by 20
+(multiply by 0.05, as shown in the Size field)
+and clamped to be a min/max of 0.0/1.0 respectively.</p>
+<p>For the minimum function,
+the node selects those Z values where the corresponding pixel is closer to the camera;
+so it chooses the Z values for the plane and part of the cube.
+The background has an infinite Z value, so it is clamped to 1.0 (shown as white).
+In the maximum example, the Z values of the cube are greater than the plane,
+so they are chosen for the left side, but the plane <em>Render Layers</em> Z are infinite
+(mapped to 1.0) for the right side, so they are chosen.</p>
+</section>
+<section id="using-sine-function-to-pulsate">
+<h3>使用正弦功能得到不断循环的变化数<a class="headerlink" href="#using-sine-function-to-pulsate" title="Permalink to this heading"></a></h3>
+<figure class="align-default" id="id2">
+<img alt="../../../../_images/compositing_types_converter_math_sine.png" src="../../../../_images/compositing_types_converter_math_sine.png" />
+<figcaption>
+<p><span class="caption-text">使用正弦功能举例。</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>范例中采用一个 <em>时间</em> 节点，其时间范围从 1 到 101 之间。在第 25 帧，输出为 0.25。此数值转为由 2 × pi (6.28) 进行相乘运算并由正弦函数转换映射到 1.0 范围，用数学公式表示为 <span class="math notranslate nohighlight">\(sin(2 × pi/ 4) = sin(pi/ 2) = +1.0\)</span>。</p>
+<p>Since the sine function can put out values between (-1.0 to 1.0),
+the <em>Map Value</em> node scales that to 0.0 to 1.0 by taking the input (-1 to 1), adding 1
+(making 0 to 2), and multiplying the result by one-half (thus scaling the output between 0 to 1).
+The default <em>Color Ramp</em> converts those values to a gray-scale.
+Thus, medium gray corresponds to a 0.0 output by the sine, black to -1.0,
+and white to 1.0. As you can see, <span class="math notranslate nohighlight">\(sin(pi/ 2) = 1.0\)</span>. Like having your own visual color calculator!
+Animating this node setup provides a smooth cyclic sequence through the range of grays.</p>
+<p>将这个功能引申，比如，图片的 alpha 通道形成渐入/渐出特效。改变Z深度通道的景深位置。改变颜色通道值使其有规律的进行色彩变化。</p>
+</section>
+<section id="brightening-scaling-a-channel">
+<h3>提亮（缩放）通道<a class="headerlink" href="#brightening-scaling-a-channel" title="Permalink to this heading"></a></h3>
+<figure class="align-default" id="id3">
+<img alt="../../../../_images/compositing_types_converter_math_multiply.png" src="../../../../_images/compositing_types_converter_math_multiply.png" />
+<figcaption>
+<p><span class="caption-text">比例缩放单一通道范例。</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>本例中的 <em>运算（相乘）</em> 节点增加了图像的亮度通道（Y），使图像更加明亮。请注意，您应该使用一个 <em>映射值节点</em>，并启用最大值和最小值，以便将输出限制在有效值范围内。通过这种方法，您可以使用对数函数来制作高动态范围图像。在这个特定的范例中，还有一个 <em>亮度/对比度节点</em>，可以更简单地控制亮度。</p>
+</section>
+<section id="restrict-color-selection-posterization">
+<h3>重新限定颜色选择（色调分离）<a class="headerlink" href="#restrict-color-selection-posterization" title="Permalink to this heading"></a></h3>
+<figure class="align-default" id="id4">
+<img alt="../../../../_images/compositing_types_converter_math_posterization.png" src="../../../../_images/compositing_types_converter_math_posterization.png" />
+<figcaption>
+<p><span class="caption-text">色调分离范例。</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>此范例中，我们重新限定颜色值为以下数值中之一：0, 0.2, 0.4, 0.6, 0.8, 1 。</p>
+<p>To split up a continuous range of values between 0 and 1 to certain set of values,
+the following function is used: <span class="math notranslate nohighlight">\(round(x × n - 0.5) / (n - 1)\)</span>,
+where &quot;n&quot; is the number of possible output values, and &quot;x&quot; is the input pixel color.
+<a class="reference external" href="https://archive.blender.org/wiki/index.php/Doc:2.4/Manual/Composite_Nodes/Types/Convertor/#Quantize.2FRestrict_Color_Selection">Read more about this function</a>.</p>
+<p>要在 Blender 中执行该运算，可以考虑上图中的节点连线方式。我们通过将运算节点串连为一个函数，接受颜色值输入（取值范围从 0 到 1），分别乘以 6，则现有的数值分布（取值范围从 0 到 6），再将此结果偏移0.5 (-0.5 到 5.5)，然后四舍五入数值到最邻近的整数 (结果值为 0, 1, 2, 3, 4, 5)，然后将颜色像素值除以 5，得到 (0.0, 0.2, 0.4, 0.6, 0.8, 1.0) 。</p>
+<p>In the case of a color image,
+you need to split it into separate RGB channels using <em>Separate/Combine RGBA</em> nodes
+and perform this operation on each channel independently.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="map_range.html" class="btn btn-neutral float-left" title="映射范围节点" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mix.html" class="btn btn-neutral float-right" title="混合节点" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/modeling/geometry_nodes/utilities/math/math.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/modeling/geometry_nodes/utilities/math/math.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fmodeling/geometry_nodes/utilities/math/math.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fmodeling/geometry_nodes/utilities/math/math.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

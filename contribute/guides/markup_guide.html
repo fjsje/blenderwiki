@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>标记样式指南 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/contribute/guides/markup_guide.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="提交指南" href="commit_guide.html" />
+    <link rel="prev" title="写作样式指南" href="writing_guide.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">贡献文档</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../index.html#getting-started">入门</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#where-to-help">如何提供帮助</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#guidelines">指南</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="writing_guide.html">写作样式指南</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">标记样式指南</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#conventions">约定</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#headings">标题</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#text-styling">文本样式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#interface-elements">界面元素</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#code-samples">代码示例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#images">图像</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#files">文件</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#usage-guides">使用指南</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#videos">视频</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id1">使用指南</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#useful-constructs">有用的结构</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#cross-references-and-linkage">交叉引用和链接</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#context-sensitive-manual-access">访问上下文相关手册</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#further-reading">扩展阅读</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="commit_guide.html">提交指南</a></li>
+<li class="toctree-l3"><a class="reference internal" href="templates.html">模板</a></li>
+<li class="toctree-l3"><a class="reference internal" href="maintenance_guide.html">维护</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../release_cycle.html">发布周期</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#translations">翻译</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../index.html#contacts">联系方式</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">贡献文档</a></li>
+      <li class="breadcrumb-item active">标记样式指南</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="markup-style-guide">
+<h1>标记样式指南<a class="headerlink" href="#markup-style-guide" title="Permalink to this heading"></a></h1>
+<p>本页涵盖了 reStructuredText (RST) 标记语言语法的写作和使用约定。</p>
+<section id="conventions">
+<h2>约定<a class="headerlink" href="#conventions" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>三空格缩进。</p></li>
+<li><p>一行不应超过120个字符。</p></li>
+<li><p>使用斜体字表示按钮/菜单名称。</p></li>
+</ul>
+<p>其他宽松约定：</p>
+<ul class="simple">
+<li><p>避免使用 Unicode 字符。</p></li>
+<li><p>避免过多换行（比如，一句话占用一行）。</p></li>
+</ul>
+</section>
+<section id="headings">
+<h2>标题<a class="headerlink" href="#headings" title="Permalink to this heading"></a></h2>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">#################</span>
+<span class="gh">  Document Part</span>
+<span class="gh">#################</span>
+
+<span class="gh">****************</span>
+<span class="gh">Document Chapter</span>
+<span class="gh">****************</span>
+
+<span class="gh">Document Section</span>
+<span class="gh">================</span>
+
+<span class="gh">Document Subsection</span>
+<span class="gh">-------------------</span>
+
+<span class="gh">Document Subsubsection</span>
+<span class="gh">^^^^^^^^^^^^^^^^^^^^^^</span>
+
+<span class="gh">Document Paragraph</span>
+<span class="gh">&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;&quot;</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>Parts</em> 只应该用在内容和索引页面。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>每个 <code class="docutils literal notranslate"><span class="pre">.rst</span></code> 文件只应该有一个章节（chapter）标题（<code class="docutils literal notranslate"><span class="pre">*</span></code>）。</p>
+</div>
+</section>
+<section id="text-styling">
+<h2>文本样式<a class="headerlink" href="#text-styling" title="Permalink to this heading"></a></h2>
+<p>参考 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">ReStructured Text 概述</a>，查看如何为文档中的各种元素添加样式，以及如何添加列表、表格、图片和代码块。<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html">sphinx 参考</a> 提供了更多深入的其他结构。</p>
+<p>以下是一些有用的文本样式标记:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="ge">*italic*</span>
+<span class="gs">**bold**</span>
+<span class="s">``literal``</span>
+</pre></div>
+</div>
+</section>
+<section id="interface-elements">
+<h2>界面元素<a class="headerlink" href="#interface-elements" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:kbd:`鼠标左键`</span></code> —— 键盘和鼠标快捷键。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">*Mirror*</span></code> —— 界面标签。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:menuselection:`3D</span> <span class="pre">视图</span> <span class="pre">--&gt;</span> <span class="pre">添加</span> <span class="pre">--&gt;</span> <span class="pre">网格</span> <span class="pre">--&gt;</span> <span class="pre">猴头`</span></code> -- 菜单。</p></li>
+</ul>
+</section>
+<section id="code-samples">
+<h2>代码示例<a class="headerlink" href="#code-samples" title="Permalink to this heading"></a></h2>
+<p>如果提供编程语言，支持代码高亮显示，使用 <code class="docutils literal notranslate"><span class="pre">:linenos:</span></code> 选项可以显示行号:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">code-block</span><span class="p">::</span> python
+   <span class="nc">:linenos:</span>
+
+   import bpy
+   def some_function():
+<span class="cp">       ...</span>
+</pre></div>
+</div>
+</section>
+<section id="images">
+<h2>图像<a class="headerlink" href="#images" title="Permalink to this heading"></a></h2>
+<p>Figure 标签用于放置图像:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">figure</span><span class="p">::</span> /images/interface_window-system_splash_current.png
+
+   Image caption.
+</pre></div>
+</div>
+<p>为了一致性，也因为这样有利于保证截图尺寸大小接近，编写手册需依照以下方式截屏：</p>
+<ol class="arabic simple">
+<li><p>准备好需要截图的区域，确保使用默认主题和设置。（有些情况下，你可能并不愿意使用默认设置，比如某些选项需在勾选复选框才能显现）</p></li>
+<li><p>放大到最大缩放级别（按住 <kbd class="kbd docutils literal notranslate">数字键盘加+</kbd>、<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">鼠标中键</kbd></kbd> 或类似方法）。</p></li>
+<li><p>缩小八个缩放级别（<kbd class="kbd docutils literal notranslate">数字键盘减-</kbd> -- 八次）。</p></li>
+<li><p>某些情况下，你可能想要在截取区域外有些留白。留白应该在 30px 左右，但也没必要正好。</p></li>
+</ol>
+<p>以上方法适用于用户界面的一些部分，但可能并不适用于所有情形。</p>
+<section id="files">
+<h3>文件<a class="headerlink" href="#files" title="Permalink to this heading"></a></h3>
+<dl>
+<dt>无大写，无空格</dt><dd><p>文件名小写，单词之间使用下划线。</p>
+</dd>
+<dt>有效排序</dt><dd><p>使用在文件名结尾添加标识符来顺序命名。</p>
+</dd>
+<dt>格式</dt><dd><p>对于纯色图片如 Blender 界面截图，使用 <code class="docutils literal notranslate"><span class="pre">.png</span></code> 格式，而 <code class="docutils literal notranslate"><span class="pre">.jpg</span></code> 格式则用于色彩丰富的图片，如渲染样图和照片。</p>
+<p>不要使用 <code class="docutils literal notranslate"><span class="pre">.gif</span></code> 文件，这些文件不便于维护，容易让人分散注意力，并且文件大小通常较大。如有必要，可以使用视频（参考下面的<a class="reference internal" href="#videos">视频</a>）。</p>
+</dd>
+<dt>位置</dt><dd><p>将文件放置于 <code class="docutils literal notranslate"><span class="pre">manual/images</span></code> 文件夹下，不要使用子文件夹。</p>
+</dd>
+<dt>命名</dt><dd><p>对于文件命名，使用下划线分隔章与节，名称包含两个或更多单词使用破折号分隔。所以，图像文件命名格式为 <code class="docutils literal notranslate"><span class="pre">chapter_subsection_sub-subsection_id.png</span></code>，例如：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">interface_splash_current.png</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interface_undo-redo_last.png</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">interface_undo-redo_repeat-history-menu.png</span></code></p></li>
+</ul>
+<p>不要使用特殊字符或空格！</p>
+</dd>
+</dl>
+</section>
+<section id="usage-guides">
+<h3>使用指南<a class="headerlink" href="#usage-guides" title="Permalink to this heading"></a></h3>
+<ul>
+<li><p>避免指定图像的分辨率，以便主题可以一致地处理图像，并跨不同屏幕尺寸提供最佳布局。</p></li>
+<li><p>在描述 UI 的面板或章节，最好是使用一张图片来显示所有相关区域（而不是每个图标或按钮一张图片），并将其放置在你所编写章节的顶部，然后按照它们在图像中出现的顺序解释这些功能。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>手册可以长期维护是非常重要的，用户界面和工具选项在不断变化，所以要尽量避免使用过多图片（在不是特别必要的情况下）。否则这会造成过多的维护负担。</p>
+</div>
+</li>
+</ul>
+</section>
+</section>
+<section id="videos">
+<h2>视频<a class="headerlink" href="#videos" title="Permalink to this heading"></a></h2>
+<p>视频可以嵌入 Blender 自托管的 <a class="reference external" href="https://joinpeertube.org/">PeerTube</a> 实例中，该实例可以在 <a class="reference external" href="https://video.blender.org/">video.blender.org</a> 中找到。使用以下指令嵌入视频：</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="ow">peertube</span><span class="p">::</span> ID
+</pre></div>
+</div>
+<p>可以在视频的 URL 中找到视频 <code class="docutils literal notranslate"><span class="pre">ID</span></code>，例如：</p>
+<p><code class="docutils literal notranslate"><span class="pre">https://video.blender.org/videos/watch/47448bc1-0cc0-4bd1-b6c8-9115d8f7e08c</span></code> 的 ID 是 <code class="docutils literal notranslate"><span class="pre">47448bc1-0cc0-4bd1-b6c8-9115d8f7e08c</span></code> 。</p>
+<p>要上传新视频，请联系<a class="reference external" href="https://projects.blender.org/blender/documentation">文档项目管理员</a>或将上传的视频包含在<a class="reference internal" href="../pull_requests.html"><span class="doc">拉取请求</span></a>说明中。</p>
+<section id="id1">
+<h3>使用指南<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p>避免添加依赖于语音或单词的视频，因为这很难翻译。</p></li>
+<li><p>不要嵌入视频教程作为解释功能的手段，写作本身应该充分解释它。（尽管您可以在页面底部的 <code class="docutils literal notranslate"><span class="pre">教程</span></code> 标题下包含指向视频的链接）。</p></li>
+</ul>
+</section>
+</section>
+<section id="useful-constructs">
+<h2>有用的结构<a class="headerlink" href="#useful-constructs" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">|BLENDER_VERSION|</span></code> —— 解释当前手册适用的 Blender 版本。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:abbr:`SSAO</span> <span class="pre">(Screen</span> <span class="pre">Space</span> <span class="pre">Ambient</span> <span class="pre">Occlusion</span> <span class="pre">屏幕空间环境光遮蔽)`</span></code> —— 向读者展示缩写的全称文本。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:term:`Manifold`</span></code> —— <a class="reference internal" href="../../glossary/index.html"><span class="doc">词汇表</span></a>入口链接。</p></li>
+</ul>
+</section>
+<section id="cross-references-and-linkage">
+<h2>交叉引用和链接<a class="headerlink" href="#cross-references-and-linkage" title="Permalink to this heading"></a></h2>
+<p>你可以链接到手册中另一个文档:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="na">:doc:</span><span class="nv">`The Title &lt;/section/path/to/file&gt;`</span>
+</pre></div>
+</div>
+<p>要链接到另一个文件（或者同一个）中的指定章节，可使用显式标签:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_sample-label:</span>
+
+[section or image to reference]
+
+Some text <span class="na">:ref:</span><span class="nv">`Optional Title &lt;sample-label&gt;`</span>
+</pre></div>
+</div>
+<p>链接到同一文件中的标题:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="gh">Titles are Targets</span>
+<span class="gh">==================</span>
+
+Body text.
+
+Implicit references, like <span class="s">`Titles are Targets`_</span>
+</pre></div>
+</div>
+<p>链接到外部链接:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="s">`Blender Website </span><span class="si">&lt;https://www.blender.org&gt;</span><span class="s">`__</span>
+</pre></div>
+</div>
+<section id="context-sensitive-manual-access">
+<h3>访问上下文相关手册<a class="headerlink" href="#context-sensitive-manual-access" title="Permalink to this heading"></a></h3>
+<p>通过打开属性或操作者的上下文菜单（右键）并选择 <em>在线手册</em>，可以从 Blender 中链接到手册的特定部分。为了使其发挥作用，这需要在文档中加以说明。要将一个属性或操作符链接到手册的特定部分，你需要添加一个外部的手册，你需要添加一个外部参考链接标签，其 ID 与 Blender 的 RNA 标签匹配。找出一个属性的标签的最简单方法是，打开该属性/操作符的上下文菜单，选择 <em>在线 Python 参考</em>，从 URL 中提取标签。下面给出了一些在 RST 文件中的例子:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_bpy.types.FluidDomainSettings.use_fractions:</span>
+
+Fractional Obstacles
+   Enables finer resolution in fluid / obstacle regions (second order obstacles)...
+
+<span class="p">   ..</span> <span class="nt">_bpy.types.FluidDomainSettings.fractions_distance:</span>
+
+   Obstacle Distance
+      Determines how far apart fluid and obstacles are...
+</pre></div>
+</div>
+<p>对于操作项:</p>
+<div class="highlight-rst notranslate"><div class="highlight"><pre><span></span><span class="p">..</span> <span class="nt">_bpy.ops.curve.subdivide:</span>
+
+<span class="gh">Subdivide</span>
+<span class="gh">=========</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="further-reading">
+<h2>扩展阅读<a class="headerlink" href="#further-reading" title="Permalink to this heading"></a></h2>
+<p>要了解更多关于 reStructuredText 的信息，请参阅：</p>
+<dl class="simple">
+<dt><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html">Sphinx RST 入门</a></dt><dd><p>不错的基础入门。</p>
+</dd>
+<dt><a class="reference external" href="https://docutils.sourceforge.io/rst.html">Docutils reStructuredText 参考</a></dt><dd><p>参考链接和用户文档。</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="writing_guide.html" class="btn btn-neutral float-left" title="写作样式指南" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="commit_guide.html" class="btn btn-neutral float-right" title="提交指南" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/contribute/guides/markup_guide.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/contribute/guides/markup_guide.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fcontribute/guides/markup_guide.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fcontribute/guides/markup_guide.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

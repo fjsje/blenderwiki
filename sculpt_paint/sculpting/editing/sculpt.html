@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>雕刻 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/sculpt_paint/sculpting/editing/sculpt.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/js/version_switch.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../copyright.html" />
+    <link rel="next" title="遮罩" href="mask.html" />
+    <link rel="prev" title="编辑" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">雕刻 &amp; 绘制</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../brush/index.html">笔刷</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../selection_visibility.html">选择 &amp; 可见性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../navigation.html">导航</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#modes">模式</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">雕刻</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction/index.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../toolbar.html">工具栏</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tools/index.html">工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tool_settings/index.html">工具设置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../controls.html">控制器</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">编辑</a><ul class="current">
+<li class="toctree-l5 current"><a class="current reference internal" href="#">雕刻</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#transforms">变换</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#show-hide">显示 / 隐藏</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#trimming">修剪</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#fairing">平顺</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#mesh-filters">网格滤镜</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#set-pivot">设置轴心点</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#rebuild-bvh">重建BVH</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#transfer-sculpt-mode">传递雕刻模式</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="mask.html">遮罩</a></li>
+<li class="toctree-l5"><a class="reference internal" href="face_sets.html">面组</a></li>
+<li class="toctree-l5"><a class="reference internal" href="expand.html">扩展</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../texture_paint/index.html">纹理绘制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vertex_paint/index.html">顶点绘制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../weight_paint/index.html">权重绘制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../curves_sculpting/index.html">曲线雕刻</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">雕刻 &amp; 绘制</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">雕刻</a></li>
+          <li class="breadcrumb-item"><a href="index.html">编辑</a></li>
+      <li class="breadcrumb-item active">雕刻</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="sculpt">
+<h1>雕刻<a class="headerlink" href="#sculpt" title="Permalink to this heading"></a></h1>
+<p>This page details the general hotkey operators and menu operators in sculpt mode.</p>
+<section id="transforms">
+<h2>变换<a class="headerlink" href="#transforms" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>移动</dt><dd><p>改变物体的位置。</p>
+</dd>
+<dt>旋转</dt><dd><p>改变网格的方向。</p>
+</dd>
+<dt>比例|缩放</dt><dd><p>增大/减小网格的尺寸。</p>
+</dd>
+<dt>球形</dt><dd><p>将网格变形为球形。</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="../tools/transforms.html"><span class="doc">变换工具</span></a>。</p>
+</div>
+</section>
+<section id="show-hide">
+<h2>显示 / 隐藏<a class="headerlink" href="#show-hide" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>雕刻模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">雕刻</span></p>
+</dd>
+</dl>
+</div>
+<p>Some very common hotkey operators to control the visibility based on face sets.
+These are not part of any menu and have to be used via the shortcuts.
+More visibility operators can be found in the <a class="reference internal" href="face_sets.html"><span class="doc">Face Sets Menu</span></a>
+and the Pie Menu shortcut <kbd class="kbd docutils literal notranslate">W</kbd>. (Since visibility is often toggled via face sets.)</p>
+<dl class="simple">
+<dt>框选隐藏</dt><dd><p>绘制一个框以隐藏网格面。</p>
+</dd>
+<dt>框选显示</dt><dd><p>绘制一个方框以显示隐藏的面。其工作原理类似于 <a class="reference internal" href="../../../interface/selecting.html#tool-select-box"><span class="std std-ref">框选</span></a> 工具。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-ops-sculpt-face-set-change-visibility">
+<dt>切换可见性 <kbd class="kbd docutils literal notranslate">H</kbd></dt><dd><p>Hide all face sets except the active one (under the cursor).
+If face sets are already hidden, then this operator will show everything.</p>
+</dd>
+<dt>Hide Active Face Set <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">H</kbd></kbd></dt><dd><p>Hide the face set under the cursor. Press <kbd class="kbd docutils literal notranslate">H</kbd> afterwards to show everything.</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These two shortcuts are inverted compared to other modes, to make the operators more convenient to access.
+Toggling the Visibility is far more often used. If this behavior is undesired it's recommended
+to change the keymap in the preferences.</p>
+</div>
+<dl class="simple" id="sculpt-show-all">
+<dt>显示全部 <kbd class="kbd docutils literal notranslate">W</kbd>, <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">H</kbd></kbd></dt><dd><p>Reveal all hidden faces.</p>
+</dd>
+<dt>Invert Visible Face Sets</dt><dd><p>Hides all geometry that is part of a face set and makes all hidden geometry that is part of a face set visible.</p>
+</dd>
+<dt>隐藏遮罩作用项</dt><dd><p>隐藏所有被遮罩的顶点。</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>更多常规介绍见于 <a class="reference internal" href="../introduction/visibility_masking_face_sets.html"><span class="doc">可见性、遮罩 &amp; 面组</span></a>。</p>
+</div>
+</section>
+<section id="trimming">
+<h2>修剪<a class="headerlink" href="#trimming" title="Permalink to this heading"></a></h2>
+<p>The trimming operators add or remove geometry from the mesh based on a gesture input.
+These operators are especially useful for sketching an early base mesh for further
+sculpting with the <a class="reference internal" href="../tool_settings/remesh.html"><span class="doc">voxel remesher</span></a>.</p>
+<dl class="simple" id="bpy-ops-sculpt-trim-box-gesture">
+<dt><a class="reference internal" href="../tools/box_trim.html"><span class="doc">框选修剪</span></a></dt><dd><p>通过 <a class="reference internal" href="../../../interface/selecting.html#tool-select-box"><span class="std std-ref">框选</span></a> 移除几何体。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-ops-sculpt-trim-lasso-gesture">
+<dt><a class="reference internal" href="../tools/lasso_trim.html"><span class="doc">套索修剪</span></a></dt><dd><p>通过 <a class="reference internal" href="../../../interface/selecting.html#tool-select-lasso"><span class="std std-ref">套索选择</span></a> 移除几何体。</p>
+</dd>
+<dt><a class="reference internal" href="../tools/box_trim.html"><span class="doc">方形添加</span></a></dt><dd><p>通过 <a class="reference internal" href="../../../interface/selecting.html#tool-select-box"><span class="std std-ref">框选</span></a> 添加几何体。</p>
+</dd>
+<dt><a class="reference internal" href="../tools/lasso_trim.html"><span class="doc">套索添加</span></a></dt><dd><p>通过 <a class="reference internal" href="../../../interface/selecting.html#tool-select-lasso"><span class="std std-ref">套索选择</span></a> 添加几何体。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-ops-sculpt-project-line-gesture">
+<dt><a class="reference internal" href="../tools/line_project.html"><span class="doc">划线投影</span></a></dt><dd><p>Flattens the geometry along a plane determined by the camera view and a drawn line.
+The region of the mesh being flattened is visualized by the side of the line that is shaded.</p>
+</dd>
+</dl>
+</section>
+<section id="fairing">
+<h2>平顺<a class="headerlink" href="#fairing" title="Permalink to this heading"></a></h2>
+<p>These operators smooths geometry patches based of a <a class="reference internal" href="face_sets.html"><span class="doc">Face set</span></a>.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="../tools/edit_face_set.html"><span class="doc">面组编辑工具</span></a></p>
+</div>
+<dl class="simple">
+<dt>平顺位置</dt><dd><p>Creates a perfectly flat and smooth geometry patch from the face set.
+This is the ideal way to trim parts of your mesh
+if the vertex count is too high for other operations,
+or the vertex IDs must not be altered
+(Like when using <a class="reference internal" href="../../../modeling/modifiers/generate/multiresolution.html"><span class="doc">Multires</span></a> sculpting).</p>
+</dd>
+<dt>平顺切向</dt><dd><p>通过最小化顶点 <a class="reference internal" href="../../../glossary/index.html#term-Tangent"><span class="xref std std-term">切向</span></a> 的变化，从面组创建一个尽可能平滑的几何补丁。这对于在复杂拓扑结构上创建平滑的曲面非常理想，在这种情况下，仅使用平滑笔刷不会产生预期的结果</p>
+</dd>
+</dl>
+</section>
+<section id="mesh-filters">
+<span id="bpy-ops-sculpt-mesh-filter"></span><h2>网格滤镜<a class="headerlink" href="#mesh-filters" title="Permalink to this heading"></a></h2>
+<p>Applies a deformation to all vertices in the mesh at the same time.
+Masking, auto-masking and visibility will be taken into account.</p>
+<p>To use these operators, click and drag away from left to right
+or from right to left for a negative effect.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="../tools/mesh_filter.html"><span class="doc">网格滤镜工具</span></a></p>
+</div>
+<dl>
+<dt>平滑化</dt><dd><p>Smooths the positions of the vertices to either polish surfaces or remove volume from larger shapes.
+Especially useful to fix most of the artifacts of the voxel remesher.
+This filter works similar to the <a class="reference internal" href="../tools/smooth.html"><span class="doc">Smooth</span></a> brush.</p>
+</dd>
+<dt>表面平滑</dt><dd><p>Eliminates irregularities of the mesh by making the positions
+of the vertices more uniform while preserving the volume of the object.
+This filter works similar to the <em>Surface</em> deformation type of the
+<a class="reference internal" href="../tools/smooth.html"><span class="doc">Smooth</span></a> brush.</p>
+</dd>
+<dt>膨胀</dt><dd><p>Displaces vertices uniformly along their normal.
+This filter works similar to the <a class="reference internal" href="../tools/inflate.html"><span class="doc">Inflate</span></a> brush.</p>
+</dd>
+<dt>松弛拓扑</dt><dd><p>Tries to create an even distribution of quads without deforming the volume of the mesh.
+This filter works the same as holding <kbd class="kbd docutils literal notranslate">Shift</kbd> with the
+<a class="reference internal" href="../tools/slide_relax.html"><span class="doc">Slide Relax</span></a> brush.</p>
+</dd>
+<dt>松弛面组</dt><dd><p>This will remove the jagged lines visible after drawing or creating a face set.
+This filter works the same as holding <kbd class="kbd docutils literal notranslate">Shift</kbd> with the
+<a class="reference internal" href="../tools/draw_facesets.html"><span class="doc">Draw Face Set</span></a> brush.</p>
+</dd>
+<dt>锐化</dt><dd><p>Sharpens and smooths the mesh based on its curvature,
+resulting in pinching hard edges and polishing flat surfaces.
+Especially useful when sculpting hard surfaces and stylized models
+with creasing and flattening brushes.</p>
+</dd>
+<dt>增强细节</dt><dd><p>Increases the high frequency surface details of the mesh
+by intensifying the difference between creases and valleys.
+This filter works similar to the inverted direction of the
+<a class="reference internal" href="../tools/smooth.html"><span class="doc">Smooth</span></a> brush.</p>
+</dd>
+<dt>擦除置换</dt><dd><p>Deletes displacement information of
+the <a class="reference internal" href="../../../modeling/modifiers/generate/multiresolution.html"><span class="doc">Multires Modifier</span></a>,
+resetting the mesh to a regular subdivision surface result.
+This can be used to reset parts of the sculpt or to fix reprojection artifacts
+after applying a <a class="reference internal" href="../../../modeling/modifiers/deform/shrinkwrap.html"><span class="doc">Shrinkwrap Modifier</span></a>.</p>
+<p>负冲程会加剧位移细节，这种方法的工作方式类似于 <em>增强细节</em>，在某些情况下可以提供更好的结果。</p>
+</dd>
+<dt>随机</dt><dd><p>沿顶点法线随机移动顶点。该滤镜的工作原理类似于 <a class="reference internal" href="../../../scene_layout/object/editing/transform/randomize.html#bpy-ops-object-randomize-transform"><span class="std std-ref">随机化变换</span></a>。</p>
+</dd>
+</dl>
+</section>
+<section id="set-pivot">
+<span id="bpy-ops-sculpt-set-pivot-position"></span><h2>设置轴心点<a class="headerlink" href="#set-pivot" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id2">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>雕刻模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">雕刻 ‣ 设置轴心点</span></p>
+</dd>
+</dl>
+</div>
+<p>Like Object and Edit Mode, Sculpt Mode also has a <a class="reference internal" href="../../../glossary/index.html#term-Pivot-Point"><span class="xref std std-term">Pivot Point</span></a>.
+This is because the basic <a class="reference internal" href="../tools/transforms.html"><span class="doc">move, rotate and scale</span></a>
+transforms are also supported in Sculpt Mode.
+But the pivot point in Sculpt Mode is unique. It always moves together with the transformed mesh
+and can be both manually &amp; automatically placed.</p>
+<dl class="simple">
+<dt>原点</dt><dd><p>将枢轴设置为雕刻的原点。</p>
+</dd>
+<dt>未遮罩</dt><dd><p>将枢轴位置设置为未屏蔽顶点的平均位置。</p>
+</dd>
+<dt>遮罩边界</dt><dd><p>Sets the pivot position to the center of the mask's border.
+This operation will automatically happen when using <a class="reference internal" href="expand.html#bpy-ops-sculpt-expand"><span class="std std-ref">扩展</span></a>.</p>
+</dd>
+<dt>活动顶点</dt><dd><p>将枢轴位置设置为活动顶点位置。</p>
+</dd>
+<dt>曲面</dt><dd><p>将枢轴位置设置为光标下方的曲面。</p>
+</dd>
+</dl>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For more convenient placement of the pivot point it's recommended to assign a shortcut to either
+<em>Surface</em> or <em>Active Vertex</em>.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>更多常规介绍见于 <a class="reference internal" href="../introduction/transforming.html"><span class="doc">变换</span></a>。</p>
+</div>
+</section>
+<section id="rebuild-bvh">
+<span id="bpy-ops-sculpt-optimize"></span><h2>重建BVH<a class="headerlink" href="#rebuild-bvh" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id3">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>雕刻模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">雕刻 ‣ 重建 BVH</span></p>
+</dd>
+</dl>
+</div>
+<p>Recalculates the <a class="reference internal" href="../../../glossary/index.html#term-BVH"><span class="xref std std-term">BVH</span></a> used by <a class="reference internal" href="../tool_settings/dyntopo.html"><span class="doc">动态拓扑</span></a>
+to improve performance, which might degrade over time while using Dyntopo.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>更多常规介绍见于 <a class="reference internal" href="../introduction/adaptive.html"><span class="doc">自适应分辨率</span></a>。</p>
+</div>
+</section>
+<section id="transfer-sculpt-mode">
+<h2>传递雕刻模式<a class="headerlink" href="#transfer-sculpt-mode" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id4">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>雕刻模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">雕刻 ‣ 传递雕刻模式</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">Q</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>将雕刻模式从 <a class="reference internal" href="../../../glossary/index.html#term-Active"><span class="xref std std-term">活动</span></a> 对象切换到鼠标下的对象。请参阅 <a class="reference internal" href="../../../editors/3dview/modes.html#bpy-ops-object-transfer-mode"><span class="std std-ref">切换物体</span></a> 了解更多信息。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>更多常规介绍见于 <a class="reference internal" href="../introduction/multiple_objects.html"><span class="doc">多物体下工作</span></a>。</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="编辑" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="mask.html" class="btn btn-neutral float-right" title="遮罩" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/sculpt_paint/sculpting/editing/sculpt.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/sculpt_paint/sculpting/editing/sculpt.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fsculpt_paint/sculpting/editing/sculpt.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fsculpt_paint/sculpting/editing/sculpt.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

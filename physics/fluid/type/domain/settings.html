@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>设置 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/physics/fluid/type/domain/settings.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../../_static/js/version_switch.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../../copyright.html" />
+    <link rel="next" title="气体设置" href="gas/index.html" />
+    <link rel="prev" title="域" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">物理</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigid_body/index.html">刚体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cloth/index.html">布料</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../soft_body/index.html">软体</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">流体</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">类型</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">域</a><ul class="current">
+<li class="toctree-l5 current"><a class="current reference internal" href="#">设置</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#border-collisions">边界碰撞</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#smoke">烟雾</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#dissolve">消融</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#fire">火焰</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#liquid">液体</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="gas/index.html">气体设置</a></li>
+<li class="toctree-l5"><a class="reference internal" href="liquid/index.html">液体设置</a></li>
+<li class="toctree-l5"><a class="reference internal" href="guides.html">辅助（引导）</a></li>
+<li class="toctree-l5"><a class="reference internal" href="collections.html">集合</a></li>
+<li class="toctree-l5"><a class="reference internal" href="cache.html">缓存</a></li>
+<li class="toctree-l5"><a class="reference internal" href="field_weights.html">力场权重</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../flow.html">流</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../effector.html">效果器</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../material.html">材质</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../particles/index.html">粒子系统</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../dynamic_paint/index.html">动态绘画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../forces/index.html">力场</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../collision.html">碰撞</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../baking.html">烘焙物理模拟</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../simulation_nodes.html">模拟节点</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">物理</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">流体</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">类型</a></li>
+          <li class="breadcrumb-item"><a href="index.html">域</a></li>
+      <li class="breadcrumb-item active">设置</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="settings">
+<h1>设置<a class="headerlink" href="#settings" title="Permalink to this heading"></a></h1>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">物理 ‣ 流体 ‣ 设置</span></p>
+</dd>
+<dt class="field-even">类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>域</p>
+</dd>
+</dl>
+</div>
+<p>域对象包含整个模拟。流体模拟不能离开域，它要么与边缘碰撞，要么消失，取决于域的设置。</p>
+<p>请记住，大域需要更高的分辨率和更长的烘焙时间。你要把它做得足够大，使模拟能在里面进行，但又不能太大，以免计算模拟的时间太长。</p>
+<p>要创建一个域，需要添加一个立方体，并对其进行变换，直到它包围住你想要进行模拟的区域。翻译、旋转和缩放都是允许的。要把它变成一个流体域，在 <span class="menuselection">属性 ‣ 物理</span> 标签中点击 <em>流体</em>，然后选择 <em>域</em> 作为流体的 <em>类型</em>。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>你 <em>可以</em> 使用其他形状的网格对象作为域对象，但流体模拟器将使用该形状的 <a class="reference internal" href="../../../../glossary/index.html#term-Bounding-Box"><span class="xref std std-term">边界框</span></a> 作为域边界。换句话说，域的实际形状仍将是矩形的。</p>
+</div>
+<dl class="simple" id="bpy-types-fluiddomainsettings-domain-type">
+<dt>域类型</dt><dd><p>一个流体域可以控制液体或气体流动。液体域将所有与该域相交的液体流动对象都考虑在内。气体域考虑所有与之相交的 <em>烟</em>、<em>火</em> 以及 <em>烟和火</em> 流动对象。不可能动态地改变域的类型。</p>
+</dd>
+</dl>
+<dl id="bpy-types-fluiddomainsettings-resolution-max">
+<dt>分辨率分区</dt><dd><p>流体域被细分为许多 &quot;单元&quot;，称为 <a class="reference internal" href="../../../../glossary/index.html#term-Voxel"><span class="xref std std-term">Voxels</span></a>，构成了流体的 &quot;像素&quot;。这个设置控制了域中的细分数量。更多的细分数量是创建更高分辨率的流体的一种方法。</p>
+<p>由于分辨率是以 &quot;分区&quot; 来定义的，较大的域将需要更多的分区来获得与小域相当的分辨率。例如，一个有64个 <em>分辨率分区</em> 的一米立方体将需要128个分区来匹配一个2米立方体。用作基础划分的尺寸是物体边界盒的最长尺寸。为了帮助可视化体素的大小，<em>分辨率分区</em> 可以在三维视口中显示一个小立方体来预览，以显示这些划分的大小。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-fluiddomainsettings-time-scale">
+<dt>时间比例</dt><dd><p>控制模拟的速度。低值会导致 &quot;慢动作 &quot;的模拟，而高值可以用来更快地推进模拟（有利于生成用于静态渲染的流体）。</p>
+</dd>
+</dl>
+<dl id="bpy-types-fluiddomainsettings-cfl-condition">
+<dt>CFL 编号</dt><dd><p>确定每个网格单元的最大速度，以每个时间步长的网格单元为单位。流体在一个时间步长中只允许移动到这个速度。如果超过这个阈值，求解器将对模拟步骤进行细分。</p>
+<p>In general, greater CFL (Courant–Friedrichs–Lewy) numbers will minimize the number of simulation steps
+and the computation time. Yet it will yield less physically accurate behavior for fast fluid flows.
+Smaller CFL numbers result in more simulation steps per frame, longer simulation times
+but more accurate behavior at high velocities (e.g. fast fluid flow colliding
+with obstacle).</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>当降低 <em>CFL</em> 数时，建议增加最大时间步数。同样地，当增加 <em>CFL</em> 数时，应调整最小的时间步数。</p>
+</div>
+<dl class="simple" id="bpy-types-fluiddomainsettings-use-adaptive-timesteps">
+<dt>使用自适应时间步数</dt><dd><p>让求解器自动决定何时执行每帧多个仿真步骤。它考虑到最大和最小的时间步数、当前的 <em>帧速率</em> 和 <em>时间尺度</em>。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-fluiddomainsettings-timesteps-max">
+<dt>时间步长最大值</dt><dd><p>每帧允许的最大时间步数。如果需要，求解器将把一个模拟步骤划分为这个数量的子步骤。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-fluiddomainsettings-timesteps-min">
+<dt>最小时间步长</dt><dd><p>每帧允许的最小时间步数。解算器将始终执行每帧至少这个数量的模拟步骤。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-fluiddomainsettings-gravity">
+<dt>重力</dt><dd><p>默认情况下，流体求解器将使用全局场景的重力。这种行为可以在场景设置中禁用。禁用全局重力将启用流体重力选项。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-fluiddomainsettings-clipping">
+<dt>空白空间 <span class="guilabel">仅限气体</span></dt><dd><p>值低于这个值的体素被认为是空的空间。更多的空白空间可以优化渲染。通过OpenVDB缓存，它还可以减少缓存的大小。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-fluiddomainsettings-delete-in-obstacle">
+<dt>在障碍中删除</dt><dd><p>移除任何与域内障碍物相交的流体体积。</p>
+</dd>
+</dl>
+<section id="border-collisions">
+<span id="bpy-types-fluiddomainsettings-use-collision-border-bottom"></span><span id="bpy-types-fluiddomainsettings-use-collision-border-top"></span><span id="bpy-types-fluiddomainsettings-use-collision-border-left"></span><span id="bpy-types-fluiddomainsettings-use-collision-border-right"></span><span id="bpy-types-fluiddomainsettings-use-collision-border-back"></span><span id="bpy-types-fluiddomainsettings-use-collision-border-front"></span><h2>边界碰撞<a class="headerlink" href="#border-collisions" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id2">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">物理 ‣ 流体 ‣设置 ‣ 边界碰撞</span></p>
+</dd>
+<dt class="field-even">类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>域（气体）</p>
+</dd>
+</dl>
+</div>
+<p>控制域的哪一面将允许流体 &quot;通过 &quot;域，使其消失而不影响模拟的其他部分，哪一面将偏转流体。</p>
+</section>
+<section id="smoke">
+<h2>烟雾<a class="headerlink" href="#smoke" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id3">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">物理 ‣ 流体 ‣ 设置 ‣ 烟雾</span></p>
+</dd>
+<dt class="field-even">类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>域（气体）</p>
+</dd>
+</dl>
+</div>
+<dl class="simple" id="bpy-types-fluiddomainsettings-alpha">
+<dt>密度浮力</dt><dd><p>Buoyant force based on smoke density.</p>
+<ul class="simple">
+<li><p>Values above 0 will cause the smoke to rise (simulating smoke which is lighter than ambient air).</p></li>
+<li><p>Values below 0 will cause smoke to sink (simulating smoke which is heavier than ambient air).</p></li>
+</ul>
+</dd>
+</dl>
+<dl id="bpy-types-fluiddomainsettings-beta">
+<dt>热度浮力</dt><dd><p>Controls how much smoke is affected by temperature.
+The effect this setting has on smoke depends on the per flow object
+<a class="reference internal" href="../flow.html#bpy-types-fluidflowsettings-temperature"><span class="std std-ref">Initial Temperature</span></a>:</p>
+<ul class="simple">
+<li><p>Values above 0 will result in the smoke rising when the flow object <em>Initial Temperature</em> is
+set to a positive value, and smoke sinking when the flow object <em>Initial Temperature</em> is
+set to a negative value.</p></li>
+<li><p>Values below 0 will result in the opposite of positive values,
+i.e. smoke emitted from flow objects with a positive <em>Initial Temperature</em> will sink,
+and smoke from flow objects with a negative <em>Initial Temperature</em> will rise.</p></li>
+</ul>
+<p>Note that smoke from multiple flow objects with different temperatures will mix and warm up or
+cool down until an equilibrium is reached.</p>
+</dd>
+</dl>
+<dl id="bpy-types-fluiddomainsettings-vorticity">
+<dt>涡量</dt><dd><p>Controls the amount of turbulence in the smoke. Higher values will make lots of small swirls,
+while lower values make smoother shapes.</p>
+<table class="docutils align-default" id="id6">
+<caption><span class="caption-text">不同数量的涡度的比较。</span><a class="headerlink" href="#id6" title="Permalink to this table"></a></caption>
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id7">
+<img alt="../../../../_images/physics_fluid_type_domain_settings_vorticity-off.png" src="../../../../_images/physics_fluid_type_domain_settings_vorticity-off.png" />
+<figcaption>
+<p><span class="caption-text">涡度为 0.0 的域。</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id8">
+<img alt="../../../../_images/physics_fluid_type_domain_settings_vorticity-on.png" src="../../../../_images/physics_fluid_type_domain_settings_vorticity-on.png" />
+<figcaption>
+<p><span class="caption-text">涡度为 0.2 的域。</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<section id="dissolve">
+<span id="bpy-types-fluiddomainsettings-use-dissolve-smoke"></span><h3>消融<a class="headerlink" href="#dissolve" title="Permalink to this heading"></a></h3>
+<p>Allow smoke to dissipate over time.</p>
+<dl class="simple" id="bpy-types-fluiddomainsettings-dissolve-speed">
+<dt>时间</dt><dd><p>Speed of smoke's dissipation in frames.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-fluiddomainsettings-use-dissolve-smoke-log">
+<dt>减慢</dt><dd><p>Dissolve smoke in a logarithmic fashion. Dissolves quickly at first, but lingers longer.</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="fire">
+<h2>火焰<a class="headerlink" href="#fire" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id4">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>域</p>
+</dd>
+<dt class="field-even">面板<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">物理 ‣ 流体 ‣ 设置 ‣ 火焰</span></p>
+</dd>
+</dl>
+</div>
+<dl class="simple" id="bpy-types-fluiddomainsettings-burning-rate">
+<dt>反应速度</dt><dd><p>燃料燃烧的速度。数值越大，火焰越小（燃料在走得很远之前就燃烧了），数值越小，火焰越大（燃料在被完全消耗之前有时间流得更远）。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-fluiddomainsettings-flame-smoke">
+<dt>火焰烟雾</dt><dd><p>自动创建的额外烟雾量，以模拟燃烧的燃料。这种烟雾在使用 &quot;火 + 烟&quot; 时最明显：参考：<a class="reference internal" href="../flow.html#bpy-types-fluidflowsettings-flow-type"><span class="std std-ref">流体对象</span></a>。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-fluiddomainsettings-flame-vorticity">
+<dt>涡量</dt><dd><p>除了全局流体之外，火焰的涡度：<a class="reference internal" href="#bpy-types-fluiddomainsettings-vorticity"><span class="std std-ref">涡度</span></a>。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-fluiddomainsettings-flame-max-temp">
+<dt>最高温度</dt><dd><p>火焰的最高温度。较大的数值会使火焰上升得更快。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-fluiddomainsettings-flame-ignition">
+<dt>最小值</dt><dd><p>火焰的最低温度。较大的数值会使火焰上升得更快。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-fluiddomainsettings-flame-smoke-color">
+<dt>烟雾颜色</dt><dd><p>从燃料中发射的烟雾的颜色。</p>
+</dd>
+</dl>
+</section>
+<section id="liquid">
+<span id="bpy-types-fluiddomainsettings-use-flip-particles"></span><h2>液体<a class="headerlink" href="#liquid" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id5">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>域</p>
+</dd>
+<dt class="field-even">面板<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">物理 ‣ 流体 ‣ 设置 ‣ 液体</span></p>
+</dd>
+</dl>
+</div>
+<p>液体设置控制模拟所包含的粒子的行为。启用液体复选框将自动为模拟创建一个粒子系统。这个粒子系统可以使模拟的流动可视化。液体粒子的可视化是可选的。流体模拟将利用所有没有附加粒子系统的领域。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>禁用液体复选框将删除附加的粒子系统及其设置。</p>
+</div>
+<dl id="bpy-types-fluiddomainsettings-simulation-method">
+<dt>模拟方法</dt><dd><p>确定液体粒子的模拟方法。</p>
+<dl class="simple">
+<dt>FLIP</dt><dd><p>产生一个非常飞溅的模拟，有很多颗粒散布在空气中。</p>
+</dd>
+<dt>APIC</dt><dd><p>产生一个非常有活力但也更稳定的模拟。与 <em>FLIP</em> 相比，液体中的涡流将被更好地保留下来。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-fluiddomainsettings-flip-ratio">
+<dt>FLIP比率 <span class="guilabel">仅限模拟FLIP</span>：</dt><dd><p>在更新液体粒子速度时要使用多少FLIP速度。1.0的值将导致一个完全基于FLIP的模拟。完全基于FLIP的模拟会产生更加混乱的飞溅，在模拟更多的液体时，这种模拟是比较好的。当使用较小的数值时，其行为将不那么紊乱，飞溅也更微妙。当模拟液体应该在小范围内的场景时，这是最佳选择。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-fluiddomainsettings-sys-particle-maximum">
+<dt>系统最大值</dt><dd><p>仿真中允许的最大流体粒子数。如果这个字段被设置为非零值，那么模拟将永远不会包含超过这个数量的流体粒子。否则，如果数值为零，求解器将在需要时一直对新粒子进行采样。</p>
+</dd>
+</dl>
+<dl id="bpy-types-fluiddomainsettings-particle-radius">
+<dt>粒子半径</dt><dd><p>以网格单元为单位的一个液体粒子的半径。这个值描述了一个粒子所覆盖的面积，从而决定了它周围有多少区域可以被认为是液体。更大的半径会让粒子覆盖更多的区域。这将导致更多的网格单元被标记为液体，而不仅仅是空的。</p>
+<p>每当模拟出现泄漏或以不希望的、非物理精确的方式增加体积时，调整这个值是个好主意。也就是说，当液体似乎消失时，这个值需要增加。反之亦然，当产生了太多的液体时，就需要调整。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-fluiddomainsettings-particle-number">
+<dt>采样</dt><dd><p>采样颗粒时使用的系数。更高的值会对更多的粒子进行采样。请注意，粒子重新采样发生在每一个模拟步骤。</p>
+</dd>
+</dl>
+<dl id="bpy-types-fluiddomainsettings-particle-randomness">
+<dt>随机性</dt><dd><p>新的粒子被采样时，其位置有一定的随机性，可以通过这个字段来控制。更高的值将对流入区域的液体粒子进行更随机的采样。如果数值为0.0，所有的新粒子将在其相应的网格单元内被均匀地采样。</p>
+<p>当试图创建一个层流（随机性小）或更多的湍流（随机性大）时，这个值可能是有用的。</p>
+</dd>
+</dl>
+<dl id="bpy-types-fluiddomainsettings-particle-max">
+<dt>粒子最大值</dt><dd><p>每个网格单元的最大液体颗粒数。在模拟过程中，一个单元中的液体粒子的数量可以波动。颗粒可以流入其他单元，或者如果它们移动到窄带之外就会被删除。重新取样会考虑到这个最大值而增加新的粒子。</p>
+<p>这个值设定了每个单元的颗粒的上限。这也是一个很好的方法来估计你的模拟中可以有多少粒子（也需要考虑网格分辨率）。这在烘焙前和计划模拟时是很有用的。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-fluiddomainsettings-particle-min">
+<dt>最小值</dt><dd><p>每个网格单元的最小液体颗粒数。与最大颗粒阈值类似，该值确保每个单元至少有一定数量的颗粒。</p>
+</dd>
+</dl>
+<dl id="bpy-types-fluiddomainsettings-particle-band-width">
+<dt>窄带宽度</dt><dd><p>控制允许液体颗粒流动的窄带的网格单元的宽度。一个高的值会导致一个较厚的带子，并可能导致流入区域完全被颗粒填满。除非模拟的目的是为了观察液体颗粒，否则建议不要大幅增加带子的宽度，因为更多的颗粒会降低模拟的速度。</p>
+<p>在某些情况下，当模拟出现泄漏时，增加这个值可以帮助创造体积。在所有其他情况下，最好保持窄带尽可能薄，因为液体表面包含大多数细节，在液体内部模拟粒子不是对计算资源的最佳利用。</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>The narrow band is an implementation of <a class="reference external" href="https://www.cs.cit.tum.de/cg/research/publications/2016/narrow-band-flip-for-liquid-simulations/">Narrow Band FLIP for Liquid Simulations</a>.</p>
+</div>
+<dl id="bpy-types-fluiddomainsettings-use-fractions">
+<dt>分数障碍</dt><dd><p>在流体/障碍物区域（二阶障碍物）启用更精细的分辨率。这个选项可以减少障碍物在域内倾斜时产生的 &quot;阶梯效应&quot;。它还可以使液体在障碍物上的流动更加平稳。</p>
+<dl class="simple" id="bpy-types-fluiddomainsettings-fractions-distance">
+<dt>障碍距离</dt><dd><p>决定了流体和障碍物之间的距离。这个值可以用来在倾斜的障碍物上实现更流畅的运动。根据障碍物的坡度，增加这个值可以帮助液体颗粒更好地流过障碍物。将这个字段设置为负值会让液体向障碍物的内部移动。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-fluiddomainsettings-fractions-threshold">
+<dt>障碍阈值</dt><dd><p>用于控制小数点障碍物选项的平滑度的值。较小的值可以减少 &quot;阶梯效应&quot;，但可能导致粒子粘在障碍物上。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<span id="bpy-ops-fluid-bake-data"></span><dl id="bpy-ops-fluid-free-data">
+<dt>烘焙数据，免费数据</dt><dd><p>这个选项只有在使用 <a class="reference internal" href="cache.html#bpy-types-fluiddomainsettings-cache-type"><span class="std std-ref">模块化</span></a> 缓存类型时才可用。<em>烘焙</em> 模拟并存储在驱动器上的流体模拟的基础。气体和液体模拟都可以在此基础上添加细化内容（例如，气体模拟可以添加噪波，液体模拟可以添加网格或二次粒子或两者）。</p>
+<p>进展将显示在状态栏中。按 <kbd class="kbd docutils literal notranslate">Esc</kbd> 将暂停模拟。</p>
+<p>一旦模拟完成，可以通过按*Free Data*删除缓存。可以暂停或恢复*Bake All*进程。</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="域" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="gas/index.html" class="btn btn-neutral float-right" title="气体设置" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/physics/fluid/type/domain/settings.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/physics/fluid/type/domain/settings.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fphysics/fluid/type/domain/settings.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fphysics/fluid/type/domain/settings.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

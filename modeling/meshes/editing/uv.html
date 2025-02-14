@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>UV 工具 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/editing/uv.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/js/version_switch.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../copyright.html" />
+    <link rel="next" title="属性" href="../properties/index.html" />
+    <link rel="prev" title="面数据" href="face/face_data.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">网格</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../structure.html">结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../primitives.html">基本体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tools/index.html">工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../selecting/index.html">选择</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">编辑</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh/index.html">网格工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vertex/index.html">顶点工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="edge/index.html">边工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="face/index.html">面工具</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">UV 工具</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#unwrap">展开</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#options">选项</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#smart-uv-project">智能 UV 投射</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#id4">选项</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#lightmap-pack">光照贴图拼排</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#id6">选项</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#follow-active-quads">沿活动四边面展开</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#id8">选项</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#cube-projection">立方投影</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#id10">选项</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#cylinder-projection">柱形投影</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#id12">选项</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#sphere-projection">球形投影</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#id14">选项</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#project-from-view">从视角投影</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#id16">选项</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#project-from-view-bounds">从视角投影（限界）</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#reset">重置</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../uv/index.html">UV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh_analysis.html">网格分析</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../retopology.html">重拓扑</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">文本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../volumes/index.html">体积（卷标）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../empties.html">空物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html">修改器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../geometry_nodes/index.html">几何节点</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">建模</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">网格</a></li>
+          <li class="breadcrumb-item"><a href="index.html">编辑</a></li>
+      <li class="breadcrumb-item active">UV 工具</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="uv-tools">
+<h1>UV 工具<a class="headerlink" href="#uv-tools" title="Permalink to this heading"></a></h1>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">编辑器<span class="colon">:</span></dt>
+<dd class="field-odd"><p>3D 视图</p>
+</dd>
+<dt class="field-even">模式<span class="colon">:</span></dt>
+<dd class="field-even"><p>编辑模式</p>
+</dd>
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">标题栏 ‣ UV</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">U</kbd></p>
+</dd>
+</dl>
+</div>
+<p>Blender 提供了几种 UV 映射方式。比较简单的投影方法使用三维空间到二维空间的映射公式，将点的位置朝点/轴/面确定的表面插值。更高级的方法可以用于更加复杂的模型，并有更具体的用途。</p>
+<section id="unwrap">
+<span id="bpy-ops-uv-unwrap"></span><h2>展开<a class="headerlink" href="#unwrap" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id2">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">编辑器<span class="colon">:</span></dt>
+<dd class="field-odd"><p>3D 视图或 UV 编辑器</p>
+</dd>
+<dt class="field-even">模式<span class="colon">:</span></dt>
+<dd class="field-even"><p>编辑模式</p>
+</dd>
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">UV ‣ 展开</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">U</kbd></p>
+</dd>
+</dl>
+</div>
+<p>展平沿<a class="reference internal" href="../uv/unwrapping/seams.html"><span class="doc">缝合线</span></a>切开后的网格。可用于有机形体。</p>
+<p>首先选择所有您要展开的面。在 3D 视图中，选择 <span class="menuselection">UV ‣ 展开</span> 或 <kbd class="kbd docutils literal notranslate">U</kbd> 并选择展开。您也可以在 UV 编辑器中使用 <span class="menuselection">UV ‣ 展开</span> 或 <kbd class="kbd docutils literal notranslate">U</kbd> 来完成此操作。这种方法将展开所有面并重置之前的结果。展开一次后，UV 菜单将出现在 UV 编辑器中。</p>
+<figure class="align-default" id="id19">
+<a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_uv_unwrap-example.png"><img alt="../../../_images/modeling_meshes_editing_uv_unwrap-example.png" src="../../../_images/modeling_meshes_editing_uv_unwrap-example.png" style="width: 420px;" /></a>
+<figcaption>
+<p><span class="caption-text">猴头的展开结果。</span><a class="headerlink" href="#id19" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>This tool unwraps the faces of the object to provide
+the &quot;best fit&quot; scenario based on how the faces are connected and will fit within the image,
+and takes into account any seams within the selected faces.
+If possible, each selected face gets its own different area of the image and is not overlapping any other faces UVs.
+If all faces of an object are selected, then each face is mapped to a part of the image.</p>
+<section id="options">
+<h3>选项<a class="headerlink" href="#options" title="Permalink to this heading"></a></h3>
+<p>Blender has two ways of calculating the unwrapping.
+They can be selected in the tool setting in the tool panel in the 3D Viewport.</p>
+<dl class="simple">
+<dt>方法</dt><dd><dl class="field-list simple">
+<dt class="field-odd">基于角度<span class="colon">:</span></dt>
+<dd class="field-odd"><p>使用基于角度的扁平化（<abbr title="Angle Based Flattening">ABF</abbr>）。这种方法能很好地呈现网格的二维效果。</p>
+</dd>
+<dt class="field-even">共形<span class="colon">:</span></dt>
+<dd class="field-even"><p>Uses Least Squares Conformal Mapping (LSCM). This usually results in a less accurate UV mapping than Angle Based,
+but performs better on simpler objects.</p>
+</dd>
+</dl>
+</dd>
+<dt>填充洞面</dt><dd><p>启用填充洞面，可以防止重叠，并更好地在 UV 区域中表示洞面。</p>
+</dd>
+<dt>校正高宽比例</dt><dd><p>Map UVs taking image aspect into account.</p>
+</dd>
+<dt>使用表面细分</dt><dd><p>投射 UV 时考虑细分修改器作用后的顶点位置。</p>
+</dd>
+<dt>定距方法</dt><dd><p>See <a class="reference internal" href="../uv/editing.html#bpy-ops-uv-pack-islands"><span class="std std-ref">拼排孤岛</span></a> for a description of this option.</p>
+</dd>
+<dt>边距</dt><dd><p>See <a class="reference internal" href="../uv/editing.html#bpy-ops-uv-pack-islands"><span class="std std-ref">拼排孤岛</span></a> for a description of this parameter.</p>
+</dd>
+</dl>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>一个面的 UV 纹理只需用到图像的 <em>局部</em>，而不是 <em>整张</em> 图像。同样地，多个面可以共用图像的同一部分。这样面映射后占用的图像会更少。</p>
+</div>
+</section>
+</section>
+<section id="smart-uv-project">
+<span id="bpy-ops-uv-smart-project"></span><h2>智能 UV 投射<a class="headerlink" href="#smart-uv-project" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id3">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">编辑器<span class="colon">:</span></dt>
+<dd class="field-odd"><p>3D 视图</p>
+</dd>
+<dt class="field-even">模式<span class="colon">:</span></dt>
+<dd class="field-even"><p>编辑模式</p>
+</dd>
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">UV ‣ 智能 UV 投射</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">U</kbd></p>
+</dd>
+</dl>
+</div>
+<p>智能 UV 投射可根据角度阈值（网格中的角度变化）切割网格。这样就可以对自动缝合线的创建方式进行精细控制。对于简单和复杂的几何形状，如机械物体或建筑，这是一种很好的方法。</p>
+<p>该算法会检查物体的形状、所选面及其相互关系，并根据这些信息和您提供的设置创建 UV 贴图。</p>
+<p>在下面的例子里，智能投射将立方体的所有面映射为上下各三个面的整齐排列，立方体的六个面调整为与原物体表面一样的方形。</p>
+<figure class="align-default" id="id20">
+<a class="reference internal image-reference" href="../../../_images/modeling_meshes_editing_uv_smart-project.png"><img alt="../../../_images/modeling_meshes_editing_uv_smart-project.png" src="../../../_images/modeling_meshes_editing_uv_smart-project.png" style="width: 670px;" /></a>
+<figcaption>
+<p><span class="caption-text">立方体的智能 UV 投射。</span><a class="headerlink" href="#id20" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>For more complex mechanical objects, this tool can quickly and easily create
+a regular and straightforward UV layout for you.</p>
+<section id="id4">
+<h3>选项<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<p>通过<a class="reference internal" href="../../../interface/undo_redo.html#bpy-ops-screen-redo-last"><span class="std std-ref">调整上一步操作</span></a>面板可以精细控制网格的展开方式：</p>
+<dl class="simple">
+<dt>角度限制</dt><dd><p>控制面的分组方式：值越高，分组越多越小，不过畸变更小；值越低，分组越少，代价是畸变更多。</p>
+</dd>
+<dt>定距方法</dt><dd><p>See <a class="reference internal" href="../uv/editing.html#bpy-ops-uv-pack-islands"><span class="std std-ref">拼排孤岛</span></a> for a description of this option.</p>
+</dd>
+<dt>孤岛边距</dt><dd><p>这可以控制 UV 孤岛之间的紧密程度。数值越大，UV 孤岛之间的空隙就越大。</p>
+</dd>
+<dt>区域权重</dt><dd><p>计算较大面积面对投影矢量的权重。</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="lightmap-pack">
+<span id="bpy-ops-uv-lightmap-pack"></span><h2>光照贴图拼排<a class="headerlink" href="#lightmap-pack" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id5">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">编辑器<span class="colon">:</span></dt>
+<dd class="field-odd"><p>3D 视图</p>
+</dd>
+<dt class="field-even">模式<span class="colon">:</span></dt>
+<dd class="field-even"><p>编辑模式</p>
+</dd>
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">UV ‣ 光照贴图拼排</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">U</kbd></p>
+</dd>
+</dl>
+</div>
+<p>Lightmap Pack takes each of a mesh's faces, or selected faces,
+and packs them into the UV bounds. Lightmaps are used primarily in realtime rendering,
+where lighting information is baked onto texture maps,
+when it is needed to use as much UV space as possible.
+It can also work on several meshes at once.
+It has several options that appear in the Toolbar:</p>
+<p>You can set the tool to map just <em>Selected Faces</em> or <em>All Faces</em> if
+working with a single mesh.</p>
+<p>The <em>Selected Mesh Object</em> option works on multiple meshes. To use this,
+in <em>Object Mode</em> select several mesh objects,
+then go into <em>Edit Mode</em> and activate the tool.</p>
+<section id="id6">
+<h3>选项<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>共享纹理空间</dt><dd><p>用于投射多于一个网格，尝试将所有物体的面不重合地排布在 UV 边界内。</p>
+</dd>
+<dt>新 UV 贴图</dt><dd><p>如果映射多个网格，该选项用于为每个网格新建一个 UV 映射。参见 <a class="reference internal" href="../uv/uv_texture_spaces.html#uv-maps-panel"><span class="std std-ref">UV 贴图</span></a>。</p>
+</dd>
+<dt>拼排品质</dt><dd><p>在执行复杂的方盒状拼排前，执行预拼排。</p>
+</dd>
+<dt>边距</dt><dd><p>这可以控制 UV 孤岛之间的紧密程度。数值越大，UV 孤岛之间的空隙就越大。</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="follow-active-quads">
+<span id="bpy-ops-uv-follow-active-quads"></span><h2>沿活动四边面展开<a class="headerlink" href="#follow-active-quads" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id7">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">编辑器<span class="colon">:</span></dt>
+<dd class="field-odd"><p>3D 视图</p>
+</dd>
+<dt class="field-even">模式<span class="colon">:</span></dt>
+<dd class="field-even"><p>编辑模式</p>
+</dd>
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">UV ‣ 沿活动四边面展开</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">U</kbd></p>
+</dd>
+</dl>
+</div>
+<p>The Follow Active Quads tool takes the selected faces and lays them out
+by following continuous face loops, even if the mesh face is irregularly-shaped.
+Note that it does not respect the image size,
+so you may have to scale them all down a bit to fit the image area.</p>
+<section id="id8">
+<h3>选项<a class="headerlink" href="#id8" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>边长度模式</dt><dd><p>UV 环状边的分布算法。</p>
+<dl class="field-list simple">
+<dt class="field-odd">均匀<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Space all UVs evenly.</p>
+</dd>
+<dt class="field-even">长度<span class="colon">:</span></dt>
+<dd class="field-even"><p>待补充。</p>
+</dd>
+<dt class="field-odd">平均长度<span class="colon">:</span></dt>
+<dd class="field-odd"><p>对每个循环边上的边长度取平均值。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Please note that it is the shape of the active quad in UV space that is being followed,
+not its shape in 3D space. To get a clean 90-degree unwrap make sure the active quad is
+a rectangle in UV space before using &quot;Follow active quad&quot;.</p>
+</div>
+</section>
+</section>
+<section id="cube-projection">
+<span id="bpy-ops-uv-cube-project"></span><h2>立方投影<a class="headerlink" href="#cube-projection" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id9">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">编辑器<span class="colon">:</span></dt>
+<dd class="field-odd"><p>3D 视图</p>
+</dd>
+<dt class="field-even">模式<span class="colon">:</span></dt>
+<dd class="field-even"><p>编辑模式</p>
+</dd>
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">UV ‣ 立方投影</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">U</kbd></p>
+</dd>
+</dl>
+</div>
+<p>立方投影将网格映射到展开的立方体表面。网格被投影至六个分离的平面，创建六个UV孤岛。在UV/图像编辑器中，会产生重叠，不过可以移动。参见 <a class="reference internal" href="../uv/editing.html"><span class="doc">UV 编辑</span></a>。</p>
+<section id="id10">
+<h3>选项<a class="headerlink" href="#id10" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>立方体尺寸</dt><dd><p>设置投射至的立方体尺寸。</p>
+</dd>
+<dt>校正高宽比例</dt><dd><p>投射 UV 时将考虑图像的宽高比。如果图像被映射到非正方形的<a class="reference internal" href="../../../glossary/index.html#term-Texture-Space"><span class="xref std std-term">纹理空间</span></a>，投射将考虑到这一点，扭曲映射来确保表面上的准确。</p>
+</dd>
+<dt>裁剪至边界框</dt><dd><p>裁剪位于 0 到 1 范围外的 UV，将其移动至 UV 空间中的最近边界。</p>
+</dd>
+<dt>缩放至边界框</dt><dd><p>如果 UV 超出 0 到 1 范围，会缩放至匹配 UV 边界。</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="cylinder-projection">
+<span id="bpy-ops-uv-cylinder-project"></span><h2>柱形投影<a class="headerlink" href="#cylinder-projection" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id11">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">编辑器<span class="colon">:</span></dt>
+<dd class="field-odd"><p>3D 视图</p>
+</dd>
+<dt class="field-even">模式<span class="colon">:</span></dt>
+<dd class="field-even"><p>编辑模式</p>
+</dd>
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">UV ‣ 柱形投影</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">U</kbd></p>
+</dd>
+</dl>
+</div>
+<p>通常，要展开一个圆柱体（管形），就好像你纵向切开它并将其折叠平整一样，Blender 希望视图是垂直的，管形 &quot;向上&quot; 站立。不同的视图会以不同的方式将管投射到UV贴图上，如果使用，则会扭曲图像。但是，您可以设置手动执行计算的轴。</p>
+<section id="id12">
+<h3>选项<a class="headerlink" href="#id12" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>方向</dt><dd><dl class="field-list simple">
+<dt class="field-odd">查看极向轴<span class="colon">:</span></dt>
+<dd class="field-odd"><p>从上向下（极向）观察时使用。</p>
+</dd>
+<dt class="field-even">赤道视图<span class="colon">:</span></dt>
+<dd class="field-even"><p>观察赤道时使用。</p>
+</dd>
+<dt class="field-odd">对齐至物体<span class="colon">:</span></dt>
+<dd class="field-odd"><p>使用物体的变换计算轴向。</p>
+</dd>
+</dl>
+</dd>
+<dt>对齐</dt><dd><p>How to determine rotation around the pole.</p>
+<dl class="field-list simple">
+<dt class="field-odd">ZX 极轴<span class="colon">:</span></dt>
+<dd class="field-odd"><p>极点 0 位于 X 轴。</p>
+</dd>
+<dt class="field-even">ZY 极轴<span class="colon">:</span></dt>
+<dd class="field-even"><p>极点 0 位于 Y 轴。</p>
+</dd>
+</dl>
+</dd>
+<dt>极点</dt><dd><p>如何处理位于极点的面。</p>
+<dl class="field-list simple">
+<dt class="field-odd">夹捏<span class="colon">:</span></dt>
+<dd class="field-odd"><p>在极点处夹捏 UV。</p>
+</dd>
+<dt class="field-even">扇形<span class="colon">:</span></dt>
+<dd class="field-even"><p>在极点处扇面化 UV。</p>
+</dd>
+</dl>
+</dd>
+<dt>保留缝合边</dt><dd><p>根据由缝合边分隔的孤岛来分离投射结果。</p>
+</dd>
+<dt>半径</dt><dd><p>使用的柱体半径。</p>
+</dd>
+<dt>校正高宽比例</dt><dd><p>投射 UV 时将考虑图像的宽高比。如果图像被映射到非正方形的<a class="reference internal" href="../../../glossary/index.html#term-Texture-Space"><span class="xref std std-term">纹理空间</span></a>，投射将考虑到这一点，扭曲映射来确保表面上的准确。</p>
+</dd>
+<dt>裁剪至边界框</dt><dd><p>裁剪位于 0 到 1 范围外的 UV，将其移动至 UV 空间中的最近边界。</p>
+</dd>
+<dt>缩放至边界框</dt><dd><p>如果 UV 超出 0 到 1 范围，会缩放至匹配 UV 边界。</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="sphere-projection">
+<span id="bpy-ops-uv-sphere-project"></span><h2>球形投影<a class="headerlink" href="#sphere-projection" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id13">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">编辑器<span class="colon">:</span></dt>
+<dd class="field-odd"><p>3D 视图</p>
+</dd>
+<dt class="field-even">模式<span class="colon">:</span></dt>
+<dd class="field-even"><p>编辑模式</p>
+</dd>
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">UV ‣ 球形投影</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">U</kbd></p>
+</dd>
+</dl>
+</div>
+<p>球形投影与柱形投影类似，但区别在于柱形投影是将 UV 投射到一个平面上，朝向圆柱形状，而球形投影则考虑了球体的曲率，每条纬线的间距变得均匀。<em>球形投影</em> 适用于球形形状，如眼睛、行星等。</p>
+<p>还记得前面提到的制图人员绘制世界地图的方法吗？好了，你可以从不同的角度展开球面，实现相同的效果。通常，要展开球体，两极分别朝上和朝下，观察球体。展开之后，Blender 会给出等距柱状投射结果；朝向你的赤道上的点位于图像中间。从两极观察则会获得不同却常见的投射结果。使用等距柱状投射作为地球的 UV 图像，可以把星球漂亮地映射到球面。</p>
+<figure class="align-default" id="id21">
+<img alt="../../../_images/modeling_meshes_editing_uv_sphere-projection.png" src="../../../_images/modeling_meshes_editing_uv_sphere-projection.png" />
+<figcaption>
+<p><span class="caption-text">等距柱状投影图像搭配球面投射使用。</span><a class="headerlink" href="#id21" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<section id="id14">
+<h3>选项<a class="headerlink" href="#id14" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>方向</dt><dd><p>球体的朝向。</p>
+<dl class="field-list simple">
+<dt class="field-odd">查看极向轴<span class="colon">:</span></dt>
+<dd class="field-odd"><p>从上向下（极向）观察时使用。</p>
+</dd>
+<dt class="field-even">赤道视图<span class="colon">:</span></dt>
+<dd class="field-even"><p>观察赤道时使用。</p>
+</dd>
+<dt class="field-odd">对齐至物体<span class="colon">:</span></dt>
+<dd class="field-odd"><p>使用物体的变换计算轴向。</p>
+</dd>
+</dl>
+</dd>
+<dt>对齐</dt><dd><p>选择朝上的轴向。</p>
+<dl class="field-list simple">
+<dt class="field-odd">ZX 极轴<span class="colon">:</span></dt>
+<dd class="field-odd"><p>极点 0 位于 X 轴。</p>
+</dd>
+<dt class="field-even">ZY 极轴<span class="colon">:</span></dt>
+<dd class="field-even"><p>极点 0 位于 Y 轴。</p>
+</dd>
+</dl>
+</dd>
+<dt>极点</dt><dd><p>如何处理位于极点的面。</p>
+<dl class="field-list simple">
+<dt class="field-odd">夹捏<span class="colon">:</span></dt>
+<dd class="field-odd"><p>在极点处夹捏 UV。</p>
+</dd>
+<dt class="field-even">扇形<span class="colon">:</span></dt>
+<dd class="field-even"><p>在极点处扇面化 UV。</p>
+</dd>
+</dl>
+</dd>
+<dt>保留缝合边</dt><dd><p>根据由缝合边分隔的孤岛来分离投射结果。</p>
+</dd>
+<dt>半径</dt><dd><p>要使用的球体的半径。</p>
+</dd>
+<dt>校正高宽比例</dt><dd><p>投射 UV 时将考虑图像的宽高比。如果图像被映射到非正方形的<a class="reference internal" href="../../../glossary/index.html#term-Texture-Space"><span class="xref std std-term">纹理空间</span></a>，投射将考虑到这一点，扭曲映射来确保表面上的准确。</p>
+</dd>
+<dt>裁剪至边界框</dt><dd><p>裁剪位于 0 到 1 范围外的 UV，将其移动至 UV 空间中的最近边界。</p>
+</dd>
+<dt>缩放至边界框</dt><dd><p>如果 UV 超出 0 到 1 范围，会缩放至匹配 UV 边界。</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="project-from-view">
+<span id="bpy-ops-uv-project-from-view"></span><h2>从视角投影<a class="headerlink" href="#project-from-view" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id15">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">编辑器<span class="colon">:</span></dt>
+<dd class="field-odd"><p>3D 视图</p>
+</dd>
+<dt class="field-even">模式<span class="colon">:</span></dt>
+<dd class="field-even"><p>编辑模式</p>
+</dd>
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">UV ‣ 从视角投影</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">U</kbd></p>
+</dd>
+</dl>
+</div>
+<p>从视角投影使用 3D 视图的当前视角，按照显示的形状摊开网格。可以在使用真实物体的图像作为模型贴图时，使用该选项。对于远离观察点的模型区域，可能会产生一些拉伸。</p>
+<section id="id16">
+<h3>选项<a class="headerlink" href="#id16" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>正交</dt><dd><p>应用正交投影。</p>
+</dd>
+<dt>校正高宽比例</dt><dd><p>投射 UV 时将考虑图像的宽高比。如果图像被映射到非正方形的<a class="reference internal" href="../../../glossary/index.html#term-Texture-Space"><span class="xref std std-term">纹理空间</span></a>，投射将考虑到这一点，扭曲映射来确保表面上的准确。</p>
+</dd>
+<dt>裁剪至边界框</dt><dd><p>裁剪位于 0 到 1 范围外的 UV，将其移动至 UV 空间中的最近边界。</p>
+</dd>
+<dt>缩放至边界框</dt><dd><p>如果 UV 超出 0 到 1 范围，会缩放至匹配 UV 边界。</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="project-from-view-bounds">
+<h2>从视角投影（限界）<a class="headerlink" href="#project-from-view-bounds" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id17">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">编辑器<span class="colon">:</span></dt>
+<dd class="field-odd"><p>3D 视图</p>
+</dd>
+<dt class="field-even">模式<span class="colon">:</span></dt>
+<dd class="field-even"><p>编辑模式</p>
+</dd>
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">UV ‣ 从视角投影 (限界)</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">U</kbd></p>
+</dd>
+</dl>
+</div>
+<p>Similar to <a class="reference internal" href="#project-from-view">Project from View</a>,
+but with <em>Scale to Bounds</em> and <em>Correct Aspect</em> activated.</p>
+</section>
+<section id="reset">
+<span id="bpy-ops-uv-reset"></span><h2>重置<a class="headerlink" href="#reset" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id18">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">编辑器<span class="colon">:</span></dt>
+<dd class="field-odd"><p>3D 视图或 UV 编辑器</p>
+</dd>
+<dt class="field-even">模式<span class="colon">:</span></dt>
+<dd class="field-even"><p>编辑模式</p>
+</dd>
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">UV ‣ 重置</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">U</kbd></p>
+</dd>
+</dl>
+</div>
+<p>重置 UV，将每个面映射为填充整个 UV 栅格，赋予每个面同样的映射。</p>
+<p>如果使用可重复的图像，物体表面会被重复的该图像覆盖，图像会经调整以适应每个单独的面。使用该展开选项重置映射和撤销所有展开（回到初始状态）。</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="face/face_data.html" class="btn btn-neutral float-left" title="面数据" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../properties/index.html" class="btn btn-neutral float-right" title="属性" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/modeling/meshes/editing/uv.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/modeling/meshes/editing/uv.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fmodeling/meshes/editing/uv.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fmodeling/meshes/editing/uv.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

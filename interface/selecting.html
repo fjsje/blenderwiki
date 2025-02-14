@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>选择 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/interface/selecting.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/js/version_switch.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="next" title="编辑器" href="../editors/index.html" />
+    <link rel="prev" title="标注" href="annotate_tool.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">用户界面</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#window-system">窗口系统</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#keymap">键位映射</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#interface-controls">界面控件</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#tools-operators">工具 &amp; 操作</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="tool_system.html">工具系统</a></li>
+<li class="toctree-l3"><a class="reference internal" href="operators.html">操作项</a></li>
+<li class="toctree-l3"><a class="reference internal" href="undo_redo.html">撤销 &amp; 重做</a></li>
+<li class="toctree-l3"><a class="reference internal" href="annotate_tool.html">标注</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">选择</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#toolbar-selection-tools">工作栏选择工具</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#tweak">拖拽</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#select-box">框选</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#select-circle">选圈</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#select-lasso">套索选择</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#selection-modes">选择模式</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#menu-selection-tools">菜单选择工具</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#box-select">框选</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#circle-select">刷选</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#lasso-select">套索选择</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">用户界面</a></li>
+      <li class="breadcrumb-item active">选择</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="selecting">
+<h1>选择<a class="headerlink" href="#selecting" title="Permalink to this heading"></a></h1>
+<p>默认情况下，Blender 使用 <kbd class="kbd docutils literal notranslate">鼠标左键</kbd> 来选择项目。这可以在<a class="reference internal" href="../editors/preferences/keymap.html"><span class="doc">偏好设置</span></a>中改成 <kbd class="kbd docutils literal notranslate">鼠标右键</kbd>。</p>
+<p>Blender 有几种选择工具，可以在不同的编辑器中使用。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>一些编辑器偏离了下面显示的键盘快捷键。例如，大多数编辑器使用 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>+<kbd class="kbd docutils literal notranslate">鼠标左键</kbd></kbd> 在选择中添加一个项目，但<a class="reference internal" href="../editors/outliner/introduction.html"><span class="doc">大纲</span></a>里使用 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">鼠标左键</kbd></kbd>。同样，大多数编辑器使用 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">鼠标右键</kbd></kbd> 来执行 <em>套索选择</em>，但<a class="reference internal" href="controls/nodes/introduction.html"><span class="doc">节点编辑器</span></a>使用 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">鼠标左键</kbd></kbd>。</p>
+</div>
+<p>大多数选择工具都有两种变体，其中一种变体在工具栏中可用，另一种在 <em>选择</em> 菜单中。虽然这两种变体的名称几乎相同（如工具栏中的 <em>选择框</em> 和菜单中的 <em>选择框</em>），但它们的工作方式却有些不同。来自其他应用程序的新用户会发现工具栏的变体是最熟悉的。</p>
+<section id="toolbar-selection-tools">
+<h2>工作栏选择工具<a class="headerlink" href="#toolbar-selection-tools" title="Permalink to this heading"></a></h2>
+<p>所有的工具栏选择工具在点击一个项目时的行为都是一样的：它们会选择该项目（并取消选择任何以前选择的项目）。如果你在点击时按住 <kbd class="kbd docutils literal notranslate">Shift</kbd>，该项目将被添加到选择中（如果它没有被选中）或从选择中删除（如果它被选中）。</p>
+<p>使得这些工具不同的是，当你拖动时会发生什么。</p>
+<section id="tweak">
+<span id="tool-select-tweak"></span><h3>拖拽<a class="headerlink" href="#tweak" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">工具<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">工具栏 ‣ 调整</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">W</kbd></p>
+</dd>
+</dl>
+</div>
+<p>拖动一个物体会使它移动。</p>
+</section>
+<section id="select-box">
+<span id="tool-select-box"></span><h3>框选<a class="headerlink" href="#select-box" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id2">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">工具<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">工具栏 ‣ 框选</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">W</kbd></p>
+</dd>
+</dl>
+</div>
+<p>拖动将创建一个矩形，并在你释放后选择所有部分或完全在其内的项目。（任何其他项目将被取消选择。）</p>
+<p>拖动时按住 <kbd class="kbd docutils literal notranslate">Shift</kbd> 将把这些项目添加到选择中。按住 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 将取消选中它们。</p>
+<p>在拖动时，你还可以按住 <kbd class="kbd docutils literal notranslate">空格键</kbd> 来用鼠标移动矩形的位置。</p>
+<table class="docutils align-default" id="id9">
+<caption><span class="caption-text">框选的例子（编辑模式）。</span><a class="headerlink" href="#id9" title="Permalink to this table"></a></caption>
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id10">
+<span id="fig-mesh-select-basics-start"></span><a class="reference internal image-reference" href="../_images/interface_selecting_border-select1.png"><img alt="../_images/interface_selecting_border-select1.png" src="../_images/interface_selecting_border-select1.png" style="width: 200px;" /></a>
+<figcaption>
+<p><span class="caption-text">开始。</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id11">
+<span id="fig-mesh-select-basics-selecting"></span><a class="reference internal image-reference" href="../_images/interface_selecting_border-select2.png"><img alt="../_images/interface_selecting_border-select2.png" src="../_images/interface_selecting_border-select2.png" style="width: 200px;" /></a>
+<figcaption>
+<p><span class="caption-text">选择。</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id12">
+<span id="fig-mesh-select-basics-complete"></span><a class="reference internal image-reference" href="../_images/interface_selecting_border-select3.png"><img alt="../_images/interface_selecting_border-select3.png" src="../_images/interface_selecting_border-select3.png" style="width: 200px;" /></a>
+<figcaption>
+<p><span class="caption-text">完成。</span><a class="headerlink" href="#id12" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="select-circle">
+<span id="tool-select-circle"></span><h3>选圈<a class="headerlink" href="#select-circle" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id3">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">工具<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">工具栏 ‣ 选圈</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">W</kbd></p>
+</dd>
+</dl>
+</div>
+<p>拖动 “刷选” 经过的所有项目都会被选中。没有经过的项目将被取消选择。</p>
+<p>拖动时按住 <kbd class="kbd docutils literal notranslate">Shift</kbd> 将把这些项目添加到选择中。按住 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 将取消选中它们。</p>
+<p>你可以在工具设置中改变圆的半径（可以在区域标题栏、侧栏的工具选项卡 <kbd class="kbd docutils literal notranslate">N</kbd>，或<a class="reference internal" href="../editors/properties_editor.html"><span class="doc">属性编辑器</span></a>的活动工具选项卡中找到）。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>在<a class="reference internal" href="../editors/3dview/modes.html"><span class="doc">物体模式</span></a>中：<em>框选</em> 在方框覆盖物体的任意部位时就会选中物体，“刷选” 与它不同，只在圆圈经过物体的原点时才会选中物体。对于选中的物体，原点显示为一个橙色的点，但对于未选中的对象，原点是不可见的，除非在<a class="reference internal" href="../editors/3dview/display/overlays.html"><span class="doc">视图叠加层</span></a>启用 “原点(全部)”。</p>
+<p>这种行为上的差异并不适用于其他模式（如编辑模式和姿态模式）。</p>
+</div>
+<table class="docutils align-default" id="id13">
+<caption><span class="caption-text">选圈的例子（编辑模式）。</span><a class="headerlink" href="#id13" title="Permalink to this table"></a></caption>
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id14">
+<a class="reference internal image-reference" href="../_images/interface_selecting_circle-select1.png"><img alt="../_images/interface_selecting_circle-select1.png" src="../_images/interface_selecting_circle-select1.png" style="width: 320px;" /></a>
+<figcaption>
+<p><span class="caption-text">开始。</span><a class="headerlink" href="#id14" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id15">
+<a class="reference internal image-reference" href="../_images/interface_selecting_circle-select2.png"><img alt="../_images/interface_selecting_circle-select2.png" src="../_images/interface_selecting_circle-select2.png" style="width: 320px;" /></a>
+<figcaption>
+<p><span class="caption-text">选择。</span><a class="headerlink" href="#id15" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id16">
+<a class="reference internal image-reference" href="../_images/interface_selecting_circle-select3.png"><img alt="../_images/interface_selecting_circle-select3.png" src="../_images/interface_selecting_circle-select3.png" style="width: 320px;" /></a>
+<figcaption>
+<p><span class="caption-text">完成。</span><a class="headerlink" href="#id16" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="select-lasso">
+<span id="tool-select-lasso"></span><h3>套索选择<a class="headerlink" href="#select-lasso" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id4">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">工具<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">工具栏 ‣ 套索</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">W</kbd></p>
+</dd>
+</dl>
+</div>
+<p>拖动将创建一个自由的形状，并在你释放后选择里面的所有项目。（任何其他项目将被取消选择。）</p>
+<p>拖动时按住 <kbd class="kbd docutils literal notranslate">Shift</kbd> 将把这些项目添加到选择中。按住 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 将取消选中它们。</p>
+<p>在拖动时，你还可以按住 <kbd class="kbd docutils literal notranslate">空格键</kbd> 来用鼠标移动形状。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><em>套索选择</em> 的行为与 <em>刷选</em> 的行为相同，它在物体模式下只检测原点。</p>
+</div>
+<table class="docutils align-default" id="id17">
+<caption><span class="caption-text">选择套索实例（编辑模式）。</span><a class="headerlink" href="#id17" title="Permalink to this table"></a></caption>
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id18">
+<a class="reference internal image-reference" href="../_images/interface_selecting_lasso-select1.png"><img alt="../_images/interface_selecting_lasso-select1.png" src="../_images/interface_selecting_lasso-select1.png" style="width: 200px;" /></a>
+<figcaption>
+<p><span class="caption-text">开始。</span><a class="headerlink" href="#id18" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id19">
+<a class="reference internal image-reference" href="../_images/interface_selecting_lasso-select2.png"><img alt="../_images/interface_selecting_lasso-select2.png" src="../_images/interface_selecting_lasso-select2.png" style="width: 200px;" /></a>
+<figcaption>
+<p><span class="caption-text">选择。</span><a class="headerlink" href="#id19" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id20">
+<a class="reference internal image-reference" href="../_images/interface_selecting_lasso-select3.png"><img alt="../_images/interface_selecting_lasso-select3.png" src="../_images/interface_selecting_lasso-select3.png" style="width: 200px;" /></a>
+<figcaption>
+<p><span class="caption-text">完成。</span><a class="headerlink" href="#id20" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="selection-modes">
+<h3>选择模式<a class="headerlink" href="#selection-modes" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id5">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">工具<span class="colon">:</span></dt>
+<dd class="field-odd"><p>选择工具</p>
+</dd>
+<dt class="field-even">面板<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">工具设置 ‣ 模式</span></p>
+</dd>
+</dl>
+</div>
+<p>每个工具栏上的选择工具都有一个模式，用来配置它与现有选择的互动方式。注意，不是每个工具都支持所有这些模式。</p>
+<dl class="simple">
+<dt>开始</dt><dd><p>设置一个新的选择（以前的选择被丢弃）。这是默认的。</p>
+</dd>
+<dt>扩选</dt><dd><p>将新选择的项目添加到现有的选择中。</p>
+</dd>
+<dt>相减</dt><dd><p>从现有的选择中删除新选择的项目。</p>
+</dd>
+<dt>反转 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">I</kbd></kbd></dt><dd><p>反向选择（未选择的项目变为选择，反之亦然）。</p>
+</dd>
+<dt>相交</dt><dd><p>选择与现有选择相交的项目。</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="menu-selection-tools">
+<h2>菜单选择工具<a class="headerlink" href="#menu-selection-tools" title="Permalink to this heading"></a></h2>
+<p>这些工具是前面描述的工具的变种。它们在菜单中而不是在工具栏中可用，工作方式也略有不同。</p>
+<section id="box-select">
+<span id="bpy-ops-select-box"></span><h3>框选<a class="headerlink" href="#box-select" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id6">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">选择 ‣ 框选</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">B</kbd></p>
+</dd>
+</dl>
+</div>
+<p>要使用这个工具，你首先要激活菜单项或键盘快捷键，然后像往常一样拖动一个方框。与 工具栏中的 <em>框选</em> 不同，这里的默认行为是将框内的项目添加到选择中。（框外的项目不会被取消选择。）</p>
+<p>要从选区中移除方框内的项目，请按住 <kbd class="kbd docutils literal notranslate">Shift</kbd>，或用 <kbd class="kbd docutils literal notranslate">鼠标中键</kbd> 拖动。</p>
+<p>在拖动时，你还可以按住 <kbd class="kbd docutils literal notranslate">空格键</kbd> 来用鼠标移动方框的位置。</p>
+</section>
+<section id="circle-select">
+<span id="bpy-ops-select-circle"></span><h3>刷选<a class="headerlink" href="#circle-select" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id7">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">选择 ‣ 刷选</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">C</kbd></p>
+</dd>
+</dl>
+</div>
+<p>要使用这个工具，你首先要激活菜单项或键盘快捷键，然后像往常一样拖动一个圆圈。与 工具栏中的 <em>刷选</em> 不同，这里的默认行为是将圆圈内的项目添加到选择中。（圆圈外的项目不会被取消选择。）</p>
+<p>从已选的物体中去掉圈中的物体，按住 <kbd class="kbd docutils literal notranslate">shift</kbd>，或者按住 <kbd class="kbd docutils literal notranslate">鼠标中键</kbd> 并拖动。</p>
+<p>你可以通过使用 <kbd class="kbd docutils literal notranslate">滚轮</kbd> 滚动或使用 <kbd class="kbd docutils literal notranslate">数字键盘加+</kbd> 和 <kbd class="kbd docutils literal notranslate">数字键盘减-</kbd> 键改变圆的半径。</p>
+<p>一旦激活，<em>圈选</em> 就会保持激活状态：你可以松开鼠标按钮，开始拖动其他地方，而不需要再次按下 <kbd class="kbd docutils literal notranslate">C</kbd>。然而，与此同时，在它激活时，它会阻挡 Blender 的所有其他部分。要再次停用该工具，请按 <kbd class="kbd docutils literal notranslate">鼠标右键</kbd>、<kbd class="kbd docutils literal notranslate">回车</kbd> 或 <kbd class="kbd docutils literal notranslate">Esc</kbd>。</p>
+</section>
+<section id="lasso-select">
+<span id="bpy-ops-select-lasso"></span><h3>套索选择<a class="headerlink" href="#lasso-select" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id8">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">选择 ‣ 套索选择</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">鼠标右键</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>要使用这个工具，你首先要激活这个菜单项，然后用 <kbd class="kbd docutils literal notranslate">鼠标左键</kbd> 在你想选择的项目周围拖动一个自由形状。该菜单让你选择是否设置、扩展或减少选择。</p>
+<p>或者，你可以立即用 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">鼠标右键</kbd></kbd> 开始拖动。与工具栏中的 <em>套索选择</em> 不同的是，默认行为是将套索内的项目添加到选区。（套索外的项目不会被取消选择。）</p>
+<p>要从选区中移除套索内的项目，可以用 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">鼠标右键</kbd></kbd> 来代替拖动。</p>
+<p>在拖动时，你还可以按住 <kbd class="kbd docutils literal notranslate">空格键</kbd> 来用鼠标移动套索的位置。</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="annotate_tool.html" class="btn btn-neutral float-left" title="标注" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../editors/index.html" class="btn btn-neutral float-right" title="编辑器" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/interface/selecting.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/interface/selecting.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Finterface/selecting.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Finterface/selecting.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

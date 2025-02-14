@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>沃罗诺伊图 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/materials/legacy_textures/types/voronoi.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../../_static/js/version_switch.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../../copyright.html" />
+    <link rel="next" title="木纹" href="wood.html" />
+    <link rel="prev" title="斯氏分形" href="stucci.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../eevee/index.html">EEVEE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cycles/index.html">Cycles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../workbench/index.html">工作台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cameras.html">摄像机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lights/index.html">灯光</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">材质</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../components/index.html">组件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../assignment.html">指定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../preview.html">预览</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../settings.html">设置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../line_art.html">线条画</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">旧版纹理</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../colors.html">颜色</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html#types">类型</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="blend.html">混合</a></li>
+<li class="toctree-l5"><a class="reference internal" href="clouds.html">云絮</a></li>
+<li class="toctree-l5"><a class="reference internal" href="distorted_noise.html">畸变噪波</a></li>
+<li class="toctree-l5"><a class="reference internal" href="image_movie.html">图像 / 影片</a></li>
+<li class="toctree-l5"><a class="reference internal" href="magic.html">幻彩</a></li>
+<li class="toctree-l5"><a class="reference internal" href="marble.html">大理石纹</a></li>
+<li class="toctree-l5"><a class="reference internal" href="musgrave.html">马氏分形</a></li>
+<li class="toctree-l5"><a class="reference internal" href="noise.html">噪波</a></li>
+<li class="toctree-l5"><a class="reference internal" href="stucci.html">斯氏分形</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">沃罗诺伊图</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#options">选项</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="wood.html">木纹</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../shader_nodes/index.html">着色节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../color_management.html">色彩管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../layers/index.html">层 &amp; 通道</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../output/index.html">渲染输出</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">渲染</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">材质</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">旧版纹理</a></li>
+      <li class="breadcrumb-item active">沃罗诺伊图</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="voronoi">
+<span id="bpy-types-voronoitexture"></span><h1>沃罗诺伊图<a class="headerlink" href="#voronoi" title="Permalink to this heading"></a></h1>
+<p>沃罗诺伊纹理用于生成真实质感的金属，尤其是 “捶打” 的效果。生物体着色器（如皮肤上的鳞片和血管）。</p>
+<figure class="align-default" id="id1">
+<img alt="../../../../_images/render_materials_legacy-textures_types_voronoi_panel.png" src="../../../../_images/render_materials_legacy-textures_types_voronoi_panel.png" />
+<figcaption>
+<p><span class="caption-text">沃罗诺伊纹理面板。</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<section id="options">
+<h2>选项<a class="headerlink" href="#options" title="Permalink to this heading"></a></h2>
+<dl>
+<dt>间隔矩阵</dt><dd><p>此程序化纹理有七种间隔矩阵选项。这些决定了纹理细节中的距离的算法。它们分别是：</p>
+<ul class="simple">
+<li><p>闵可夫斯基</p></li>
+<li><p>闵可夫斯基 4</p></li>
+<li><p>闵可夫斯基 1/2</p></li>
+<li><p>切比雪夫</p></li>
+<li><p>曼哈顿点距</p></li>
+<li><p>平方间隔</p></li>
+<li><p>实际间隔</p></li>
+</ul>
+<p><em>闵可夫斯基</em> 设置中有一个用户自定义值（<em>指数</em> 按钮），它决定了闵可夫斯基的距离功能的指数 <em>e</em>：</p>
+<blockquote>
+<div><p>(<em>x</em><sup>e</sup> + <em>y</em><sup>e</sup> + <em>z</em><sup>e</sup>)<sup>1/e</sup></p>
+</div></blockquote>
+<p>值为1时产生的 <em>曼哈顿点距</em> 矩阵，值低于1时生成的星形（在0.5时，它给出了 <em>闵可夫斯基 1/2</em>），更高值生成的方形细胞（在4.0时，它给出了 <em>闵可夫斯基 4</em>，在10.0时，则是 <em>切比雪夫</em>）。</p>
+<p>你可以用 <em>实际间隔</em> / <em>平方间隔</em> 选项生成不规则的原型细胞形状。</p>
+</dd>
+</dl>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../../../../_images/render_materials_legacy-textures_types_voronoi_minkowski0-5.jpg"><img alt="../../../../_images/render_materials_legacy-textures_types_voronoi_minkowski0-5.jpg" src="../../../../_images/render_materials_legacy-textures_types_voronoi_minkowski0-5.jpg" style="width: 200px;" /></a>
+<figcaption>
+<p><span class="caption-text">闵可夫斯基指数: 0.5（闵可夫斯基 1/2）。</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id3">
+<a class="reference internal image-reference" href="../../../../_images/render_materials_legacy-textures_types_voronoi_minkowski1.jpg"><img alt="../../../../_images/render_materials_legacy-textures_types_voronoi_minkowski1.jpg" src="../../../../_images/render_materials_legacy-textures_types_voronoi_minkowski1.jpg" style="width: 200px;" /></a>
+<figcaption>
+<p><span class="caption-text">闵可夫斯基指数：1（曼哈顿点距）。</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id4">
+<a class="reference internal image-reference" href="../../../../_images/render_materials_legacy-textures_types_voronoi_minkowski2.jpg"><img alt="../../../../_images/render_materials_legacy-textures_types_voronoi_minkowski2.jpg" src="../../../../_images/render_materials_legacy-textures_types_voronoi_minkowski2.jpg" style="width: 200px;" /></a>
+<figcaption>
+<p><span class="caption-text">闵可夫斯基指数：2（实际间隔）。</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+<tr class="row-even"><td><figure class="align-default" id="id5">
+<a class="reference internal image-reference" href="../../../../_images/render_materials_legacy-textures_types_voronoi_minkowski4.jpg"><img alt="../../../../_images/render_materials_legacy-textures_types_voronoi_minkowski4.jpg" src="../../../../_images/render_materials_legacy-textures_types_voronoi_minkowski4.jpg" style="width: 200px;" /></a>
+<figcaption>
+<p><span class="caption-text">闵可夫斯基指数：（闵可夫斯基 4）。</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id6">
+<a class="reference internal image-reference" href="../../../../_images/render_materials_legacy-textures_types_voronoi_minkowski10.jpg"><img alt="../../../../_images/render_materials_legacy-textures_types_voronoi_minkowski10.jpg" src="../../../../_images/render_materials_legacy-textures_types_voronoi_minkowski10.jpg" style="width: 200px;" /></a>
+<figcaption>
+<p><span class="caption-text">闵可夫斯基指数：10 (切比雪夫)。</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id7">
+<a class="reference internal image-reference" href="../../../../_images/render_materials_legacy-textures_types_voronoi_distancesquared.jpg"><img alt="../../../../_images/render_materials_legacy-textures_types_voronoi_distancesquared.jpg" src="../../../../_images/render_materials_legacy-textures_types_voronoi_distancesquared.jpg" style="width: 200px;" /></a>
+<figcaption>
+<p><span class="caption-text">方形间隔（对比度高于实际间隔）。</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<dl class="simple">
+<dt>特性权重</dt><dd><p>这些沃罗诺伊面板底部的四个滑动条代表四种沃雷常量，它们用于计算每个基于间隔矩阵的细胞之间的间距。调节这些值可以得到一些有趣的最终效果。</p>
+</dd>
+</dl>
+<dl class="simple">
+<dt>着色</dt><dd><p>四个选项（<em>强度</em>、<em>位置</em>、<em>位置和轮廓</em>，以及 <em>位置, 轮廓和强度</em>）可使用四种不同噪波偏移为手段来计算纹理输出的颜色和强度。配合 “沃雷滑块” 你可以创造出外观完全不同的沃罗诺伊纹理，与其它纹理中的噪波基型设置等同。</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="stucci.html" class="btn btn-neutral float-left" title="斯氏分形" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="wood.html" class="btn btn-neutral float-right" title="木纹" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/render/materials/legacy_textures/types/voronoi.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/render/materials/legacy_textures/types/voronoi.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Frender/materials/legacy_textures/types/voronoi.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Frender/materials/legacy_textures/types/voronoi.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

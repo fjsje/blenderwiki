@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>选择 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/uv/selecting.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="吸附" href="controls/snapping.html" />
+    <link rel="prev" title="侧栏" href="sidebar.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../3dview/index.html">3D 视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image/index.html">图像编辑器</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">UV 编辑器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="navigating.html">导航</a></li>
+<li class="toctree-l3"><a class="reference internal" href="overlays.html">叠加层</a></li>
+<li class="toctree-l3"><a class="reference internal" href="sidebar.html">侧栏</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">选择</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#sync-selection">选区同步</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#selection-mode">选择模式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sticky-selection-mode">粘性选择模式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#select-menu">选择菜单</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#shortest-path">最短路径</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#select-edge-loop">选择循环边</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#select-edge-ring">选择并排边</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="controls/snapping.html">吸附</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../compositor.html">合成器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../texture_node/index.html">纹理节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geometry_node.html">几何节点编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shader_editor.html">着色器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../video_sequencer/index.html">视频序列编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../clip/index.html">影片剪辑编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dope_sheet/index.html">动画摄影表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../timeline.html">时间线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../graph_editor/index.html">曲线编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../drivers_editor.html">驱动器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../nla/index.html">非线性动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../text_editor.html">文本编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python_console.html">Python 控制台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../info_editor.html">信息编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outliner/index.html">大纲视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../properties_editor.html">属性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../file_browser.html">文件浏览器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../asset_browser.html">资产浏览器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spreadsheet.html">电子表格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/index.html">偏好设置</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">编辑器</a></li>
+          <li class="breadcrumb-item"><a href="index.html">UV 编辑器</a></li>
+      <li class="breadcrumb-item active">选择</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="selecting">
+<span id="bpy-ops-uv-select"></span><h1>选择<a class="headerlink" href="#selecting" title="Permalink to this heading"></a></h1>
+<p>与 3D 视口一样，UV 编辑器的标题栏中也有选择模式按钮和 <em>选择</em> 菜单。</p>
+<section id="sync-selection">
+<span id="bpy-types-toolsettings-use-uv-select-sync"></span><h2>选区同步<a class="headerlink" href="#sync-selection" title="Permalink to this heading"></a></h2>
+<p>如果关闭（默认设置），UV 编辑器只会显示在 3D 视口中选中的面。在一个编辑器中选择一个项目并不会自动在另一个编辑器中同步选中该项目。如果一个 3D 顶点/边对应多个 UV 顶点/边，可以单独选择每个顶点/边。</p>
+<p>如果开启，UV 编辑器将始终显示所有面。在一个编辑器中选择一个项目，也会在另一个编辑器中同步选中它。如果一个 3D 顶点/边对应多个 UV 顶点/边，则不能单独选择这些顶点/边（只能选择所有顶点/边）。</p>
+</section>
+<section id="selection-mode">
+<span id="bpy-types-toolsettings-uv-select-mode"></span><span id="bpy-ops-uv-select-mode"></span><h2>选择模式<a class="headerlink" href="#selection-mode" title="Permalink to this heading"></a></h2>
+<dl class="field-list simple">
+<dt class="field-odd">顶点<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">1</kbd> 选择顶点。</p>
+</dd>
+<dt class="field-even">边<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">2</kbd> 选择边。</p>
+</dd>
+<dt class="field-odd">面<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">3</kbd> 选择面。</p>
+</dd>
+<dt class="field-even">孤岛<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">4</kbd> 选择连续的面组。仅当 <em>同步选择</em> 被禁用时可用。</p>
+</dd>
+</dl>
+<p>如果启用了 <em>同步选择</em>，您可以在点击选择模式时按住 <kbd class="kbd docutils literal notranslate">Shift</kbd> 来同时激活多种选择模式，或按住 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> 来扩展/收缩选择。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="../../modeling/meshes/selecting/introduction.html"><span class="doc">网格选择</span></a></p>
+</div>
+</section>
+<section id="sticky-selection-mode">
+<span id="bpy-types-toolsettings-uv-sticky-select-mode"></span><h2>粘性选择模式<a class="headerlink" href="#sticky-selection-mode" title="Permalink to this heading"></a></h2>
+<p>自动选择其他 UV 顶点的选项。仅在 <em>同步选择</em> 被禁用时可用。</p>
+<dl class="simple">
+<dt>禁用</dt><dd><p>每个 UV 顶点都可以独立于其他元素单独选择。</p>
+</dd>
+<dt>共享位置</dt><dd><p>自动选择与相同网格顶点相对应且具有相同 UV 坐标的 UV 顶点。这是默认设置，会给人一种 UV 贴图中的多个面可以共享同一个顶点的错觉；而实际上，它们有各自重叠的顶点。</p>
+</dd>
+<dt>共用顶点</dt><dd><p>自动选择对应同一网格顶点的 UV 顶点，即使它们的 UV 坐标不同。这也是启用 <em>同步选择</em> 时的行为。</p>
+</dd>
+</dl>
+</section>
+<section id="select-menu">
+<h2>选择菜单<a class="headerlink" href="#select-menu" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>全部 <kbd class="kbd docutils literal notranslate">A</kbd></dt><dd><p>选择所有 UV 元素。</p>
+</dd>
+<dt>无 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">A</kbd></kbd></dt><dd><p>取消选择所有 UV 元素。</p>
+</dd>
+<dt>反转 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">I</kbd></kbd></dt><dd><p>反转当前的选择。</p>
+</dd>
+<dt>框选 <kbd class="kbd docutils literal notranslate">B</kbd></dt><dd><p>请参阅<a class="reference internal" href="../../interface/selecting.html#bpy-ops-select-box"><span class="std std-ref">框选</span></a>。</p>
+</dd>
+<dt>框选已钉固项 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">B</kbd></kbd></dt><dd><p>类似于 <em>框选</em>，但只会选中已<a class="reference internal" href="../../modeling/meshes/uv/editing.html#bpy-ops-uv-pin"><span class="std std-ref">钉固</span></a>的 UV 顶点。</p>
+</dd>
+<dt>刷选</dt><dd><p>请参阅<a class="reference internal" href="../../interface/selecting.html#bpy-ops-select-circle"><span class="std std-ref">刷选</span></a>。</p>
+</dd>
+<dt>扩展/缩减选区 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">数字键盘加+</kbd></kbd>, <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">数字键盘减-</kbd></kbd></dt><dd><p>依相邻元素扩展/缩减选中项。</p>
+</dd>
+<dt>选择已钉固项 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">P</kbd></kbd></dt><dd><p>选择所有已钉固的 UV。</p>
+</dd>
+<dt>选择相连元素</dt><dd><dl class="simple">
+<dt>相连项 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">L</kbd></kbd></dt><dd><p>选择连接到当前所选内容的所有元素。</p>
+</dd>
+<dt>最短路径</dt><dd><p>选择两个选中元素之间的路径。（见下文）</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl id="bpy-ops-uv-select-similar">
+<dt>选择相似 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">G</kbd></kbd></dt><dd><p>选择与<a class="reference internal" href="../../glossary/index.html#term-Active"><span class="xref std std-term">活动</span></a>元素在某些方面相似的 UV 元素。<a class="reference internal" href="../../interface/undo_redo.html#bpy-ops-screen-redo-last"><span class="std std-ref">调整上一步操作</span></a>面板提供了几个选项：</p>
+<dl>
+<dt>类型</dt><dd><p>要比较的属性。哪些属性可用取决于<a class="reference internal" href="#bpy-types-toolsettings-uv-select-mode"><span class="std std-ref">选择模式</span></a>。</p>
+<dl class="simple">
+<dt>顶点选择模式</dt><dd><dl class="field-list simple">
+<dt class="field-odd">钉固<span class="colon">:</span></dt>
+<dd class="field-odd"><p>选择具有相同<a class="reference internal" href="../../modeling/meshes/uv/editing.html#bpy-ops-uv-pin"><span class="std std-ref">钉固</span></a>状态的顶点。</p>
+</dd>
+</dl>
+</dd>
+<dt>边选择模式</dt><dd><dl class="field-list simple">
+<dt class="field-odd">长度<span class="colon">:</span></dt>
+<dd class="field-odd"><p>选择在 UV 中具有相似长度的边。</p>
+</dd>
+<dt class="field-even">3D长度<span class="colon">:</span></dt>
+<dd class="field-even"><p>选择在 3D 网格中具有相似长度的边。</p>
+</dd>
+<dt class="field-odd">钉固<span class="colon">:</span></dt>
+<dd class="field-odd"><p>选择钉固状态相同的边。</p>
+</dd>
+</dl>
+</dd>
+<dt>面选择模式</dt><dd><dl class="field-list simple">
+<dt class="field-odd">面光<span class="colon">:</span></dt>
+<dd class="field-odd"><p>选择在 UV 贴图中具有相似面积的面。</p>
+</dd>
+<dt class="field-even">3D面积<span class="colon">:</span></dt>
+<dd class="field-even"><p>选择在 3D 网格中具有相似面积的面。</p>
+</dd>
+<dt class="field-odd">材质<span class="colon">:</span></dt>
+<dd class="field-odd"><p>选择具有相同<a class="reference internal" href="../../render/materials/index.html"><span class="doc">材质</span></a>的面。</p>
+</dd>
+<dt class="field-even">物体<span class="colon">:</span></dt>
+<dd class="field-even"><p>选择属于同一物体的面。当编辑模式下同时存在多个物体时很有用。</p>
+</dd>
+<dt class="field-odd">多边形边数<span class="colon">:</span></dt>
+<dd class="field-odd"><p>选择具有相同边数量的面。</p>
+</dd>
+<dt class="field-even">翻转/未翻转<span class="colon">:</span></dt>
+<dd class="field-even"><p>选择具有相同朝向的面（在 UV 中面朝上还是面朝下）。</p>
+</dd>
+</dl>
+</dd>
+<dt>孤岛选择模式</dt><dd><dl class="field-list simple">
+<dt class="field-odd">面光<span class="colon">:</span></dt>
+<dd class="field-odd"><p>选择在 UV 中具有相似面积的孤岛。</p>
+</dd>
+<dt class="field-even">3D面积<span class="colon">:</span></dt>
+<dd class="field-even"><p>选择在 3D 网格中具有相似面积的孤岛。</p>
+</dd>
+<dt class="field-odd">孤岛中的面数<span class="colon">:</span></dt>
+<dd class="field-odd"><p>选择拥有相同面数的孤岛。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>比较</dt><dd><p>比较操作。</p>
+<dl class="field-list simple">
+<dt class="field-odd">等于<span class="colon">:</span></dt>
+<dd class="field-odd"><p>选择值相等的元素。</p>
+</dd>
+<dt class="field-even">大于<span class="colon">:</span></dt>
+<dd class="field-even"><p>选择值较大或相等的元素。</p>
+</dd>
+<dt class="field-odd">小于<span class="colon">:</span></dt>
+<dd class="field-odd"><p>选择值较小或相等的元素。</p>
+</dd>
+</dl>
+</dd>
+<dt>阈值</dt><dd><p>对几乎相同但不完全相同的值的容差。阈值越高，选择的元素就越多。</p>
+</dd>
+</dl>
+</dd>
+<dt>拆分选中项 <kbd class="kbd docutils literal notranslate">Y</kbd></dt><dd><p>“分离” 选中的面，以便将其移动到其他地方而不影响其邻近面。</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>与用于网格的<a class="reference internal" href="../../modeling/meshes/editing/mesh/split.html"><span class="doc">拆分选中项</span></a>物理断开面的操作不同，这是一个纯粹的选择操作。在 UV 空间中，这些面从一开始就没有连接在一起；只是因为 <em>粘性选择</em> 自动选择了相邻面的顶点，所以看起来才会这样。<em>选择拆分</em> 则会再次取消选择这些顶点。</p>
+<p>作为 <em>选择拆分</em> 的替代方法，您可以将 <em>粘性选择模式</em> 设置为 <em>禁用</em>。</p>
+</div>
+</dd>
+<dt>选择重叠</dt><dd><p>选择所有互相重叠的 UV 面。</p>
+</dd>
+</dl>
+</section>
+<section id="shortest-path">
+<span id="bpy-ops-uv-shortest-path-pick"></span><span id="bpy-ops-uv-shortest-path-select"></span><h2>最短路径<a class="headerlink" href="#shortest-path" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">选择‣ 选择相连元素 ‣ 最短路径</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">鼠标左键</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>沿两个元素之间的最短路径选择所有 UV 元素：使用菜单激活时选择两个元素，使用快捷键激活时选择活动元素和点击的元素。</p>
+<dl>
+<dt>捷径跨面</dt><dd><p>对于顶点：允许路径跨越面，沿着面的对角线而不是边游走。</p>
+<p>For edges: selects disconnected edges that are perpendicular to the path (edge ring),
+rather than connected edges along the path (edge loop).</p>
+<p>对于面：允许路径穿过仅共享一个顶点而非一条边的面。</p>
+</dd>
+<dt>拓扑距离</dt><dd><p>计算距离时，只需计算边的数量，而不测量边的长度。</p>
+</dd>
+<dt>填充区域 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">鼠标左键</kbd></kbd></dt><dd><p>选择所有最短路径（而不是只有一条）。</p>
+</dd>
+<dt>虚线选项</dt><dd><p>只允许以固定间隔选择元素，创建 “虚线” 而非连续线。</p>
+<dl class="simple">
+<dt>弃选项</dt><dd><p>重复次序中跳过的元素数量。</p>
+</dd>
+<dt>选中项</dt><dd><p>重复次序中选择的元素数量。</p>
+</dd>
+<dt>偏移量</dt><dd><p>要偏移序列的元素个数。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>网格编辑中的<a class="reference internal" href="../../modeling/meshes/selecting/linked.html#bpy-ops-mesh-shortest-path-select"><span class="std std-ref">拾取最短路径</span></a>。</p>
+</div>
+</section>
+<section id="select-edge-loop">
+<span id="bpy-ops-uv-select-edge-loop"></span><h2>选择循环边<a class="headerlink" href="#select-edge-loop" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id2">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">鼠标左键</kbd></kbd>，或 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">鼠标左键</kbd></kbd> 以扩展现有选中项。</p>
+</dd>
+</dl>
+</div>
+<p>点击边时按住 <kbd class="kbd docutils literal notranslate">Alt</kbd> 键会选中该边，然后将选中的边尽可能向与之平行的两个方向扩展。（这当然适用于选择网格四周的边 “循环”，但在没有循环的情况下也同样有效。）</p>
+<p>您可以额外按住 <kbd class="kbd docutils literal notranslate">Shift</kbd> 键以扩展当前选中项而不是将其替换。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>网格编辑中的<a class="reference internal" href="../../modeling/meshes/selecting/loops.html#bpy-ops-mesh-loop-select"><span class="std std-ref">选择循环边</span></a>。</p>
+</div>
+</section>
+<section id="select-edge-ring">
+<span id="bpy-ops-uv-select-edge-ring"></span><h2>选择并排边<a class="headerlink" href="#select-edge-ring" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id3">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">鼠标左键</kbd></kbd>，或 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">鼠标左键</kbd></kbd> 以扩展现有选中项。</p>
+</dd>
+</dl>
+</div>
+<p>按住 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Alt</kbd></kbd> 的同时单击一条边会选中该边，然后将选中的边尽可能地向与之垂直的两个方向扩展。（这当然适用于选择网格四周的边 “环”，但在没有环的情况下也同样有效。）</p>
+<p>您可以额外按住 <kbd class="kbd docutils literal notranslate">Shift</kbd> 键以扩展当前选中项而不是将其替换。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>网格编辑中的<a class="reference internal" href="../../modeling/meshes/selecting/loops.html#bpy-ops-mesh-select-edge-ring"><span class="std std-ref">选择并排边</span></a>。</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="sidebar.html" class="btn btn-neutral float-left" title="侧栏" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="controls/snapping.html" class="btn btn-neutral float-right" title="吸附" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/editors/uv/selecting.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/editors/uv/selecting.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Feditors/uv/selecting.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Feditors/uv/selecting.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

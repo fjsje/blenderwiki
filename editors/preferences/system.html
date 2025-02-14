@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>系统 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/preferences/system.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="保存&amp;加载" href="save_load.html" />
+    <link rel="prev" title="键位映射" href="keymap.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../3dview/index.html">3D 视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image/index.html">图像编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../uv/index.html">UV 编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../compositor.html">合成器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../texture_node/index.html">纹理节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geometry_node.html">几何节点编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shader_editor.html">着色器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../video_sequencer/index.html">视频序列编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../clip/index.html">影片剪辑编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dope_sheet/index.html">动画摄影表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../timeline.html">时间线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../graph_editor/index.html">曲线编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../drivers_editor.html">驱动器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../nla/index.html">非线性动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../text_editor.html">文本编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python_console.html">Python 控制台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../info_editor.html">信息编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outliner/index.html">大纲视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../properties_editor.html">属性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../file_browser.html">文件浏览器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../asset_browser.html">资产浏览器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spreadsheet.html">电子表格</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">偏好设置</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interface.html">界面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="themes.html">主题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="viewport.html">视图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lights.html">灯光</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing.html">编辑</a></li>
+<li class="toctree-l3"><a class="reference internal" href="animation.html">动画</a></li>
+<li class="toctree-l3"><a class="reference internal" href="addons.html">插件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="input.html">输入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="navigation.html">导航</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keymap.html">键位映射</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">系统</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cycles-render-device">Cycles 渲染设备</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#operating-system-settings">操作系统设置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#memory-limits">内存 &amp; 限额</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#video-sequencer">视频序列编辑器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sound">声音</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="save_load.html">保存&amp;加载</a></li>
+<li class="toctree-l3"><a class="reference internal" href="file_paths.html">文件路径</a></li>
+<li class="toctree-l3"><a class="reference internal" href="experimental.html">试验特性</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">编辑器</a></li>
+          <li class="breadcrumb-item"><a href="index.html">偏好设置</a></li>
+      <li class="breadcrumb-item active">系统</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="system">
+<span id="bpy-types-preferencessystem"></span><h1>系统<a class="headerlink" href="#system" title="Permalink to this heading"></a></h1>
+<p><em>系统</em> 部分允许设置显卡选项、内存限额和声音设置。</p>
+<p>如果您的硬件不支持此页面上描述的某些选项，则它们将不会显示或在启动时进行更正。</p>
+<figure class="align-default" id="id1">
+<img alt="../../_images/editors_preferences_section_system.png" src="../../_images/editors_preferences_section_system.png" />
+<figcaption>
+<p><span class="caption-text">偏好设置系统部分。</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<section id="cycles-render-device">
+<span id="editors-preferences-cycles"></span><h2>Cycles 渲染设备<a class="headerlink" href="#cycles-render-device" title="Permalink to this heading"></a></h2>
+<p>修改 <a class="reference internal" href="../../render/cycles/index.html"><span class="doc">Cycles</span></a> 渲染引擎使用的、用于渲染图像的计算设备。Cycles 可以使用 CPU 或者特定的 GPU 渲染图像，更多相关信息，参见 <a class="reference internal" href="../../render/cycles/gpu_rendering.html"><span class="doc">GPU渲染</span></a> 页面。</p>
+<dl class="field-list simple">
+<dt class="field-odd">无<span class="colon">:</span></dt>
+<dd class="field-odd"><p>当设置为 <em>无</em> 或者只有 <em>无</em> 选项时：将使用 CPU 作为 Cycles 渲染器的计算设备。</p>
+</dd>
+<dt class="field-even">CUDA<span class="colon">:</span></dt>
+<dd class="field-even"><p>如果系统具有兼容的 Nvidia CUDA 设备，则该设备将可用作使用 Cycles 进行渲染的选项。</p>
+</dd>
+<dt class="field-odd">OptiX<span class="colon">:</span></dt>
+<dd class="field-odd"><p>如果系统具有兼容的 Nvidia OptiX 设备，则该设备将可用作使用 Cycles 进行渲染的选项。</p>
+</dd>
+<dt class="field-even">HIP<span class="colon">:</span></dt>
+<dd class="field-even"><p>如果系统具有兼容的 AMD HIP 设备，则该设备将可用作使用 Cycles 进行渲染的选项。</p>
+</dd>
+<dt class="field-odd">oneAPI<span class="colon">:</span></dt>
+<dd class="field-odd"><p>如果系统具有兼容的 Intel oneAPI 设备，则该设备将可用作使用 Cycles 进行渲染的选项。</p>
+</dd>
+<dt class="field-even">Metal<span class="colon">:</span></dt>
+<dd class="field-even"><p>如果系统具有兼容的 Apple Metal 设备，则该设备将可用作使用 Cycles 进行渲染的选项。</p>
+</dd>
+</dl>
+<dl id="prefs-system-cycles-distributive-memory">
+<dt>跨设备分配内存</dt><dd><p>跨多个 GPU 分配资源，而不是复制数据，从而有效地释放了较大场景的空间。请注意，为了使此选项可用，GPU 必须通过高带宽通信协议连接在一起。</p>
+<p>当前仅支持 Nvidia GPU 上的 NVLink。</p>
+</dd>
+<dt>GPU 上启用 Embree 光追</dt><dd><p>允许在英特尔 GPU 上使用硬件光线追踪技术，从而提供更好的整体性能。</p>
+<p>仅支持 oneAPI 渲染设备。</p>
+</dd>
+<dt>HIP 光追 (试验特性)</dt><dd><p>通过在 RDNA2 及以上版本的显卡上启用 AMD 硬件光线追踪功能来加快渲染速度，并在旧显卡上使用着色器回退功能。此功能为试验性功能，某些场景可能会出现渲染错误。</p>
+<p>此特性只在使用 <em>HIP</em> 渲染设备时可用。</p>
+</dd>
+<dt>MetalRT (试验)</dt><dd><p>MetalRT for ray tracing uses less memory for scenes which use curves extensively,
+and can give better performance in specific cases.
+This feature is experimental and some scenes may render incorrectly.</p>
+</dd>
+</dl>
+</section>
+<section id="operating-system-settings">
+<h2>操作系统设置<a class="headerlink" href="#operating-system-settings" title="Permalink to this heading"></a></h2>
+<p>Make this installation your default Blender.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This panel of options is only available on Microsoft Windows.</p>
+</div>
+<dl class="simple">
+<dt>使默认</dt><dd><p>将当前正在使用的 Blender 安装设置为生成缩略图的默认值，并设置为打开 blend 文件的默认值。</p>
+</dd>
+</dl>
+</section>
+<section id="memory-limits">
+<span id="prefs-system-memory-and-limits"></span><h2>内存 &amp; 限额<a class="headerlink" href="#memory-limits" title="Permalink to this heading"></a></h2>
+<dl>
+<dt>撤销步数</dt><dd><p>可以撤销的步数。</p>
+</dd>
+<dt>撤销内存限制</dt><dd><p>以 Mb 为单位的最大内存使用量（0 为不限制）。</p>
+</dd>
+<dt>全局撤销</dt><dd><p>启用后，Blender 会保存 <strong>非</strong> <em>编辑模式</em> 下执行的操作。比如，复制物体、修改面板设置或者切换模式。</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>虽然禁用此选项确实可以节省内存，但它会停止<a class="reference internal" href="../../interface/undo_redo.html#bpy-ops-screen-redo-last"><span class="std std-ref">调整上一步操作</span></a>面板运行，并且在某些情况下还会阻止更改工具选项。对于典型用法，最好将其保持启用状态。</p>
+</div>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="../../interface/undo_redo.html"><span class="doc">了解更多关于撤销和重做选项</span></a>。</p>
+</div>
+<dl>
+<dt>控制台回查行数</dt><dd><p>在控制台窗口的内存中缓冲的行数。用于调试和命令行渲染。</p>
+</dd>
+<dt>纹理超时</dt><dd><p>自上次访问 GL 纹理以来的时间（秒），在此时间之后将释放该纹理。数值为 0 表示保留纹理。</p>
+<dl class="simple">
+<dt>垃圾回收速率</dt><dd><p>每次运行 GL 纹理垃圾回收器之间的秒数。</p>
+</dd>
+</dl>
+</dd>
+<dt>VBO 超时</dt><dd><p>自上次访问 GL 顶点缓冲区对象（VBO）以来的以秒为单位的时间，在此时间后释放该对象（设置为 0 以保持分配的 VBO）。</p>
+<dl class="simple">
+<dt>垃圾回收速率</dt><dd><p>在每次运行 GL 顶点缓冲区对象垃圾收集器之间的秒数。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+<section id="video-sequencer">
+<span id="prefs-system-video-sequencer"></span><h2>视频序列编辑器<a class="headerlink" href="#video-sequencer" title="Permalink to this heading"></a></h2>
+<dl class="simple" id="prefs-system-memory-cache-limit">
+<dt>内存缓存限额</dt><dd><p>序列编辑器和视频剪辑编辑器的内存缓存上限 (MB)。要达到剪辑编辑器和序列编辑器的最佳使用性能，推荐使用较高的数值。</p>
+</dd>
+<dt>磁盘缓存</dt><dd><p>将缓存的剪辑写入磁盘，磁盘可以存储比 RAM 多得多的剪辑。要使用磁盘缓存，必须启用此选项，设置 <em>磁盘缓存目录</em> 和 <em>磁盘缓存限制</em>，然后保存或重新打开现有的 blend 文档。</p>
+</dd>
+<dt>文件夹</dt><dd><p>磁盘上用于存储缓存的位置。</p>
+</dd>
+<dt>缓存限值</dt><dd><p>视频序列编辑器的磁盘缓存上限（以 GB 为单位），设置为零将禁用磁盘缓存。</p>
+</dd>
+<dt>压缩</dt><dd><p>在磁盘缓存中压缩图片的压缩级别。这在节省磁盘空间和需要更多处理之间进行了权衡。使用更高的压缩级别，需要更快的磁盘写入/读取速度和更多的 CPU 使用率。</p>
+</dd>
+<dt>代理设置</dt><dd><p>何时以及如何创建<a class="reference internal" href="../video_sequencer/sequencer/sidebar/proxy.html"><span class="doc">代理</span></a>。</p>
+<dl class="field-list simple">
+<dt class="field-odd">自动<span class="colon">:</span></dt>
+<dd class="field-odd"><p>在每个预览尺寸中为添加的影片和图像片段建立代理。</p>
+</dd>
+<dt class="field-even">手动<span class="colon">:</span></dt>
+<dd class="field-even"><p>手动设置代理。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="../video_sequencer/sequencer/sidebar/cache.html"><span class="doc">序列缓存属性</span></a></p>
+</div>
+</section>
+<section id="sound">
+<span id="prefs-system-sound"></span><h2>声音<a class="headerlink" href="#sound" title="Permalink to this heading"></a></h2>
+<p>此面板包含 Blender 中实时播放的声音设置，并且仅适用于 <em>无</em> 以外的设备。要控制这些用于导出声音的设置，请参阅<a class="reference internal" href="../../render/output/properties/output.html#render-output-video-encoding-panel"><span class="std std-ref">编码面板</span></a>和<a class="reference internal" href="../../scene_layout/scene/properties.html#data-scenes-audio"><span class="std std-ref">音频面板</span></a>。</p>
+<dl class="simple">
+<dt>音频设备</dt><dd><p>设置用于处理和输出音频的音频引擎。</p>
+<dl class="field-list simple">
+<dt class="field-odd">无<span class="colon">:</span></dt>
+<dd class="field-odd"><p>不支持音频播放（仍然可以正常加载和渲染音频片段）。</p>
+</dd>
+<dt class="field-even">核心音频<span class="colon">:</span></dt>
+<dd class="field-even"><p>在 macOS 上，CoreAudio 是本机音频 API。这是 macOS 用户的默认设置，应该优先使用。</p>
+</dd>
+<dt class="field-odd">脉冲音频<span class="colon">:</span></dt>
+<dd class="field-odd"><p>PulseAudio 是现代 Linux 分发系统中最常用的声音服务器。如果 PulseAudio 可用，这应该是 Linux 上的首选设置。</p>
+</dd>
+<dt class="field-even">WASAPI<span class="colon">:</span></dt>
+<dd class="field-even"><p>在 Windows 上，WASAPI 是与 Windows Vista 一起引入的本机音频 API。这是 Windows 用户的默认设置，应首选。</p>
+</dd>
+<dt class="field-odd">Jack<span class="colon">:</span></dt>
+<dd class="field-odd"><p>高质量的专业音频引擎，需要在您的系统上运行正确配置的服务器。支持使用 Jack 与其他专业音频应用程序进行准确同步。</p>
+</dd>
+<dt class="field-even">OpenAL<span class="colon">:</span></dt>
+<dd class="field-even"><p>适用于所有平台，以防本机引擎无法工作。回放的 3D 音频可能与渲染时的声音不同。</p>
+</dd>
+<dt class="field-odd">SDL<span class="colon">:</span></dt>
+<dd class="field-odd"><p>使用来自 <a class="reference external" href="https://www.libsdl.org">libsdl.org</a> 的简单直接媒体层 API，它支持所有平台。可能质量较低，因此只能用作备份。</p>
+</dd>
+</dl>
+</dd>
+<dt>通道</dt><dd><p>设置音频通道数。</p>
+</dd>
+<dt>混合缓冲区</dt><dd><p>设置混音缓冲区采样数。较高的缓冲区大小可能会导致延迟问题，但如果听到咔嗒声或其他问题，请尝试增加大小。</p>
+</dd>
+<dt>采样率</dt><dd><p>设置音频<a class="reference external" href="https://en.wikipedia.org/wiki/Sampling_(signal_processing)#Sampling_rate">采样率</a>。</p>
+</dd>
+<dt>采样格式</dt><dd><p>设置音频采样格式。</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="keymap.html" class="btn btn-neutral float-left" title="键位映射" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="save_load.html" class="btn btn-neutral float-right" title="保存&amp;加载" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/editors/preferences/system.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/editors/preferences/system.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Feditors/preferences/system.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Feditors/preferences/system.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

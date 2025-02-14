@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>简介 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../../../_static/js/version_switch.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../../../copyright.html" />
+    <link rel="next" title="Spline IK 样条 IK" href="spline_ik.html" />
+    <link rel="prev" title="简介" href="../introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">动画 &amp; 绑定</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../keyframes/index.html">关键帧</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html">骨架</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../bones/index.html">骨骼</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../structure.html">结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../skinning/index.html">蒙皮</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html">姿态</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../selecting.html">选择</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editing/index.html">编辑</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tool_settings.html">工具设置</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">骨骼约束</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l5 current"><a class="reference internal" href="../index.html#inverse-kinematics">反向动力学</a><ul class="current">
+<li class="toctree-l6 current"><a class="current reference internal" href="#">简介</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#armature-ik-panel">Armature IK Panel 骨架IK面板</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="#standard">标准</a></li>
+<li class="toctree-l8"><a class="reference internal" href="#itasc">iTaSC</a><ul>
+<li class="toctree-l9"><a class="reference internal" href="#animation">动画</a></li>
+<li class="toctree-l9"><a class="reference internal" href="#simulation">模拟</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="#bone-ik-panel">骨骼 IK 面板</a><ul>
+<li class="toctree-l8"><a class="reference internal" href="#itasc-solver">iTaSC 解算器</a></li>
+</ul>
+</li>
+<li class="toctree-l7"><a class="reference internal" href="#arm-rig-example">Arm Rig Example 手臂绑定示例</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="spline_ik.html">Spline IK 样条 IK</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../lattice.html">晶格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../constraints/index.html">约束</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../actions.html">动作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../drivers/index.html">驱动</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../markers.html">标记</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../shape_keys/index.html">形态键</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../motion_paths.html">运动路径</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html">动画 &amp; 绑定</a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">骨架</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">姿态</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">骨骼约束</a></li>
+      <li class="breadcrumb-item active">简介</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h1>
+<p>反向动力学（IK）简化了动画过程，并使得以更少的工作量制作更高级的动画成为可能。</p>
+<p>反向动力学允许您将骨骼链中的最后一个骨骼定位，其他骨骼会自动定位。这就像移动某人的手指会导致他们的手臂跟随它一样。根据正常的姿势技术，您必须从根骨开始，并按顺序设置骨骼，直到到达尖端骨骼：当移动每个父骨时，其子骨将继承其位置和旋转。因此，在链条的更远处进行微小的精确姿势更改变得更加困难，因为您可能必须首先调整所有父骨骼。</p>
+<p>IK就是解决这一问题的有效办法。</p>
+<p>IK 大多在骨骼约束下完成，尽管在姿态模式中还有一个简单的 <a class="reference internal" href="../../tool_settings.html#bpy-types-pose-use-auto-ik"><span class="std std-ref">自动 IK</span></a> 功能。它们的工作方法相同，但约束提供了更多的选择和控制。有关这些限制的详细信息，请参阅以下页面：</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../../../../constraints/tracking/ik_solver.html"><span class="doc">IK反向动力学约束</span></a></p></li>
+<li><p><a class="reference internal" href="../../../../constraints/tracking/spline_ik.html"><span class="doc">样条线IK约束</span></a></p></li>
+</ul>
+<section id="armature-ik-panel">
+<h2>Armature IK Panel 骨架IK面板<a class="headerlink" href="#armature-ik-panel" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>姿态模式</p>
+</dd>
+<dt class="field-even">面板<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">属性 ‣ 骨架 ‣ 反向动力学</span></p>
+</dd>
+</dl>
+</div>
+<p>该面板用于为骨架选择IK解算器类型。<em>标准</em> 或 <em>iTaSC</em> 。大多数时候，人们会使用 <em>标准</em> IK解算。</p>
+<section id="standard">
+<h3>标准<a class="headerlink" href="#standard" title="Permalink to this heading"></a></h3>
+<p>待完善。</p>
+</section>
+<section id="itasc">
+<span id="rigging-armatures-posing-bone-constraints-ik-model-itasc"></span><span id="bpy-types-itasc"></span><h3>iTaSC<a class="headerlink" href="#itasc" title="Permalink to this heading"></a></h3>
+<p>iTaSC代表使用约束的即时任务规范。</p>
+<p>iTaSC使用不同的方法来计算雅可比矩阵，这使得它能够处理除了末端效应器位置和方向之外的其他约束：iTaSC是一个通用的多约束IK解算器。但是，在当前实现中尚未充分利用此功能，只能处理两种其他类型的约束：笛卡尔空间中的距离和关节空间中的联合旋转。第一个允许将末端执行器保持在以目标位置为中心的球体内部，内部或外部，第二个是能够直接控制骨骼相对于其父体的旋转。那些对数学感兴趣的人可以在这里找到用于构建雅可比矩阵方法的简短描述。</p>
+<p>iTaSC接受混合约束和每个骨骼的多个约束：求解器根据每个约束的相应权重计算最佳姿势。这是对当前约束系统的重大改进，其中约束按照定义的顺序逐个求解，使得冲突约束彼此重写。</p>
+<dl>
+<dt>精度</dt><dd><p>两个连续迭代之间的末端执行器的最大变化，其中获得足够稳定的姿势并且求解器应该停止迭代。值越小意味着末端执行器位置的精度越高。</p>
+</dd>
+<dt>迭代</dt><dd><p>迭代次数的上限。</p>
+</dd>
+<dt>解算器</dt><dd><p>选择iTaSC将使用的逆向雅可比解算器。</p>
+<dl>
+<dt><abbr title="Selective Damped Least Square 选择性阻尼最小二乘法">SDLS</abbr></dt><dd><p>通过估计骨架运动学中的 &quot;取消&quot; 水平自动计算阻尼。这种方法适用于复制姿势约束，但缺点是在单一姿势周围阻尼超过必要，这意味着移动较慢。当然，这仅在模拟模式下才会显着。</p>
+</dd>
+<dt><abbr title="Damped Least Square 阻尼最小二乘">DLS</abbr></dt><dd><p>手动计算阻尼，可提供更高的反应性和更高的精度。</p>
+<dl class="simple">
+<dt>最大阻尼</dt><dd><p>最大阻尼量。值越小意味着阻尼越小，因此速度越快，精度越高，但在单一姿态下抖动的风险也越大。0表示根本没有阻尼。</p>
+</dd>
+<dt>Damping Epsilon 小量阻尼</dt><dd><p>单一姿态周围的阻尼区域范围。较小的值意味着较小的控制区域和更大通过单一姿势的风险，这意味着抖动。</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>必须针对每个骨架调整 <em>阻尼</em> 和 <em>小量</em>。您应该使用保持稳定性的最小值。</p>
+</div>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>SDLS解算器不能和 &quot;距离&quot; 约束一起使用。如果要使用 &quot;距离&quot; 约束在动画中使用单一姿势，则必须使用DLS解算器。</p></li>
+<li><p>如果你没有单一姿势，两个解算器都能使用。</p></li>
+</ul>
+</div>
+</dd>
+</dl>
+<section id="animation">
+<h4>动画<a class="headerlink" href="#animation" title="Permalink to this heading"></a></h4>
+<p>在动画模式下，iTaSC 的操作类似于 IK 求解器：它是无状态的，并使用 F 曲线插值中的姿态作为 IK 收敛之前的起始姿势。目标速度将被忽略，求解器会收敛，直到获得给定的精度。尽管如此，新的求解器通常比旧的求解器更快，并提供iTaSC固有的功能：每个骨骼有多个目标和多种类型的约束。</p>
+</section>
+<section id="simulation">
+<h4>模拟<a class="headerlink" href="#simulation" title="Permalink to this heading"></a></h4>
+<p>模拟模式是求解器的有状态模式：它估计目标的速度，在 &quot;真实时间&quot; 上下文中操作，忽略关键帧的旋转（通过关节旋转约束除外）并自动构建状态缓存。</p>
+<dl>
+<dt>重复</dt><dd><dl class="simple">
+<dt>从不</dt><dd><p>求解器从静置姿态开始，即使对于第一帧也不重复（收敛）。这意味着在动画开始时需要几帧才能到达目标。</p>
+</dd>
+<dt>初始</dt><dd><p>求解器从静置姿态开始并重新迭代直到达到给定精度，但仅在第一帧（即，在高速缓存中没有任何先前帧的帧）上。此选项基本上允许您选择与其余姿势不同的开始姿势，它是默认值。对于后续帧，解算器将通过在帧表示的时间间隔内对雅可比解算器计算的关节速度进行积分来跟踪目标。跟踪精度取决于反馈系数，步数和目标速度。</p>
+</dd>
+<dt>总是</dt><dd><p>求解器在每个帧上重新迭代，直到达到给定的精度。此选项省略了大部分iTaSC动态行为：不再保证最大关节速度和帧之间的连续性，以补偿末端执行器位置的更好精度。它是 <em>动画</em> 和 <em>模拟</em> 真实时间之间的中间模式。</p>
+</dd>
+</dl>
+</dd>
+<dt>自动步长</dt><dd><p>如果要让解算器设置每帧应执行的子步数，请使用此选项。子步骤是两个帧之间时间的细分，求解器为此计算IK方程并更新关节位置。更多子步骤意味着更多处理，但跟踪目标的精度更高。自动步进算法估计最佳步数，以在处理和精度之间获得最佳折衷。它通过估计姿势的非线性和通过限制子步骤期间关节变化的幅度来工作。它可以配置下两个参数：</p>
+<dl class="simple">
+<dt>最小值</dt><dd><p>建议的最小子步持续时间（秒）。自动步进算法可以进一步基于关节速度减少子步骤。</p>
+</dd>
+<dt>最大值</dt><dd><p>最大子步持续时间（秒）。自动步进算法不允许子步长超过此值。</p>
+</dd>
+</dl>
+</dd>
+<dt>步数 (阶梯)</dt><dd><p>如果禁用 &quot;自动步进&quot;，则可以使用此参数选择固定数量的子步骤。子步不应超过10毫秒，这意味着25 fps动画的步数为4 。如果骨架在帧之间看起来不稳定（振动），则可以通过增加步数来提高稳定性。</p>
+</dd>
+<dt>反馈</dt><dd><p>末端执行器位置误差的系数，用于设定矫正关节速度。纠错的时间常数是该值的倒数。然而，该参数对骨架的动作几乎没有影响，因为算法在任何情况下都评估目标速度。将此参数设置为0意味着 &quot;打开循环&quot;：求解器跟踪速度而不是位置；错误会迅速累积。将此值设置得太高意味着过度的校正和不稳定的风险。该值应在20-100范围内。默认值为20，这意味着在100-200ms的典型时间内纠正跟踪错误。反馈系数是即使目标已经停止移动，骨架在模拟模式下继续轻微移动的原因：残余误差逐帧被逐步抑制。</p>
+</dd>
+<dt>最大速度</dt><dd><p>指示性最大关节速度，以弧度/秒为单位。该参数对骨架动作有重要影响。如果目标快速移动，较小的值将导致骨架缓慢移动并滞后。您可以通过将此参数设置为较低值来模拟惯性。</p>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+<section id="bone-ik-panel">
+<span id="bpy-types-posebone-ik"></span><h2>骨骼 IK 面板<a class="headerlink" href="#bone-ik-panel" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id2">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>姿态模式</p>
+</dd>
+<dt class="field-even">面板<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">属性 ‣ 骨骼 ‣ 反向动力学</span></p>
+</dd>
+</dl>
+</div>
+<p>该面板用于控制 <em>姿势骨骼</em> 在IK链中的工作方式。</p>
+<dl class="simple">
+<dt>IK拉伸</dt><dd><p>拉伸影响到IK目标。</p>
+</dd>
+<dt>锁定</dt><dd><p>不允许围绕轴运动。</p>
+</dd>
+<dt>Stiffness 硬度</dt><dd><p>绕轴的硬度。如果使用了 <em>锁定</em>，则禁用影响。</p>
+</dd>
+<dt>限制</dt><dd><p>围绕轴限制运动。</p>
+</dd>
+</dl>
+<section id="itasc-solver">
+<span id="bpy-types-posebone-ik-rotation-weight"></span><span id="bpy-types-posebone-use-ik-rotation-control"></span><h3>iTaSC 解算器<a class="headerlink" href="#itasc-solver" title="Permalink to this heading"></a></h3>
+<p>如果使用 <a class="reference internal" href="#rigging-armatures-posing-bone-constraints-ik-model-itasc"><span class="std std-ref">iTaSC IK解算器</span></a> 则骨骼IK面板会更改以添加这些附加参数。</p>
+<dl>
+<dt>控制旋转</dt><dd><p>激活该骨骼上的关节旋转约束。从Action或UI交互计算的姿势旋转将转换为关节值，并作为关节的目标传递给解算器。这将使您可以控制关节，同时解算器仍然跟踪其他IK目标。您可以使用此功能为关节（例如静置姿态）提供首选姿势，或通过对关节角度进行动作来设置关节角度的动画。</p>
+<dl class="simple">
+<dt>权重</dt><dd><p>在不能同时实现所有约束的情况下，基于约束权重联合旋转约束的重要性。例如，如果要强制执行关节旋转，请在关节旋转约束上设置较高的权重，在IK约束上设置较低的权重。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</section>
+<section id="arm-rig-example">
+<h2>Arm Rig Example 手臂绑定示例<a class="headerlink" href="#arm-rig-example" title="Permalink to this heading"></a></h2>
+<p>这个手臂使用两根骨骼来克服前臂的扭曲问题。IK锁定用于阻止前臂弯曲，但是在 <em>姿态模式</em> 前臂仍然可以通过按 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">R</kbd> <kbd class="kbd docutils literal notranslate">Y</kbd> <kbd class="kbd docutils literal notranslate">Y</kbd></kbd> 手动扭转，或通过使用其他约束扭转。</p>
+<figure class="align-center" id="id3">
+<img alt="../../../../../_images/animation_armatures_posing_bone-constraints_inverse-kinematics_introduction_example.png" src="../../../../../_images/animation_armatures_posing_bone-constraints_inverse-kinematics_introduction_example.png" />
+<figcaption>
+<p><span class="caption-text"><a class="reference external" href="https://archive.blender.org/wiki/index.php/File:IK_Arm_Example.blend">手臂 IK 示例</a>。</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>请注意，如果使用了 <em>极向目标</em>，则 IK 锁定将不适用于根骨骼。</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="spline_ik.html" class="btn btn-neutral float-right" title="Spline IK 样条 IK" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/animation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fanimation/armatures/posing/bone_constraints/inverse_kinematics/introduction.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fanimation/armatures/posing/bone_constraints/inverse_kinematics/introduction.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

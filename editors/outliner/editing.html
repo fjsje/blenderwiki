@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>编辑 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/outliner/editing.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="用法" href="usage.html" />
+    <link rel="prev" title="选择和激活" href="selecting.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../3dview/index.html">3D 视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image/index.html">图像编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../uv/index.html">UV 编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../compositor.html">合成器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../texture_node/index.html">纹理节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geometry_node.html">几何节点编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shader_editor.html">着色器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../video_sequencer/index.html">视频序列编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../clip/index.html">影片剪辑编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dope_sheet/index.html">动画摄影表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../timeline.html">时间线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../graph_editor/index.html">曲线编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../drivers_editor.html">驱动器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../nla/index.html">非线性动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../text_editor.html">文本编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python_console.html">Python 控制台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../info_editor.html">信息编辑器</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">大纲视图</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interface.html">界面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selecting.html">选择和激活</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">编辑</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#context-menu">上下文菜单</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#collections">集合</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#bpy-ops-outliner-id-operation">ID 数据</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#mark-as-asset">标记为资产</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#clear-asset">清理资产</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#clear-asset-set-fake-user">清除资产 (设置伪用户)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#view">视图</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="usage.html">用法</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../properties_editor.html">属性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../file_browser.html">文件浏览器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../asset_browser.html">资产浏览器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spreadsheet.html">电子表格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/index.html">偏好设置</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">编辑器</a></li>
+          <li class="breadcrumb-item"><a href="index.html">大纲视图</a></li>
+      <li class="breadcrumb-item active">编辑</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="editing">
+<h1>编辑<a class="headerlink" href="#editing" title="Permalink to this heading"></a></h1>
+<section id="context-menu">
+<span id="editors-outliner-editing-context-menu"></span><h2>上下文菜单<a class="headerlink" href="#context-menu" title="Permalink to this heading"></a></h2>
+<p>Show the context menu for a data-block with <kbd class="kbd docutils literal notranslate">RMB</kbd> on the icon or name.
+Depending on the type of the preselected data-block(s), you will have all or part of the following options:</p>
+<dl class="simple">
+<dt>复制/粘贴</dt><dd><p>复制/粘贴选定的数据块。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-ops-outliner-delete">
+<dt>删除</dt><dd><p>删除选定的数据块。</p>
+</dd>
+<dt>选择，选择层级，弃选</dt><dd><p>Add object to current selection without making it the active one.</p>
+</dd>
+</dl>
+<section id="collections">
+<span id="editors-outliner-editing-collections"></span><h3>集合<a class="headerlink" href="#collections" title="Permalink to this heading"></a></h3>
+<p>Collections are a way Blender uses to organize scenes.
+Collections contain objects and everything else in a scene.
+They can include collections themselves and are fully recursive.</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>查阅更多<a class="reference internal" href="../../scene_layout/collections/index.html"><span class="doc">集合</span></a>相关信息。</p>
+</div>
+<dl class="simple" id="bpy-ops-outliner-collection-new">
+<dt>新建</dt><dd><p>创建一个新集合。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-ops-outliner-collection-duplicate">
+<dt>复制集合</dt><dd><p>递归地复制集合，包括所有子集合、物体和物体数据。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-ops-outliner-collection-duplicate-linked">
+<dt>关联复制</dt><dd><p>Duplicate entire hierarchy keeping content linked with original.</p>
+</dd>
+<dt>删除层级</dt><dd><p>Deletes the collection and removes all its child objects or collections.
+It is important to note that this only deletes the collection,
+if child objects are part of another collection they will stay in the scene collection
+and their data-blocks will not be deleted from the blend-file.</p>
+</dd>
+</dl>
+<dl id="bpy-ops-outliner-collection-instance">
+<dt>实例化到场景</dt><dd><p>创建新的<a class="reference internal" href="../../scene_layout/object/properties/instancing/collection.html"><span class="doc">集合实例</span></a>。</p>
+</dd>
+<dt>可见性</dt><dd><p>控制在 3D 视图和最终渲染中该集合的可见性。</p>
+<dl class="simple" id="bpy-ops-outliner-collection-isolate">
+<dt>隔离</dt><dd><p>Hides all collections except the selected collection and any parent collections (if any exist).</p>
+</dd>
+</dl>
+<span id="bpy-ops-outliner-collection-show"></span><dl class="simple" id="bpy-ops-outliner-collection-hide">
+<dt>显示/隐藏</dt><dd><p>Shows/Hides the selected collection from the <a class="reference internal" href="../../scene_layout/view_layers/index.html"><span class="doc">View Layer</span></a>.</p>
+</dd>
+</dl>
+<span id="bpy-ops-outliner-collection-show-inside"></span><dl class="simple" id="bpy-ops-outliner-collection-hide-inside">
+<dt>显示/隐藏内部</dt><dd><p>Shows/Hides all items that are a member of the selected collection, include child collections,
+from the <a class="reference internal" href="../../scene_layout/view_layers/index.html"><span class="doc">View Layer</span></a>.</p>
+</dd>
+</dl>
+<span id="bpy-ops-outliner-collection-enable"></span><dl class="simple" id="bpy-ops-outliner-collection-disable">
+<dt>在视图中启用/禁用</dt><dd><p>启用/禁用在<a class="reference internal" href="../../scene_layout/view_layers/index.html"><span class="doc">视图层</span></a>中的绘制。</p>
+</dd>
+</dl>
+<span id="bpy-ops-outliner-collection-enable-render"></span><dl class="simple" id="bpy-ops-outliner-collection-disable-render">
+<dt>在渲染中启用/禁用</dt><dd><p>在渲染中启用/禁用集合的可见性。</p>
+</dd>
+</dl>
+</dd>
+<dt>视图层</dt><dd><p>控制集合和<a class="reference internal" href="../../render/layers/introduction.html"><span class="doc">视图层</span></a>的互动性。</p>
+<span id="bpy-ops-outliner-collection-exclude-clear"></span><dl class="simple" id="bpy-ops-outliner-collection-exclude-set">
+<dt>视图层中启用/禁用</dt><dd><p>Disables/Enables the collection from the view layer.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="simple" id="bpy-ops-outliner-collection-color-tag-set">
+<dt>设置颜色标签</dt><dd><p>指定或清除所选集合的<a class="reference internal" href="../../scene_layout/collections/introduction.html#scene-layout-collections-color-tagging"><span class="std std-ref">颜色标签</span></a>。</p>
+</dd>
+</dl>
+</section>
+<section id="bpy-ops-outliner-id-operation">
+<span id="id-data"></span><h3>ID 数据<a class="headerlink" href="#bpy-ops-outliner-id-operation" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>取消关联</dt><dd><p>To unlink a data-block from its &quot;owner&quot; (e.g. a material from its mesh).</p>
+</dd>
+<dt>转为本地项</dt><dd><p>To create a &quot;local&quot; duplicate of this data-block.</p>
+</dd>
+<dt>使其独立化</dt><dd><p>This feature is not yet implemented.</p>
+</dd>
+<dt>删除</dt><dd><p>删除选定的数据块。</p>
+</dd>
+<dt>创建库重写</dt><dd><p>Make a local <a class="reference internal" href="../../files/linked_libraries/library_overrides.html"><span class="doc">override</span></a> of this linked data-block.</p>
+</dd>
+<dt>创建库重写层级</dt><dd><p>Make a local <a class="reference internal" href="../../files/linked_libraries/library_overrides.html"><span class="doc">override</span></a> of this linked data-block,
+and its hierarchy of dependencies.</p>
+</dd>
+<dt>重置库重写</dt><dd><p>Reset this local <a class="reference internal" href="../../files/linked_libraries/library_overrides.html"><span class="doc">override</span></a> to its linked values.</p>
+</dd>
+<dt>重置库重写层级</dt><dd><p>Reset this local <a class="reference internal" href="../../files/linked_libraries/library_overrides.html"><span class="doc">override</span></a> to its linked values,
+as well as its hierarchy of dependencies. This allows you to update local overrides
+when the relationship between data-blocks changed in the linked library data.</p>
+</dd>
+<dt>重新同步库重写层级</dt><dd><p>从其关联引用重建本地<a class="reference internal" href="../../files/linked_libraries/library_overrides.html"><span class="doc">重写</span></a>及其依赖层级。</p>
+</dd>
+<dt>删除库重写层级</dt><dd><p>Deletes the local <a class="reference internal" href="../../files/linked_libraries/library_overrides.html"><span class="doc">override</span></a>
+(including its hierarchy of override dependencies) and relinks its users to the linked data-blocks.</p>
+</dd>
+<dt>重新映射用户</dt><dd><p>Remap Users of a data-block to another one (of same type of course).
+This means you can e.g. replace all usages of a material or texture by another one.</p>
+</dd>
+<dt>复制/粘贴</dt><dd><p>复制/粘贴选定的数据块。</p>
+</dd>
+<dt>添加伪用户，清除伪用户</dt><dd><p>Adds a &quot;dummy&quot; (fake) user so that the selected data-block always gets saved even if it has no users.
+The fake user can be removed with <em>Clear Fake User</em>.</p>
+</dd>
+<dt>重命名 <kbd class="kbd docutils literal notranslate">F2</kbd></dt><dd><p>重命名选定的数据块。</p>
+</dd>
+<dt>选择相连元素</dt><dd><p>Selects the linked data, see <a class="reference internal" href="../../scene_layout/object/selecting.html#bpy-ops-object-select-linked"><span class="std std-ref">选择相连元素</span></a> for more information.</p>
+</dd>
+</dl>
+</section>
+<section id="mark-as-asset">
+<h3>标记为资产<a class="headerlink" href="#mark-as-asset" title="Permalink to this heading"></a></h3>
+<p>详见<a class="reference internal" href="../../files/asset_libraries/introduction.html#bpy-ops-asset-mark"><span class="std std-ref">创建资产</span></a>。</p>
+</section>
+<section id="clear-asset">
+<h3>清理资产<a class="headerlink" href="#clear-asset" title="Permalink to this heading"></a></h3>
+<p>详见<a class="reference internal" href="../../files/asset_libraries/introduction.html#bpy-ops-asset-clear"><span class="std std-ref">删除资产</span></a>。</p>
+</section>
+<section id="clear-asset-set-fake-user">
+<h3>清除资产 (设置伪用户)<a class="headerlink" href="#clear-asset-set-fake-user" title="Permalink to this heading"></a></h3>
+<p>详见<a class="reference internal" href="../../files/asset_libraries/introduction.html#assets-clear-set-fake-user"><span class="std std-ref">删除资产</span></a>。</p>
+</section>
+<section id="view">
+<h3>视图<a class="headerlink" href="#view" title="Permalink to this heading"></a></h3>
+<p>The view menu is part of the context menu and supported in all the Outliner elements.</p>
+<dl class="simple" id="bpy-ops-outliner-show-active">
+<dt>显示活动 <kbd class="kbd docutils literal notranslate">句号.</kbd></dt><dd><p>Centers the Tree View to selected object.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-ops-outliner-show-hierarchy">
+<dt>显示层级 <kbd class="kbd docutils literal notranslate">Home</kbd></dt><dd><p>To collapse all levels of the tree.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-ops-outliner-show-one-level">
+<dt>显示/隐藏一级 <kbd class="kbd docutils literal notranslate">数字键盘加+</kbd>/ <kbd class="kbd docutils literal notranslate">数字键盘减-</kbd></dt><dd><p>Expand one level down in the tree or collapse one level using the keyboard shortcuts.</p>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="selecting.html" class="btn btn-neutral float-left" title="选择和激活" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="usage.html" class="btn btn-neutral float-right" title="用法" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/editors/outliner/editing.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/editors/outliner/editing.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Feditors/outliner/editing.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Feditors/outliner/editing.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

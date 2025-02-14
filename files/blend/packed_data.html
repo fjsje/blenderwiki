@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>打包数据 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/files/blend/packed_data.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="Blend 文件预览" href="previews.html" />
+    <link rel="prev" title="打开 &amp; 保存" href="open_save.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">资产、文件 &amp; 数据系统</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Blender 文件</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="open_save.html">打开 &amp; 保存</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">打包数据</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#pack-data">打包数据</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#pack-resources">打包资源</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#automatically-pack-resources">自动打包资源</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#selective-packing">选择性打包</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#unpack-data">解包数据</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#unpack-resources">解包资源</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#options">选项</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#selective-unpacking">选择性解包</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#id4">选项</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#pack-linked-libraries">打包关联库</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#unpack-linked-libraries">解包关联库</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="previews.html">Blend 文件预览</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rename.html">重命名</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../data_blocks.html">数据块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom_properties.html">自定义属性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linked_libraries/index.html">关联库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../asset_libraries/index.html">资产库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../media/index.html">媒体格式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../import_export.html">导入 &amp; 导出文件</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">资产、文件 &amp; 数据系统</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Blender 文件</a></li>
+      <li class="breadcrumb-item active">打包数据</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="packed-data">
+<span id="pack-unpack-data"></span><h1>打包数据<a class="headerlink" href="#packed-data" title="Permalink to this heading"></a></h1>
+<p>Blender 能够将通常保存于外部的各种数据封装（合并）入 blend 文件中。例如，作为外部图像文件的图像纹理可以放在 blend 文件的 “内部”。这允许将整个项目共享为单个文件，而不是包含 blend 文件及其所有依赖项的存档。</p>
+<p>可以通过文件路径旁边的小 “礼品盒” 图标来确认数据是否是被打包。</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>不是所有的外部文件都可以被打包</p>
+<p>通常有一些很大的文件，比如<a class="reference internal" href="../../video_editing/introduction.html"><span class="doc">序列编辑器</span></a>或者<a class="reference internal" href="../../editors/clip/introduction.html"><span class="doc">影片剪辑编辑器</span></a>中生成的视频文件就不能被打包到 blend 文件中。</p>
+</div>
+<section id="pack-data">
+<h2>打包数据<a class="headerlink" href="#pack-data" title="Permalink to this heading"></a></h2>
+<section id="pack-resources">
+<span id="bpy-ops-file-pack-all"></span><h3>打包资源<a class="headerlink" href="#pack-resources" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">文件 ‣ 外部数据 ‣ 打包资源</span></p>
+</dd>
+</dl>
+</div>
+<p>将 blend 文件使用的所有符合条件的外部资源文件标记为已打包。实际打包将在下次保存 blend 文件时进行。</p>
+</section>
+<section id="automatically-pack-resources">
+<span id="bpy-ops-file-autopack-toggle"></span><h3>自动打包资源<a class="headerlink" href="#automatically-pack-resources" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id2">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">文件 ‣ 外部数据 ‣ 自动打包资源</span></p>
+</dd>
+</dl>
+</div>
+<p>启用后，此选项将确保所有符合条件的外部资源文件（现有或稍后添加）都被系统地标记为已打包。与 <em>打包资源</em> 一样，必须将 blend 文件保存到驱动器才能生效。</p>
+<p>禁用这个选项并不会把文件解包出来，但是之后添加的外部文件就不会被标记为已打包。</p>
+</section>
+<section id="selective-packing">
+<h3>选择性打包<a class="headerlink" href="#selective-packing" title="Permalink to this heading"></a></h3>
+<p>通过单击文件路径 UI 部件左侧的小 “礼品盒” 图标即可打包单个文件。</p>
+</section>
+</section>
+<section id="unpack-data">
+<h2>解包数据<a class="headerlink" href="#unpack-data" title="Permalink to this heading"></a></h2>
+<section id="unpack-resources">
+<span id="bpy-ops-file-unpack-all"></span><h3>解包资源<a class="headerlink" href="#unpack-resources" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id3">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">文件 ‣ 外部数据 ‣ 解包资源</span></p>
+</dd>
+</dl>
+</div>
+<p>解包 blend 文件中所有打包的文件至外部文件。</p>
+<section id="options">
+<h4>选项<a class="headerlink" href="#options" title="Permalink to this heading"></a></h4>
+<dl class="simple">
+<dt>使用当前目录中的文件 (在必要时创建)</dt><dd><p>将所有文件解包到目录 <code class="docutils literal notranslate"><span class="pre">//</span></code> 和 blend 文件目录相同的路径中，将它们分组到适当的文件夹中（例如 &quot;texture&quot;）。但是如果文件已经存在，它将直接使用该文件，而不再解包这个文件。</p>
+</dd>
+<dt>将文件写至当前目录（覆盖现有文件）</dt><dd><p>和前一个选项一样，只不过当文件存在时直接替换存在的文件。</p>
+</dd>
+<dt>使用原始位置的文件（在必要时创建）</dt><dd><p>解包所有的文件到每个文件原始位置。如果文件已经存在，它将直接使用该文件，而不再解包这个文件。</p>
+</dd>
+<dt>将文件写至原目录（覆盖现有文件）</dt><dd><p>和前一个选项一样，只不过当文件存在时直接替换存在的文件。</p>
+</dd>
+<dt>禁用自动打包，保留所有已打包的文件</dt><dd><p>仅停用 <em>自动打包资源</em> 选项。</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="selective-unpacking">
+<h3>选择性解包<a class="headerlink" href="#selective-unpacking" title="Permalink to this heading"></a></h3>
+<p>通过单击文件路径 UI 部件左侧的小 “礼品盒” 图标即可解包单个文件。</p>
+<section id="id4">
+<h4>选项<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h4>
+<dl class="simple">
+<dt>删除打包</dt><dd><p>只是标记这个文件为已解包，不做保存或者重新读取的操作。</p>
+</dd>
+<dt>建立 &lt;本地文件路径&gt;</dt><dd><p>把文件解包到当前 blend 文件的本地目录。</p>
+</dd>
+<dt>使用 &lt;原始文件路径&gt; (不同)|(相同)</dt><dd><p>如果原始文件路径仍然存在，则将其标记为已解包。注意，它不会自动从硬盘重新加载。<em>（不同）</em> 或 <em>（相同）</em> 显示打包版本与驱动器上版本的差异状态。</p>
+</dd>
+<dt>替换 &lt;原始文件路径&gt;</dt><dd><p>如果原始文件路径存在但与打包版不同，将其标记为已解包并使用打包版覆盖硬盘上的文件。</p>
+</dd>
+<dt>建立 &lt;原始文件路径&gt;</dt><dd><p>如果原始文件路径不存在，请将其标记为已解包并将其写入硬盘。</p>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+<section id="pack-linked-libraries">
+<span id="bpy-ops-file-pack-libraries"></span><h2>打包关联库<a class="headerlink" href="#pack-linked-libraries" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id5">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">文件 ‣ 外部数据 ‣ 打包关联库</span></p>
+</dd>
+</dl>
+</div>
+<p>将当前 blend 文件中的所有关联库文件标记为已打包。实际打包将在下次保存 blend 文件时进行。</p>
+</section>
+<section id="unpack-linked-libraries">
+<span id="bpy-ops-file-unpack-libraries"></span><h2>解包关联库<a class="headerlink" href="#unpack-linked-libraries" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id6">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">文件 ‣ 外部数据 ‣ 解包关联库</span></p>
+</dd>
+</dl>
+</div>
+<p>从此 blend 文件中解包所有已使用的关联库文件。</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="open_save.html" class="btn btn-neutral float-left" title="打开 &amp; 保存" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="previews.html" class="btn btn-neutral float-right" title="Blend 文件预览" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/files/blend/packed_data.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/files/blend/packed_data.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Ffiles/blend/packed_data.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Ffiles/blend/packed_data.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

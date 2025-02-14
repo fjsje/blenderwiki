@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>姿态库 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/animation/armatures/posing/editing/pose_library.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../../_static/js/version_switch.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../../copyright.html" />
+    <link rel="next" title="翻转四元数值" href="flip_quats.html" />
+    <link rel="prev" title="复制/粘贴姿态" href="copy_paste.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">动画 &amp; 绑定</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../keyframes/index.html">关键帧</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">骨架</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../bones/index.html">骨骼</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure.html">结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../skinning/index.html">蒙皮</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">姿态</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../selecting.html">选择</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">编辑</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l5"><a class="reference internal" href="clear.html">清空变换</a></li>
+<li class="toctree-l5"><a class="reference internal" href="apply.html">应用</a></li>
+<li class="toctree-l5"><a class="reference internal" href="in_betweens.html">间帧调整</a></li>
+<li class="toctree-l5"><a class="reference internal" href="propagate.html">传导</a></li>
+<li class="toctree-l5"><a class="reference internal" href="copy_paste.html">复制/粘贴姿态</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">姿态库</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#what-is-a-pose-asset">什么是姿态资产？</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#creating-a-pose-library">创建一个姿态库</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#pose-creation-via-action-editor">通过动作编辑器创建姿态</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#pose-creation-from-existing-animation">从现有动画创建姿势</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#pose-creation-by-copying-from-other-file">通过从其他文件复制创建姿势</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#automatically-assigned-catalog">自动分配目录</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#controlling-the-look-of-preview-images">控制预览图像的外观</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#scene-animation-for-preview-images">预览图像的场景动画</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#using-the-pose-library">使用姿态库</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#use-from-the-asset-browser">从资产浏览器使用</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#use-from-3d-viewport">从3D视口使用</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#old-pose-library">旧版姿态库</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#converting-old-pose-libraries">转换旧姿态库</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="flip_quats.html">翻转四元数值</a></li>
+<li class="toctree-l5"><a class="reference internal" href="show_hide.html">显示/隐藏</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../tool_settings.html">工具设置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../bone_constraints/index.html">骨骼约束</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../lattice.html">晶格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../constraints/index.html">约束</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../actions.html">动作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../drivers/index.html">驱动</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../markers.html">标记</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../shape_keys/index.html">形态键</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../motion_paths.html">运动路径</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">动画 &amp; 绑定</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">骨架</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">姿态</a></li>
+          <li class="breadcrumb-item"><a href="index.html">编辑</a></li>
+      <li class="breadcrumb-item active">姿态库</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="pose-library">
+<span id="bpy-ops-poselib"></span><h1>姿态库<a class="headerlink" href="#pose-library" title="Permalink to this heading"></a></h1>
+<p>This section describes the pose library, which is based on the <a class="reference internal" href="../../../../editors/asset_browser.html"><span class="doc">资产浏览器</span></a>.
+For an overview of the asset system, see the <a class="reference internal" href="../../../../files/asset_libraries/index.html"><span class="doc">资产库</span></a> section.
+The pose library is meant to be used in Pose Mode. In other words, it only works
+when posing an armature, and not for general object animation.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The pose library is implemented as an add-on. This add-on is enabled by
+default; disabling it will remove the pose library from Blender's user
+interface.</p>
+<p>The &quot;building blocks&quot; of the pose library are actually implemented in Blender
+itself. The add-on only contains the user interface and the logic that
+determines what is stored in a pose asset. This was intentionally put into an
+add-on, so that artists or studios who want to change the behavior can do
+so with an add-on of their own.</p>
+</div>
+<section id="what-is-a-pose-asset">
+<h2>什么是姿态资产？<a class="headerlink" href="#what-is-a-pose-asset" title="Permalink to this heading"></a></h2>
+<p><em>姿势资产</em> 是一个已被 <a class="reference internal" href="../../../../files/asset_libraries/introduction.html#asset-create"><span class="std std-ref">标记为资产</span></a> 的操作，其中包含正好 <strong>一帧动画</strong> 数据。这些通常是通过 <em>创建姿势资产</em> 按钮（见下文）创建的，但任何按键在一个帧上的操作都可以看作是姿势资产。</p>
+<p>库中的每个姿态都存储在自己的动作数据块中。这意味着它可以获得自己的名称和预览图像，并且可以在 <a class="reference internal" href="../../../../files/asset_libraries/catalogs.html"><span class="doc">资产目录</span></a> 中进行组织。</p>
+</section>
+<section id="creating-a-pose-library">
+<span id="bpy-ops-poselib-create-pose-asset"></span><h2>创建一个姿态库<a class="headerlink" href="#creating-a-pose-library" title="Permalink to this heading"></a></h2>
+<p><em>姿态库文件</em> 通常是专用于姿态的 blend 文件。它可以链接到角色、道具等，然后不仅可用于创建姿态，还可用于<a class="reference internal" href="#poselib-preview-images"><span class="std std-ref">渲染预览</span></a>。</p>
+<figure class="align-default" id="id1">
+<img alt="../../../../_images/asset_browser-pose_library_ellie.png" src="../../../../_images/asset_browser-pose_library_ellie.png" />
+<figcaption>
+<p><span class="caption-text">精灵恐惧角色Ellie的示例姿态库。</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<section id="pose-creation-via-action-editor">
+<h3>通过动作编辑器创建姿态<a class="headerlink" href="#pose-creation-via-action-editor" title="Permalink to this heading"></a></h3>
+<p>要从动作编辑器在库中创建姿态，请 <strong>为角色摆姿势，选择相关骨骼</strong>，然后单击 <em>创建姿态资产</em> 按钮。这将创建新的姿态动作，将包含每个骨骼的位置、旋转、缩放和Bendy Bone属性的当前值的键。</p>
+<figure class="align-default" id="id2">
+<img alt="../../../../_images/asset_browser-pose_library-create_from_action_editor.png" src="../../../../_images/asset_browser-pose_library-create_from_action_editor.png" />
+<figcaption>
+<p><span class="caption-text">要创建新的姿势资源，请使用操作编辑器中的创建姿势资源按钮。</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p><strong>创建的动作现已分配给骨架。</strong>这样可以检查包括哪些骨骼并作调整。在这方面，这与其他动作类似，您可以像往常一样添加或删除键。只需确保键都位于同一帧上，以便保持这个 &quot;姿态&quot; 而不是 &quot;动画片段&quot;；后者目前不受支持。</p>
+<p>根据其名称，<em>创建姿态资产</em> 按钮将自动将动作标记为资产。这不仅使其在姿态库中可用，还将产生 <em>伪用户</em>，以确保在从骨架中取消分配后，动作不会丢失。</p>
+<p>The pose asset can be renamed in the Asset Browser. There you can also right
+click on the thumbnail, then choose Assign Action to assign the Action to the
+active Object (see description above).</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>创建姿态资产</strong> 按钮将创建一个新的动作。为了确保此信息在用户界面中确实可见，以便您知道发生了什么，它尝试确保 &quot;资产浏览器&quot; 显示新创建的姿态资产。因此，它 <strong>要求存在可见的资产浏览器，并设置为显示当前文件资产库</strong>。</p>
+<p>与其他资产相比，这对构成资产尤其重要。您不能将对象多次标记为资产，但您可以从同一个角色姿势创建十个姿态资产。</p>
+</div>
+</section>
+<section id="pose-creation-from-existing-animation">
+<span id="bpy-ops-poselib-restore-previous-action"></span><h3>从现有动画创建姿势<a class="headerlink" href="#pose-creation-from-existing-animation" title="Permalink to this heading"></a></h3>
+<p>动画师吃饭和呼吸时间，因此您在时间轴上已经有一些姿势的可能性相当大。从现有动画创建姿势资产与上面描述的几乎相同，但有一些微妙的差异：</p>
+<ul class="simple">
+<li><p>转到具有要转换为资产的姿势的框架。</p></li>
+<li><p>选择相关骨骼，然后单击操作编辑器中的 <strong>创建姿态资产按钮</strong>。</p></li>
+<li><p>这将像以前一样创建一个动作，但这次 <strong>它还包括在当前帧上键入的任何骨骼属性</strong>。换句话说：在用户界面中以黄色显示的任何骨骼属性（常规和自定义）都将包含在姿态资产中。例如，这使得还可以包括控制 IK/FK 切换的属性。与姿态一样，当前值将被复制到姿态资产中，而不是键入值。</p></li>
+<li><p>Blender保存先前分配给骨架的操作。</p></li>
+<li><p>新姿势操作分配给骨架，因此您可以为其命名并检查/调整其内容。</p></li>
+<li><p>点击 &quot;创建姿势资产&quot; 按钮旁边出现的 <em>还原上一个操作</em> 按钮（后退箭头图标）。此项 <strong>将重新分配之前的操作</strong>，以便您回到之前的动画状态。</p></li>
+</ul>
+</section>
+<section id="pose-creation-by-copying-from-other-file">
+<span id="bpy-ops-poselib-copy-as-asset"></span><h3>通过从其他文件复制创建姿势<a class="headerlink" href="#pose-creation-by-copying-from-other-file" title="Permalink to this heading"></a></h3>
+<p>如<a class="reference internal" href="../../../../files/asset_libraries/introduction.html#asset-libraries-design-limitations"><span class="std std-ref">设计局限</span></a>中所述，Blender 仅将数据写入当前打开的 blend 文件。要将姿态从其他文件复制到姿态库文件中，请参阅以下步骤：</p>
+<ul class="simple">
+<li><p>摆出角色的姿势并选择相关的骨骼。</p></li>
+<li><p>点击 <strong>复制姿态作为资产</strong>，该按钮在动作编辑器内可用。这将创建姿态资产（包括其缩略图），并将其存储在临时文件中。</p></li>
+<li><p>选择现有姿态资产，然后打开其上下文菜单。单击 <strong>打开 blend 文件</strong> 选项。</p></li>
+<li><p>将启动新的Blender过程，并自动打开包含所选姿势的资源库文件。顺便说一句，这适用于所有资产，而不仅仅是姿势！</p></li>
+<li><p>在资产浏览器中，单击 <strong>粘贴为新资产按钮</strong>。这将加载临时文件，并加载它可以在那里找到的所有资产。在我们的情况下，它只会找到一个姿态，但未来版本的 Blender 可能会将其扩展到其他资产类型。这就是为什么按钮的名称如此泛泛 -- 它不是姿态特定的。</p></li>
+<li><p>给姿势命名，然后单击预览图像面板中的 &quot;刷新&quot; 按钮以呈现新的预览（如果需要）。</p></li>
+<li><p><strong>保存文件并退出Blender</strong>。</p></li>
+<li><p>原始Blender仍在后台运行，并注意到新Blender已退出。它 <strong>自动刷新资产浏览器</strong> 以显示新添加的姿势。</p></li>
+</ul>
+</section>
+<section id="automatically-assigned-catalog">
+<h3>自动分配目录<a class="headerlink" href="#automatically-assigned-catalog" title="Permalink to this heading"></a></h3>
+<p>创建姿势资源时，Blender可能会自动将其分配给资源目录。这仅适用于资源浏览器可见时；Blender然后将姿势资源分配给其活动资源目录。如果有多个打开的资产浏览器，则执行以下步骤：</p>
+<ul class="simple">
+<li><p>如果当前窗口有一个资源浏览器，则会使用该资源浏览器。</p></li>
+<li><p>如果当前窗口有多个资源浏览器，则使用最大的。</p></li>
+<li><p>否则，Blender会翻过其他窗口（如果有），并执行类似的搜索。它看到的第一个窗口有资产浏览器赢得。</p></li>
+</ul>
+</section>
+<section id="controlling-the-look-of-preview-images">
+<span id="poselib-preview-images"></span><h3>控制预览图像的外观<a class="headerlink" href="#controlling-the-look-of-preview-images" title="Permalink to this heading"></a></h3>
+<p>姿态库预览图像使用活动 <a class="reference internal" href="../../../../scene_layout/scene/properties.html#bpy-types-scene-camera"><span class="std std-ref">场景相机</span></a> 渲染。这种方法优于渲染特定的3D视口，主要原因有两个：</p>
+<ul class="simple">
+<li><p>任何时候都只有一个场景摄像机处于活动状态，因此可以预测使用哪个摄像机。</p></li>
+<li><p>可以为渲染缩略图专门设置摄像机以及场景的其余部分。姿态库文件用于此目的：包含姿态并渲染其预览图像。</p></li>
+</ul>
+<p>使用 <a class="reference internal" href="../../../../render/workbench/index.html"><span class="doc">工作台引擎</span></a> 渲染预览图像。切换场景以使用它作为渲染引擎，您将看到各种影响外观的选项。选择姿势资源并按生成预览按钮，以使用当前设置重新渲染预览图像。</p>
+<p>您还可以动画设置，如MatCap渲染、光线位置和强度等。用这个来占你便宜！</p>
+</section>
+<section id="scene-animation-for-preview-images">
+<h3>预览图像的场景动画<a class="headerlink" href="#scene-animation-for-preview-images" title="Permalink to this heading"></a></h3>
+<p>有时候，为您的姿势设置几种不同的背景颜色或相机角度非常方便。许多面部姿势都是根据特定的摄像机角度制作的。</p>
+<ul class="simple">
+<li><p>背景颜色可以通过在角色后面放置一个平面并动画其材质来动画化。在这种情况下，只是为了好玩，但对于更严肃的应用，这可以用来表示某个性格，情绪或其他任何东西。</p></li>
+<li><p>通过使用 <a class="reference internal" href="../../../markers.html#bpy-ops-marker-camera-bind"><span class="std std-ref">相机标记</span></a> 可以切换活动相机。</p></li>
+</ul>
+<p>两者都可以选择特定的帧来选择背景颜色和摄像机角度。姿势角色，单击 <em>创建姿势资产</em> 按钮，姿势操作将在当前帧上按键。这意味着编辑姿势并刷新其预览图像非常简单，因为您确切知道它最初创建于哪个帧上。</p>
+</section>
+</section>
+<section id="using-the-pose-library">
+<h2>使用姿态库<a class="headerlink" href="#using-the-pose-library" title="Permalink to this heading"></a></h2>
+<p>姿态库可用于以几种不同的方式姿势角色。简而言之，您可以完全应用一个姿态，也可以交互式地将其混合到角色当前的姿态中。这些操作的具体工作方式取决于您在哪里使用它们。本节将解释 &quot;资产浏览器&quot; 和3D视口的使用方式。</p>
+<section id="use-from-the-asset-browser">
+<h3>从资产浏览器使用<a class="headerlink" href="#use-from-the-asset-browser" title="Permalink to this heading"></a></h3>
+<p>姿态库可直接从资产浏览器使用。<strong>姿态库面板将出现</strong> 当活动对象是一个骨架并且处于姿态模式时。<a class="reference internal" href="../../../../files/asset_libraries/catalogs.html"><span class="doc">目录系统</span></a> 和顶部的过滤器栏可用于搜索特定姿态。</p>
+<p>The following operators can be accessed by <kbd class="kbd docutils literal notranslate">RMB</kbd> on a pose:</p>
+<dl class="simple" id="bpy-ops-poselib-apply-pose-asset">
+<dt>应用姿态</dt><dd><p>将姿势应用于角色。如果选择了任何骨骼，则该姿势将仅应用于这些骨骼。这使得可以通过对手施加拳头姿势，然后仅对食指和大拇指施加&quot;敞开手&quot;姿势来创建&quot;手枪&quot;姿势。双击一个姿势也将应用它。</p>
+</dd>
+<dt>应用翻转姿态</dt><dd><p>Will mirror the pose from left to right and vice versa. This makes it
+possible, for example, to apply a left-hand pose to the right hand, reducing
+the number of poses you have to put into the library. This can of course also
+be applied for asymmetrical facial expressions that depend on the camera
+angle. While blending (see below), keep <kbd class="kbd docutils literal notranslate">Ctrl</kbd> pressed to blend the flipped pose.</p>
+</dd>
+</dl>
+<p>. _bpy.ops.poselib.blend_pose_asset:</p>
+<dl class="simple">
+<dt>混合姿态</dt><dd><p>Allows you to gradually blend a pose from the library into the character's pose.
+Click the button, then move the mouse left/right to determine the desired blend.
+A pose asset can be &quot;subtracted&quot; while blending. Drag to the right to blend as usual, drag to the left to subtract the pose.
+While blending, you can use <kbd class="kbd docutils literal notranslate">Tab</kbd> to toggle between the original and the blended pose.
+As usual in Blender, <kbd class="kbd docutils literal notranslate">LMB</kbd> or press <kbd class="kbd docutils literal notranslate">Enter</kbd> to confirm; <kbd class="kbd docutils literal notranslate">RMB</kbd> or press <kbd class="kbd docutils literal notranslate">Esc</kbd> to cancel the operator.
+Blending can also exaggerate a pose, by pressing <kbd class="kbd docutils literal notranslate">E</kbd> (for Extrapolate) and applying a pose for more than 100%.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-ops-poselib-pose-asset-select-bones">
+<dt>选择/取消选择姿态骨骼</dt><dd><p>选择或取消选择姿势中使用的骨骼。这可用于创建选择集，或者只显示姿势的一部分和没有的部分。</p>
+</dd>
+</dl>
+</section>
+<section id="use-from-3d-viewport">
+<span id="pose-library-from-viewport"></span><h3>从3D视口使用<a class="headerlink" href="#use-from-3d-viewport" title="Permalink to this heading"></a></h3>
+<figure class="align-default" id="id3">
+<img alt="../../../../_images/asset_browser-pose_library-use_from_viewport.png" src="../../../../_images/asset_browser-pose_library-use_from_viewport.png" />
+<figcaption>
+<p><span class="caption-text">The pose library as a side-panel of the 3D Viewport.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The Sidebar of the 3D Viewport has a Pose Library panel in the Animations tab.
+Contrary to the Asset Browser, which can be used for different asset types and
+also for some asset management tasks, this panel is dedicated to applying poses.
+This means that it can allow faster interaction.</p>
+<p><strong>Click on a pose to apply it.</strong> A single click is enough.
+You can also select and apply a pose via the cursor keys.
+This allows for fast exploration of the poses,
+to directly see the result on the active character.</p>
+<p><strong>将姿势缩略图从左向右拖动，将其混合</strong> 到角色的当前姿势中。只需松开鼠标按钮即可确认。</p>
+<p>To <strong>search for poses</strong>, hover your mouse over the poses,
+then press <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">F</kbd></kbd> and type a search query.
+This will filter the poses to match what you typed.
+The scrollable area will automatically scroll the search field into view.</p>
+</section>
+</section>
+<section id="old-pose-library">
+<span id="pose-library-old"></span><h2>旧版姿态库<a class="headerlink" href="#old-pose-library" title="Permalink to this heading"></a></h2>
+<p>In Blender 3.0, the Asset Browser based pose library, described above, replaced
+its predecessor pose library system. This section describes how to convert poses
+from the old pose library to the current system.</p>
+<section id="converting-old-pose-libraries">
+<span id="bpy-ops-poselib-convert-old-poselib"></span><span id="pose-library-convert-old"></span><h3>转换旧姿态库<a class="headerlink" href="#converting-old-pose-libraries" title="Permalink to this heading"></a></h3>
+<p>旧式姿态库可以通过以下方式转换为姿态资产：</p>
+<ul class="simple">
+<li><p>在动作编辑器中，选择包含了您要转换的姿态库的动作。</p></li>
+<li><p>确保场景摄像机设置正确，以便渲染预览图像。</p></li>
+<li><p>在动作编辑器的姿态库面板，点击 &quot;转换旧版姿态库&quot; 按钮。</p></li>
+<li><p>打开资产浏览器，查看已转换的姿态。</p></li>
+<li><p>如果您对结果感到满意，即可移除旧版姿态库动作。</p></li>
+<li><p>保存 blend 文件。</p></li>
+</ul>
+<p>与往常一样，blend 文件应保存到标记为资产库的目录中，以便使用其他 blend 文件中的姿态资产。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>此转换不会将姿势分配给任何目录，因此它们将出现在 &quot;当前文件&quot; 资产库的 &quot;未分配&quot; 部分。</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="copy_paste.html" class="btn btn-neutral float-left" title="复制/粘贴姿态" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="flip_quats.html" class="btn btn-neutral float-right" title="翻转四元数值" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/animation/armatures/posing/editing/pose_library.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/animation/armatures/posing/editing/pose_library.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fanimation/armatures/posing/editing/pose_library.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fanimation/armatures/posing/editing/pose_library.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

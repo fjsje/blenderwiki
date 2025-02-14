@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>曲线工具（Curve Tools） &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/addons/add_curve/curve_tools.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="添加额外的曲线物体（Extra Objects）" href="extra_objects.html" />
+    <link rel="prev" title="BTracer" href="btracer.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">插件</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#add-ons-category-listings">插件类别列表</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../3d_view/index.html">3D 视图</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">添加曲线</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="assign_shape_keys.html">指定形态键（Assign Shape Keys）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="btracer.html">BTracer</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">曲线工具（Curve Tools）</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#activation">激活</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#interface">界面</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#curve-info">曲线信息</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#curve-edit">曲线编辑</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#intersect">相交</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#surfaces">面</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#loft">Loft</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#sanitize">Sanitize</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#utilities">Utilities</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#path-finder">Path Finder</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="extra_objects.html">添加额外的曲线物体（Extra Objects）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ivy_gen.html">常春藤生成器（Ivy Gen）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sapling.html">苗木生成器（Sapling Tree Gen）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="simplify_curves.html">简化曲线（Simplify Curves）</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../add_mesh/index.html">添加网格</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../animation/index.html">动画</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../baking/index.html">烘焙</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../camera/index.html">摄像机</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../development/index.html">开发</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../import_export/index.html">导入 - 导出</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../interface/index.html">界面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lighting/index.html">光照</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../materials/index.html">材质</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/index.html">网格</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node/index.html">节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../object/index.html">物体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../paint/index.html">绘制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sequencer/index.html">序列编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../system/index.html">系统</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../uv/index.html">UV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../video_tools/index.html">视频工具</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">插件</a></li>
+          <li class="breadcrumb-item"><a href="index.html">添加曲线</a></li>
+      <li class="breadcrumb-item active">曲线工具（Curve Tools）</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="curve-tools">
+<h1>曲线工具（Curve Tools）<a class="headerlink" href="#curve-tools" title="Permalink to this heading"></a></h1>
+<p>这个插件提供对曲线进行操作和编辑的扩展工具。包含了几个 <abbr title="Computer-Aided Design 计算机辅助设计">CAD</abbr> 风格的曲线工具。</p>
+<section id="activation">
+<h2>激活<a class="headerlink" href="#activation" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>打开 Blender 并转到 “偏好设置”，然后转到 “插件” 选项卡。</p></li>
+<li><p>选择 “添加曲线” 类别，然后勾选 “Curve Tools” 以启用插件。</p></li>
+</ul>
+</section>
+<section id="interface">
+<h2>界面<a class="headerlink" href="#interface" title="Permalink to this heading"></a></h2>
+<p>这个插件分成了几个子面板，每个面板包含自己的特定工具集。</p>
+<section id="curve-info">
+<h3>曲线信息<a class="headerlink" href="#curve-info" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">工具<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">侧栏 ‣ 编辑 ‣ 曲线信息</span> 标签</p>
+</dd>
+</dl>
+</div>
+<dl class="simple">
+<dt>曲线</dt><dd><p>Print splines, segments and empty splines information to the Info header and Info editor.</p>
+</dd>
+<dt>样条线</dt><dd><p>Print splines information to the Info header and Info editor.</p>
+</dd>
+<dt>线段</dt><dd><p>Print segments information to the Info header and Info editor.</p>
+</dd>
+<dt>长度</dt><dd><p>Calculate the length of the curve and show in the add-on's panel.</p>
+</dd>
+</dl>
+</section>
+<section id="curve-edit">
+<h3>曲线编辑<a class="headerlink" href="#curve-edit" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id2">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">工具<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">侧栏 ‣ 编辑 ‣ 曲线编辑</span></p>
+</dd>
+</dl>
+</div>
+<dl class="simple">
+<dt>Fillet/Chamfer</dt><dd><p>Round or chamfer Bézier point fillets.</p>
+</dd>
+<dt>轮廓</dt><dd><p>Create an outline around a selected curve object.</p>
+</dd>
+<dt>Recursive Offset</dt><dd><p>Create an offset array.</p>
+</dd>
+<dt>Separate Offset/Selected</dt><dd><p>Separate the outline mesh from the original.</p>
+</dd>
+<dt>细分</dt><dd><p>Subdivide selection or filleted corners.</p>
+</dd>
+<dt>Multi Subdivide</dt><dd><p>Subdivide with level of details.</p>
+</dd>
+<dt>Split at Vertex</dt><dd><p>Cuts the selected points creating openings.</p>
+</dd>
+<dt>Discretize Curve</dt><dd><p>Disconnect the selected points.</p>
+</dd>
+<dt>Array Splines</dt><dd><p>Create an array of the selected curves in Edit Mode.</p>
+</dd>
+</dl>
+</section>
+<section id="intersect">
+<h3>相交<a class="headerlink" href="#intersect" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id3">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">工具<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">侧栏 ‣ 编辑 ‣ 相交</span></p>
+</dd>
+</dl>
+</div>
+<dl class="simple">
+<dt>2D Curve Boolean</dt><dd><p>Boolean selected curves on a 2D plane.</p>
+</dd>
+<dt>Intersect Curves</dt><dd><p>Create an intersection between flat curves on the same plane.</p>
+</dd>
+</dl>
+</section>
+<section id="surfaces">
+<h3>面<a class="headerlink" href="#surfaces" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id4">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">工具<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">侧栏 ‣ 编辑 ‣ 曲面</span></p>
+</dd>
+</dl>
+</div>
+<dl class="simple">
+<dt>Birail</dt><dd><p>It creates a surface from a profile and two paths.
+The order in which you select the curves and its direction is important to make this function properly.</p>
+</dd>
+<dt>Convert Bézier to Surface</dt><dd><p>Convert the selected curve to a NURBS surface.</p>
+</dd>
+<dt>Convert Faces to Bézier</dt><dd><p>Select faces and convert them to Bézier curves.</p>
+</dd>
+</dl>
+<section id="loft">
+<h4>Loft<a class="headerlink" href="#loft" title="Permalink to this heading"></a></h4>
+<div class="refbox admonition" id="id5">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">工具<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">侧栏 ‣ 编辑 ‣ 曲面 ‣ Loft</span></p>
+</dd>
+</dl>
+</div>
+<dl class="simple">
+<dt>Loft</dt><dd><p>Loft a mesh object between two Bézier curves.</p>
+</dd>
+<dt>Auto Loft</dt><dd><p>Turn on to store the loft data if you move or edit the curves.</p>
+</dd>
+<dt>Update Auto Loft</dt><dd><p>Press this button to update the new loft mesh position after moving or editing parent curves.</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="sanitize">
+<h3>Sanitize<a class="headerlink" href="#sanitize" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id6">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">工具<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">侧栏 ‣ 编辑 ‣ Sanitize</span></p>
+</dd>
+</dl>
+</div>
+<dl class="simple">
+<dt>Set Origin to Spline Start</dt><dd><p>Move the origin of the curve to the first point.</p>
+</dd>
+<dt>Reset Scale</dt><dd><p>Reset the objects scale to (1, 1, 1).</p>
+</dd>
+</dl>
+<p class="rubric">Cleanup:</p>
+<dl class="simple">
+<dt>Remove Doubles</dt><dd><p>Remove doubled points.</p>
+</dd>
+<dt>Short Splines</dt><dd><p>Remove selected splines based on a threshold.</p>
+</dd>
+</dl>
+<p class="rubric">Join Splines:</p>
+<dl class="simple">
+<dt>Join Neighboring Splines</dt><dd><p>Join selected splines based on a threshold.</p>
+</dd>
+</dl>
+</section>
+<section id="utilities">
+<h3>Utilities<a class="headerlink" href="#utilities" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id7">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">工具<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">侧栏 ‣ 编辑 ‣ 实用工具</span></p>
+</dd>
+</dl>
+</div>
+<p class="rubric">Curve Resolution:</p>
+<dl class="simple">
+<dt>Show [ESC]</dt><dd><p>Display the resolution in the interface with a colored overlay.</p>
+</dd>
+</dl>
+<p class="rubric">Spline Order:</p>
+<dl class="simple">
+<dt>Show [ESC]</dt><dd><p>Display and arrange the sequence.</p>
+</dd>
+</dl>
+<section id="path-finder">
+<h4>Path Finder<a class="headerlink" href="#path-finder" title="Permalink to this heading"></a></h4>
+<div class="refbox admonition" id="id8">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">工具<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">侧栏 ‣ 编辑 ‣ 实用工具 ‣ Path Finder</span></p>
+</dd>
+</dl>
+</div>
+<p>Tools for paths.</p>
+<div class="refbox admonition" id="id9">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">类别<span class="colon">:</span></dt>
+<dd class="field-odd"><p>添加曲线</p>
+</dd>
+<dt class="field-even">描述<span class="colon">:</span></dt>
+<dd class="field-even"><p>添加贝塞尔/NURBS曲线/曲面的相关功能。</p>
+</dd>
+<dt class="field-odd">位置<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">侧栏 ‣ 编辑</span> 标签</p>
+</dd>
+<dt class="field-even">文件<span class="colon">:</span></dt>
+<dd class="field-even"><p>curve_tools 文件夹</p>
+</dd>
+<dt class="field-odd">作者<span class="colon">:</span></dt>
+<dd class="field-odd"><p>MacKracken, cwolf3d, Alexander Meißner (Lichtso)</p>
+</dd>
+<dt class="field-even">贡献者<span class="colon">:</span></dt>
+<dd class="field-even"><p>guy lateur, Alexander Meißner (Lichtso), Dealga McArdle (zeffii), Marvin K. Breuer (MKB)</p>
+</dd>
+<dt class="field-odd">维护者<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Vladimir Spivak (cwolf3d)</p>
+</dd>
+<dt class="field-even">许可证<span class="colon">:</span></dt>
+<dd class="field-even"><p>通用公共许可证</p>
+</dd>
+<dt class="field-odd">支持级别<span class="colon">:</span></dt>
+<dd class="field-odd"><p>社区</p>
+</dd>
+<dt class="field-even">说明<span class="colon">:</span></dt>
+<dd class="field-even"><p>此插件与 Blender 捆绑在一起。</p>
+</dd>
+</dl>
+</div>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="btracer.html" class="btn btn-neutral float-left" title="BTracer" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="extra_objects.html" class="btn btn-neutral float-right" title="添加额外的曲线物体（Extra Objects）" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/addons/add_curve/curve_tools.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/addons/add_curve/curve_tools.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Faddons/add_curve/curve_tools.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Faddons/add_curve/curve_tools.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

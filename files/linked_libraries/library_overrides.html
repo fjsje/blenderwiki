@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>库重写 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/files/linked_libraries/library_overrides.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="资产库" href="../asset_libraries/index.html" />
+    <link rel="prev" title="代理" href="library_proxies.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">资产、文件 &amp; 数据系统</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blend/index.html">Blender 文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../data_blocks.html">数据块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom_properties.html">自定义属性</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">关联库</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="link_append.html">关联与追加</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_proxies.html">代理</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">库重写</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#override-hierarchies">重写层级</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#resyncing-overrides">同步重写</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#non-editable-overrides">不可编辑重写</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#make-an-override">生成一个重写</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#selected-items">选择项目</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#dview">3D预览</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#outliner">大纲视图</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#id-widget">ID部件</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#make-editable">使其可编辑</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#reset-an-override">重置库重写</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#clear-an-override">清空重写</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#edit-an-override">编辑重写</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#define-overrides">定义重写</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#define-single-override">定义单个覆盖</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#remove-overrides">移除覆盖</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#remove-single-override">覆盖单个覆盖</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#troubleshoot-an-override-hierarchy">重新同步库重写层级</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#resync">重新同步</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#resync-enforce">强制重新同步</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#delete">删除</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../asset_libraries/index.html">资产库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../media/index.html">媒体格式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../import_export.html">导入 &amp; 导出文件</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">资产、文件 &amp; 数据系统</a></li>
+          <li class="breadcrumb-item"><a href="index.html">关联库</a></li>
+      <li class="breadcrumb-item active">库重写</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="library-overrides">
+<h1>库重写<a class="headerlink" href="#library-overrides" title="Permalink to this heading"></a></h1>
+<p>库重写是一个系统，旨在允许编辑<a class="reference internal" href="link_append.html"><span class="doc">链接数据</span></a>，同时使其与原始库数据保持同步。大多数类型的链接数据块都可以被重写，然后可以编辑这些覆写的属性。当库数据更改时，将相应更新被覆写的库的未修改属性。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>旧的代理系统已在 Blender 3.0 中弃用，并在 Blender 3.2 中完全删除。加载 blend 文件时，会自动从代理转换为库重写，但复杂字符的结果无法保证，可能需要手动修复。</p>
+</div>
+<p>库重写支持：</p>
+<ul class="simple">
+<li><p>同一链接数据的多个独立覆盖（例如，在同一场景中具有相同的字符多次）。</p></li>
+<li><p>在堆栈中的任何位置添加新的修改器和约束。</p></li>
+<li><p>递归链接覆盖（即链接和覆盖从另一个库文件等）。</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>There are known issues that have to be addressed. See the <a class="reference external" href="https://projects.blender.org/blender/blender/issues/73318">main task of the project</a>, for more details.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>虽然在大多数情况下，库重写数据会保留参考链接数据的丢失（例如，如果库文件变得不可用或被重新定位），但有一些例外。</p>
+<p>The main one is probably posed (but not animated) armature objects, when their Armature obdata
+itself is not overridden. The Pose bones of an armature object are fully linked to the bones
+of its Armature obdata, if the later goes missing, the pose bones are definitively lost.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>正确的收藏布局很重要</p>
+<p>为了使库重写正常工作，最好 <strong>所有</strong> 字符所需的集合是根（链接和实例化）的子集，以便有一个清晰的层次结构。否则，一些数据可能无法被适当地自动覆写，并且其他操作可能不太可靠。</p>
+</div>
+<section id="override-hierarchies">
+<h2>重写层级<a class="headerlink" href="#override-hierarchies" title="Permalink to this heading"></a></h2>
+<p>层次结构是处理库重写时需要理解的一个非常重要的概念。在Blender中，现实生活资产（角色、道具、集合等）几乎从未由单个数据块构成，而是一组彼此具有依赖关系的数据块。例如，角色通常将具有骨架对象、几个几何对象、绑定控制器对象、所有这些对象的物体数据、材质、纹理等。</p>
+<p>这些关系可以表示为树，具有根数据块 &quot;链接&quot; 其所有依赖关系，递归。在库重写的情况下，层次结构的根通常也是导入资产（通常是集合）时直接链接的数据块。</p>
+<p>这种层次结构的概念也可以被看作是某种超级元数据块。当同一链接数据有多个覆盖时，它是非常关键的，因为它可以清楚地将一个给定的数据块识别为一个覆盖，不会给影响整个层次结构的过程留下任何歧义（例如，将覆盖与它们的链接数据重新同步）。它还允许在不同层次的数据块之间共享关系，就像同一个字符的两个不同覆盖之间的亲子关系。</p>
+</section>
+<section id="resyncing-overrides">
+<h2>同步重写<a class="headerlink" href="#resyncing-overrides" title="Permalink to this heading"></a></h2>
+<p>关联的数据块之间的关系可能会发生变化，从而导致过时的重写。发生这种情况时，需要重新同步重写，以匹配其层次结构的新结构。如果在打开 blend 文件时需要，重写将自动重新同步。但是，有时可能需要手动重新同步它们，请参阅<a class="reference internal" href="#troubleshoot-an-override-hierarchy">重写层次结构的故障排除</a>。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Blender还可以从外部库重新同步库重写，然后将其链接到工作文件中。然而，这是一个昂贵的过程，每次加载工作文件时都需要完全重做，因为Blender无法直接编辑/修改外部库。</p>
+<p>因此，链接覆盖（或创建递归覆盖）的用户应确保定期更新其库文件，以避免在文件加载时出现这种开销（通常，打开和保存这些库文件应足以更新它们）。</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>可以在文档中禁用自动重新同步 <a class="reference internal" href="../../editors/preferences/experimental.html"><span class="doc">试验特性设置</span></a>。</p>
+</div>
+</section>
+<section id="non-editable-overrides">
+<h2>不可编辑重写<a class="headerlink" href="#non-editable-overrides" title="Permalink to this heading"></a></h2>
+<p>出于技术原因（数据块之间的关系的存储方式），Blender需要创建大量数据块的覆盖，即使其中只有一两个数据块实际上需要由用户编辑。为了减少信息量和潜在的不必要编辑风险，大多数数据块现在默认标记为不可编辑。一旦创建了覆盖，就可以更改此设置。</p>
+</section>
+<section id="make-an-override">
+<span id="bpy-ops-ui-override-idtemplate-make"></span><span id="bpy-ops-object-make-override-library"></span><span id="bpy-ops-outliner-liboverride-operation"></span><h2>生成一个重写<a class="headerlink" href="#make-an-override" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">编辑器<span class="colon">:</span></dt>
+<dd class="field-odd"><p>3D 视图，大纲，属性</p>
+</dd>
+<dt class="field-even">模式<span class="colon">:</span></dt>
+<dd class="field-even"><p>物体模式</p>
+</dd>
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">3D 视图 ‣ 标题栏 ‣ 物体 ‣ 库重写 ‣ 生成</span> <span class="menuselection">大纲 ‣ 上下文菜单 ‣ 库重写 ‣ 生成</span> <span class="menuselection">ID 部件 ‣ 上下文菜单 ‣ 库重写 ‣ 生成</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p>在 ID 部件的 '关联'/'重写' 按钮上点击 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">鼠标左键</kbd></kbd>。</p>
+</dd>
+</dl>
+</div>
+<p>从选定的数据块创建覆盖。</p>
+<p>Blender会自动为所有必需的数据块创建覆盖，以确保创建有效的覆盖层次结构。</p>
+<p>只有从所选项目创建的覆盖将可由用户编辑。</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>从ID小部件（主要来自 <em>属性</em> 编辑器）创建库重写的支持是有限的。虽然应支持最常见的用法，特别是物体、网格等，但仍有许多待实施。</p>
+</div>
+<section id="selected-items">
+<h3>选择项目<a class="headerlink" href="#selected-items" title="Permalink to this heading"></a></h3>
+<p>根据从何处创建重写，有几种方法可以 &quot;选择&quot; 要覆写的项目和允许用户编辑的项目。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>这也适用于其他共同操作（<em>重置</em> 和 <em>清除</em>）。</p>
+<p>仅在大纲中提供的 <em>疑难解答</em> 高级操作始终适用于整个重写层次结构。</p>
+</div>
+<section id="dview">
+<h4>3D预览<a class="headerlink" href="#dview" title="Permalink to this heading"></a></h4>
+<p>选定的物体将被视为选定物体。</p>
+<p>当所选物体是实例化关联集合的本地 <em>空物体</em> 时，将发生以下情况：<em>空物体</em> 将被删除。其关联的集合将被覆写，并且该覆写将在当前 <em>视图层</em> 中的相同集合中实例化。如果集合包含 <em>骨架</em> 物体，则它们将可由用户编辑。否则，创建的覆写将不会被定义为用户可编辑。</p>
+</section>
+<section id="outliner">
+<h4>大纲视图<a class="headerlink" href="#outliner" title="Permalink to this heading"></a></h4>
+<p>此操作仅适用于选定的项目，仅适用于其内容，或两者兼而有之。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>使用 <em>被选 &amp; 目录</em> 是一种简单的方法，可以立即获得所有新创建的覆盖，用户可编辑。</p>
+</div>
+</section>
+<section id="id-widget">
+<h4>ID部件<a class="headerlink" href="#id-widget" title="Permalink to this heading"></a></h4>
+<p>只有 ID 部件中的关联数据块才被视为已选中，一旦被覆写，则设置为可编辑。</p>
+</section>
+</section>
+<section id="make-editable">
+<h3>使其可编辑<a class="headerlink" href="#make-editable" title="Permalink to this heading"></a></h3>
+<p>That same operation can also be used to make existing overrides user-editable,
+after they have been created, or <a class="reference internal" href="#clear-override"><span class="std std-ref">cleared</span></a></p>
+</section>
+</section>
+<section id="reset-an-override">
+<span id="bpy-ops-ui-override-idtemplate-reset"></span><span id="bpy-ops-object-reset-override-library"></span><h2>重置库重写<a class="headerlink" href="#reset-an-override" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id2">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">编辑器<span class="colon">:</span></dt>
+<dd class="field-odd"><p>3D 视图，大纲，属性</p>
+</dd>
+<dt class="field-even">模式<span class="colon">:</span></dt>
+<dd class="field-even"><p>物体模式</p>
+</dd>
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">3D 视图 ‣ 标题栏 ‣ 物体 ‣ 库重写 ‣ 重置</span> <span class="menuselection">大纲 ‣ 上下文菜单 ‣ 库重写 ‣ 重置</span> <span class="menuselection">ID 部件 ‣ 上下文菜单 ‣ 库重写 ‣ 重置</span></p>
+</dd>
+</dl>
+</div>
+<p>将所选覆盖重置为原始值（来自链接的参考数据）。与 <em>清除</em> 操作不同，覆盖将保持完全可编辑，并且永远不会被删除。</p>
+</section>
+<section id="clear-an-override">
+<span id="clear-override"></span><span id="bpy-ops-ui-override-idtemplate-clear"></span><span id="bpy-ops-object-clear-override-library"></span><h2>清空重写<a class="headerlink" href="#clear-an-override" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id3">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">编辑器<span class="colon">:</span></dt>
+<dd class="field-odd"><p>3D 视图，大纲，属性</p>
+</dd>
+<dt class="field-even">模式<span class="colon">:</span></dt>
+<dd class="field-even"><p>物体模式</p>
+</dd>
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">3D 视图 ‣ 标题栏 ‣ 物体 ‣ 库重写 ‣ 清空</span> <span class="menuselection">大纲 ‣ 上下文菜单 ‣ 库重写 ‣ 清空</span> <span class="menuselection">ID 部件 ‣ 上下文菜单 ‣ 库重写 ‣ 清空</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">鼠标左键</kbd></kbd> 在 ID 部件的 '重写' 按钮上。</p>
+</dd>
+</dl>
+</div>
+<p>将选定的覆盖重置为原始值，如果可能，在不破坏现有层次结构的情况下，删除它们并用其链接的引用数据替换它们。否则，保留覆盖，但将其标记为不可编辑。</p>
+</section>
+<section id="edit-an-override">
+<h2>编辑重写<a class="headerlink" href="#edit-an-override" title="Permalink to this heading"></a></h2>
+<p>基本上，覆盖编辑的方式与常规本地数据块相同。您可以在它们上使用运算符，从各种编辑器编辑它们的属性等。但是，有一些限制，最值得注意的是，编辑模式不允许覆盖。在大多数情况下，编辑房源后，您可以看到房源被其蓝色轮廓/背景覆盖。</p>
+<p>您还可以动画覆盖，动画属性只需替换/取代覆盖。请注意，您不能覆盖/编辑现有动画，您必须创建一个新的操作。您可以手动定义或从相关属性的上下文菜单中删除覆盖。如果覆盖不可编辑，则必须先使其可编辑。</p>
+<section id="define-overrides">
+<span id="bpy-ops-ui-override-type-set-button"></span><h3>定义重写<a class="headerlink" href="#define-overrides" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id4">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">编辑器<span class="colon">:</span></dt>
+<dd class="field-odd"><p>任意</p>
+</dd>
+<dt class="field-even">模式<span class="colon">:</span></dt>
+<dd class="field-even"><p>物体模式</p>
+</dd>
+<dt class="field-odd">属性<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">上下文菜单 ‣ 定义重写</span> <span class="menuselection">上下文菜单 ‣ 定义单个重写</span></p>
+</dd>
+</dl>
+</div>
+<p>在本地 blend 文件中标记要覆盖的属性。对于数组属性，所有元素都将被覆盖。</p>
+</section>
+<section id="define-single-override">
+<h3>定义单个覆盖<a class="headerlink" href="#define-single-override" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id5">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">编辑器<span class="colon">:</span></dt>
+<dd class="field-odd"><p>任意</p>
+</dd>
+<dt class="field-even">模式<span class="colon">:</span></dt>
+<dd class="field-even"><p>物体模式</p>
+</dd>
+<dt class="field-odd">属性<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">上下文菜单 ‣ 定义单个重写</span></p>
+</dd>
+</dl>
+</div>
+<p>在本地 blend 文件中标记要覆盖的属性。对于数组属性，仅将覆写所选元素。</p>
+</section>
+<section id="remove-overrides">
+<span id="bpy-ops-ui-remove-override-button"></span><h3>移除覆盖<a class="headerlink" href="#remove-overrides" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id6">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">编辑器<span class="colon">:</span></dt>
+<dd class="field-odd"><p>任意</p>
+</dd>
+<dt class="field-even">模式<span class="colon">:</span></dt>
+<dd class="field-even"><p>物体模式</p>
+</dd>
+<dt class="field-odd">属性<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">上下文菜单 ‣ 移除重写</span> <span class="menuselection">上下文菜单 ‣ 移除单个重写</span></p>
+</dd>
+</dl>
+</div>
+<p>从覆盖中删除属性。将使用数据块中链接的值。对于数组属性，所有元素将从覆盖中删除。</p>
+</section>
+<section id="remove-single-override">
+<h3>覆盖单个覆盖<a class="headerlink" href="#remove-single-override" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id7">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">编辑器<span class="colon">:</span></dt>
+<dd class="field-odd"><p>任意</p>
+</dd>
+<dt class="field-even">模式<span class="colon">:</span></dt>
+<dd class="field-even"><p>物体模式</p>
+</dd>
+<dt class="field-odd">属性<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">上下文菜单 ‣ 移除单个重写</span></p>
+</dd>
+</dl>
+</div>
+<p>从覆盖中删除属性。将使用数据块中链接的值。对于数组属性，仅将从覆盖中删除所选元素。</p>
+</section>
+</section>
+<section id="troubleshoot-an-override-hierarchy">
+<span id="bpy-ops-outliner-liboverride-troubleshoot-operation"></span><span id="troubleshootoverride"></span><h2>重新同步库重写层级<a class="headerlink" href="#troubleshoot-an-override-hierarchy" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id8">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">编辑器<span class="colon">:</span></dt>
+<dd class="field-odd"><p>大纲视图</p>
+</dd>
+<dt class="field-even">模式<span class="colon">:</span></dt>
+<dd class="field-even"><p>物体模式</p>
+</dd>
+<dt class="field-odd">大纲视图<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">上下文菜单 ‣ 库重写 ‣ 排除故障</span></p>
+</dd>
+</dl>
+</div>
+<p>这些操作仅在Outliner上下文菜单中可用。它们可以帮助修复损坏的覆盖层次结构。</p>
+<section id="resync">
+<h3>重新同步<a class="headerlink" href="#resync" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id9">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">编辑器<span class="colon">:</span></dt>
+<dd class="field-odd"><p>大纲视图</p>
+</dd>
+<dt class="field-even">模式<span class="colon">:</span></dt>
+<dd class="field-even"><p>物体模式</p>
+</dd>
+<dt class="field-odd">大纲视图<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">上下文菜单 ‣ 库重写 ‣ 排除故障 ‣ 重新同步</span></p>
+</dd>
+</dl>
+</div>
+<p>链接数据的层次结构（链接数据块之间的关系）可能会发生变化。需要重新同步覆盖以匹配新层次结构。此运算符将重新同步覆盖以匹配库中的新层次结构。</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>重新同步库重写时，如果在原始库中更改编辑的覆写，则可能会删除它们。如果是这种情况，将显示一条警告消息，说明删除了多少覆写，如果删除是不合需要的，则可以在保存 blend 文件之前撤销重新同步。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>此过程是自动的</p>
+<p>通常，当Blender检测到需要它时，在文档加载时会自动执行此操作，除非在 <a class="reference internal" href="../../editors/preferences/experimental.html"><span class="doc">实验首选项</span></a> 中禁用它。</p>
+</div>
+</section>
+<section id="resync-enforce">
+<h3>强制重新同步<a class="headerlink" href="#resync-enforce" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id10">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">编辑器<span class="colon">:</span></dt>
+<dd class="field-odd"><p>大纲视图</p>
+</dd>
+<dt class="field-even">模式<span class="colon">:</span></dt>
+<dd class="field-even"><p>物体模式</p>
+</dd>
+<dt class="field-odd">大纲视图<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">上下文菜单 ‣ 库重写 ‣ 排除故障 ‣ 强制重新同步</span></p>
+</dd>
+</dl>
+</div>
+<p>在某些情况下，特别是对于那些保存有 &quot;破损&quot;（非层次匹配）覆写的旧 blend 文件，常规的重新同步本身不能像预期的那样正确重建重写（例如，一些对象可能会丢失）。为了解决这个问题，这个操作者从其链接的引用以及其依赖的层次结构重建本地重写，强制该层次结构与关联的数据相匹配（即忽略数据块属性上现有的重写）。这类似于常规的重新同步，但更有力，更积极，代价是可能失去 ID 指针属性上的一些重写。</p>
+</section>
+<section id="delete">
+<h3>删除<a class="headerlink" href="#delete" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id11">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">编辑器<span class="colon">:</span></dt>
+<dd class="field-odd"><p>大纲视图</p>
+</dd>
+<dt class="field-even">模式<span class="colon">:</span></dt>
+<dd class="field-even"><p>物体模式</p>
+</dd>
+<dt class="field-odd">大纲视图<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">上下文菜单 ‣ 库重写 ‣ 排除故障 ‣ 删除</span></p>
+</dd>
+</dl>
+</div>
+<p>删除整个库重写层次结构，并将所有这些重写数据块替换为其原始链接数据块。这将完全恢复 <em>Make</em> 操作。</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="library_proxies.html" class="btn btn-neutral float-left" title="代理" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../asset_libraries/index.html" class="btn btn-neutral float-right" title="资产库" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/files/linked_libraries/library_overrides.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/files/linked_libraries/library_overrides.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Ffiles/linked_libraries/library_overrides.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Ffiles/linked_libraries/library_overrides.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

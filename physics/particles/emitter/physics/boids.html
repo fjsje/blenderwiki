@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>群体 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/physics/particles/emitter/physics/boids.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../../_static/js/version_switch.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../../copyright.html" />
+    <link rel="next" title="流体" href="fluid.html" />
+    <link rel="prev" title="键控" href="keyed.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">物理</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../rigid_body/index.html">刚体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../cloth/index.html">布料</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../soft_body/index.html">软体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../fluid/index.html">流体</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">粒子系统</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../particle_system_panel.html">粒子系统面板</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">发射体</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../emission.html">自发光（发射）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../cache.html">缓存</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../velocity.html">速度</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../rotation.html">旋转</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">物理</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l5"><a class="reference internal" href="newtonian.html">牛顿</a></li>
+<li class="toctree-l5"><a class="reference internal" href="keyed.html">键控</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">群体</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#movement">移动</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#battle">战斗</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#misc">杂项</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#relations">关系</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#deflection">偏转</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#force-fields">力场</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#boid-brain">群集行为逻辑</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#goal-rule">目标规则</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#avoid-rule">回避规则</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#avoid-collision-rule">回避碰撞规则</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#separate-rule">分离规则</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#flock-rule">聚集规则</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#follow-leader-rule">跟随引导规则</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#average-speed-rule">平均速度规则</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#fight-rule">战斗规则</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="fluid.html">流体</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../render.html">渲染</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../display.html">视图显示</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../children.html">子级</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../force_field.html">力场</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../vertex_groups.html">顶点组</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../hair/index.html">毛发</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../texture_influence.html">纹理影响</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mode.html">粒子编辑模式</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../dynamic_paint/index.html">动态绘画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../forces/index.html">力场</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../collision.html">碰撞</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../baking.html">烘焙物理模拟</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../simulation_nodes.html">模拟节点</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">物理</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">粒子系统</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">发射体</a></li>
+          <li class="breadcrumb-item"><a href="index.html">物理</a></li>
+      <li class="breadcrumb-item active">群体</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="boids">
+<span id="bpy-ops-boid"></span><span id="bpy-types-boid"></span><h1>群体<a class="headerlink" href="#boids" title="Permalink to this heading"></a></h1>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">粒子系统 ‣ 物理</span></p>
+</dd>
+<dt class="field-even">类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>群体</p>
+</dd>
+</dl>
+</div>
+<p>Boids粒子系统由有限的人工智能控制，可以编程以遵循基本规则和行为。它们非常适合模拟鸡群，群体，群体以及各种动物，昆虫和鱼类或捕食者与捕食者模拟的学校。他们可以对其他对象的存在以及他们自己系统的成员做出反应。Boids只能处理一定数量的信息，因此Boid Brain规则的顺序非常重要。在某些情况下，仅评估前三个参数。</p>
+<section id="movement">
+<h2>移动<a class="headerlink" href="#movement" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id2">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">粒子系统 ‣ 物理 ‣ 移动</span></p>
+</dd>
+</dl>
+</div>
+<p>群体尝试避免激活碰撞的物体。他们试图达到目标物体，并根据Boid Brain设置从 &quot;捕食者&quot; 中飞出。</p>
+<p>Boids can have different physics depending on whether they are in the air,
+or on land (on collision object).</p>
+<dl class="simple">
+<dt>允许飞行</dt><dd><p>让群体在空中移动。</p>
+</dd>
+<dt>允许着陆</dt><dd><p>允许群体在陆地上移动。</p>
+</dd>
+<dt>允许攀爬</dt><dd><p>允许群体攀爬目标物体。</p>
+</dd>
+<dt>最大空速</dt><dd><p>设置空中的最大速度。</p>
+</dd>
+<dt>最小空速</dt><dd><p>设置空中的最小速度。</p>
+</dd>
+<dt>最大空中加速度</dt><dd><p>空气中的横向加速度，最大速度（转弯）的百分比。定义群体能够改变方向的速度。</p>
+</dd>
+<dt>最大空中角速度</dt><dd><p>空气切向加速度，180度。定义群体可以突然加速以实现规则的程度。</p>
+</dd>
+<dt>空中的个体私有空间</dt><dd><p>半空中的个体空间。粒径百分比。</p>
+</dd>
+<dt>着陆平滑度</dt><dd><p>群体如何平稳着陆。</p>
+</dd>
+<dt>最大着陆速率</dt><dd><p>设置最大的陆地速度。</p>
+</dd>
+<dt>跳跃速率</dt><dd><p>最大的跳跃速度。</p>
+</dd>
+<dt>最大着陆加速度</dt><dd><p>陆地上的横向加速度，最大速度（转弯）的百分比。定义群体能够改变方向的速度。</p>
+</dd>
+<dt>最大着陆角速度</dt><dd><p>陆地上的切向加速度，180度。定义群体可以突然加速以实现规则的程度。</p>
+</dd>
+<dt>着陆独占空间</dt><dd><p>群体中个体在陆地的空间班半径。粒子系统的百分比。</p>
+</dd>
+<dt>着陆粘滞力</dt><dd><p>影响群体着陆所需的起始作用力。</p>
+</dd>
+<dt>碰撞集合</dt><dd><p>仅与此集合中的对象发生碰撞。</p>
+</dd>
+</dl>
+</section>
+<section id="battle">
+<h2>战斗<a class="headerlink" href="#battle" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id3">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">粒子系统 ‣ 物理 ‣ 战斗</span></p>
+</dd>
+</dl>
+</div>
+<dl class="simple">
+<dt>健康状态</dt><dd><p>出生时的初始健康状态。</p>
+</dd>
+<dt>强度</dt><dd><p>攻击时每秒造成的最大伤害。</p>
+</dd>
+<dt>攻击性</dt><dd><p>群体这次比敌人更强大。</p>
+</dd>
+<dt>精度</dt><dd><p>攻击的准确性。</p>
+</dd>
+<dt>范围</dt><dd><p>群里可以攻击的最大距离。</p>
+</dd>
+</dl>
+</section>
+<section id="misc">
+<h2>杂项<a class="headerlink" href="#misc" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id4">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">粒子系统 ‣ 物理 ‣ 杂项</span></p>
+</dd>
+</dl>
+</div>
+<dl class="simple">
+<dt>倾斜</dt><dd><p>转弯时速度矢量周围的旋转量。1.0的倾斜量具有自然的倾斜效应。</p>
+</dd>
+<dt>音调</dt><dd><p>侧向量周围的旋转量。</p>
+</dd>
+<dt>高度</dt><dd><p>群体相对于粒子系统大小的高度。</p>
+</dd>
+</dl>
+</section>
+<section id="relations">
+<h2>关系<a class="headerlink" href="#relations" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id5">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">粒子系统 ‣ 物理 ‣ 关系</span></p>
+</dd>
+</dl>
+</div>
+<dl class="simple">
+<dt>目标</dt><dd><p>此 <a class="reference internal" href="../../../../interface/controls/templates/list_view.html#ui-list-view"><span class="std std-ref">列表视图</span></a> 允许你设置其他粒子系统以与该群体做出反应。</p>
+</dd>
+<dt>目标物体</dt><dd><p>用 <a class="reference internal" href="../../../../interface/controls/templates/data_block.html#ui-data-id"><span class="std std-ref">数据 ID</span></a> 来选择与设置于粒子系统中的的对象。</p>
+</dd>
+<dt>系统</dt><dd><p>在粒子面板的列表视图中设置的 <em>对象</em> 粒子系统的索引。</p>
+</dd>
+<dt>模式</dt><dd><dl class="simple">
+<dt>敌人</dt><dd><p>讲类型设置为 <em>敌人</em> 将导致系统互相争斗。</p>
+</dd>
+<dt>友军</dt><dd><p>将使系统协同作战。</p>
+</dd>
+<dt>中立</dt><dd><p>不参与他们彼此之间的战斗。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<section id="deflection">
+<h3>偏转<a class="headerlink" href="#deflection" title="Permalink to this heading"></a></h3>
+<p>群体将根据碰撞规则的权重尝试避免偏转对象。适用于凸面（凹面还需要一些做些设置）。</p>
+</section>
+<section id="force-fields">
+<h3>力场<a class="headerlink" href="#force-fields" title="Permalink to this heading"></a></h3>
+<p>与其他物理类型一样，群体也收外力场的影响。</p>
+<p>此外，特殊的 <em>群体</em> 力场可以与群体物理一起使用。这些效果器可以是群体试图避免的捕食者（正强度），或者是群体试图根据 <em>群体首脑</em> 的（分别) <em>忽略</em> 和 <em>攻击目标</em> 规则达到的目标(负强度）。</p>
+</section>
+</section>
+<section id="boid-brain">
+<h2>群集行为逻辑<a class="headerlink" href="#boid-brain" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id6">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">粒子系统 ‣ 物理 ‣ 群集行为逻辑</span></p>
+</dd>
+</dl>
+</div>
+<p>群集行为逻辑面板控制群簇粒子间互动的方式。群簇的行为由一系列规则控制。只能解算列表中的一定数量的信息。如果超出内存容量，则忽略其余规则。</p>
+<p>默认情况下，规则从顶部列表解析到底部列表（因此给出明确的优先级），并且可以使用右侧的小箭头按钮修改顺序。</p>
+<dl>
+<dt>规则解算</dt><dd><p>有三种方法可以控制规则的解算方式：</p>
+<dl class="simple">
+<dt>平均</dt><dd><p>所有规则都为平均值。</p>
+</dd>
+<dt>随机</dt><dd><p>为每个群体选择随机规则。</p>
+</dd>
+<dt>模糊</dt><dd><p>使用模糊逻辑评估规则。规则从上到下依次评估。只有影响 <em>规则模糊度</em> 阈值以上的第一条规则才会被评估。该值应视为群体会在多大程度上努力遵守给定的规则（值为 1 表示群体会始终遵守规则，值为 0 表示永远不会遵守规则）。如果群体同时遇到一个以上的冲突条件，它会根据每条规则各自的权重来尽量满足所有规则。</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>给定的群体将尽可能多地尝试遵守它所给出的每个规则，但在某些情况下，某些规则很可能会优先于其他规则。例如，为了避开捕食者，一个群体可能会 &quot;忘记&quot; 碰撞，分离和群体规则，这意味着 &quot;在恐慌&quot; 时，它很可能遇到障碍物，例如，即使被指示不要这样做，大多数时候也是如此。</p>
+</div>
+</dd>
+<dt>在空中</dt><dd><p>当前规则会影响在飞行时飞行的群体。</p>
+</dd>
+<dt>在地上</dt><dd><p>当前规则会影响不飞行时的群体。</p>
+</dd>
+</dl>
+<section id="goal-rule">
+<h3>目标规则<a class="headerlink" href="#goal-rule" title="Permalink to this heading"></a></h3>
+<p>寻求目标。</p>
+<dl class="simple">
+<dt>物体</dt><dd><p>指定目标对象。如果未指定，则将具有负强度的群体力场用作目标。</p>
+</dd>
+<dt>预测</dt><dd><p>预测目标的移动。</p>
+</dd>
+</dl>
+</section>
+<section id="avoid-rule">
+<h3>回避规则<a class="headerlink" href="#avoid-rule" title="Permalink to this heading"></a></h3>
+<p>忽略 “攻击者”。</p>
+<dl class="simple">
+<dt>物体</dt><dd><p>指定要忽略的对象。如果未指定，具有正强度的群体力场讲作为攻击者。</p>
+</dd>
+<dt>预测</dt><dd><p>预测目标的移动。</p>
+</dd>
+<dt>畏惧系数</dt><dd><p>如果危险超过此阈值，则回避对象。</p>
+</dd>
+</dl>
+</section>
+<section id="avoid-collision-rule">
+<h3>回避碰撞规则<a class="headerlink" href="#avoid-collision-rule" title="Permalink to this heading"></a></h3>
+<p>避免激活偏转的对象。</p>
+<dl class="simple">
+<dt>群体</dt><dd><p>避免与其他群体发生碰撞。</p>
+</dd>
+<dt>导流板</dt><dd><p>避免与偏转对象发生碰撞。</p>
+</dd>
+<dt>向前看</dt><dd><p>停顿几秒思考。</p>
+</dd>
+</dl>
+</section>
+<section id="separate-rule">
+<h3>分离规则<a class="headerlink" href="#separate-rule" title="Permalink to this heading"></a></h3>
+<p>群体彼此分离。</p>
+</section>
+<section id="flock-rule">
+<h3>聚集规则<a class="headerlink" href="#flock-rule" title="Permalink to this heading"></a></h3>
+<p>复制邻近群体的动作，但互相避开。</p>
+</section>
+<section id="follow-leader-rule">
+<h3>跟随引导规则<a class="headerlink" href="#follow-leader-rule" title="Permalink to this heading"></a></h3>
+<p>脱离群体跟随引导对象。</p>
+<dl>
+<dt>距离</dt><dd><p>与首领保持跟随的距离。</p>
+</dd>
+<dt>线形</dt><dd><p>与首领在一条线上跟随。</p>
+<dl class="simple">
+<dt>队列规模</dt><dd><p>一条队列允许跟随的群簇数量。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+<section id="average-speed-rule">
+<h3>平均速度规则<a class="headerlink" href="#average-speed-rule" title="Permalink to this heading"></a></h3>
+<p>保持平均速度。</p>
+<dl class="simple">
+<dt>速率</dt><dd><p>最大速度的百分比。</p>
+</dd>
+<dt>徘徊</dt><dd><p>速度方向的随机速度有多快。</p>
+</dd>
+<dt>水平</dt><dd><p>速度的Z分量保持不变。</p>
+</dd>
+</dl>
+</section>
+<section id="fight-rule">
+<h3>战斗规则<a class="headerlink" href="#fight-rule" title="Permalink to this heading"></a></h3>
+<p>向附近的群体移动。</p>
+<dl class="simple">
+<dt>战斗距离</dt><dd><p>攻击群体的最大距离。</p>
+</dd>
+<dt>逃逸距离</dt><dd><p>在这个距离逃离。</p>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="keyed.html" class="btn btn-neutral float-left" title="键控" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="fluid.html" class="btn btn-neutral float-right" title="流体" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/physics/particles/emitter/physics/boids.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/physics/particles/emitter/physics/boids.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fphysics/particles/emitter/physics/boids.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fphysics/particles/emitter/physics/boids.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

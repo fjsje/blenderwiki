@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>生成的绑定功能 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/addons/rigging/rigify/rig_features.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/js/version_switch.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../copyright.html" />
+    <link rel="next" title="创建元骨骼" href="metarigs.html" />
+    <link rel="prev" title="骨骼定位指南" href="bone_positioning.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">插件</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#add-ons-category-listings">插件类别列表</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../3d_view/index.html">3D 视图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../add_curve/index.html">添加曲线</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../add_mesh/index.html">添加网格</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../baking/index.html">烘焙</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../camera/index.html">摄像机</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../development/index.html">开发</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../import_export/index.html">导入 - 导出</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../interface/index.html">界面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../lighting/index.html">光照</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../materials/index.html">材质</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mesh/index.html">网格</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../node/index.html">节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../object/index.html">物体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../paint/index.html">绘制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">绑定</a><ul class="current">
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">Rigify</a><ul class="current">
+<li class="toctree-l5 current"><a class="reference internal" href="index.html#basics">基础</a><ul class="current">
+<li class="toctree-l6"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l6"><a class="reference internal" href="basics.html">基础用法</a></li>
+<li class="toctree-l6"><a class="reference internal" href="bone_positioning.html">骨骼定位指南</a></li>
+<li class="toctree-l6 current"><a class="current reference internal" href="#">生成的绑定功能</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#limbs">四肢</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#head">头部</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#face">面</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="index.html#customization">个性化定制</a></li>
+<li class="toctree-l5"><a class="reference internal" href="index.html#extensions">扩展</a></li>
+<li class="toctree-l5"><a class="reference internal" href="index.html#development">开发</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../sequencer/index.html">序列编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../system/index.html">系统</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../uv/index.html">UV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../video_tools/index.html">视频工具</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">插件</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">绑定</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Rigify</a></li>
+      <li class="breadcrumb-item active">生成的绑定功能</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="generated-rig-features">
+<h1>生成的绑定功能<a class="headerlink" href="#generated-rig-features" title="Permalink to this heading"></a></h1>
+<p>在人类绑定生成后，会有一个名叫 <code class="docutils literal notranslate"><span class="pre">rig</span></code> 的骨架添加到你的场景中。这是从你的人类元骨骼基础上生成的角色绑定，并包含了所有的功能。</p>
+<section id="limbs">
+<h2>四肢<a class="headerlink" href="#limbs" title="Permalink to this heading"></a></h2>
+<p>Each limb will have a gear widget at its base. This is the utility bone that
+contains all the sub-rig properties. The rig features will be displayed anyway
+when the affected bone is selected but if you are looking in the Graph editor for
+those properties' animated values, this is most likely the bone to look at.</p>
+<p>Depending on the user defined meta-rig options, multiple deform bone segments will be created.
+Each bone can be controlled by tweak controls placed at the respective bone's head/tail.
+Tweaks are subordinate to the general IK or FK limb position but can be moved apart,
+twisted and scaled freely, even reaching virtually impossible limb shapes.</p>
+<p>Rigify 的四肢在 侧边栏 面板中拥有以下控件：</p>
+<figure class="align-right">
+<img alt="../../../_images/addons_rigging_rigify_rig-features_limb-properties.png" src="../../../_images/addons_rigging_rigify_rig-features_limb-properties.png" />
+</figure>
+<dl>
+<dt>FK Limb Follow (FK 肢体跟随) <span class="guilabel">滑块</span></dt><dd><p>当设置为 1 时，FK 肢体将不会与躯干一起旋转，而是保持相对于根骨的旋转。</p>
+</dd>
+<dt>IK-FK <span class="guilabel">滑块</span></dt><dd><p>控制肢体是遵循 IK 还是 FK 控制，在 0 处的完全 IK 和 1 处的完全 FK 之间进行混合。</p>
+</dd>
+<dt>IK&lt;-&gt;FK 吸附 <span class="guilabel">按钮</span></dt><dd><p>To snap one type of controls to another use the appropriate buttons.</p>
+<p>Each snap direction has buttons to update just the current pose, bake the whole animation in the
+current <em>Action</em>, or <em>Clear</em> keyframes instead of snapping. The buttons dealing with keyframes
+use options from an additional panel to control the range of frames to bake.</p>
+</dd>
+<dt>IK Stretch (IK 拉伸) <span class="guilabel">滑块</span></dt><dd><p>在 1 处自由拉伸的肢体，或在 0 处约束其最大长度的肢体，两者之间进行混合。</p>
+</dd>
+<dt>Toggle Pole (切换极向) <span class="guilabel">切换</span></dt><dd><p>When set to 0 the IK limb will use the rotational pole vector (the arrow at the base of the limb).
+Rotating/translating/scaling the arrow will control the IK limb base.
+When set to 1 the classic pole vector will be displayed and used to orient the IK limb.
+The arrow will continue to handle the scale and the location of the IK limb base.</p>
+<p>Similar to IK-FK Snapping, the row includes buttons to convert the current pose between types,
+or bake the whole action.</p>
+</dd>
+<dt>IK Parent (IK 父级) <span class="guilabel">切换</span></dt><dd><p>Switches the effective parent of the main IK control, with different integer values corresponding
+to choices from a list.</p>
+<p>The row includes buttons that allow converting the current pose via choosing from a menu,
+or baking the whole action.</p>
+</dd>
+<dt>Pole Parent (极向父级) <span class="guilabel">切换</span></dt><dd><p>切换经典 IK 极向 控件的有效父对象.</p>
+</dd>
+</dl>
+</section>
+<section id="head">
+<h2>头部<a class="headerlink" href="#head" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>颈部跟随 <span class="guilabel">滑块</span></dt><dd><p>This slider controls the rotations isolation for the neck bones.
+When set to 0 the neck will stay oriented as the Torso (the big box control).
+When set to 1 the neck will be oriented as the Chest (the big circle in the shoulder area).</p>
+</dd>
+<dt>Head Follow <span class="guilabel">Slider</span></dt><dd><p>This slider controls the rotations isolation for the head.
+When set to 0 the head will stay oriented as the Torso (the big box control).
+When set to 1 the head will be oriented as the neck.</p>
+</dd>
+</dl>
+</section>
+<section id="face">
+<h2>面<a class="headerlink" href="#face" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>Mouth Lock <span class="guilabel">Slider</span></dt><dd><p>This slider controls the mouth opening.
+When set to 0 moving/rotating the jaw bone will result in mouth opening,
+when set to 1 the lips will stay sealed while the jaw is moving.</p>
+</dd>
+<dt>Eyes Following <span class="guilabel">Slider</span></dt><dd><p>This slider controls the eyelid automation.
+When set to 1 the eyelids and the lower eyebrow will follow
+the eye movement giving a realistic effect to the character,
+when set to 0 no automation will happen.</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="bone_positioning.html" class="btn btn-neutral float-left" title="骨骼定位指南" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="metarigs.html" class="btn btn-neutral float-right" title="创建元骨骼" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/addons/rigging/rigify/rig_features.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/addons/rigging/rigify/rig_features.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Faddons/rigging/rigify/rig_features.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Faddons/rigging/rigify/rig_features.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>选择 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/animation/armatures/bones/selecting.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/js/version_switch.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../copyright.html" />
+    <link rel="next" title="编辑" href="editing/index.html" />
+    <link rel="prev" title="工具设置" href="tools/tool_settings.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">动画 &amp; 绑定</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../keyframes/index.html">关键帧</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">骨架</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">骨骼</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structure.html">结构</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tools/index.html">工具</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">选择</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#selecting-bone-joints">选择骨骼关节</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#inverse-selection">反选</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#selecting-connected-bone-joints">选择连接的骨骼关节</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#selecting-bones">选择骨骼</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#deselecting-connected-bones">Deselecting connected bones 取消选择链接的骨骼</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#select-mirror">选择镜像</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#more-less">加选/减选</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#linked">已关联</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#parent-child">父级/子级</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#extend-parent-child">扩展父级/子级</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#similar">相似项</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#select-pattern">按样式选择</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="editing/index.html">编辑</a></li>
+<li class="toctree-l4"><a class="reference internal" href="properties/index.html">属性</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../structure.html">结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../skinning/index.html">蒙皮</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../posing/index.html">姿态</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../lattice.html">晶格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../constraints/index.html">约束</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../actions.html">动作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../drivers/index.html">驱动</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../markers.html">标记</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../shape_keys/index.html">形态键</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../motion_paths.html">运动路径</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">动画 &amp; 绑定</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">骨架</a></li>
+          <li class="breadcrumb-item"><a href="index.html">骨骼</a></li>
+      <li class="breadcrumb-item active">选择</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="selecting">
+<h1>选择<a class="headerlink" href="#selecting" title="Permalink to this heading"></a></h1>
+<p>在 <em>编辑模式</em> 和 <em>姿态模式</em> 下你可以选择和编辑骨骼。在这里，我们主要是看看怎么在 <em>编辑模式</em> 选择骨骼。<em>姿态模式</em> 下选择骨骼和在 <em>编辑模式</em> 很多地方操作很相似的，除了少数的几个不同的区别见 <a class="reference internal" href="../posing/selecting.html"><span class="doc">姿态章节</span></a> 部分。</p>
+<p>类似于网格的 <a class="reference internal" href="../../../modeling/meshes/selecting/introduction.html"><span class="doc">顶点/边选择</span></a>，在 <em>编辑模式</em> 有两种方法来选择整个骨骼：</p>
+<ol class="arabic simple">
+<li><p>直接选择骨骼的body（主体）部分。</p></li>
+<li><p>选择它的两个关节（根部和尾端）。</p></li>
+</ol>
+<p>这是一个需要理解的重点，因为选择骨骼只可能导致不明显的行为，与你实际选择的骨头有关。</p>
+<p>请注意，与网格物体的视图模式不同，骨架的视图显示对选择操作没有影响。换句话说，无论骨骼以哪种方式显示，您都可以以相同的方式选择骨骼的关节或主体。</p>
+<section id="selecting-bone-joints">
+<span id="bpy-ops-armature-select-all"></span><h2>选择骨骼关节<a class="headerlink" href="#selecting-bone-joints" title="Permalink to this heading"></a></h2>
+<p>要选择骨骼的关节，你有参考 <a class="reference internal" href="../../../scene_layout/object/selecting.html"><span class="doc">标准选择</span></a> 的方法。</p>
+<section id="inverse-selection">
+<h3>反选<a class="headerlink" href="#inverse-selection" title="Permalink to this heading"></a></h3>
+<p>如上所述，你必须记住，这些选择工具仅适用于骨骼的关节，而不是骨骼的主体。</p>
+<p>例如，<em>反向</em> 选择选项 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">I</kbd></kbd> 反转骨骼关节的选择，而不是骨骼的选择（参见 <em>反选</em> ）。</p>
+<p>记得只有选择了它的关节两端才是选择了一个骨骼。所以，当选择骨骼的末端被反选，一套新的骨骼将被选择。</p>
+<table class="docutils align-default" id="id6">
+<caption><span class="caption-text">反选。</span><a class="headerlink" href="#id6" title="Permalink to this table"></a></caption>
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id7">
+<a class="reference internal image-reference" href="../../../_images/animation_armatures_bones_selecting_two-bones.png"><img alt="../../../_images/animation_armatures_bones_selecting_two-bones.png" src="../../../_images/animation_armatures_bones_selecting_two-bones.png" style="width: 320px;" /></a>
+<figcaption>
+<p><span class="caption-text">选择两个骨骼。</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id8">
+<a class="reference internal image-reference" href="../../../_images/animation_armatures_bones_selecting_three-ends.png"><img alt="../../../_images/animation_armatures_bones_selecting_three-ends.png" src="../../../_images/animation_armatures_bones_selecting_three-ends.png" style="width: 320px;" /></a>
+<figcaption>
+<p><span class="caption-text"><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">I</kbd></kbd> 反选的结果: 骨骼关节选择已经反转，而不是骨骼选择反转。</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="selecting-connected-bone-joints">
+<h3>选择连接的骨骼关节<a class="headerlink" href="#selecting-connected-bone-joints" title="Permalink to this heading"></a></h3>
+<p>另一个例子是：当你选择一个连接到父级骨骼的骨骼根部（root），你也同时选择了其父级骨骼的尾端（tip）（反之亦然）。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>记住，当选择骨骼的连接关节时，父骨的尾端是与其子骨的根部是同时被选择的。</p>
+</div>
+</section>
+</section>
+<section id="selecting-bones">
+<h2>选择骨骼<a class="headerlink" href="#selecting-bones" title="Permalink to this heading"></a></h2>
+<p>通过点击骨骼的主体，你将选择它（因此你将隐含地选择它的根骨和端骨）。</p>
+<p>使用快捷键 <kbd class="kbd docutils literal notranslate">Shift</kbd> -单击，你能够添加或移除选择。</p>
+<p>根据他们的关系，您还有一些 <em>高级选择</em> 选项。</p>
+<dl class="simple">
+<dt>选择最短路径 <kbd class="kbd docutils literal notranslate">Ctrl</kbd> -单击</dt><dd><p>选择从激活骨骼到鼠标点击骨骼位置的路径。</p>
+</dd>
+</dl>
+<section id="deselecting-connected-bones">
+<h3>Deselecting connected bones 取消选择链接的骨骼<a class="headerlink" href="#deselecting-connected-bones" title="Permalink to this heading"></a></h3>
+<p>这是一个很微妙的骨骼选择。</p>
+<p>当你有几个连接的骨骼被选择，如果你取消了一个骨骼，你将实际上取消了它的尾端的选择，而没有取消连接另一根骨骼的根部。</p>
+<p>要理解这一点，请看图 <a class="reference internal" href="#fig-rig-bone-select-deselect"><span class="std std-ref">在选择的骨骼链取消骨骼选择。</span></a> 。</p>
+<span id="fig-rig-bone-select-deselect"></span><table class="docutils align-default" id="id9">
+<caption><span class="caption-text">在选择的骨骼链取消骨骼选择。</span><a class="headerlink" href="#id9" title="Permalink to this table"></a></caption>
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id10">
+<a class="reference internal image-reference" href="../../../_images/animation_armatures_bones_selecting_whole-chain.png"><img alt="../../../_images/animation_armatures_bones_selecting_whole-chain.png" src="../../../_images/animation_armatures_bones_selecting_whole-chain.png" style="width: 320px;" /></a>
+<figcaption>
+<p><span class="caption-text">一个选择的骨骼链。</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id11">
+<a class="reference internal image-reference" href="../../../_images/animation_armatures_bones_selecting_two-bones.png"><img alt="../../../_images/animation_armatures_bones_selecting_two-bones.png" src="../../../_images/animation_armatures_bones_selecting_two-bones.png" style="width: 320px;" /></a>
+<figcaption>
+<p><span class="caption-text">两个选定的骨骼。</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<p>使用 <kbd class="kbd docutils literal notranslate">Shift</kbd>- 单击 &quot;Bone.003&quot;：</p>
+<ul class="simple">
+<li><p>&quot;Bone.003&quot; 的尾端（同是它也是Bone.004的根部）被取消了选择。</p></li>
+<li><p>&quot;Bone&quot; 是 &quot;Bone.003&quot; 的父本。因此，&quot;Bone.003&quot; 的根与 &quot;Bone&quot; 的顶端相同。由于 &quot;Bone&quot; 仍然被选中，它的顶端也被选中。因此，&quot;Bone.003&quot; 的根部仍然被选中。</p></li>
+</ul>
+</section>
+</section>
+<section id="select-mirror">
+<span id="bpy-ops-armature-select-mirror"></span><h2>选择镜像<a class="headerlink" href="#select-mirror" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">选择 ‣ 选择镜像</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">M</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>将选择从一侧翻转到另一侧。</p>
+</section>
+<section id="more-less">
+<span id="bpy-ops-armature-select-less"></span><span id="bpy-ops-armature-select-more"></span><h2>加选/减选<a class="headerlink" href="#more-less" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id2">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">选择 ‣ 扩展/缩减选择</span></p>
+</dd>
+</dl>
+</div>
+<dl class="simple">
+<dt>扩展选区 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">数字键盘加+</kbd></kbd></dt><dd><p>将当前选择扩展到与其相连的骨骼。</p>
+</dd>
+<dt>缩减选区 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">数字键盘减-</kbd></kbd></dt><dd><p>取消选择每个选择边界的骨骼。</p>
+</dd>
+</dl>
+</section>
+<section id="linked">
+<span id="bpy-ops-armature-select-linked"></span><h2>已关联<a class="headerlink" href="#linked" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id3">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">选择 ‣ 关联项</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">L</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>选择活动（最后选择的）骨骼所属的链中的所有骨骼。</p>
+<dl class="simple">
+<dt>全部分支</dt><dd><p>选择连接到活动骨骼的所有骨骼，即使分支与当前骨骼分离。</p>
+</dd>
+</dl>
+<table class="docutils align-default" id="id12">
+<caption><span class="caption-text">选择关联的骨骼。</span><a class="headerlink" href="#id12" title="Permalink to this table"></a></caption>
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id13">
+<a class="reference internal image-reference" href="../../../_images/animation_armatures_bones_selecting_single-bone.png"><img alt="../../../_images/animation_armatures_bones_selecting_single-bone.png" src="../../../_images/animation_armatures_bones_selecting_single-bone.png" style="width: 320px;" /></a>
+<figcaption>
+<p><span class="caption-text">单一的骨骼选择。</span><a class="headerlink" href="#id13" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id14">
+<a class="reference internal image-reference" href="../../../_images/animation_armatures_bones_selecting_whole-chain.png"><img alt="../../../_images/animation_armatures_bones_selecting_whole-chain.png" src="../../../_images/animation_armatures_bones_selecting_whole-chain.png" style="width: 320px;" /></a>
+<figcaption>
+<p><span class="caption-text">其整个链选择与链接。</span><a class="headerlink" href="#id14" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="parent-child">
+<span id="bpy-ops-armature-select-hierarchy"></span><h2>父级/子级<a class="headerlink" href="#parent-child" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>父 <kbd class="kbd docutils literal notranslate">[</kbd>, 子 <kbd class="kbd docutils literal notranslate">]</kbd></dt><dd><p>您可以取消选择活动骨骼并选择其直接父级或其子级之一。</p>
+</dd>
+</dl>
+</section>
+<section id="extend-parent-child">
+<h2>扩展父级/子级<a class="headerlink" href="#extend-parent-child" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>延长父级 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">[</kbd></kbd>, 延长子级 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">]</kbd></kbd></dt><dd><p>与上文的选择类似，但保持激活骨骼的选择。</p>
+</dd>
+</dl>
+</section>
+<section id="similar">
+<span id="bpy-ops-armature-select-similar"></span><h2>相似项<a class="headerlink" href="#similar" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id4">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">选择 ‣ 选择相似</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">G</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<dl class="simple">
+<dt>子级</dt><dd><p>选定内容扩展到所有层次的子级骨骼。</p>
+</dd>
+<dt>直接子级</dt><dd><p>选定内容扩展到所有直接子级骨骼。</p>
+</dd>
+<dt>平级</dt><dd><p>选择与激活骨骼具有相同父级的骨骼。</p>
+</dd>
+<dt>长度</dt><dd><p>Selects bones with a similar bone length (between tip and tail) under the specified <em>Threshold</em>.</p>
+</dd>
+<dt>方向 (Y 轴)</dt><dd><p>选择与其Y轴上对齐的骨骼（沿着骨骼长度）。</p>
+</dd>
+<dt>前缀</dt><dd><p>选择名称前缀匹配的骨骼（用 <code class="docutils literal notranslate"><span class="pre">.</span></code> 分隔）。</p>
+</dd>
+<dt>后缀</dt><dd><p>选择具有匹配名称后缀的骨骼（用 <code class="docutils literal notranslate"><span class="pre">.</span></code> 分隔）。</p>
+</dd>
+<dt>层</dt><dd><p>Select bones on the same layer.</p>
+</dd>
+<dt>组</dt><dd><p>Select bones in the same group.</p>
+</dd>
+<dt>形状</dt><dd><p>选择使用相同的形状物体的骨骼（在姿态模式下）。</p>
+</dd>
+</dl>
+</section>
+<section id="select-pattern">
+<h2>按样式选择<a class="headerlink" href="#select-pattern" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id5">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>物体模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">选择 ‣ 按名称...</span></p>
+</dd>
+</dl>
+</div>
+<p>选择所有与已给出的名称格式相匹配的物体。支持通配符：* 匹配所有，? 匹配单个文字，[abc] 表示匹配 &quot;abc&quot;，[!abc] 表示匹配不含 &quot;abc&quot; 的内容。例如 *house* 匹配任何名字中包含了 &quot;house&quot; 的物体，而 floor* 则匹配任何名字以 &quot;floor&quot; 为开头的物体。</p>
+<dl class="simple">
+<dt>区分大小写</dt><dd><p>可以选择匹配是否区分大小写。</p>
+</dd>
+<dt>扩选</dt><dd><p>当 <em>扩展</em> 复选框勾选时，选择项将进行扩选而不是生成新选区。</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tools/tool_settings.html" class="btn btn-neutral float-left" title="工具设置" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="editing/index.html" class="btn btn-neutral float-right" title="编辑" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/animation/armatures/bones/selecting.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/animation/armatures/bones/selecting.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fanimation/armatures/bones/selecting.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fanimation/armatures/bones/selecting.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

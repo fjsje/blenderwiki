@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>配置外设 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/getting_started/configuration/hardware.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="默认" href="defaults.html" />
+    <link rel="prev" title="简介" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">配置 Blender</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">配置外设</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#displays">显示器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#input-devices">输入设备</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#mouse">鼠标</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#mouse-button-emulation">鼠标按键模拟</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#keyboard">键盘</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#numpad-emulation">数字键盘模拟</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#non-english-keyboards">非英文键盘</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#graphic-tablet">绘图板</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ndof-3d-mouse">NDOF (3D鼠标)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#head-mounted-displays-virtual-reality">头戴式显示器（虚拟现实）</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#supported-platforms">支持的平台</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#getting-started">入门</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#htc-vive-cosmos">HTC Vive Cosmos</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#htc-vive-focus-3">HTC Vive Focus 3</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#monado">Monado</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#meta-formerly-oculus">Meta (以前的 Oculus)</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#steamvr">SteamVR</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#varjo">Varjo</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#windows-mixed-reality">Windows Mixed Reality</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="defaults.html">默认</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">配置 Blender</a></li>
+      <li class="breadcrumb-item active">配置外设</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="configuring-peripherals">
+<h1>配置外设<a class="headerlink" href="#configuring-peripherals" title="Permalink to this heading"></a></h1>
+<section id="displays">
+<h2>显示器<a class="headerlink" href="#displays" title="Permalink to this heading"></a></h2>
+<p>推荐使用全高清或更高配置的显示器。支持多显示器，可以配置工作区来扩展到多个显示器。</p>
+<figure class="align-default" id="id1">
+<img alt="../../_images/getting-started_configuration_hardware_multi-monitor.jpg" src="../../_images/getting-started_configuration_hardware_multi-monitor.jpg" />
+<figcaption>
+<p><span class="caption-text">Blender 多显示器支持示例。</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="input-devices">
+<h2>输入设备<a class="headerlink" href="#input-devices" title="Permalink to this heading"></a></h2>
+<p>Blender 支持各种类型的输入设备：</p>
+<ul class="simple">
+<li><p>键盘（推荐：有数字键区的键盘，最好是英文布局）</p></li>
+<li><p>鼠标（推荐：带滚轮的三键鼠标）</p></li>
+<li><p>NDOF 设备（也称作 <em>3D 鼠标</em>）</p></li>
+<li><p>绘图板</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>如果没有三键鼠标，你需要在<a class="reference internal" href="../../editors/preferences/input.html"><span class="doc">输入设置</span></a>勾选模拟三键鼠标的选项。</p>
+</div>
+<section id="mouse">
+<h3>鼠标<a class="headerlink" href="#mouse" title="Permalink to this heading"></a></h3>
+<section id="mouse-button-emulation">
+<h4>鼠标按键模拟<a class="headerlink" href="#mouse-button-emulation" title="Permalink to this heading"></a></h4>
+<p>如果没有三键鼠标，你需要在<a class="reference internal" href="../../editors/preferences/input.html"><span class="doc">偏好设置</span></a>勾选模拟三键鼠标的选项。</p>
+<p>下面的表格列出了组合键的模拟用法：</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><th class="stub"><p>三键鼠标</p></th>
+<td><p><kbd class="kbd docutils literal notranslate">鼠标左键</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">鼠标中键</kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">鼠标右键</kbd></p></td>
+</tr>
+<tr class="row-even"><th class="stub"><p>两键鼠标</p></th>
+<td><p><kbd class="kbd docutils literal notranslate">鼠标左键</kbd></p></td>
+<td><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">鼠标左键</kbd></kbd></p></td>
+<td><p><kbd class="kbd docutils literal notranslate">鼠标右键</kbd></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="keyboard">
+<h3>键盘<a class="headerlink" href="#keyboard" title="Permalink to this heading"></a></h3>
+<section id="numpad-emulation">
+<h4>数字键盘模拟<a class="headerlink" href="#numpad-emulation" title="Permalink to this heading"></a></h4>
+<p>如果你的键盘右侧没有数字小键盘，你可能想要模拟一个。你可以使用键盘上方的数字行来替代，但就使用不了这些键的原始功能了（比如在编辑模式下快速切换顶点/边/面模式）。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>更多关于 <em>数字键区模拟</em> 见<a class="reference internal" href="../../editors/preferences/input.html"><span class="doc">偏好设置</span></a>。</p>
+</div>
+</section>
+<section id="non-english-keyboards">
+<h4>非英文键盘<a class="headerlink" href="#non-english-keyboards" title="Permalink to this heading"></a></h4>
+<p>如果你用的是非英文布局的键盘，你可能还得切换为 UK 或 US 布局才能使用 Blender 工作。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>还可以在<a class="reference internal" href="../../editors/preferences/input.html"><span class="doc">偏好设置</span></a>修改默认的键位映射和默认快捷键，不过，本手册会假定你用的是默认键位映射。</p>
+</div>
+</section>
+</section>
+<section id="graphic-tablet">
+<span id="hardware-tablet"></span><h3>绘图板<a class="headerlink" href="#graphic-tablet" title="Permalink to this heading"></a></h3>
+<p>因为数位板有笔这个元素，所以使用它可以用更为传统的方式控制鼠标指针。这为习惯于涂绘的艺术工作者提供了更为相近的体验，而且数位板还能提供诸如压感之类的其他控制方式。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>如果您使用的是绘图板而不是鼠标，并且压感无法正常工作时，请尝试将鼠标指针放在 Blender 窗口中，然后断开/重新连接绘图板。这可能会有所帮助。</p>
+</div>
+</section>
+<section id="ndof-3d-mouse">
+<span id="hardware-ndof"></span><h3>NDOF (3D鼠标)<a class="headerlink" href="#ndof-3d-mouse" title="Permalink to this heading"></a></h3>
+<p>3D 鼠标或 <abbr title="N-Degrees of Freedom">NDOF</abbr> 设备是可用于在 Blender 中导航场景的硬件。当前仅支持 3Dconnexion 制造的设备。这些设备使您可以探索场景，并使<a class="reference internal" href="../../editors/3dview/navigate/walk_fly.html#dview-fly-walk"><span class="std std-ref">飞行/步行导航</span></a>更易于控制。可以在<a class="reference internal" href="../../editors/preferences/input.html#editors-preferences-input-ndof"><span class="std std-ref">偏好设置</span></a>中配置 NDOF 设备。这些设置也可以使用 NDOF 设备上的 <kbd class="kbd docutils literal notranslate">NDOFMenu</kbd> 按钮来访问，打开弹出菜单以直接从视图调整设置。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>更多的外设配置信息请看<a class="reference internal" href="../../editors/preferences/input.html"><span class="doc">输入设置</span></a>。</p>
+</div>
+</section>
+</section>
+<section id="head-mounted-displays-virtual-reality">
+<span id="hardware-head-mounted-displays"></span><h2>头戴式显示器（虚拟现实）<a class="headerlink" href="#head-mounted-displays-virtual-reality" title="Permalink to this heading"></a></h2>
+<p><abbr title="Head-Mounted Displays 头戴式显示器">HDMs</abbr> 使用户能够处在一个交互式的虚拟环境中。将它们系在头部，将会跟踪头部的运动，将一个看似周围的世界投射到用户眼前的屏幕上。如果系统工作良好，就好像真正处于虚拟环境中一样。</p>
+<section id="supported-platforms">
+<h3>支持的平台<a class="headerlink" href="#supported-platforms" title="Permalink to this heading"></a></h3>
+<p>Blender 中的虚拟现实支持是通过多平台 OpenXR 标准实现的。此标准是较新的，因此对它的支持仍然有限。</p>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">OpenXR 兼容的平台。</span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p>平台</p></th>
+<th class="head"><p>操作系统</p></th>
+<th class="head"><p>注意</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><a class="reference internal" href="#htc-vive-cosmos">HTC Vive Cosmos</a></p></td>
+<td><p>Windows</p></td>
+<td><p><a class="reference external" href="https://forum.htc.com/topic/9046-vive-openxr-support-for-vive-cosmos/">开发人员预览</a></p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#htc-vive-focus-3">HTC Vive Focus 3</a></p></td>
+<td><p>Windows</p></td>
+<td><p><a class="reference external" href="https://forum.htc.com/topic/9876-focus-3-openxr-support-status/page/3/">开发人员预览</a></p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#monado">Monado</a></p></td>
+<td><p>GNU/Linux</p></td>
+<td><p>一般 <em>不</em> 推荐使用。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#meta-formerly-oculus">Meta (以前的 Oculus)</a> (Rift 和 Quest)</p></td>
+<td><p>Windows</p></td>
+<td><p>需要 Oculus v31 软件更新。任务所需的 Oculus 链接。</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#steamvr">SteamVR</a></p></td>
+<td><p>Windows, GNU/Linux</p></td>
+<td><p>需要 SteamVR 1.16 更高版本。</p></td>
+</tr>
+<tr class="row-odd"><td><p><a class="reference internal" href="#varjo">Varjo</a></p></td>
+<td><p>Windows</p></td>
+<td><p>--</p></td>
+</tr>
+<tr class="row-even"><td><p><a class="reference internal" href="#windows-mixed-reality">Windows Mixed Reality</a></p></td>
+<td><p>Windows</p></td>
+<td><p>需要 Windows 10 2019 年五月更新（1903）。</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="getting-started">
+<h3>入门<a class="headerlink" href="#getting-started" title="Permalink to this heading"></a></h3>
+<p>以下各节介绍如何设置 HMD 以在<a class="reference internal" href="#supported-platforms">支持的平台</a>上使用。如果不这样做，则 Blender 在尝试启动虚拟现实会话时将报告错误。</p>
+<section id="htc-vive-cosmos">
+<h4>HTC Vive Cosmos<a class="headerlink" href="#htc-vive-cosmos" title="Permalink to this heading"></a></h4>
+<p><a class="reference external" href="https://www.vive.com/eu/product/#cosmos%20series">HTC Vive Cosmos</a> 专用平台，目前针对开发人员，可能缺乏其他平台的功能。</p>
+<ul class="simple">
+<li><p>按照 <a class="reference external" href="https://forum.htc.com/topic/9046-vive-openxr-support-for-vive-cosmos/">Vive 开发者论坛</a> 中的步骤操作。</p></li>
+<li><p>在 Blender 中，启用 <a class="reference internal" href="../../addons/3d_view/vr_scene_inspection.html"><span class="doc">VR 场景检查插件</span></a>。</p></li>
+</ul>
+</section>
+<section id="htc-vive-focus-3">
+<h4>HTC Vive Focus 3<a class="headerlink" href="#htc-vive-focus-3" title="Permalink to this heading"></a></h4>
+<p><a class="reference external" href="https://www.vive.com/eu/product/vive-focus3/overview/">HTC Vive Focus 3</a> 专用平台，目前针对开发人员，可能缺乏其他平台的功能。</p>
+<ul class="simple">
+<li><p>按照 <a class="reference external" href="https://forum.htc.com/topic/9876-focus-3-openxr-support-status/page/3/">Vive 开发者论坛</a> 中的步骤操作。</p></li>
+<li><p>在 Blender 中，启用 <a class="reference internal" href="../../addons/3d_view/vr_scene_inspection.html"><span class="doc">VR 场景检查插件</span></a>。</p></li>
+</ul>
+</section>
+<section id="monado">
+<h4>Monado<a class="headerlink" href="#monado" title="Permalink to this heading"></a></h4>
+<p><a class="reference external" href="https://monado.dev/">Monado</a> 是一个用于 Linux 的<a class="reference internal" href="../about/license.html"><span class="doc">免费开源</span></a> XR 平台。它尚未准备好用于生产用途，应仅用于测试目的。</p>
+<ul>
+<li><p>软件包可用于以下发行版：</p>
+<ul class="simple">
+<li><p>Ubuntu (<a class="reference external" href="https://launchpad.net/~monado-xr/+archive/ubuntu/monado">Eoan, Focal</a>)</p></li>
+<li><p>Debian (<a class="reference external" href="https://packages.debian.org/bullseye/libopenxr1-monado">bullseye</a>,
+<a class="reference external" href="https://packages.debian.org/sid/libopenxr1-monado">sid</a>)</p></li>
+</ul>
+<p>对于其他系统，必须从源代码进行编译，在这种情况下，不建议对软件编译经验不足的人使用。仍想这样做，请遵循 Monado 上的 <a class="reference external" href="https://gitlab.freedesktop.org/monado/monado/-/blob/main/README.md">入门指南</a>。</p>
+</li>
+<li><p>在 Blender 中，启用 <a class="reference internal" href="../../addons/3d_view/vr_scene_inspection.html"><span class="doc">VR 场景检查插件</span></a>。</p></li>
+</ul>
+</section>
+<section id="meta-formerly-oculus">
+<h4>Meta (以前的 Oculus)<a class="headerlink" href="#meta-formerly-oculus" title="Permalink to this heading"></a></h4>
+<p><a class="reference external" href="https://www.meta.com/quest/">Meta（前身为 Oculus）</a>从 Oculus v31 软件更新开始全面支持 OpenXR。</p>
+<ul class="simple">
+<li><p>下载并安装 <a class="reference external" href="https://www.meta.com/quest/setup/">Oculus Rift/Oculus Link 软件</a>。</p></li>
+<li><p>通过 Oculus 应用程序设置中的 <em>General</em> 选项卡将 Oculus 设置为活动的 OpenXR 运行时。</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/getting-started_configuration_hardware_xr_runtime_oculus.jpg"><img alt="../../_images/getting-started_configuration_hardware_xr_runtime_oculus.jpg" src="../../_images/getting-started_configuration_hardware_xr_runtime_oculus.jpg" style="width: 600.0px; height: 392.0px;" /></a>
+</figure>
+<ul class="simple">
+<li><p>在 Blender 中，启用 <a class="reference internal" href="../../addons/3d_view/vr_scene_inspection.html"><span class="doc">VR 场景检查插件</span></a>。</p></li>
+</ul>
+</section>
+<section id="steamvr">
+<h4>SteamVR<a class="headerlink" href="#steamvr" title="Permalink to this heading"></a></h4>
+<p><a class="reference external" href="https://www.steamvr.com/">SteamVR</a> 从 SteamVR 1.16 起为 OpenXR 提供全面支持。</p>
+<ul class="simple">
+<li><p>通过 SteamVR 设置中的 <em>Developer</em> 选项卡将 SteamVR 设置为活动 OpenXR 运行时。</p></li>
+</ul>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/getting-started_configuration_hardware_xr_runtime_steamvr.jpg"><img alt="../../_images/getting-started_configuration_hardware_xr_runtime_steamvr.jpg" src="../../_images/getting-started_configuration_hardware_xr_runtime_steamvr.jpg" style="width: 600.0px; height: 472.5px;" /></a>
+</figure>
+<ul class="simple">
+<li><p>在 Blender 中，启用 <a class="reference internal" href="../../addons/3d_view/vr_scene_inspection.html"><span class="doc">VR 场景检查插件</span></a>。</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>SteamVR 运行时也可用于 HTC Vive Cosmos、Oculus 和 Windows Mixed Reality HMD。</p>
+</div>
+</section>
+<section id="varjo">
+<h4>Varjo<a class="headerlink" href="#varjo" title="Permalink to this heading"></a></h4>
+<p><a class="reference external" href="https://varjo.com/">Varjo</a> 包括完整的 OpenXR 支持及其所需的 Varjo Base 软件。</p>
+<ul class="simple">
+<li><p>在 Blender 中，启用 <a class="reference internal" href="../../addons/3d_view/vr_scene_inspection.html"><span class="doc">VR 场景检查插件</span></a>。</p></li>
+</ul>
+</section>
+<section id="windows-mixed-reality">
+<h4>Windows Mixed Reality<a class="headerlink" href="#windows-mixed-reality" title="Permalink to this heading"></a></h4>
+<p><a class="reference external" href="https://www.microsoft.com/windows/windows-mixed-reality">Windows 混合现实</a>为 OpenXR 提供全面支持。为了检查 PC 是否符合运行软件的要求，Microsoft 提供了 <a class="reference external" href="https://www.microsoft.com/en-us/p/windows-mixed-reality-pc-check/9nzvl19n7cnc">Windows 虚拟现实 PC 检测</a>应用程序。</p>
+<ul class="simple">
+<li><p>确保已安装 Windows 10 2019 年五月更新（1903）。</p></li>
+<li><p>如果系统满足所有要求，则应该已经安装了Mixed Reality Portal。在 <a class="reference external" href="https://www.microsoft.com/en-us/p/mixed-reality-portal/9ng1h8b3zc7m">Microsoft Store</a> 中也可以找到它。</p></li>
+<li><p>启动 Mixed Reality Portal。点击左下角的菜单按钮 <code class="docutils literal notranslate"><span class="pre">...</span></code>。在打开的菜单中，选择 <em>设置 OpenXR</em>。</p></li>
+<li><p>在 Blender 中，启用 <a class="reference internal" href="../../addons/3d_view/vr_scene_inspection.html"><span class="doc">VR 场景检查插件</span></a>。</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>若要从其他 OpenXR 运行时（例如 SteamVR）切换到 Windows 混合现实，请从<a class="reference external" href="https://www.microsoft.com/en-us/p/openxr-developer-tools-for-windows-mixed-reality/9n5cvvl23qbt">微软商店</a>下载 OpenXR 开发人员工具，并将 Windows 混合现实设置为活动运行时。</p>
+</div>
+<figure class="align-default">
+<a class="reference internal image-reference" href="../../_images/getting-started_configuration_hardware_xr_runtime_wmr.jpg"><img alt="../../_images/getting-started_configuration_hardware_xr_runtime_wmr.jpg" src="../../_images/getting-started_configuration_hardware_xr_runtime_wmr.jpg" style="width: 598.5px; height: 471.0px;" /></a>
+</figure>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="defaults.html" class="btn btn-neutral float-right" title="默认" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/getting_started/configuration/hardware.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/getting_started/configuration/hardware.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fgetting_started/configuration/hardware.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fgetting_started/configuration/hardware.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

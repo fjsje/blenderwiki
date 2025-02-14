@@ -1,0 +1,882 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>编辑 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/graph_editor/fcurves/editing.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/js/version_switch.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../copyright.html" />
+    <link rel="next" title="属性" href="properties.html" />
+    <link rel="prev" title="简介" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../3dview/index.html">3D 视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../image/index.html">图像编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../uv/index.html">UV 编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../compositor.html">合成器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texture_node/index.html">纹理节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../geometry_node.html">几何节点编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../shader_editor.html">着色器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../video_sequencer/index.html">视频序列编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../clip/index.html">影片剪辑编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dope_sheet/index.html">动画摄影表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../timeline.html">时间线</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">曲线编辑器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../channels/index.html">通道</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">函数曲线</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">编辑</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#transform">变换</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#snap">吸附</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#mirror">镜像</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#jump-to-selected">跳转到选定项</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#insert">插入</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#copy-paste">复制/粘贴</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#duplicate">复制操作</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#delete">删除</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#handle-type">控制柄类型</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#interpolation-mode">插值模式</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#easing-type">缓动类型</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#density">密度</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#decimate">精简</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#sample-keyframes">取样关键帧</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#clean-keyframes">清理关键帧</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#blend">混合</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#breakdown">间断</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#blend-to-neighbor">混合至邻帧</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#blend-to-default-value">混合到默认值</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#ease">缓动</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#smooth">平滑化</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#smooth-legacy">平滑(旧版)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="properties.html">属性</a></li>
+<li class="toctree-l4"><a class="reference internal" href="modifiers.html">函数曲线修改器</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../drivers_editor.html">驱动器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../nla/index.html">非线性动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../text_editor.html">文本编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../python_console.html">Python 控制台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../info_editor.html">信息编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../outliner/index.html">大纲视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../properties_editor.html">属性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../file_browser.html">文件浏览器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../asset_browser.html">资产浏览器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../spreadsheet.html">电子表格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preferences/index.html">偏好设置</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">编辑器</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">曲线编辑器</a></li>
+          <li class="breadcrumb-item"><a href="index.html">函数曲线</a></li>
+      <li class="breadcrumb-item active">编辑</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="editing">
+<h1>编辑<a class="headerlink" href="#editing" title="Permalink to this heading"></a></h1>
+<section id="transform">
+<h2>变换<a class="headerlink" href="#transform" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">关键帧 ‣ 变换</span></p>
+</dd>
+</dl>
+</div>
+<p>An F-Curve can be edited by transforming the locations of the keyframes.</p>
+<dl class="simple">
+<dt>移动，旋转，缩放</dt><dd><p>Like other elements in Blender, keyframes can be
+moved, rotated, or scaled as described in
+<a class="reference internal" href="../../../scene_layout/object/editing/transform/introduction.html"><span class="doc">Basic Transformations</span></a>.</p>
+</dd>
+<dt>扩选</dt><dd><p>Moves keyframes relative to the current frame.
+If the mouse is to the left of the Playhead,
+this operator only affects the selected keyframes that are to the left of the Playhead.
+On the contrary, if the mouse is to the right of the Playhead,
+this operator only affects the selected keyframes that are to the right of the Playhead.</p>
+</dd>
+</dl>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>For precise control of the keyframe position and value,
+you can set values in the <em>Active Keyframe</em> of the Sidebar region.</p>
+</div>
+</section>
+<section id="snap">
+<span id="bpy-ops-graph-snap"></span><h2>吸附<a class="headerlink" href="#snap" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id2">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">关键帧 ‣ 吸附</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">S</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>Keyframes can be snapped to different properties by using the <em>Snap Keys</em> tool.</p>
+<dl>
+<dt>选中项到当前帧</dt><dd><p>Snap the selected keyframes to the current frame.</p>
+</dd>
+<dt>选中项到游标值</dt><dd><p>Snap the selected keyframes to the <em>2D Cursor</em>.</p>
+</dd>
+<dt>选中项到最近帧</dt><dd><p>Snap the selected keyframes to their nearest frame individually.</p>
+</dd>
+<dt>选中项到最近秒</dt><dd><p>Snap the selected keyframes to their nearest second individually, based on the <em>FPS</em> of the scene.</p>
+</dd>
+<dt>选中项到最近标记</dt><dd><p>Snap the selected keyframes to their nearest marker individually.</p>
+</dd>
+<dt>展平控制柄</dt><dd><p>展平所选关键帧的 <em>贝塞尔</em> 控制柄。</p>
+<table class="docutils align-default" id="id21">
+<caption><span class="caption-text">展平控制柄吸附示例。</span><a class="headerlink" href="#id21" title="Permalink to this table"></a></caption>
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id22">
+<img alt="../../../_images/editors_graph-editor_fcurves_editing_flatten-handles-1.png" src="../../../_images/editors_graph-editor_fcurves_editing_flatten-handles-1.png" />
+<figcaption>
+<p><span class="caption-text">展平控制柄之前。</span><a class="headerlink" href="#id22" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id23">
+<img alt="../../../_images/editors_graph-editor_fcurves_editing_flatten-handles-2.png" src="../../../_images/editors_graph-editor_fcurves_editing_flatten-handles-2.png" />
+<figcaption>
+<p><span class="caption-text">展平控制柄之后。</span><a class="headerlink" href="#id23" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+<dl id="bpy-ops-graph-equalize-handles">
+<dt>等长化控制柄</dt><dd><p>确保被选中的关键帧手柄两侧一样长。</p>
+<dl class="simple">
+<dt>侧面</dt><dd><p>Side of the keyframes' Bézier handles to affect</p>
+<dl class="field-list simple">
+<dt class="field-odd">左<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Equalize selected keyframes' left handles.</p>
+</dd>
+<dt class="field-even">右<span class="colon">:</span></dt>
+<dd class="field-even"><p>Equalize selected keyframes' right handles.</p>
+</dd>
+<dt class="field-odd">两者<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Equalize both of a keyframe's handles.</p>
+</dd>
+</dl>
+</dd>
+<dt>控制柄长度</dt><dd><p>用于制作所选关键帧的贝塞尔手柄的长度。</p>
+</dd>
+<dt>平化</dt><dd><p>Make the values of the selected keyframes' handles the same as their respective keyframes.</p>
+</dd>
+</dl>
+</dd>
+<dt>游标到选中项 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">G</kbd></kbd></dt><dd><p>Places the cursor at the midpoint between selected keyframes.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-ops-graph-snap-cursor-value">
+<dt>游标值到选中项</dt><dd><p>Places the cursor value on the average value of selected keyframes.</p>
+</dd>
+</dl>
+</section>
+<section id="mirror">
+<span id="bpy-ops-graph-mirror"></span><h2>镜像<a class="headerlink" href="#mirror" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id3">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">关键帧 ‣ 镜像</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">M</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>Selected keyframes can be mirrored over different properties using the <em>Mirror Keys</em> tool.</p>
+<dl class="simple">
+<dt>沿时间轴关于当前帧</dt><dd><p>Mirror horizontally over the current frame.</p>
+</dd>
+<dt>沿值轴关于游标值</dt><dd><p>Mirror vertically over the 2D cursor.</p>
+</dd>
+<dt>By Times over Time 0</dt><dd><p>Mirror horizontally over frame 0.</p>
+</dd>
+<dt>By Values over Value 0</dt><dd><p>Mirror vertically over value 0.</p>
+</dd>
+<dt>沿时间轴关于第一个选中标记</dt><dd><p>Mirror horizontally over the first selected marker.</p>
+</dd>
+</dl>
+</section>
+<section id="jump-to-selected">
+<span id="bpy-ops-graph-frame-jump"></span><h2>跳转到选定项<a class="headerlink" href="#jump-to-selected" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id4">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">关键帧 ‣ 跳转到选中项</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">G</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>Places the 2D cursor at the center of the selected keyframes.</p>
+</section>
+<section id="insert">
+<span id="bpy-ops-graph-keyframe-insert"></span><h2>插入<a class="headerlink" href="#insert" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id5">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">关键帧 ‣ 插入</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">I</kbd></p>
+</dd>
+</dl>
+</div>
+<p>Inserts a keyframe to the active F-Curve at the mouse position.
+The newly added keyframes will be selected, making it easier to quickly tweak the newly added keyframes.
+All previously selected keyframes are kept selected by using <kbd class="kbd docutils literal notranslate">I</kbd>.</p>
+<dl class="simple">
+<dt>类型</dt><dd><dl class="field-list simple">
+<dt class="field-odd">全部通道<span class="colon">:</span></dt>
+<dd class="field-odd"><p>使用各曲线的当前值在所有可见且可编辑函数曲线内插一个关键帧。</p>
+</dd>
+<dt class="field-even">仅选择通道<span class="colon">:</span></dt>
+<dd class="field-even"><p>Insert a keyframe on selected F-Curves using each curve's current value.</p>
+</dd>
+<dt class="field-odd">仅活动函数曲线<span class="colon">:</span></dt>
+<dd class="field-odd"><p>在活动的函数曲线上使用曲线当前值插入关键帧。</p>
+</dd>
+<dt class="field-even">光标位置的活动通道<span class="colon">:</span></dt>
+<dd class="field-even"><p>Insert a keyframe for the active F-Curve at the cursor point.</p>
+</dd>
+<dt class="field-odd">光标位置选中的通道<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Insert a keyframe for selected F-Curves at the cursor point.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+<section id="copy-paste">
+<span id="bpy-ops-graph-paste"></span><span id="bpy-ops-graph-copy"></span><h2>复制/粘贴<a class="headerlink" href="#copy-paste" title="Permalink to this heading"></a></h2>
+<div class="admonition-reference admonition">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">关键帧 ‣ 复制关键帧</span>，<span class="menuselection">关键帧 ‣ 粘贴关键帧</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">C</kbd></kbd>, <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">V</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>Use <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">C</kbd></kbd> to copy selected keyframes and <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">V</kbd></kbd> to paste the previously copied keyframes.
+During the paste action, the <a class="reference internal" href="../../../interface/undo_redo.html#bpy-ops-screen-redo-last"><span class="std std-ref">调整上一步操作</span></a> panel provides some options in
+how the paste is applied.</p>
+<dl class="simple">
+<dt>偏移量</dt><dd><dl class="field-list simple">
+<dt class="field-odd">无偏移<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Pastes the keyframes in the location they were copied from.</p>
+</dd>
+<dt class="field-even">相对帧<span class="colon">:</span></dt>
+<dd class="field-even"><p>Pastes the keyframe relative to the current frame based on the locations of
+the keyframes relative to the current frame when they were copied.</p>
+</dd>
+<dt class="field-odd">起始帧<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Pastes the keyframes with the first keyframe of the copied set placed at the current frame.</p>
+</dd>
+<dt class="field-even">结束帧<span class="colon">:</span></dt>
+<dd class="field-even"><p>Pastes the keyframes with the last keyframe of the copied set placed at the current frame.</p>
+</dd>
+</dl>
+</dd>
+<dt>类型</dt><dd><dl class="field-list simple">
+<dt class="field-odd">混合<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Integrates the pasted keyframes in with existing keyframes only overwriting keyframes that share a frame.</p>
+</dd>
+<dt class="field-even">覆写全部<span class="colon">:</span></dt>
+<dd class="field-even"><p>Removes all previous keyframes and replaces them with the pasted keyframes.</p>
+</dd>
+<dt class="field-odd">覆写范围<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Overwrite keys in pasted range.</p>
+</dd>
+<dt class="field-even">覆写整个范围<span class="colon">:</span></dt>
+<dd class="field-even"><p>Overwrite keys in pasted range, using the range of all copied keys.</p>
+</dd>
+</dl>
+</dd>
+<dt>翻转</dt><dd><p>Paste keyframes from mirrored bones if they exist.</p>
+</dd>
+</dl>
+</section>
+<section id="duplicate">
+<span id="bpy-ops-graph-duplicate-move"></span><h2>复制操作<a class="headerlink" href="#duplicate" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id6">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">关键帧 ‣ 复制</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">D</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>复制选定的关键帧。可以通过移动鼠标来重新放置它们。</p>
+</section>
+<section id="delete">
+<span id="bpy-ops-graph-delete"></span><h2>删除<a class="headerlink" href="#delete" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id7">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">关键帧 ‣ 删除</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">X</kbd>, <kbd class="kbd docutils literal notranslate">Delete</kbd></p>
+</dd>
+</dl>
+</div>
+<p>按 <kbd class="kbd docutils literal notranslate">X</kbd> 或 <kbd class="kbd docutils literal notranslate">Delete</kbd> 将打开一个弹出菜单，可以从中删除选定的关键帧。</p>
+</section>
+<section id="handle-type">
+<span id="bpy-ops-graph-handle-type"></span><h2>控制柄类型<a class="headerlink" href="#handle-type" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id8">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">关键帧 ‣ 控制柄类型</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">V</kbd></p>
+</dd>
+</dl>
+</div>
+<p>设置选定关键帧的<a class="reference internal" href="properties.html#editors-graph-fcurves-settings-handles"><span class="std std-ref">控制柄类型</span></a>。</p>
+</section>
+<section id="interpolation-mode">
+<span id="bpy-ops-graph-interpolation-type"></span><h2>插值模式<a class="headerlink" href="#interpolation-mode" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id9">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">关键帧 ‣ 插值模式</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">T</kbd></p>
+</dd>
+</dl>
+</div>
+<p>Sets the <a class="reference internal" href="properties.html#editors-graph-fcurves-settings-interpolation"><span class="std std-ref">interpolation mode</span></a> between the selected keyframes.</p>
+</section>
+<section id="easing-type">
+<span id="bpy-ops-graph-easing-type"></span><h2>缓动类型<a class="headerlink" href="#easing-type" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id10">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">关键帧 ‣ 缓动类型</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">E</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>Sets the <a class="reference internal" href="properties.html#editors-graph-fcurves-settings-easing"><span class="std std-ref">easing mode</span></a> of the selected keyframes.</p>
+</section>
+<section id="density">
+<h2>密度<a class="headerlink" href="#density" title="Permalink to this heading"></a></h2>
+<section id="decimate">
+<span id="bpy-ops-graph-decimate"></span><h3>精简<a class="headerlink" href="#decimate" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id11">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">关键帧 ‣ 密度 ‣ 精简(比例)</span></p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">关键帧 ‣ 密度 ‣ 精简(受允许修改)</span></p>
+</dd>
+</dl>
+</div>
+<p>The <em>Decimate</em> tool simplifies an F-Curve by removing
+keyframes that influence the curve shape the least.</p>
+<dl class="simple">
+<dt>模式</dt><dd><p>Controls which method is used pick the number of keyframes to use.</p>
+<dl class="field-list simple">
+<dt class="field-odd">比率<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Deletes a defined percentage of keyframes,
+the amount of keyframes to delete is define by the <em>Remove</em> property.</p>
+</dd>
+<dt class="field-even">边际误差<span class="colon">:</span></dt>
+<dd class="field-even"><p>Deletes keyframes which only allowing the F-Curve to change by a defined amount.
+The amount of change is controlled by the <em>Max Error Margin</em>
+which controls how much the new decimated curve is allowed to deviate from the original.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+<section id="sample-keyframes">
+<span id="bpy-ops-graph-sample"></span><h3>取样关键帧<a class="headerlink" href="#sample-keyframes" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id12">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">关键帧 ‣ 密度 ‣ 取样关键帧</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">O</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>Sampling a set of keyframes replaces interpolated values with a new keyframe for each frame.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id24">
+<img alt="../../../_images/editors_graph-editor_fcurves_editing_sample.png" src="../../../_images/editors_graph-editor_fcurves_editing_sample.png" />
+<figcaption>
+<p><span class="caption-text">采样前的函数曲线。</span><a class="headerlink" href="#id24" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id25">
+<img alt="../../../_images/editors_graph-editor_fcurves_editing_sample2.png" src="../../../_images/editors_graph-editor_fcurves_editing_sample2.png" />
+<figcaption>
+<p><span class="caption-text">采样后的函数曲线。</span><a class="headerlink" href="#id25" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="clean-keyframes">
+<span id="bpy-ops-graph-clean"></span><h3>清理关键帧<a class="headerlink" href="#clean-keyframes" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id13">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">关键帧 ‣ 密度 ‣ 清理关键帧</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">X</kbd></p>
+</dd>
+</dl>
+</div>
+<p><em>Clean Keyframes</em> resets the keyframe tangents on selected keyframes
+to their auto-clamped shape, if they have been modified.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>The modified curve left after the <em>Clean</em> tool is run is not the same as the original,
+so this tool is better used before doing custom editing of F-Curves and after initial keyframe insertion,
+to get rid of any unwanted keyframes inserted while doing mass keyframe insertion
+(by selecting all bones and pressing <kbd class="kbd docutils literal notranslate">I</kbd> for instance).</p>
+</div>
+<dl class="simple">
+<dt>通道</dt><dd><p>Deletes the channel itself if it is only left with
+a single keyframe containing the default property value and
+it's not being used by any generative F-Curve modifiers or drivers.</p>
+</dd>
+</dl>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id26">
+<img alt="../../../_images/editors_graph-editor_fcurves_editing_clean1.png" src="../../../_images/editors_graph-editor_fcurves_editing_clean1.png" />
+<figcaption>
+<p><span class="caption-text">清理前的函数曲线。</span><a class="headerlink" href="#id26" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id27">
+<img alt="../../../_images/editors_graph-editor_fcurves_editing_clean2.png" src="../../../_images/editors_graph-editor_fcurves_editing_clean2.png" />
+<figcaption>
+<p><span class="caption-text">清理后的函数曲线。</span><a class="headerlink" href="#id27" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="blend">
+<h2>混合<a class="headerlink" href="#blend" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id14">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">关键帧 ‣ 混合</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">D</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<section id="breakdown">
+<span id="bpy-ops-graph-breakdown"></span><h3>间断<a class="headerlink" href="#breakdown" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id15">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">关键帧 ‣ 混合 ‣ 间断</span></p>
+</dd>
+</dl>
+</div>
+<p>Moves the selected keyframes to an in between position relative to the adjacent keyframes.
+To use this operator, drag the mouse left or right to adjust the operator's <em>Factor</em> property.</p>
+<dl class="simple">
+<dt>系数</dt><dd><p>The amount to favor either the left or the right key. Values less than 0.5 favor the left keyframe,
+values greater than 0.5 favor the right keyframe, a value of 0.5 results in no change.</p>
+</dd>
+</dl>
+</section>
+<section id="blend-to-neighbor">
+<span id="bpy-ops-graph-blend-to-neighbor"></span><h3>混合至邻帧<a class="headerlink" href="#blend-to-neighbor" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id16">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">关键帧 ‣ 混合 ‣ 混合至邻帧</span></p>
+</dd>
+</dl>
+</div>
+<p>Transitions the current keyframe with the neighboring keyframes in the timeline.
+In order for this operator to work, there must be a keyframe before and after the current frame.
+To use this operator, drag the mouse left or right to adjust the operator's <em>Blend</em> property.</p>
+<dl class="simple">
+<dt>混合</dt><dd><p>The amount to favor either the left or the right key. Values less than 0.5 favor the left keyframe,
+values greater than 0.5 favor the right keyframe, a value of 0.5 results in no change.</p>
+</dd>
+</dl>
+</section>
+<section id="blend-to-default-value">
+<span id="bpy-ops-graph-blend-to-default"></span><h3>混合到默认值<a class="headerlink" href="#blend-to-default-value" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id17">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">关键帧 ‣ 混合 ‣ 混合至邻帧</span></p>
+</dd>
+</dl>
+</div>
+<p>Transitions the current keyframe towards the property's default value.
+To use this operator, drag the mouse left or right to adjust the operator's <em>Blend</em> property.</p>
+<dl class="simple">
+<dt>混合</dt><dd><p>The amount to favor either the current key or the default value.
+A value of 0 represents the current key, a value of 1 represents the default value.</p>
+</dd>
+</dl>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="../../../interface/controls/buttons/menus.html#bpy-ops-ui-reset-default-button"><span class="std std-ref">重置为默认值</span></a>运算符将任何属性重置为其默认值，无需关键帧。</p>
+</div>
+</section>
+<section id="ease">
+<span id="bpy-ops-graph-ease"></span><h3>缓动<a class="headerlink" href="#ease" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id18">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">关键帧 ‣ 混合 ‣ 缓动</span></p>
+</dd>
+</dl>
+</div>
+<p>Aligns selected keyframes to follow an exponential path between the first and last keyframes.
+To use this operator, drag the mouse left or right to adjust the operator's <em>Blend</em> property.</p>
+<dl class="simple">
+<dt>混合</dt><dd><p>Changes the concavity of the curve. Values less than 0.5 cause keyframes to concave up,
+values greater than 0.5 cause keyframes to concave down, a value of 0.5 results in a straight line.</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="smooth">
+<h2>平滑化<a class="headerlink" href="#smooth" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id19">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">关键帧 ‣ 平滑</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">S</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<section id="smooth-legacy">
+<span id="bpy-ops-graph-smooth"></span><h3>平滑(旧版)<a class="headerlink" href="#smooth-legacy" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id20">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">关键帧 ‣ 平滑 ‣ 平滑(旧版)</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">O</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>There is also an option to smooth the selected curves, but beware: its algorithm seems to be
+to divide by two the distance between each keyframe and the average linear value of the curve,
+without any setting, which gives quite a strong smoothing! Note that the first and last keys
+seem to be never modified by this tool.</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id28">
+<img alt="../../../_images/editors_graph-editor_fcurves_editing_clean1.png" src="../../../_images/editors_graph-editor_fcurves_editing_clean1.png" />
+<figcaption>
+<p><span class="caption-text">平滑前的函数曲线。</span><a class="headerlink" href="#id28" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id29">
+<img alt="../../../_images/editors_graph-editor_fcurves_editing_smooth.png" src="../../../_images/editors_graph-editor_fcurves_editing_smooth.png" />
+<figcaption>
+<p><span class="caption-text">平滑后的函数曲线。</span><a class="headerlink" href="#id29" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="properties.html" class="btn btn-neutral float-right" title="属性" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/editors/graph_editor/fcurves/editing.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/editors/graph_editor/fcurves/editing.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Feditors/graph_editor/fcurves/editing.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Feditors/graph_editor/fcurves/editing.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

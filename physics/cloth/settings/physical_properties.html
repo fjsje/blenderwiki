@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>物理属性 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/physics/cloth/settings/physical_properties.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/js/version_switch.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../copyright.html" />
+    <link rel="next" title="缓存" href="cache.html" />
+    <link rel="prev" title="设置" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">物理</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigid_body/index.html">刚体</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">布料</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">设置</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">物理属性</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#stiffness">Stiffness 硬度</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#damping">阻尼</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#internal-springs">内部弹簧</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#pressure">压力</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="cache.html">缓存</a></li>
+<li class="toctree-l4"><a class="reference internal" href="shape.html">形状</a></li>
+<li class="toctree-l4"><a class="reference internal" href="collisions.html">碰撞</a></li>
+<li class="toctree-l4"><a class="reference internal" href="property_weights.html">属性权重</a></li>
+<li class="toctree-l4"><a class="reference internal" href="field_weights.html">力场权重</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../examples.html">示例</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../soft_body/index.html">软体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fluid/index.html">流体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../particles/index.html">粒子系统</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../dynamic_paint/index.html">动态绘画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../forces/index.html">力场</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collision.html">碰撞</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../baking.html">烘焙物理模拟</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../simulation_nodes.html">模拟节点</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">物理</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">布料</a></li>
+          <li class="breadcrumb-item"><a href="index.html">设置</a></li>
+      <li class="breadcrumb-item active">物理属性</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="physical-properties">
+<h1>物理属性<a class="headerlink" href="#physical-properties" title="Permalink to this heading"></a></h1>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">物理 ‣ 布料 ‣ 物理属性</span></p>
+</dd>
+</dl>
+</div>
+<dl class="simple" id="bpy-types-clothsettings-mass">
+<dt>顶点质量</dt><dd><p>布料材料的质量。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-clothsettings-air-damping">
+<dt>空气粘度</dt><dd><p>空气有一定的密度，可以减缓坠落的速度。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-clothsettings-bending-model">
+<dt>弯曲模型</dt><dd><dl class="field-list simple">
+<dt class="field-odd">线性<span class="colon">:</span></dt>
+<dd class="field-odd"><p>带线性弯曲弹簧的布料模型（旧）。</p>
+</dd>
+<dt class="field-even">棱角<span class="colon">:</span></dt>
+<dd class="field-even"><p>带棱角弯曲弹簧的布料模型。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<section id="stiffness">
+<h2>Stiffness 硬度<a class="headerlink" href="#stiffness" title="Permalink to this heading"></a></h2>
+<dl class="simple" id="bpy-types-clothsettings-tension-stiffness">
+<dt>张力</dt><dd><p>材料抗拉强度。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-clothsettings-compression-stiffness">
+<dt>压缩</dt><dd><p>材料抗压强度。</p>
+</dd>
+<dt>结构</dt><dd><p>布料的整体刚度（仅在线性弯曲模型中）。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-clothsettings-shear-stiffness">
+<dt>切变</dt><dd><p>材料抗剪切强度。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-clothsettings-bending-stiffness">
+<dt>弯曲</dt><dd><p>皱纹系数。更高会产生更大的褶皱。</p>
+</dd>
+</dl>
+</section>
+<section id="damping">
+<h2>阻尼<a class="headerlink" href="#damping" title="Permalink to this heading"></a></h2>
+<dl class="simple" id="bpy-types-clothsettings-tension-damping">
+<dt>张力</dt><dd><p>拉伸行为中的阻尼量。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-clothsettings-compression-damping">
+<dt>压缩</dt><dd><p>压缩行为中的阻尼量。</p>
+</dd>
+<dt>结构</dt><dd><p>拉伸行为中的阻尼量（仅在线性弯曲模型中）。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-clothsettings-shear-damping">
+<dt>切变</dt><dd><p>切变行为中的阻尼量。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-clothsettings-bending-damping">
+<dt>弯曲</dt><dd><p>弯曲行为中的阻尼量。</p>
+</dd>
+</dl>
+</section>
+<section id="internal-springs">
+<span id="bpy-types-clothsettings-use-internal-springs"></span><h2>内部弹簧<a class="headerlink" href="#internal-springs" title="Permalink to this heading"></a></h2>
+<p>正如介绍中所说，布的物理特性是通过 <a class="reference internal" href="../introduction.html#physics-cloth-introduction-springs"><span class="std std-ref">弹性</span></a> 连接网格表面的顶点来模拟的。但是这些弹簧只在表面相互作用，并且只适用于2D表面。3D或 <em>内部弹簧</em> 可以用来使网格的行为类似于 <a class="reference internal" href="../../soft_body/index.html"><span class="doc">软体</span></a>。内部弹簧可以通过切换 <em>内部弹簧</em> 面板标题下的复选框来启用。</p>
+<dl class="simple" id="bpy-types-clothsettings-internal-spring-max-length">
+<dt>最大弹簧创建长度</dt><dd><p>内部弹簧在创建过程中可以具有的最大长度。如果内部点之间的距离大于此值，则不会在这些点之间产生内部弹簧。长度为零表示没有长度限制。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-clothsettings-internal-spring-max-diversion">
+<dt>最大创建偏离</dt><dd><p>允许用于连接内部点的最大角度可以与顶点法线相背离。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-clothsettings-internal-spring-normal-check">
+<dt>检查表面法向</dt><dd><p>要求内部弹簧连接的点具有相反的法向。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-clothsettings-internal-tension-stiffness">
+<dt>张力</dt><dd><p>材料抗拉强度。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-clothsettings-internal-compression-stiffness">
+<dt>压缩</dt><dd><p>材料抗压强度。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-clothsettings-vertex-group-intern">
+<dt>顶点组</dt><dd><p>内部弹簧的 <em>张力</em> 和 <em>压缩</em> 可以通过 <a class="reference internal" href="../../../modeling/meshes/properties/vertex_groups/index.html"><span class="doc">顶点组</span></a> 来控制，以指定网格中哪些部分有内部弹簧或弹簧强度。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-clothsettings-internal-tension-stiffness-max">
+<dt>最大张力</dt><dd><p>最大张力刚度值。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-clothsettings-internal-compression-stiffness-max">
+<dt>最大压缩</dt><dd><p>最大压缩刚度值。</p>
+</dd>
+</dl>
+</section>
+<section id="pressure">
+<span id="bpy-types-clothsettings-use-pressure"></span><h2>压力<a class="headerlink" href="#pressure" title="Permalink to this heading"></a></h2>
+<p>布料压力允许模拟软壳物体，如气球或球，其中充满一种液体。这种流体被模拟成气体；为了模拟不可压缩的液体，在不破坏模拟的情况下，将 <em>压力刻度</em> 设置得尽可能高。布料压力可以通过拨动 <em>压力</em> 面板标题中的复选框来启用。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><a class="reference internal" href="../../../glossary/index.html#term-Non-manifold"><span class="xref std std-term">Non-manifold</span></a> 网格可以在布的压力下工作，但是，压力会从网格孔中逸出，导致漂移或推进力。一个解决这个问题的方法是通过使用 <em>顶点组</em> 来排除网格的非网格部分。</p>
+</div>
+<dl class="simple" id="bpy-types-clothsettings-uniform-pressure-force">
+<dt>压力</dt><dd><p>持续施加在网格上的均匀压力。这个值以 <em>压力刻度</em> 为单位，可以是负值，以模拟内爆或任何其他物体有外部压力向内推的情况。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-clothsettings-use-pressure-volume">
+<dt>自定义体积</dt><dd><p>使用 <em>目标体积</em> 参数作为布料的初始体积，而不是从网格本身计算它。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-clothsettings-target-volume">
+<dt>目标体积</dt><dd><p>内/外压力将相同的网格体积。如果设置为零，则物体体积的变化不会影响压力。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-clothsettings-pressure-factor">
+<dt>压力缩放</dt><dd><p>物体内部和外部都存在的环境压力（单位：kPa），当体积与目标相匹配时，就会达到平衡。增加该值可以使物体对体积变化的抵抗力更强。</p>
+</dd>
+</dl>
+<dl id="bpy-types-clothsettings-fluid-density">
+<dt>流体密度</dt><dd><p>指定物体内部所含液体的密度（单位：千克/升=1000|千克/立方米|，水用1），用于产生静水压力梯度，模拟液体的重量。如果该值为负数，则模拟周围流体的浮力。</p>
+<p>流体并不是实际模拟的，所以虽然这个设置有助于实现物体在静止状态下更合理的形状，但它不能创造出真实的流体动力学效果。它也可以用来给像软体一样的物体赋予更多的重量，使其具有沉重和足够的弹性填充物，即使它本身不是流体。</p>
+<p>对象的体积不被保留。如果需要的话，它应该和 <em>压力刻度</em> 一起使用。<em>流体密度</em> 乘以 <em>物体大小</em> 乘以50是 <em>压强</em> 的一个很好的起始值，以确保在物体没有经历比标准重力更高的加速度时，体积变化不超过10% 。</p>
+</dd>
+</dl>
+<dl id="bpy-types-clothsettings-vertex-group-pressure">
+<dt>顶点组</dt><dd><p>布的压力可以通过 <a class="reference internal" href="../../../modeling/meshes/properties/vertex_groups/index.html"><span class="doc">顶点组</span></a> 来控制，以指定网格的哪个部分来施加压力。零权重意味着没有压力，而权重为1意味着全压。</p>
+<p>注意，顶点权重为零的面将被排除在 <em>目标体积</em> 计算之外。</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="设置" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="cache.html" class="btn btn-neutral float-right" title="缓存" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/physics/cloth/settings/physical_properties.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/physics/cloth/settings/physical_properties.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fphysics/cloth/settings/physical_properties.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fphysics/cloth/settings/physical_properties.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

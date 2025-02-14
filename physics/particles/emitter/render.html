@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>渲染 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/physics/particles/emitter/render.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/js/version_switch.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../copyright.html" />
+    <link rel="next" title="视图显示" href="display.html" />
+    <link rel="prev" title="流体" href="physics/fluid.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">物理</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../rigid_body/index.html">刚体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../cloth/index.html">布料</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../soft_body/index.html">软体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../fluid/index.html">流体</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">粒子系统</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../particle_system_panel.html">粒子系统面板</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">发射体</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="emission.html">自发光（发射）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="cache.html">缓存</a></li>
+<li class="toctree-l4"><a class="reference internal" href="velocity.html">速度</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rotation.html">旋转</a></li>
+<li class="toctree-l4"><a class="reference internal" href="physics/index.html">物理</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">渲染</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#common-settings">常规设置</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#render-as">渲染为</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#none">无</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#halo">光晕</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#path">路径</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#timing">时序</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#object">物体</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#collection">集合</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#use-count">使用计数</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#extra">附加</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="display.html">视图显示</a></li>
+<li class="toctree-l4"><a class="reference internal" href="children.html">子级</a></li>
+<li class="toctree-l4"><a class="reference internal" href="force_field.html">力场</a></li>
+<li class="toctree-l4"><a class="reference internal" href="vertex_groups.html">顶点组</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../hair/index.html">毛发</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../texture_influence.html">纹理影响</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mode.html">粒子编辑模式</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../dynamic_paint/index.html">动态绘画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../forces/index.html">力场</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../collision.html">碰撞</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../baking.html">烘焙物理模拟</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../simulation_nodes.html">模拟节点</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">物理</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">粒子系统</a></li>
+          <li class="breadcrumb-item"><a href="index.html">发射体</a></li>
+      <li class="breadcrumb-item active">渲染</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="render">
+<h1>渲染<a class="headerlink" href="#render" title="Permalink to this heading"></a></h1>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">粒子系统 ‣ 渲染</span></p>
+</dd>
+</dl>
+</div>
+<p><em>渲染面板</em> 控制粒子在渲染时的显示方式。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Cycles 仅支持物体和集合渲染类型。</p>
+</div>
+<section id="common-settings">
+<h2>常规设置<a class="headerlink" href="#common-settings" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>比例|缩放</dt><dd><p>待补充。</p>
+</dd>
+<dt>缩放随机性</dt><dd><p>待补充。</p>
+</dd>
+<dt>材质</dt><dd><p>设置对象材质中的哪一个用于着色粒子。</p>
+</dd>
+<dt>坐标系</dt><dd><p>使用不同的对象坐标来确定粒子的诞生。</p>
+</dd>
+<dt>显示发射器</dt><dd><p>禁用时，不再渲染发射器。激活按钮 <em>发射器</em> 以渲染网格对象。</p>
+</dd>
+</dl>
+</section>
+<section id="render-as">
+<h2>渲染为<a class="headerlink" href="#render-as" title="Permalink to this heading"></a></h2>
+<section id="none">
+<h3>无<a class="headerlink" href="#none" title="Permalink to this heading"></a></h3>
+<p>设置为 <em>无</em> 时，不会渲染粒子。如果您使用粒子复制对象，这将非常有用。</p>
+</section>
+<section id="halo">
+<span id="particle-halo"></span><h3>光晕<a class="headerlink" href="#halo" title="Permalink to this heading"></a></h3>
+<p>光晕被渲染为发光的点或一小团光。虽然它们不是真正的光，因为它们不会像光物体一样将光投射到场景中。它们被称为 <em>光环</em>，因为你可以看到它们，但它们没有任何物质。</p>
+</section>
+<section id="path">
+<span id="particle-path"></span><h3>路径<a class="headerlink" href="#path" title="Permalink to this heading"></a></h3>
+<p><em>路径</em> 可视化需要 <a class="reference internal" href="../hair/index.html"><span class="doc">毛发</span></a> 粒子系统或 <a class="reference internal" href="physics/keyed.html"><span class="doc">键控</span></a> 粒子。</p>
+<dl class="simple">
+<dt>B-样条曲线</dt><dd><p>使用B-样条插入毛发。如果要使用较低的渲染值，这可能是一个选项。你降低一点控制但获得更顺畅的路径。</p>
+</dd>
+<dt>步数 (阶梯)</dt><dd><p>Set the number of subdivisions of the rendered paths (the value is a power of 2).
+You should set this value carefully,
+because if you increase the render value by two you need four times more memory to render.
+Also the rendering is faster if you use low render values (sometimes drastically).
+But how low you can go with this value depends on the waviness of the hair (the value is a power of 2).
+This means 0 steps give 1 subdivision,
+1 give 2 subdivisions, 2 --&gt; 4, 3 --&gt; 8, 4 --&gt; 16, ... <em>n</em> --&gt; <em>n</em><sup>2</sup>.</p>
+</dd>
+</dl>
+</section>
+<section id="timing">
+<h3>时序<a class="headerlink" href="#timing" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id2">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">粒子系统 ‣ 渲染 ‣ 时序</span></p>
+</dd>
+<dt class="field-even">类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>毛发</p>
+</dd>
+</dl>
+</div>
+<dl class="simple">
+<dt>绝对轨迹时间</dt><dd><p>轨迹时序是绝对帧。</p>
+</dd>
+<dt>结束</dt><dd><p>实际轨迹的结束时间。</p>
+</dd>
+<dt>随机</dt><dd><p>给轨迹长度一个随机变化。</p>
+</dd>
+</dl>
+</section>
+<section id="object">
+<span id="particle-object"></span><h3>物体<a class="headerlink" href="#object" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id3">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">粒子系统 ‣ 渲染 ‣ 物体</span></p>
+</dd>
+</dl>
+</div>
+<dl class="simple">
+<dt>实例物体</dt><dd><p>实例化指定的物体来代替每个粒子。</p>
+</dd>
+<dt>全局坐标系</dt><dd><p>使用物体的全局坐标系进行实例化。</p>
+</dd>
+<dt>物体旋转</dt><dd><p>使用物体的旋转。</p>
+</dd>
+<dt>物体缩放</dt><dd><p>使用物体的大小。</p>
+</dd>
+</dl>
+</section>
+<section id="collection">
+<span id="particle-collection"></span><h3>集合<a class="headerlink" href="#collection" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id4">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">粒子系统 ‣ 渲染 ‣ 集合</span></p>
+</dd>
+</dl>
+</div>
+<dl class="simple">
+<dt>实例集合</dt><dd><p>属于集合中的物体在粒子的位置依次实例化。</p>
+</dd>
+<dt>完整集合</dt><dd><p>一次使用全部集合中的物体，而不是其中一个，显示组代替每个粒子。</p>
+</dd>
+<dt>随机拾取</dt><dd><p>组中的对象按随机顺序选择，并且仅显示一个对象来代替粒子。请注意，此机制完全替换了使用父级和 <em>实例化顶点</em> 的旧 Blender 粒子系统，以将粒子替换为实际几何体。此方法已完全弃用，不再有效。</p>
+</dd>
+<dt>全局坐标系</dt><dd><p>使用物体的全局坐标系进行实例化。</p>
+</dd>
+<dt>物体旋转</dt><dd><p>使用物体的旋转。</p>
+</dd>
+<dt>物体缩放</dt><dd><p>使用物体的大小。</p>
+</dd>
+</dl>
+<section id="use-count">
+<h4>使用计数<a class="headerlink" href="#use-count" title="Permalink to this heading"></a></h4>
+<div class="refbox admonition" id="id5">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">粒子系统 ‣ 渲染 ‣ 集合 ‣ 使用计数</span></p>
+</dd>
+</dl>
+</div>
+<p>在同一群组中多次使用物体。使用显示的列表视图指定重复每个物体的顺序和次数。您可以使用 <code class="docutils literal notranslate"><span class="pre">+</span></code> 按钮复制 <a class="reference internal" href="../../../interface/controls/templates/list_view.html#ui-list-view"><span class="std std-ref">列表视图</span></a> 中的对象，或使用 <code class="docutils literal notranslate"><span class="pre">-</span></code> 按钮删除副本。</p>
+</section>
+</section>
+</section>
+<section id="extra">
+<h2>附加<a class="headerlink" href="#extra" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id6">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">粒子系统 ‣ 渲染 ‣ 附加</span></p>
+</dd>
+</dl>
+</div>
+<dl class="simple" id="bpy-types-particlesettings-use-parent-particles">
+<dt>渲染父粒子</dt><dd><p>如果使用子粒子，也渲染父粒子。子集有很多不同的变形选择，所以策略是父集在他们折叠的子集之间。因此，默认情况下，如果激活子项，则不会呈现 <em>父集</em>。另请详见 <a class="reference internal" href="children.html"><span class="doc">子集</span></a>。</p>
+</dd>
+<dt>未诞生</dt><dd><p>在粒子诞生之前渲染它。</p>
+</dd>
+<dt>消逝</dt><dd><p>在粒子消逝后渲染它。如果粒子在碰撞中消逝，那么这非常有用，因此可以用例子覆盖物体。</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="physics/fluid.html" class="btn btn-neutral float-left" title="流体" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="display.html" class="btn btn-neutral float-right" title="视图显示" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/physics/particles/emitter/render.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/physics/particles/emitter/render.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fphysics/particles/emitter/render.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fphysics/particles/emitter/render.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

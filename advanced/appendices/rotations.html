@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>旋转模式 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/advanced/appendices/rotations.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="问题排查" href="../../troubleshooting/index.html" />
+    <link rel="prev" title="附录" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">高级</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../command_line/index.html">命令行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../scripting/index.html">脚本与扩展 Blender</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../app_templates.html">应用模板</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../keymap_editing.html">键位映射自定义</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../limits.html">功能局限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../operators.html">操作项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../blender_directory_layout.html">Blender 目录布局</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">附录</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">旋转模式</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#euler-modes">欧拉模式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#axis-angle-mode">轴向角度模式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#quaternion-mode">四元数模式</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#more-about-quaternions">更多关于四元数</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#other-considerations">其他注意事项</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">高级</a></li>
+          <li class="breadcrumb-item"><a href="index.html">附录</a></li>
+      <li class="breadcrumb-item active">旋转模式</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="rotation-modes">
+<h1>旋转模式<a class="headerlink" href="#rotation-modes" title="Permalink to this heading"></a></h1>
+<p>Blender 允许您通过多种方式定义旋转。每一个都有一系列优缺点；没有最佳的旋转模式，因为每一个都适合具体情况。</p>
+<p>在所有这些模式中，正角值表示逆时针旋转方向，而负值定义顺时针旋转。</p>
+<p>虽然您可以使用全局或局部变换方向旋转元素，但这些轴不适合定义旋转，因为它们各自的效果无法与其他两个分离。</p>
+<p>例如，取 X、Y 和 Z 旋转的任何三个值。使用全局或局部轴执行这些操作中的每一个。根据您执行这些操作的顺序，您最终将获得不同的最终方向。因此，需要适当的旋转坐标系。</p>
+<section id="euler-modes">
+<h2>欧拉模式<a class="headerlink" href="#euler-modes" title="Permalink to this heading"></a></h2>
+<p>用于执行欧拉旋转的轴系统是所谓的欧拉万向轴。支架是一组特定的三个轴。其中的特殊之处在于，轴之间有一个层次关系：其中一个轴位于层次结构的顶部，并且以另外两个轴中的一个作为其直接子轴；同时，这个子轴是剩余轴的父轴，即层次结构最底部的一个。</p>
+<p>哪个轴位于顶部，哪个位于中间，哪个位于底部，这取决于特定的欧拉万向轴：它们有六种类型，因为有六种可能的组合：XYZ、XZY、YXZ、YZX、ZXY 和 ZYX 欧拉旋转模式。使用轴的字母顺序命名这些模式，从层次结构底部的轴开始，最后是顶部的轴。</p>
+<p>这些系统的主要问题出现在它们失去相对垂直度的时候。而这发生在中间的轴旋转时，导致底部的轴也随之旋转。当这个底部的轴接近 90°（或相等的角度）时，情况不断恶化。在这种情况下，它将保持与层次结构顶部的轴对齐。在那一刻，我们刚刚失去了一个旋转轴。这在制作动画时可能会导致不连续的插值。这种特殊的轴线损失被称为 “万向节锁”。</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>通过启用 <em>旋转</em> 物体操控器并将其设置为 <em>万向</em>（位于标题栏中的操控器按钮），可以在 3D 视口中看到支架轴的实际配置。同时，旋转模式应设置为活动物体的任意欧拉模式。</p>
+<p>现在，您可以围绕中间的轴执行旋转（例如，在 <em>XYZ 欧拉</em> 模式下对应的是 Y 轴），并查看只有两个轴的万向轴有多容易。在带有万向节锁的 <em>XYZ 欧拉</em> 模式的特定情况下，围绕 X 轴的旋转将具有与围绕 Z 轴旋转相同的效果，这意味着实际上无法执行 X 轴旋转。</p>
+</div>
+<p>此模式的一个优点是动画曲线易于理解和编辑。但是，当中轴接近 90°（或等效角度）值时，必须特别注意。</p>
+</section>
+<section id="axis-angle-mode">
+<h2>轴向角度模式<a class="headerlink" href="#axis-angle-mode" title="Permalink to this heading"></a></h2>
+<p>此模式允许我们定义轴（X, Y, Z）和围绕该轴的旋转角度（W）。</p>
+<p>如果我们使用交互式旋转（使用旋转控件）定义旋转，则 X、Y 和 Z 的值在绝对值上不会超过 1.0，并且 W 将包含在 0 和 180 度之间。</p>
+<p>如果要定义 180° 以上的旋转（例如，定义多个旋转），则需要直接编辑 W 值，但当您执行交互式旋转时，该值将再次调整。轴线值也是如此。</p>
+<p>此系统适用于围绕固定轴旋转的元素，或一次动画化一个元素（轴或角度）。当同时动画（插值）两个组件（轴和角度）时，可能会出现问题。由此产生的效果可能不如预期。</p>
+<p>此旋转模式下的 <em>Gimbal</em> 控件显示一组三个正交轴，其中 Z 轴沿着定义的旋转轴，即它指向由（X, Y, Z）点定义的方向。</p>
+<p>轴-角度系统没有万向节锁，但当同时动画轴和角度时，此模式下的动画曲线根本不直观，在这种情况下，它们很难理解和编辑。</p>
+</section>
+<section id="quaternion-mode">
+<h2>四元数模式<a class="headerlink" href="#quaternion-mode" title="Permalink to this heading"></a></h2>
+<p>在此模式下，旋转也由四个值（ X、Y、Z 和 W ）定义。X、Y 和 Z 也定义了一个轴，而 W 则定义了一个角度，但它与轴的角度截然不同。这里重要的是所有四个值之间的关系。</p>
+<p>为了以直观的方式描述它，让我们来看看 X 坐标的效果：它所做的是将元素围绕 X 轴旋转到 180 度。Y 和 Z 也是如此。W 的效果是避免这些旋转并且使元件保持零旋转。最后的方向是这四种效果的组合。</p>
+<p>由于分量之间的关系定义了最终方向，将所有四个数字乘以或除以一个恒定值将产生非常相同的旋转。</p>
+<p>此模式非常适合在 <strong>任何</strong> 对方向之间插值。它不会受到万向节锁定或任何不希望的插值效应的影响。唯一的缺点是，您无法在距离大于 180° 的两个方向之间插值，因为动画将在它们之间走最短的路径。因此，要动画化旋转元素，您必须设置许多中间关键帧，最多彼此 180°。</p>
+<p>此模式下的 <em>Gimbal</em> 控件等同于 <em>Local</em> 控件，没有任何特殊含义。</p>
+<p>此模式下的动画曲线不直观，因此也难以理解和编辑。</p>
+<section id="more-about-quaternions">
+<h3>更多关于四元数<a class="headerlink" href="#more-about-quaternions" title="Permalink to this heading"></a></h3>
+<p>本节对 3D 艺术家来说并不真正有用，但它可以适用于好奇或科学家。</p>
+<p>四元数是扩展复杂数字的数字系统。它们表示一个四个分量向量，其分量在 Blender 中被称为 X、Y、Z 和 W 。当在四元数模式下交互式旋转时，四元数的所谓的规范（长度）将保持不变。根据定义，四元数的规范等于 1.0（这是 <strong>归一化</strong> 四元数）。当您在 Blender 中选择四元数模式时，XYZW 组件将描述归一化四元数。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>四元数 <em>q</em> 的规律在数学上定义为：</p>
+<div class="math notranslate nohighlight">
+\[\lvert q \rvert = \sqrt{X^2 + Y^2 + Z^2 + W^2}\]</div>
+</div>
+<p>然而，如果在交互式转换期间使用适当的锁定按钮锁定四元数组分之一，则规范将不会保持不变，因为被阻断的组件将无法自行调整以保持单位规范。</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>与控件交互式旋转不会改变当前四元数的法线。单独编辑单个 XYZW 分量，您可以更改规范。要再次使标准 1.0，您可以切换到任何旋转模式，然后再次返回到四元数。</p>
+</div>
+<p>四元数的旋转分量与轴角度分量保持紧密关系。要找到对应关系，首先我们必须处理四元数的标准化版本，即一个其规范等于 1.0 的四元数。要使一个四元数归一化，只需将其每个组成部分按其规范划分即可。如前所述，将所有四个值除以相同的数字会产生相同的方向。</p>
+<p>一旦我们计算出归一化四元数的分量，与轴角分量的关系如下：</p>
+<ul class="simple">
+<li><p>X、Y 和 Z 表示与轴角完全相同：它们只是定义了旋转围绕的轴。</p></li>
+<li><p>W 可以用来检索围绕定义角度的实际旋转。以下公式适用（前提是 <em>四元数已归一化</em>）：<span class="math notranslate nohighlight">\(W = \cos(\frac{a}{2})\)</span>，其中 <em>a</em> 实际上就是我们要找的旋转角度。也就是说：<span class="math notranslate nohighlight">\(a = 2 \arccos{W}\)</span>。</p></li>
+</ul>
+</section>
+</section>
+<section id="other-considerations">
+<h2>其他注意事项<a class="headerlink" href="#other-considerations" title="Permalink to this heading"></a></h2>
+<p>在轴角模式和四元数模式中，我们可以在每个分量的基础上锁定交互式模式中的旋转，而不是按轴进行。为此，我们可以使用相应的 <em>旋转</em> 变换按钮旁边的锁定按钮激活此锁定功能。</p>
+<p>关于旋转动画，所有关键帧必须以相同的旋转模式定义，这必须是整个动画中对象的选定旋转模式。</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="附录" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../troubleshooting/index.html" class="btn btn-neutral float-right" title="问题排查" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/advanced/appendices/rotations.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/advanced/appendices/rotations.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fadvanced/appendices/rotations.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fadvanced/appendices/rotations.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

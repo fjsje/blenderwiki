@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>复制全局变换 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/addons/animation/copy_global_transform.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="矫正形态键（Corrective Shape Keys）" href="corrective_shape_keys.html" />
+    <link rel="prev" title="骨骼选择集（Bone Selection Sets）" href="bone_selection_sets.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">插件</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html#add-ons-category-listings">插件类别列表</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../3d_view/index.html">3D 视图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../add_curve/index.html">添加曲线</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../add_mesh/index.html">添加网格</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">动画</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="animall.html">动画所有（Animall）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bone_selection_sets.html">骨骼选择集（Bone Selection Sets）</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">复制全局变换</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#activation">激活</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#interface">界面</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#description">描述</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#mirror-options">镜像选项</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#limitations">局限</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="corrective_shape_keys.html">矫正形态键（Corrective Shape Keys）</a></li>
+<li class="toctree-l4"><a class="reference internal" href="turnaround_camera.html">转场镜头（Turnaround Camera）</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../baking/index.html">烘焙</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../camera/index.html">摄像机</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../development/index.html">开发</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../import_export/index.html">导入 - 导出</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../interface/index.html">界面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../lighting/index.html">光照</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../materials/index.html">材质</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../mesh/index.html">网格</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../node/index.html">节点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../object/index.html">物体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../paint/index.html">绘制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../rigging/index.html">绑定</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sequencer/index.html">序列编辑器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../system/index.html">系统</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../uv/index.html">UV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../video_tools/index.html">视频工具</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">插件</a></li>
+          <li class="breadcrumb-item"><a href="index.html">动画</a></li>
+      <li class="breadcrumb-item active">复制全局变换</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="copy-global-transform">
+<h1>复制全局变换<a class="headerlink" href="#copy-global-transform" title="Permalink to this heading"></a></h1>
+<p>轻松复制粘贴物体与骨骼变换。</p>
+<p>在复制时，全局（<a class="reference internal" href="../../glossary/index.html#term-World-Space"><span class="xref std std-term">世界空间</span></a>）变换将被放置在剪贴板上。这可以被粘贴到任何物体或骨骼上，无论是在当前帧或任意其他帧。</p>
+<p>由于变换是作为文本放在剪贴板上的，因此您甚至可以将其复制粘贴到即时消息中并将其发送给其他人。</p>
+<section id="activation">
+<h2>激活<a class="headerlink" href="#activation" title="Permalink to this heading"></a></h2>
+<ul class="simple">
+<li><p>打开 Blender 并转到 “偏好设置”，然后转到 “插件” 选项卡。</p></li>
+<li><p>选择 “动画” 类别，然后勾选 “复制全局变换” 以启用插件。</p></li>
+</ul>
+</section>
+<section id="interface">
+<h2>界面<a class="headerlink" href="#interface" title="Permalink to this heading"></a></h2>
+<p>位于 <span class="menuselection">3D 视图 ‣ 侧栏 ‣ 动画标签</span>。</p>
+<figure class="align-right">
+<img alt="../../_images/addons_animation_copy-global-transform.png" src="../../_images/addons_animation_copy-global-transform.png" />
+</figure>
+</section>
+<section id="description">
+<h2>描述<a class="headerlink" href="#description" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>复制</dt><dd><p>检查活动对象（在物体模式下）或骨骼（在姿态模式下）并将其当前全局变换作为矩阵放置到剪贴板上。</p>
+</dd>
+<dt>粘贴</dt><dd><p>将复制的全局变换应用于活动的物体或骨骼。这是通过 <strong>调整其位置、旋转和缩放属性</strong> 来完成的。</p>
+</dd>
+<dt>镜像</dt><dd><p>与上面的 “粘贴” 功能相同，但会相对于其他对象或骨骼进行镜像。这在某些情况下非常有用，例如，将一只脚的位置复制到另一只脚的位置。请参阅下面的<a class="reference internal" href="#copy-global-transform-mirror-options"><span class="std std-ref">镜像选项</span></a>。</p>
+</dd>
+<dt>粘贴到所选关键帧</dt><dd><p>如上所述进行粘贴，并自动记录关键帧以更新一个或多个帧。关键帧的选择用于告诉 Blender 应该在 <em>哪些帧</em> 上进行此操作；它不会影响变换的哪些部分被记录。哪些关键帧被记录是由正在使用的活动插帧集决定的。</p>
+</dd>
+<dt>粘贴并烘焙</dt><dd><p>几乎与 <em>粘贴到所选关键帧</em> 相同，替代仅粘贴到所选关键帧，<em>粘贴并烘焙</em> 将会粘贴并在第一个关键帧和最后选择的关键中中间自动插入关键帧。</p>
+</dd>
+</dl>
+</section>
+<section id="mirror-options">
+<span id="copy-global-transform-mirror-options"></span><h2>镜像选项<a class="headerlink" href="#mirror-options" title="Permalink to this heading"></a></h2>
+<p>复制的变换可以相对于物体或者一个<a class="reference internal" href="../../glossary/index.html#term-Bone"><span class="xref std std-term">骨骼</span></a>镜像处理，这需要首先选择该物体或骨骼。</p>
+<dl class="simple">
+<dt>骨架 + 骨骼</dt><dd><p>选择一个<a class="reference internal" href="../../glossary/index.html#term-Armature"><span class="xref std std-term">骨架</span></a>物体作为镜像物体就会显示骨骼选择器，您可以使用它来拾取骨骼以用作镜像。这将始终使用特定骨架物体上命名的骨骼。</p>
+</dd>
+<dt>仅骨骼</dt><dd><p>当你选择 <em>无镜像物体</em> 时，你仍然可以选择一个 <em>骨骼名称</em>，这用于镜像 <em>活动骨架</em> 中的骨骼。这对于相对于活动角色的 “胸部” 骨骼镜像骨骼变换非常有用。</p>
+</dd>
+<dt>仅物体</dt><dd><p>这将只相对于所选物体的进行镜像。</p>
+</dd>
+</dl>
+<p>当使用 “镜像粘贴” 粘贴时，镜像轴可选择于<a class="reference internal" href="../../interface/undo_redo.html#bpy-ops-screen-redo-last"><span class="std std-ref">重做面板</span></a>。</p>
+</section>
+<section id="limitations">
+<h2>局限<a class="headerlink" href="#limitations" title="Permalink to this heading"></a></h2>
+<p>粘贴变换会调整对象/骨骼的位置、旋转和缩放。这意味着在复制倾斜的变换时，这种倾斜会丢失。</p>
+<p>如果对象/骨骼上有约束，那么产生的最终变换结果可能与粘贴的变换看上去不一样。举个具体的例子：如果有一个约束条件添加了旋转，那么它总是会在粘贴变换的基础上添加旋转。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>通过<a class="reference internal" href="../../animation/armatures/posing/editing/pose_library.html"><span class="doc">姿态库</span></a>来管理和共享所有姿态。</p>
+</div>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">类别<span class="colon">:</span></dt>
+<dd class="field-odd"><p>动画</p>
+</dd>
+<dt class="field-even">描述<span class="colon">:</span></dt>
+<dd class="field-even"><p>一个简单的插件，用于复制世界空间变换。</p>
+</dd>
+<dt class="field-odd">位置<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">3D 视图 ‣ 侧栏 ‣ 动画标签</span></p>
+</dd>
+<dt class="field-even">文件<span class="colon">:</span></dt>
+<dd class="field-even"><p>copy_global_transform.py</p>
+</dd>
+<dt class="field-odd">作者<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Sybren A. Stüvel</p>
+</dd>
+<dt class="field-even">维护者<span class="colon">:</span></dt>
+<dd class="field-even"><p>Sybren A. Stüvel</p>
+</dd>
+<dt class="field-odd">许可证<span class="colon">:</span></dt>
+<dd class="field-odd"><p>GPL 2+</p>
+</dd>
+<dt class="field-even">支持级别<span class="colon">:</span></dt>
+<dd class="field-even"><p>官方</p>
+</dd>
+<dt class="field-odd">说明<span class="colon">:</span></dt>
+<dd class="field-odd"><p>此插件与 Blender 捆绑在一起。</p>
+</dd>
+</dl>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="bone_selection_sets.html" class="btn btn-neutral float-left" title="骨骼选择集（Bone Selection Sets）" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="corrective_shape_keys.html" class="btn btn-neutral float-right" title="矫正形态键（Corrective Shape Keys）" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/addons/animation/copy_global_transform.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/addons/animation/copy_global_transform.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Faddons/animation/copy_global_transform.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Faddons/animation/copy_global_transform.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>粒子实例修改器 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/modifiers/physics/particle_instance.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/js/version_switch.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../copyright.html" />
+    <link rel="next" title="粒子系统修改器" href="particle_system.html" />
+    <link rel="prev" title="洋面修改器" href="ocean.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">网格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">文本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../volumes/index.html">体积（卷标）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../empties.html">空物体</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">修改器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../common_options.html">常见的修改器选项</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#modify">修改</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#generate">生成</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#deform">形变</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#physics">物理</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="cloth.html">布料修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="collision.html">碰撞修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="dynamic_paint.html">动态绘画修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="explode.html">爆破修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="fluid.html">流体修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="ocean.html">洋面修改器</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">粒子实例修改器</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#options">选项</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#create-along-paths">沿路径创建</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#layers">层</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#examples">示例</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="particle_system.html">粒子系统修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="soft_body.html">软体修改器</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../geometry_nodes/index.html">几何节点</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">建模</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">修改器</a></li>
+      <li class="breadcrumb-item active">粒子实例修改器</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="particle-instance-modifier">
+<span id="bpy-types-particleinstancemodifier"></span><span id="index-0"></span><h1>粒子实例修改器<a class="headerlink" href="#particle-instance-modifier" title="Permalink to this heading"></a></h1>
+<p>当粒子实例修改器被添加到一个对象上时，这个对象的网格将被复制到另一个目标对象的选定粒子系统的粒子位置上。这意味着，要使用这个修改器，你必须至少有一个其他的对象上有<a class="reference internal" href="../../../physics/particles/index.html"><span class="doc">粒子系统</span></a>。</p>
+<p>由于粒子实例修改器受到其他对象上的基础粒子系统的影响，因此修改器产生的一些明显的效果可能看起来和行动都大不相同，这取决于它所关联的粒子系统的基础设置。当粒子实例修改器的设置似乎没有返回预期的结果时，这是值得考虑的。</p>
+<section id="options">
+<h2>选项<a class="headerlink" href="#options" title="Permalink to this heading"></a></h2>
+<figure class="align-right" id="id1">
+<a class="reference internal image-reference" href="../../../_images/modeling_modifiers_physics_particle-instance_panel.png"><img alt="../../../_images/modeling_modifiers_physics_particle-instance_panel.png" src="../../../_images/modeling_modifiers_physics_particle-instance_panel.png" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-text">粒子实例修改器。</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<dl>
+<dt>物体</dt><dd><p>具有与其关联的粒子系统的目标对象。</p>
+</dd>
+<dt>粒子系统</dt><dd><p>将这个修改器应用到目标 <em>物体</em> 的哪个粒子系统。</p>
+</dd>
+<dt>创建实例</dt><dd><dl>
+<dt>常规</dt><dd><p>启用后，修改器将使用常规（父级）粒子来复制修改对象的网格。</p>
+</dd>
+<dt>子级</dt><dd><p>启用后，修改器将使用 <a class="reference internal" href="../../../physics/particles/emitter/children.html"><span class="doc">子对象</span></a> 粒子来复制修改对象的网格。</p>
+</dd>
+<dt>尺寸</dt><dd><p>以粒子大小的属性来缩放网格的实例副本。当这个功能被禁用时，所有的副本都会出现与原点相同的尺寸。</p>
+<p>关于粒子的尺寸选项，请参见粒子系统的 <a class="reference internal" href="../../../physics/particles/emitter/render.html"><span class="doc">Render</span></a> 和 <a class="reference internal" href="../../../physics/particles/emitter/children.html"><span class="doc">Children</span></a> 面板。</p>
+</dd>
+</dl>
+</dd>
+<dt>显示</dt><dd><dl class="simple">
+<dt>未诞生</dt><dd><p>启用后，修改器将使用未出生的粒子来复制修改对象的网格。</p>
+</dd>
+<dt>活跃</dt><dd><p>启用后，修改器将使用活着的粒子来复制修改对象的网格。</p>
+</dd>
+<dt>消逝</dt><dd><p>启用后，修改器将使用死亡粒子来复制修改对象的网格。</p>
+</dd>
+</dl>
+</dd>
+<dt>数量</dt><dd><p>要使用的粒子的比例。允许你 <strong>随机</strong> 地跳过粒子来调整实例的数量。</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>目前使用的随机算法只能确保在 <em>统计学上尊重相对数量。实际生成的实例数量将与理论数量不同，这取决于目标粒子系统的 *Seed</em> 值（以及下面描述的 <em>Offset</em> 值）。</p>
+<p>这种偏差在粒子数量多的情况下并不明显，但在数量少的情况下会非常明显（例如，目标系统中有 100 个粒子，<em>总量</em> 值为 <code class="docutils literal notranslate"><span class="pre">0.1</span></code>，它可以产生多达 15 或 5 个实例，而不是预期的 10 个）。</p>
+</div>
+</dd>
+<dt>偏移量</dt><dd><p>用于实例化的粒子范围中的相对偏移。当同一粒子系统被用于多个修改器实例时，允许你避免使用的粒子重叠。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>如果你想完全避免重叠，你的 <em>Offset</em> 值必须至少和你的 <em>Amount</em> 值一样高。</p>
+</div>
+</dd>
+<dt>坐标空间</dt><dd><dl class="simple">
+<dt>世界，局部</dt><dd><p>使用 <a class="reference internal" href="../../../glossary/index.html#term-World-Space"><span class="xref std std-term">世界空间</span></a>，或 <a class="reference internal" href="../../../glossary/index.html#term-Local-Space"><span class="xref std std-term">局部空间</span></a> 的目标对象（即粒子系统被分配到的）。</p>
+<ul class="simple">
+<li><p>世界空间意味着修改后的网格副本的位置将取决于被修改对象的 <strong>和</strong> 目标对象的位置。</p></li>
+<li><p>局部空间意味着修改后的网格副本的位置将只取决于修改对象的位置。</p></li>
+</ul>
+</dd>
+</dl>
+</dd>
+<dt>轴向</dt><dd><p>指定修改后的对象的哪个轴作为极轴，以应用来自实例化粒子的旋转。</p>
+</dd>
+</dl>
+<section id="create-along-paths">
+<h3>沿路径创建<a class="headerlink" href="#create-along-paths" title="Permalink to this heading"></a></h3>
+<p>默认情况下，实例的放置取决于粒子在当前帧中的位置。通过启用 <em>沿路径创建</em>，修改对象的实例会沿着粒子路径（或头发丝）变形。这允许你沿着粒子路径选择位置，而不考虑当前帧的情况。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>你可以在 <em>粒子系统</em> 标签的 <a class="reference internal" href="../../../physics/particles/emitter/render.html"><span class="doc">渲染</span></a> 面板上调整粒子的路径（使用 <em>Path</em> 可视化类型）。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>粒子系统必须是 <a class="reference internal" href="../../../physics/baking.html"><span class="doc">baked</span></a>，除了 <em>Hair</em> 类型或 <em>Keyed</em> 物理学。</p>
+</div>
+<dl class="simple">
+<dt>位置</dt><dd><p>指定实例填充路径的百分比，如果启用*Keep Shape*选项，则指定路径上的位置。</p>
+</dd>
+<dt>随机</dt><dd><p>为每个实例的 <em>Position</em> 值添加随机性。</p>
+</dd>
+<dt>旋转</dt><dd><p>指定围绕该路径的旋转。</p>
+</dd>
+<dt>随机</dt><dd><p>为每个实例的 <em>Rotation</em> 值添加随机性。</p>
+</dd>
+<dt>保持形态</dt><dd><p>启用这个功能可以防止实例被变形，并根据 <em>Position</em> 值将其放在路径上。</p>
+</dd>
+</dl>
+</section>
+<section id="layers">
+<h3>层<a class="headerlink" href="#layers" title="Permalink to this heading"></a></h3>
+<p>通过这些字段，你可以选择颜色属性，它将根据粒子信息来填充颜色。例如，这些颜色属性可以在着色器中使用，以增加材料的差异性。</p>
+<dl class="simple">
+<dt>编号</dt><dd><p>基于粒子索引的值的颜色属性。</p>
+</dd>
+<dt>数值</dt><dd><p>一个颜色属性，用于每个粒子的随机值。</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="examples">
+<h2>示例<a class="headerlink" href="#examples" title="Permalink to this heading"></a></h2>
+<figure class="align-center" id="id2">
+<img alt="../../../_images/modeling_modifiers_physics_particle-instance_split-plane.jpg" src="../../../_images/modeling_modifiers_physics_particle-instance_split-plane.jpg" />
+<figcaption>
+<p><span class="caption-text">粒子实例修改器示例。</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The render above shows a single plane mesh object assigned to two different vertex groups
+and each of those vertex groups is assigned to a separate and independent particle system,
+with each particle system being assigned to a different Particle Instance modifier.
+In the case shown the Particle Instance modifiers are added to a sphere and a cube.
+See <a class="reference external" href="https://archive.blender.org/wiki/uploads/4/48/Manual_-_Modifiers_-_Particle_Instance_Modifiers_-_Split_Plane.blend">example blend-file</a>.</p>
+<figure class="align-center" id="id3">
+<img alt="../../../_images/modeling_modifiers_physics_particle-instance_create-along-paths.jpg" src="../../../_images/modeling_modifiers_physics_particle-instance_create-along-paths.jpg" />
+<figcaption>
+<p><span class="caption-text">沿路径创建示例。</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>在这个例子中，一个单一的 <em>Keyed</em> 粒子在一个椭圆的路径上穿过四个点（绿色的平面）。粒子实例修改器被添加到一个圆柱体对象，然后与该 <em>键</em> 粒子系统相关联。</p>
+<p>当 <em>沿着路径创建</em> 被激活时，圆柱体的位置不是仅仅跟随粒子的位置，而是圆柱体的网格被拟合为粒子所遵循的路径的形状。被变形的物体的网格几何形状会对变形的效果产生影响。就圆柱体而言，它的长度上有许多环形切口，因此它可以在这些点上弯曲，沿着粒子路径变形。</p>
+<p>粒子实例修改器 <em>沿着路径创建</em> 选项适用于头发（发丝）粒子，也适用于键控粒子。在这种情况下，修改器的网格将遵循头发丝路径的长度和轮廓。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>股，当它们被生成时，会立即死亡，所以为了使 <em>沿着路径创建</em> 复选框有任何用处，你必须同时启用 <em>死亡</em> 复选框。</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="ocean.html" class="btn btn-neutral float-left" title="洋面修改器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="particle_system.html" class="btn btn-neutral float-right" title="粒子系统修改器" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/modeling/modifiers/physics/particle_instance.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/modeling/modifiers/physics/particle_instance.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fmodeling/modifiers/physics/particle_instance.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fmodeling/modifiers/physics/particle_instance.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

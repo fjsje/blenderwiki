@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>物体类型 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/scene_layout/object/types.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="物体原点" href="origin.html" />
+    <link rel="prev" title="简介" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">场景 &amp; 物体</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../scene/index.html">场景</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">物体</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">物体类型</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#common-options">通用选项</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="origin.html">物体原点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selecting.html">选择</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing/index.html">编辑</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tools/index.html">工具</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../collections/index.html">集合</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../view_layers/index.html">视图层</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">场景 &amp; 物体</a></li>
+          <li class="breadcrumb-item"><a href="index.html">物体</a></li>
+      <li class="breadcrumb-item active">物体类型</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="object-types">
+<span id="objects-types"></span><h1>物体类型<a class="headerlink" href="#object-types" title="Permalink to this heading"></a></h1>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>物体模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">添加</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">A</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>可以使用 3D 视图标题栏中的 <em>添加</em> 菜单创建新物体。</p>
+<dl class="simple">
+<dt><a class="reference internal" href="../../modeling/meshes/introduction.html"><span class="doc">网格(Mesh)</span></a></dt><dd><p>物体是由顶点、边和多边形面组成的，可以用 Blender 的网格编辑工具进行编辑。参见<a class="reference internal" href="../../modeling/meshes/primitives.html"><span class="doc">网格基本体</span></a>。</p>
+</dd>
+<dt><a class="reference internal" href="../../modeling/curves/introduction.html"><span class="doc">曲线(Curve)</span></a></dt><dd><p>数学定义的物体，可以使用控制柄或控制点（而不是顶点）进行操作，以编辑其长度和曲率。见<a class="reference internal" href="../../modeling/curves/primitives.html"><span class="doc">曲线基本体</span></a>。</p>
+</dd>
+<dt><a class="reference internal" href="../../modeling/surfaces/introduction.html"><span class="doc">曲面(Surface)</span></a></dt><dd><p>数学定义的补块，可通过控制点进行操作。对于简单的圆形形式和有机景观很有用。见<a class="reference internal" href="../../modeling/surfaces/primitives.html"><span class="doc">曲面基本体</span></a>。</p>
+</dd>
+<dt><a class="reference internal" href="../../modeling/metas/introduction.html"><span class="doc">融球(Metaball)</span></a></dt><dd><p>由数学函数（无顶点或控制点）形成的物体，定义了物体所在的 3D 体积。融球物体具有类似液体的质量，当将两个或多个融球放在一起时，它们通过平滑地圆润地连接而合并在一起，显示为一个统一的物体。见<a class="reference internal" href="../../modeling/metas/primitives.html"><span class="doc">融球基本体</span></a>。</p>
+</dd>
+<dt><a class="reference internal" href="../../modeling/texts/introduction.html"><span class="doc">文本</span></a></dt><dd><p>创建一个文本的二维表示。</p>
+</dd>
+<dt><a class="reference internal" href="../../modeling/volumes/introduction.html"><span class="doc">体积</span></a></dt><dd><p>由其他软件或 Blender 的<a class="reference internal" href="../../physics/fluid/index.html"><span class="doc">流体模拟器</span></a>生成的 OpenVDB 文档的容器。</p>
+</dd>
+<dt><a class="reference internal" href="../../grease_pencil/introduction.html"><span class="doc">蜡笔(Grease Pencil)</span></a></dt><dd><p>通过绘图笔触创建的物体。请参见<a class="reference internal" href="../../grease_pencil/primitives.html"><span class="doc">蜡笔基本体</span></a></p>
+</dd>
+<dt><a class="reference internal" href="../../animation/armatures/index.html"><span class="doc">骨架</span></a></dt><dd><p>Used for rigging 3D models to make them posable and animatable.</p>
+</dd>
+<dt><a class="reference internal" href="../../animation/lattice.html"><span class="doc">晶格</span></a></dt><dd><p>不可渲染的线框，通常用于借助<a class="reference internal" href="../../modeling/modifiers/deform/lattice.html"><span class="doc">晶格修改器</span></a>形变其他物体。</p>
+</dd>
+<dt><a class="reference internal" href="../../modeling/empties.html"><span class="doc">空物体</span></a></dt><dd><p>空白的物体，是不能渲染的简单视觉变换节点物体。它们用于控制其他物体的位置或移动。</p>
+</dd>
+<dt><a class="reference internal" href="../../modeling/empties.html#bpy-types-object-empty-image"><span class="std std-ref">图像</span></a></dt><dd><p>是 3D 视图中显示为图片的空物体。这些图像可以用于辅助建模或动画。</p>
+</dd>
+<dt><a class="reference internal" href="../../render/lights/light_object.html"><span class="doc">灯光</span></a></dt><dd><p>发射光线的空物体，用于在渲染器中点亮场景。</p>
+</dd>
+<dt><a class="reference internal" href="../../render/eevee/light_probes/introduction.html"><span class="doc">光照探头</span></a></dt><dd><p>Used by the Eevee render engine to record lighting information for indirect lighting.</p>
+</dd>
+<dt><a class="reference internal" href="../../render/cameras.html"><span class="doc">摄像机</span></a></dt><dd><p>这是用于确定渲染中呈现内容的虚拟摄像机。</p>
+</dd>
+<dt><a class="reference internal" href="../../render/output/audio/speaker.html"><span class="doc">扬声器</span></a></dt><dd><p>给场景一个声源的空物体。</p>
+</dd>
+<dt><a class="reference internal" href="../../physics/forces/force_fields/index.html"><span class="doc">力场</span></a></dt><dd><p>用于模拟外力的空物体。它们模拟外部力量，创造运动，并在 3D 视图编辑器中显示为小型控制物体。</p>
+</dd>
+<dt><a class="reference internal" href="properties/instancing/collection.html"><span class="doc">集合实例</span></a></dt><dd><p>允许从若干已存在的集合中选择。一旦选定，将产生一个空物体，包含被选集合的实例（集合实例化激活状态）。</p>
+</dd>
+</dl>
+<section id="common-options">
+<span id="object-common-options"></span><h2>通用选项<a class="headerlink" href="#common-options" title="Permalink to this heading"></a></h2>
+<p>您可以在创建物体后立即在<a class="reference internal" href="../../interface/undo_redo.html#bpy-ops-screen-redo-last"><span class="std std-ref">调整上一步操作</span></a>面板中更改物体的选项：</p>
+<dl>
+<dt>类型</dt><dd><p>有些物体可以在创建后，使用选择器更改其类型。</p>
+</dd>
+<dt>半径/尺寸</dt><dd><p>设置起始尺寸。</p>
+</dd>
+<dt>对齐</dt><dd><p>旋转新物体，使其以下列方式之一对齐：</p>
+<dl class="simple">
+<dt>世界环境</dt><dd><p>对齐物体到世界空间轴向，换言之，物体的前面会朝向负 Y 轴（默认）。</p>
+</dd>
+<dt>视图</dt><dd><p>对齐物体到视图空间轴向，换言之，物体的前面会朝向视图的方向。</p>
+</dd>
+<dt>3D 游标</dt><dd><p>对齐物体以匹配 <a class="reference internal" href="../../editors/3dview/3d_cursor.html"><span class="doc">3D 游标</span></a> 的旋转方向。</p>
+</dd>
+</dl>
+</dd>
+<dt>位置</dt><dd><p>物体默认放置在 3D 游标的位置。这些值可让你将物体放置在其他位置。</p>
+</dd>
+<dt>旋转</dt><dd><p>这个值让你旋转物体，以便重写默认的旋转。</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="origin.html" class="btn btn-neutral float-right" title="物体原点" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/scene_layout/object/types.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/scene_layout/object/types.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fscene_layout/object/types.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fscene_layout/object/types.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

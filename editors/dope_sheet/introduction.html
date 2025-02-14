@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>简介 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/dope_sheet/introduction.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="编辑" href="editing.html" />
+    <link rel="prev" title="动画摄影表" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../3dview/index.html">3D 视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image/index.html">图像编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../uv/index.html">UV 编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../compositor.html">合成器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../texture_node/index.html">纹理节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geometry_node.html">几何节点编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shader_editor.html">着色器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../video_sequencer/index.html">视频序列编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../clip/index.html">影片剪辑编辑器</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">动画摄影表</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">简介</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#dope-sheet-modes">动画摄影表模式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#main-region">主区块</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#navigation">导航</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#keyframes">关键帧</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#selecting-keyframes">选择关键帧</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#manipulating-keyframes">操纵关键帧</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#channels-region">通道区块</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#header">标题栏</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#view-menu">视图菜单</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#markers-menu">标记菜单</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#key-menu">关键帧菜单</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#filters">过滤器</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#sidebar-region">侧栏区块</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#action-panel">动作面板</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#custom-properties">自定义属性</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="editing.html">编辑</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#modes">模式</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../timeline.html">时间线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../graph_editor/index.html">曲线编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../drivers_editor.html">驱动器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../nla/index.html">非线性动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../text_editor.html">文本编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python_console.html">Python 控制台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../info_editor.html">信息编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outliner/index.html">大纲视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../properties_editor.html">属性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../file_browser.html">文件浏览器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../asset_browser.html">资产浏览器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spreadsheet.html">电子表格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../preferences/index.html">偏好设置</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">编辑器</a></li>
+          <li class="breadcrumb-item"><a href="index.html">动画摄影表</a></li>
+      <li class="breadcrumb-item active">简介</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="introduction">
+<span id="index-0"></span><h1>简介<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h1>
+<figure class="align-default" id="id1">
+<a class="reference internal image-reference" href="../../_images/editors_dope-sheet_introduction_overview.png"><img alt="../../_images/editors_dope-sheet_introduction_overview.png" src="../../_images/editors_dope-sheet_introduction_overview.png" style="width: 620px;" /></a>
+<figcaption>
+<p><span class="caption-text">动画摄影表。</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The Dope Sheet gives the animator a birds-eye-view of the keyframes inside the scene.</p>
+<p>The Dope Sheet is inspired by classical hand-drawn animation process,
+in which animators will make use of a chart, showing exactly when each drawing,
+sound and camera move will occur, and for how long. This is called an exposure sheet or 'dope sheet'.
+While CG foundations dramatically differ from classical hand-drawn animation,
+Blender's <em>Dope Sheet</em> inherits a similar directive.</p>
+<section id="dope-sheet-modes">
+<h2>动画摄影表模式<a class="headerlink" href="#dope-sheet-modes" title="Permalink to this heading"></a></h2>
+<figure class="align-default" id="id2">
+<img alt="../../_images/editors_dope-sheet_introduction_modes.png" src="../../_images/editors_dope-sheet_introduction_modes.png" />
+<figcaption>
+<p><span class="caption-text">动画摄影表模式。</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>While the Dope Sheet Mode allows you to edit multiple actions at once,
+the other ones are dedicated to view and edit specific data-blocks used in different context of animation.</p>
+<ul class="simple">
+<li><p>动画摄影表</p></li>
+<li><p><a class="reference internal" href="action.html"><span class="doc">动作编辑器</span></a></p></li>
+<li><p><a class="reference internal" href="shape_key.html#dope-sheet-shape-key"><span class="std std-ref">形态键编辑器</span></a></p></li>
+<li><p><a class="reference internal" href="grease_pencil.html"><span class="doc">蜡笔</span></a></p></li>
+<li><p><a class="reference internal" href="shape_key.html#dope-sheet-mask"><span class="std std-ref">遮罩</span></a></p></li>
+<li><p>Cache File: Alembic Todo 2.78.</p></li>
+</ul>
+</section>
+<section id="main-region">
+<h2>主区块<a class="headerlink" href="#main-region" title="Permalink to this heading"></a></h2>
+<section id="navigation">
+<h3>导航<a class="headerlink" href="#navigation" title="Permalink to this heading"></a></h3>
+<p>与大多数编辑器一样，您可以：</p>
+<dl class="simple">
+<dt>平移</dt><dd><p>Pan the view vertically (values) or horizontally (time) with click and drag (<kbd class="kbd docutils literal notranslate">MMB</kbd>).</p>
+</dd>
+<dt>缩放</dt><dd><p>Zoom in and out with the mouse wheel (<kbd class="kbd docutils literal notranslate">Wheel</kbd>).</p>
+</dd>
+<dt>缩放视图</dt><dd><p>Scale the view vertically or horizontally (<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">MMB</kbd></kbd>).</p>
+</dd>
+</dl>
+<p>In addition, you can also use the scrollbars to pan and zoom the view.</p>
+</section>
+<section id="keyframes">
+<h3>关键帧<a class="headerlink" href="#keyframes" title="Permalink to this heading"></a></h3>
+<figure class="align-default" id="id3">
+<img alt="../../_images/editors_dope-sheet_introduction_types.png" src="../../_images/editors_dope-sheet_introduction_types.png" />
+<figcaption>
+<p><span class="caption-text">具有物体通道的动画摄影表编辑器。</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>This area contains keyframes for all visible action channels.
+As with the other time-based editors, the X axis represents time.
+The Y axis represents a stack of action channels.</p>
+<p>On these channels lay the keyframes, which can show different information:</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 80%" />
+</colgroup>
+<tbody>
+<tr class="row-odd"><td><p>灰色</p></td>
+<td><p>未选择</p></td>
+</tr>
+<tr class="row-even"><td><p>黄色</p></td>
+<td><p>选中项</p></td>
+</tr>
+<tr class="row-odd"><td><p>菱形</p></td>
+<td><p>自由关键帧控制柄</p></td>
+</tr>
+<tr class="row-even"><td><p>圆（四舍五入）</p></td>
+<td><p>自动钳位关键帧控制柄</p></td>
+</tr>
+<tr class="row-odd"><td><p>圆形</p></td>
+<td><p>自动关键帧控制柄</p></td>
+</tr>
+<tr class="row-even"><td><p>正方形</p></td>
+<td><p>矢量关键帧控制柄</p></td>
+</tr>
+<tr class="row-odd"><td><p>钝菱形</p></td>
+<td><p>对齐关键帧控制柄</p></td>
+</tr>
+<tr class="row-even"><td><p>各种颜色</p></td>
+<td><p>These represent custom keyframe tags set by the user (<span class="menuselection">Key ‣ Keyframe Type</span>)</p></td>
+</tr>
+<tr class="row-odd"><td><p>键之间的灰色条</p></td>
+<td><p>保持键（两个关键帧相同）</p></td>
+</tr>
+<tr class="row-even"><td><p>键之间的绿线</p></td>
+<td><p>Fixed keyframe interpolation (set in <span class="menuselection">Key ‣ Interpolation Mode</span>)</p></td>
+</tr>
+<tr class="row-odd"><td><p>向上箭头</p></td>
+<td><p>Maximum Extreme keyframe (visible if <span class="menuselection">View ‣ Show Curve Extremes</span> are enabled)</p></td>
+</tr>
+<tr class="row-even"><td><p>向下箭头</p></td>
+<td><p>Minimum Extreme keyframe (visible if <span class="menuselection">View ‣ Show Curve Extremes</span> are enabled)</p></td>
+</tr>
+</tbody>
+</table>
+<p>A diagonal hash fill in the background is used to display the
+<a class="reference internal" href="../../animation/actions.html#bpy-types-action-use-frame-range"><span class="std std-ref">Manual Frame Range</span></a> of the action the channel belong to.</p>
+</section>
+<section id="selecting-keyframes">
+<h3>选择关键帧<a class="headerlink" href="#selecting-keyframes" title="Permalink to this heading"></a></h3>
+<p>Selection tools are available in the Select menu in the header, and the main shortcuts are listed below:</p>
+<dl class="simple">
+<dt>选择</dt><dd><p>Click on a key to select it. Hold <kbd class="kbd docutils literal notranslate">Shift</kbd> to extend the current selection.</p>
+</dd>
+<dt>框选</dt><dd><p>Click and drag to box select multiple keyframes at once.
+You can hold <kbd class="kbd docutils literal notranslate">Shift</kbd> to extend or <kbd class="kbd docutils literal notranslate">Ctrl</kbd> to subtract from the current selection.</p>
+</dd>
+<dt>套索选择</dt><dd><p>另见<a class="reference internal" href="../../interface/selecting.html#tool-select-lasso"><span class="std std-ref">套索选择</span></a>。</p>
+</dd>
+<dt>选择/弃选全部</dt><dd><ul class="simple">
+<li><p>To select all keys, press <kbd class="kbd docutils literal notranslate">A</kbd>.</p></li>
+<li><p>To deselect all keys, press <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">A</kbd></kbd>.</p></li>
+<li><p>To inverse the selection, press <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">I</kbd></kbd>.</p></li>
+</ul>
+</dd>
+<dt>当前帧之前/之后 <kbd class="kbd docutils literal notranslate">[</kbd>, <kbd class="kbd docutils literal notranslate">]</kbd></dt><dd><p>Select all to the right or left.
+Or hold <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Ctrl</kbd></kbd> and click on either side of the Playhead.</p>
+</dd>
+</dl>
+<p>See the Select menu for a full list of selection tools.</p>
+</section>
+<section id="manipulating-keyframes">
+<h3>操纵关键帧<a class="headerlink" href="#manipulating-keyframes" title="Permalink to this heading"></a></h3>
+<p>Keyframe tools are available in the Key menu in the header, and the main shortcuts listed below:</p>
+<dl class="simple">
+<dt>移动关键帧</dt><dd><p>To move a single keyframe, click and drag on a key.
+To move multiple keyframes, make sure several keys are selected and press <kbd class="kbd docutils literal notranslate">G</kbd>.</p>
+</dd>
+<dt>缩放关键帧</dt><dd><p>To scale (stretch) selected keys, press <kbd class="kbd docutils literal notranslate">S</kbd>.</p>
+</dd>
+<dt>扩展关键帧</dt><dd><p>To extend the time between two keys, select all with <kbd class="kbd docutils literal notranslate">A</kbd>,
+place the Playhead between two keyframes and press <kbd class="kbd docutils literal notranslate">E</kbd>.</p>
+</dd>
+</dl>
+<p>See the Key menu for a full list of selection tools.</p>
+</section>
+<section id="channels-region">
+<h3>通道区块<a class="headerlink" href="#channels-region" title="Permalink to this heading"></a></h3>
+<figure class="align-default" id="id4">
+<span id="fig-dope-sheet-action"></span><img alt="../../_images/editors_dope-sheet_introduction_action-editor-sliders.png" src="../../_images/editors_dope-sheet_introduction_action-editor-sliders.png" />
+<figcaption>
+<p><span class="caption-text">The Action editor's channels region.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>详见<a class="reference internal" href="../graph_editor/channels/index.html"><span class="doc">通道</span></a>。</p>
+</section>
+<section id="header">
+<h3>标题栏<a class="headerlink" href="#header" title="Permalink to this heading"></a></h3>
+<p>Here you find the menus, a first group of controls related to the editor &quot;mode&quot;,
+a second one concerning the action data-blocks, and a few other tools
+(like the copy/paste buttons, and snapping type).</p>
+<section id="view-menu">
+<span id="dope-sheet-view-menu"></span><h4>视图菜单<a class="headerlink" href="#view-menu" title="Permalink to this heading"></a></h4>
+<dl class="simple">
+<dt>调整上一步操作</dt><dd><p>显示一个弹出面板，用于更改上次完成的操作的属性。请参阅：<a class="reference internal" href="../../interface/undo_redo.html#bpy-ops-screen-redo-last"><span class="std std-ref">调整上一步操作</span></a>。</p>
+</dd>
+</dl>
+<figure class="align-right" id="id5">
+<img alt="../../_images/animation_keyframes_introduction_interpolation.png" src="../../_images/animation_keyframes_introduction_interpolation.png" />
+<figcaption>
+<p><span class="caption-text">控制柄类型。</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<dl>
+<dt>显示控制柄和插值</dt><dd><p>Instead of displaying all keyframes as diamonds, different icons are used to show the Bézier handle type.
+When curves use a different interpolation type, a line is shown between keys to highlight that.</p>
+<p>请参阅 <a class="reference internal" href="../../animation/keyframes/introduction.html#keyframe-handle-display"><span class="std std-ref">控制柄&amp;插值显示</span></a>。</p>
+</dd>
+</dl>
+<figure class="align-right" id="id6">
+<img alt="../../_images/editors_dope-sheet_introduction_extremes.png" src="../../_images/editors_dope-sheet_introduction_extremes.png" />
+<figcaption>
+<p><span class="caption-text">极端标记。</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<dl class="simple">
+<dt>Show Extremes</dt><dd><p>Detect keys where the curve changes direction based on comparing with the adjacent key values,
+and display that by changing the keyframe icons to resemble an arrow.
+A muted version of the icon is used if the curve overshoots the extreme,
+or for groups with different results for contained curves.</p>
+</dd>
+</dl>
+<p>See Graph editor's <a class="reference internal" href="../graph_editor/introduction.html#graph-view-menu"><span class="std std-ref">视图菜单</span></a>.</p>
+</section>
+<section id="markers-menu">
+<h4>标记菜单<a class="headerlink" href="#markers-menu" title="Permalink to this heading"></a></h4>
+<p><a class="reference internal" href="../../animation/markers.html"><span class="doc">标记</span></a> 用于表示动画中具有关键点或重要事件的帧。像大多数动画编辑器一样，标记显示在编辑器的底部。</p>
+<figure class="align-default" id="id7">
+<img alt="../../_images/editors_graph-editor_introduction_markers.png" src="../../_images/editors_graph-editor_introduction_markers.png" />
+<figcaption>
+<p><span class="caption-text">动画编辑器中的标记。</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>下面这些选项是动画摄影表编辑器独有的：</p>
+<dl class="simple">
+<dt>同步标记</dt><dd><p>Sync Markers with keyframe edits.</p>
+</dd>
+<dt>显示姿态标记</dt><dd><p>Available in <a class="reference internal" href="action.html"><span class="doc">Action</span></a> and <a class="reference internal" href="shape_key.html"><span class="doc">Shape Key</span></a> modes.
+Shows pose markers owned by the active action instead of the scene ones.</p>
+</dd>
+<dt>将标记自身化</dt><dd><p>Available in <a class="reference internal" href="action.html"><span class="doc">Action</span></a> and <a class="reference internal" href="shape_key.html"><span class="doc">Shape Key</span></a> modes.
+Converts selected scene markers in pose markers, assigning them to the active action.</p>
+</dd>
+</dl>
+<p>For more information and the description of the other marker tools,
+see <a class="reference internal" href="../../animation/markers.html#animation-markers-editing"><span class="std std-ref">Editing Markers</span></a>.</p>
+</section>
+<section id="key-menu">
+<h4>关键帧菜单<a class="headerlink" href="#key-menu" title="Permalink to this heading"></a></h4>
+<dl class="simple">
+<dt>关键帧类型 <kbd class="kbd docutils literal notranslate">R</kbd></dt><dd><p>Sets the <a class="reference internal" href="../../animation/keyframes/introduction.html#keyframe-type"><span class="std std-ref">关键帧类型</span></a> of the selected keyframes.</p>
+</dd>
+</dl>
+<p>详见<a class="reference internal" href="../graph_editor/fcurves/index.html"><span class="doc">函数曲线</span></a>。</p>
+</section>
+<section id="filters">
+<span id="bpy-types-dopesheet-show-summary"></span><h4>过滤器<a class="headerlink" href="#filters" title="Permalink to this heading"></a></h4>
+<dl id="bpy-types-dopesheet-show-only-selected">
+<dt>仅显示选中</dt><dd><p>Only include keyframes related to the selected item this item
+could be sequencer strips, nodes, objects, or any other type of data.</p>
+</dd>
+<dt>显示隐藏项</dt><dd><p>Include keyframes from objects or bones that are not visible.</p>
+</dd>
+<dt>仅显示错误信息</dt><dd><p>Only include curves and drivers that are disabled or have errors.
+Useful for debugging.</p>
+</dd>
+<dt>函数曲线名称过滤器</dt><dd><p>Fuzzy/Multi-Word name filtering matches word snippets/partial words,
+instead of having to match everything. It breaks down the search text based on whitespace placement.
+e.g. &quot;lo ro&quot; will filter all location and rotation, while &quot;lc rt&quot; will <em>not</em> work.</p>
+</dd>
+<dt>按类型过滤</dt><dd><p>按属性类型过滤曲线。</p>
+</dd>
+<dt>过滤集合</dt><dd><p>Select a collection to only show keyframes from objects contained in that collection.</p>
+</dd>
+<dt>数据块排序</dt><dd><p>Objects data-blocks appear in alphabetical order, so that it is easier to find where they occur
+(as well as helping to keep the animation of related objects together in the NLA editor for instance).</p>
+<p>If you find that your playback speed suffers from this being enabled
+(it should only really be an issue when working with lots of objects in the scene),
+you can turn this off.</p>
+</dd>
+<dt>汇总</dt><dd><p>Toggles the &quot;Dope Sheet Summary&quot; channel at the top of the <a class="reference internal" href="#channels-region">Channels Region</a>.
+This is used to give an overview of all the channels by combining all the actions into one channel.</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="sidebar-region">
+<h3>侧栏区块<a class="headerlink" href="#sidebar-region" title="Permalink to this heading"></a></h3>
+<section id="action-panel">
+<h4>动作面板<a class="headerlink" href="#action-panel" title="Permalink to this heading"></a></h4>
+<figure class="align-center" id="id8">
+<img alt="../../_images/animation_actions_range.png" src="../../_images/animation_actions_range.png" />
+<figcaption>
+<p><span class="caption-text">Actions with and without a Manual Frame Range in Dope Sheet.</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>When the editor is in the Action mode, or a channel belonging to an action is selected in
+Dope Sheet mode, this panel allows changing some settings of the selected action, specifically
+the <a class="reference internal" href="../../animation/actions.html#bpy-types-action-use-frame-range"><span class="std std-ref">Manual Frame Range</span></a>.</p>
+</section>
+<section id="custom-properties">
+<h4>自定义属性<a class="headerlink" href="#custom-properties" title="Permalink to this heading"></a></h4>
+<p>创建和管理您自己的属性，以将数据存储在操作的数据块中。有关详细信息，请参阅 <a class="reference internal" href="../../files/custom_properties.html#files-data-blocks-custom-properties"><span class="std std-ref">自定义属性</span></a> 页面。</p>
+</section>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="动画摄影表" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="editing.html" class="btn btn-neutral float-right" title="编辑" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/editors/dope_sheet/introduction.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/editors/dope_sheet/introduction.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Feditors/dope_sheet/introduction.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Feditors/dope_sheet/introduction.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

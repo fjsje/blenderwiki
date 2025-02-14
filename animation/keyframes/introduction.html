@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>简介 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/animation/keyframes/introduction.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="编辑" href="editing.html" />
+    <link rel="prev" title="关键帧" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">动画 &amp; 绑定</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">关键帧</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">简介</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#visualization">可视化</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#interpolation">插值</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#keyframe-types">关键帧类型</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#handles-interpolation-mode-display">控制柄&amp;插值模式显示</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="editing.html">编辑</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keying_sets.html">插帧集</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../armatures/index.html">骨架</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lattice.html">晶格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../constraints/index.html">约束</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../actions.html">动作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../drivers/index.html">驱动</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../markers.html">标记</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shape_keys/index.html">形态键</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../motion_paths.html">运动路径</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">动画 &amp; 绑定</a></li>
+          <li class="breadcrumb-item"><a href="index.html">关键帧</a></li>
+      <li class="breadcrumb-item active">简介</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="introduction">
+<h1>简介<a class="headerlink" href="#introduction" title="Permalink to this heading"></a></h1>
+<p><em>关键帧</em> 只是存储属性值的时间标记。</p>
+<p>例如，关键帧可以定义一个立方体的水平位置在第1帧上是3米。</p>
+<p>关键帧的目的是为了实现插值动画，这意味着，比如，用户可以在第10帧上添加另一个关键帧，指定立方体的水平位置在20米处，Blender将根据所选择的插值方法（如线性，贝塞尔曲线，二次曲线等）自动确定帧1和帧10之间的所有帧中立方体的确切位置。</p>
+<p>可以通过 <a class="reference internal" href="../../editors/dope_sheet/index.html"><span class="doc">动画摄影表</span></a> 编辑器来概览已有关键帧。</p>
+<section id="visualization">
+<h2>可视化<a class="headerlink" href="#visualization" title="Permalink to this heading"></a></h2>
+<p>在三维视口中，有一些重要的可视化功能，可以帮助动画制作。</p>
+<p>当当前帧是当前活动对象的关键帧时，该对象的名称（显示在三维视口的左上角）变成黄色。</p>
+<figure class="align-center" id="id1">
+<img alt="../../_images/animation_keyframes_introduction_visualization.png" src="../../_images/animation_keyframes_introduction_visualization.png" />
+<figcaption>
+<p><span class="caption-text">上图：当前帧为立方体的关键帧。下图：当前帧不是关键帧。</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="interpolation">
+<h2>插值<a class="headerlink" href="#interpolation" title="Permalink to this heading"></a></h2>
+<p>关键帧插值通过 <a class="reference internal" href="../../editors/graph_editor/fcurves/introduction.html"><span class="doc">动画函数曲线</span></a> 来表达和控制，也称为 <a class="reference internal" href="../../glossary/index.html#term-F-Curve"><span class="xref std std-term">函数曲线</span></a>。可以通过 <a class="reference internal" href="../../editors/graph_editor/index.html"><span class="doc">曲线编辑器</span></a> 查看和修改这些曲线。</p>
+<figure class="align-center" id="id2">
+<img alt="../../_images/animation_keyframes_introduction_curves.png" src="../../_images/animation_keyframes_introduction_curves.png" />
+<figcaption>
+<p><span class="caption-text">常值，线性，二次型和贝塞尔插值，以及线性插值。</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>曲线的X轴对应于时间，而Y代表属性的值。关键帧本身定义曲线的上的关键点，而插值则由附加参数控制。</p>
+<p><a class="reference internal" href="../../editors/graph_editor/fcurves/properties.html#editors-graph-fcurves-settings-interpolation"><span class="std std-ref">插值模式</span></a>是为每个关键帧插值到下一个关键帧的主要设置。它有许多具有形状规则的模式，例如 <em>常值</em>、<em>线性</em>、<em>二次型</em> 等，以及自由形式的 <em>贝塞尔</em> 模式。</p>
+<p>可以参考 <a class="reference internal" href="../../editors/graph_editor/channels/editing.html#editors-graph-fcurves-settings-extrapolation"><span class="std std-ref">外插</span></a> 来指定曲线在第一个关键帧之前和最后一个关键帧之后的延伸方式。可用选项主要有 <em>常值</em> 和 <em>线性</em> ；也可以将曲线设置为循环。</p>
+<p><em>贝塞尔</em> 插值由控制柄控制，这控制柄具有<a class="reference internal" href="../../editors/graph_editor/fcurves/properties.html#editors-graph-fcurves-settings-handles"><span class="std std-ref">控制柄类型</span></a>和位置。必须使用曲线编辑器手动设置 <em>自由</em>、<em>对齐</em> 控制柄的位置，而 <em>矢量</em>、<em>自动</em> 和 <em>自动钳制</em> 控制柄是根据关键帧值自动计算的。</p>
+<p>也可以在 <a class="reference internal" href="../../editors/dope_sheet/index.html"><span class="doc">动画摄影表</span></a> 编辑器中修改插值，外插和控制柄类型。</p>
+<figure class="align-center" id="id3">
+<img alt="../../_images/editors_graph-editor_fcurves_sidebar_curve_auto-smoothing.png" src="../../_images/editors_graph-editor_fcurves_sidebar_curve_auto-smoothing.png" />
+<figcaption>
+<p><span class="caption-text">控制柄平滑模式。黄色：<em>无</em>，青色：<em>持续加速</em>。</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>三种自动处理类型的计算方法是由每条曲线的 <a class="reference internal" href="../../editors/graph_editor/fcurves/properties.html#bpy-types-fcurve-auto-smoothing"><span class="std std-ref">自动处理平滑</span></a> 设置控制。无 <em>模式类似于大多数其他软件的工作方式，只考虑紧邻的键的值。连续加速</em> 模式考虑整个曲线的形状，这产生了更平滑的结果，但意味着一个键的变化会影响曲线较大部分的插值；它也倾向于与 <em>自动</em> 手柄的过冲。</p>
+</section>
+<section id="keyframe-types">
+<span id="keyframe-type"></span><h2>关键帧类型<a class="headerlink" href="#keyframe-types" title="Permalink to this heading"></a></h2>
+<p>为了在视觉上区分常规关键帧和其他不同的动画事件或状态（极端，间断或其他中间状态），可以在它们上应用不同的颜色以进行可视化。</p>
+<figure class="align-right" id="id4">
+<img alt="../../_images/animation_keyframes_introduction_types.png" src="../../_images/animation_keyframes_introduction_types.png" />
+<figcaption>
+<p><span class="caption-text">左：未选中；右：选中。</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<dl class="simple">
+<dt>关键帧（白/黄色菱形）</dt><dd><p>常规关键帧。</p>
+</dd>
+<dt>间断（青色小菱形）</dt><dd><p>间断状态，如用于不同关键姿态间的过渡。</p>
+</dd>
+<dt>惯性延续（深灰色/橙色菱形）</dt><dd><p>一个可以在一个保持姿势附近添加少量动作的关键帧。在动画摄影表中，它还会在它们之间显示一个条块。</p>
+</dd>
+<dt>极端（红色大菱形）</dt><dd><p>&quot;极值&quot; 状态，或者其他需要的用途。</p>
+</dd>
+<dt>抖动（绿色小菱形）</dt><dd><p>填充或烘焙关键帧，用于在其他帧上插帧，或用于其他所需目的。</p>
+</dd>
+</dl>
+</section>
+<section id="handles-interpolation-mode-display">
+<span id="keyframe-handle-display"></span><h2>控制柄&amp;插值模式显示<a class="headerlink" href="#handles-interpolation-mode-display" title="Permalink to this heading"></a></h2>
+<p>动画摄影表可以显示与关键帧关联的贝塞尔控制柄类型，并使用非贝塞尔插值标记线段。这有助于在不使用曲线编辑器的情况下进行插值的基本编辑。</p>
+<p>图标形状表示所属关键帧的 <a class="reference internal" href="../../editors/graph_editor/fcurves/properties.html#editors-graph-fcurves-settings-handles"><span class="std std-ref">贝塞尔控制柄</span></a> 类型。</p>
+<figure class="align-right" id="id5">
+<img alt="../../_images/animation_keyframes_introduction_interpolation.png" src="../../_images/animation_keyframes_introduction_interpolation.png" />
+<figcaption>
+<p><span class="caption-text">从上向下：摘要，贝塞尔，线性。</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><p>圆形</p></td>
+<td><p>自动钳制（默认）</p></td>
+</tr>
+<tr class="row-even"><td><p>带点的圆（圆圈）</p></td>
+<td><p>自动</p></td>
+</tr>
+<tr class="row-odd"><td><p>正方形</p></td>
+<td><p>矢量</p></td>
+</tr>
+<tr class="row-even"><td><p>修剪过的菱形</p></td>
+<td><p>对齐</p></td>
+</tr>
+<tr class="row-odd"><td><p>菱形</p></td>
+<td><p>自由</p></td>
+</tr>
+</tbody>
+</table>
+<p>如果关键帧上存在不同类型的控制柄，或者在摘要行表示多条曲线的情况下，则使用可用选项中位于上表最下方的图标表示。这意味着如果分组行使用圆形图标，则可以保证分组的通道中不存在有非自动型关键帧的通道。</p>
+<p>水平绿线表示使用非贝塞尔 <a class="reference internal" href="../../editors/graph_editor/fcurves/properties.html#editors-graph-fcurves-settings-interpolation"><span class="std std-ref">插值模式</span></a>。如果并非所有分组通道都具有相同的插值模式，则该行在摘要行中变暗。</p>
+<p>可以通过动画摄影表的 <a class="reference internal" href="../../editors/dope_sheet/introduction.html#dope-sheet-view-menu"><span class="std std-ref">视图菜单</span></a> 的 <em>显示控制柄与插值</em> 选项来禁用此信息的显示。</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="关键帧" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="editing.html" class="btn btn-neutral float-right" title="编辑" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/animation/keyframes/introduction.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/animation/keyframes/introduction.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fanimation/keyframes/introduction.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fanimation/keyframes/introduction.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

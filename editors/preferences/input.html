@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>输入 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/editors/preferences/input.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="导航" href="navigation.html" />
+    <link rel="prev" title="插件" href="addons.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">编辑器</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../3dview/index.html">3D 视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../image/index.html">图像编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../uv/index.html">UV 编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../compositor.html">合成器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../texture_node/index.html">纹理节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geometry_node.html">几何节点编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shader_editor.html">着色器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../video_sequencer/index.html">视频序列编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../clip/index.html">影片剪辑编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../dope_sheet/index.html">动画摄影表</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../timeline.html">时间线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../graph_editor/index.html">曲线编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../drivers_editor.html">驱动器编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../nla/index.html">非线性动画</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../text_editor.html">文本编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../python_console.html">Python 控制台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../info_editor.html">信息编辑器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outliner/index.html">大纲视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../properties_editor.html">属性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../file_browser.html">文件浏览器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../asset_browser.html">资产浏览器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../spreadsheet.html">电子表格</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">偏好设置</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="interface.html">界面</a></li>
+<li class="toctree-l3"><a class="reference internal" href="themes.html">主题</a></li>
+<li class="toctree-l3"><a class="reference internal" href="viewport.html">视图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="lights.html">灯光</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing.html">编辑</a></li>
+<li class="toctree-l3"><a class="reference internal" href="animation.html">动画</a></li>
+<li class="toctree-l3"><a class="reference internal" href="addons.html">插件</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">输入</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#keyboard">键盘</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mouse">鼠标</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#touchpad">触控板</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tablet">数位板</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#ndof">NDOF</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="navigation.html">导航</a></li>
+<li class="toctree-l3"><a class="reference internal" href="keymap.html">键位映射</a></li>
+<li class="toctree-l3"><a class="reference internal" href="system.html">系统</a></li>
+<li class="toctree-l3"><a class="reference internal" href="save_load.html">保存&amp;加载</a></li>
+<li class="toctree-l3"><a class="reference internal" href="file_paths.html">文件路径</a></li>
+<li class="toctree-l3"><a class="reference internal" href="experimental.html">试验特性</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">编辑器</a></li>
+          <li class="breadcrumb-item"><a href="index.html">偏好设置</a></li>
+      <li class="breadcrumb-item active">输入</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="input">
+<span id="bpy-types-preferencesinput"></span><h1>输入<a class="headerlink" href="#input" title="Permalink to this heading"></a></h1>
+<p>在输入偏好设置中，可以自定义 Blender 对鼠标和键盘的反应以及定义自己的键位映射。</p>
+<figure class="align-default">
+<img alt="../../_images/editors_preferences_section_input.png" src="../../_images/editors_preferences_section_input.png" />
+</figure>
+<section id="keyboard">
+<h2>键盘<a class="headerlink" href="#keyboard" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>模拟数字键盘</dt><dd><p>数字键盘经常在 Blender 中使用，并且没有分配给与之相应的常规数字键相同的操作功能。如果你有一个没有数字键盘的键盘（例如在笔记本电脑上），你可以通过勾选 <em>模拟数字键盘</em> 告诉 Blender 将标准数字键视为数字键盘键。</p>
+</dd>
+<dt>默认启用高级数值输入</dt><dd><p>对于变换模式，默认为<a class="reference internal" href="../../scene_layout/object/editing/transform/control/numeric_input.html#transform-numeric-input-advanced"><span class="std std-ref">高级模式</span></a>，否则使用<a class="reference internal" href="../../scene_layout/object/editing/transform/control/numeric_input.html#transform-numeric-input-simple"><span class="std std-ref">简单模式</span></a>。</p>
+</dd>
+</dl>
+</section>
+<section id="mouse">
+<h2>鼠标<a class="headerlink" href="#mouse" title="Permalink to this heading"></a></h2>
+<dl id="preferences-input-emulate-mouse">
+<dt>模拟三键鼠标</dt><dd><p>Blender 可以配置为与没有 <kbd class="kbd docutils literal notranslate">鼠标中键</kbd> 的指点设备一起使用。通过按住 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">鼠标左键</kbd></kbd> 来实现三键鼠标的功能。</p>
+<p>本手册中鼠标/键盘的组合可以替换为下表中的组合。例如：</p>
+<p>比如 <kbd class="kbd docutils literal notranslate">鼠标中键</kbd> 拖动变为 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">鼠标左键</kbd></kbd> 拖动。</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>此选项会导致无法访问某些功能，因为 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">鼠标左键</kbd></kbd> 对某些操作另有用处。</p>
+<ul class="simple">
+<li><p>一次修改多个项值（物体、骨骼...等）。</p></li>
+<li><p>在编辑模式下取消选择边/面环。</p></li>
+<li><p>脱开节点连接。</p></li>
+<li><p>移动合成器背景图像。</p></li>
+</ul>
+<p>某些触摸板支持三指点击代替鼠标中键，这可能是使用该选项的替代方案。</p>
+</div>
+<dl>
+<dt>Modifier <em>(unsupported on Microsoft Windows)</em></dt><dd><dl>
+<dt><kbd class="kbd docutils literal notranslate">Alt</kbd></dt><dd><p>使用 <kbd class="kbd docutils literal notranslate">Alt</kbd> 键模拟鼠标中间按钮。</p>
+</dd>
+<dt><kbd class="kbd docutils literal notranslate">OSKey</kbd></dt><dd><p>使用 <kbd class="kbd docutils literal notranslate">OSKey</kbd> 模拟鼠标中间按钮。</p>
+<p>正如上文所提及，这样做的好处是，它不会与现有的 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">鼠标中键</kbd></kbd> 快捷方式冲突。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>持续拖拽</dt><dd><p>这个功能是用来解决移动物体或平移视图等操作被屏幕边界限制的问题。</p>
+<p>这是通过将鼠标指针重新定位到视图实现的。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>持续拖拽仅支持 <em>相对</em> 定位输入装置（比如说鼠标、轨迹球、触控板）。</p>
+<p>不过，由于数位板通常使用的是 <em>绝对</em> 定位，所以使用数位板时该功能失效。</p>
+<p>Blender 会侦测每个动作，所以使用数位板并不会影响鼠标指针的 <em>持续拖拽</em> 输入效果。</p>
+</div>
+</dd>
+<dt>释放确认</dt><dd><p>在物体上拖动 <kbd class="kbd docutils literal notranslate">鼠标左键</kbd> 并移动它。要确认此（和其他）变换，默认情况下是 <kbd class="kbd docutils literal notranslate">鼠标左键</kbd>。激活此选项后，释放 <kbd class="kbd docutils literal notranslate">鼠标左键</kbd> 将作为变换的确认。</p>
+</dd>
+<dt>鼠标拖动阈值</dt><dd><p>用户界面元素在被 Blender 识别之前必须移动的像素数值，低于此值的值将被检测为点击事件。</p>
+</dd>
+<dt>数位板拖动阈值</dt><dd><p>绘图板事件的拖动阈值。</p>
+</dd>
+<dt>拖动阈值</dt><dd><p>非鼠标/绘图板的拖动阈值（例如键盘或 <a class="reference internal" href="../../glossary/index.html#term-NDOF"><span class="xref std std-term">NDOF</span></a> ）。</p>
+<p>这会影响<a class="reference internal" href="../../interface/keymap/blender_default.html#keymap-pref-py-menu-on-drag"><span class="std std-ref">拖拽饼菜单</span></a>键映射偏好设置。</p>
+</dd>
+<dt>动作阈值</dt><dd><p>在注册移动之前必须移动游标的像素数。这有助于更难以保持静止的绘图笔，可以减少游标位置的卡顿。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>与点击/拖动区别不同，这用于检测小的移动，例如，通过游标附近的元素拾取选择循环。一旦游标移超过此阈值，选择将停止循环并选择最近的项。</p>
+</div>
+</dd>
+</dl>
+</section>
+<section id="touchpad">
+<h2>触控板<a class="headerlink" href="#touchpad" title="Permalink to this heading"></a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This panel is only available on Windows or macOS.</p>
+</div>
+<dl class="simple">
+<dt>多点触控手势</dt><dd><p>Use multi-touch gestures for navigation with touchpad, instead of scroll wheel emulation.</p>
+</dd>
+</dl>
+</section>
+<section id="tablet">
+<h2>数位板<a class="headerlink" href="#tablet" title="Permalink to this heading"></a></h2>
+<dl class="simple">
+<dt>绘图板 API（仅限 Windows）</dt><dd><p>选择本机 Windows 墨水或较旧的 Wintab 系统进行压力敏感度。Blender 会自动为您的操作系统和平板电脑选择 API，但是如果出现问题，可以手动设置。您可能需要重新启动 Blender 才能使更改生效。</p>
+</dd>
+<dt>最大阈值</dt><dd><p>达到全强度所需的压感。</p>
+</dd>
+<dt>柔和</dt><dd><p>使用伽马曲线控制低压感响应的柔和程度。</p>
+</dd>
+</dl>
+</section>
+<section id="ndof">
+<span id="editors-preferences-input-ndof"></span><h2>NDOF<a class="headerlink" href="#ndof" title="Permalink to this heading"></a></h2>
+<p>这些首选项控制 <a class="reference internal" href="../../getting_started/configuration/hardware.html#hardware-ndof"><span class="std std-ref">NDOF 设备</span></a> 如何与 3D 视口进行交互。也可以使用 NDOF 设备上的 <kbd class="kbd docutils literal notranslate">NDOFMenu</kbd> 按钮打开弹出式菜单以直接从 3D 视口调整设置来访问这些首选项。</p>
+<dl>
+<dt>平移敏感度</dt><dd><p>在3D视图中，平移操作的整体灵敏度。</p>
+</dd>
+<dt>视轨灵敏度</dt><dd><p>在3D视图中，环绕操作的整体灵敏度。</p>
+</dd>
+<dt>盲区</dt><dd><p>从设备静止状态到活动状态所需的移动量的阈值。</p>
+</dd>
+<dt>导航</dt><dd><p>视图的导航风格。</p>
+<dl class="field-list simple">
+<dt class="field-odd">自由<span class="colon">:</span></dt>
+<dd class="field-odd"><p>使用完整的6自由度。</p>
+</dd>
+<dt class="field-even">环绕轨道<span class="colon">:</span></dt>
+<dd class="field-even"><p>绕视图中心环绕轨道。</p>
+</dd>
+</dl>
+</dd>
+<dt>旋转</dt><dd><p>视图的旋转风格。</p>
+<dl class="field-list simple">
+<dt class="field-odd">转盘<span class="colon">:</span></dt>
+<dd class="field-odd"><p>旋转视图保持地平线水平。</p>
+</dd>
+<dt class="field-even">轨迹球<span class="colon">:</span></dt>
+<dd class="field-even"><p>限制较少，允许任何方向。</p>
+</dd>
+</dl>
+</dd>
+<dt>显示导航指南</dt><dd><p>旋转时，显示轴心点和轴向。</p>
+</dd>
+<dt>反转缩放</dt><dd><p>使用相反方向缩放。</p>
+</dd>
+<dt>锁定相机平移/缩放</dt><dd><p>平移/缩放相机视图，而不是在轨道运行时离开相机视图。</p>
+</dd>
+<dt>交换 Y 轴和 Z 轴</dt><dd><p>平移使用 NDOF 设备上的上/下，而不是前/后。</p>
+</dd>
+<dt>反转轴向 平移</dt><dd><p>在所选轴上，反转平移轴向。</p>
+</dd>
+<dt>环绕轨道</dt><dd><p>在所选轴上，反转环绕轨道轴向。</p>
+</dd>
+<dt>飞行/步行</dt><dd><p>用于当<a class="reference internal" href="../3dview/navigate/walk_fly.html#dview-fly-walk"><span class="std std-ref">步行/飞行导航</span></a>时，使用控制 NDOF 设备如何使用的设置。</p>
+<dl class="simple">
+<dt>锁定水平</dt><dd><p>飞行时保持水平轴水平。</p>
+</dd>
+<dt>直升机模式</dt><dd><p>上下移动 NDOF 设备时，上下移动 3D 视图。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="addons.html" class="btn btn-neutral float-left" title="插件" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="navigation.html" class="btn btn-neutral float-right" title="导航" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/editors/preferences/input.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/editors/preferences/input.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Feditors/preferences/input.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Feditors/preferences/input.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

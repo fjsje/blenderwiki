@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>开放着色语言 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/shader_nodes/osl.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="色彩管理" href="../color_management.html" />
+    <link rel="prev" title="组" href="groups.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eevee/index.html">EEVEE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workbench/index.html">工作台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cameras.html">摄像机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lights/index.html">灯光</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../materials/index.html">材质</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">着色节点</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="input/index.html">输入</a></li>
+<li class="toctree-l3"><a class="reference internal" href="output/index.html">输出</a></li>
+<li class="toctree-l3"><a class="reference internal" href="shader/index.html">着色器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="textures/index.html">纹理</a></li>
+<li class="toctree-l3"><a class="reference internal" href="color/index.html">颜色</a></li>
+<li class="toctree-l3"><a class="reference internal" href="vector/index.html">矢量</a></li>
+<li class="toctree-l3"><a class="reference internal" href="converter/index.html">转换器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="groups.html">组</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">开放着色语言</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#script-node">脚本节点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#writing-shaders">着色器写入</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#closures">闭包</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#bsdf">BSDF</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#hair">毛发</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#bssrdf">BSSRDF</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#volume">体积/音量</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#other">其他</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#attributes">属性</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#trace">跟踪</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#metadata">元数据</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../color_management.html">色彩管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../layers/index.html">层 &amp; 通道</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染输出</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">渲染</a></li>
+          <li class="breadcrumb-item"><a href="index.html">着色节点</a></li>
+      <li class="breadcrumb-item active">开放着色语言</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="open-shading-language">
+<h1>开放着色语言<a class="headerlink" href="#open-shading-language" title="Permalink to this heading"></a></h1>
+<p><span class="guilabel">仅限 Cycles</span></p>
+<p>It is also possible to create your own nodes using
+<a class="reference external" href="https://github.com/AcademySoftwareFoundation/OpenShadingLanguage">Open Shading Language</a> (OSL).
+These nodes will only work with the CPU and OptiX rendering backend.</p>
+<p>要开启这块功能，在渲染设置的着色器系统中选择开放式着色语言。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Some OSL features are not available when using the OptiX backend. Examples include:</p>
+<ul class="simple">
+<li><p>Memory usage reductions offered by features like on-demand texture loading and
+mip-mapping are not available.</p></li>
+<li><p>Texture lookups require OSL to be able to determine a constant image file path for each
+texture call.</p></li>
+<li><p>Some noise functions are not available. Examples include <em>Cell</em>, <em>Simplex</em>, and <em>Gabor</em>.</p></li>
+<li><p>The <a class="reference internal" href="#render-shader-nodes-osl-trace"><span class="std std-ref">trace</span></a> function is not functional.
+As a result of this, the <a class="reference internal" href="input/ao.html#bpy-types-shadernodeambientocclusion"><span class="std std-ref">Ambient Occlusion</span></a>
+and <a class="reference internal" href="input/bevel.html#bpy-types-shadernodebevel"><span class="std std-ref">Bevel</span></a> nodes do not work.</p></li>
+</ul>
+</div>
+<section id="script-node">
+<span id="bpy-types-shadernodescript"></span><h2>脚本节点<a class="headerlink" href="#script-node" title="Permalink to this heading"></a></h2>
+<figure class="align-right">
+<img alt="脚本节点。" src="../../_images/node-types_ShaderNodeScript.webp" />
+</figure>
+<p>OSL是专门为节点着色器式的渲染模式设计的，节点图里面一个着色器节点就对应着一个OSL着色器。要添加一个OSL着色器，需要在Blender的文本编辑器中添加脚本或者一个外部文件的链接。节点的输入和输出接口会由代码中的各种参数，在Update按钮按下时即时生成。</p>
+<p>OSL着色器可以通过几种不同的方式连接到节点。使用 <em>内部</em> 模式，将使用文本数据块存储OSL着色器，而OSO字节码则存储在节点本身中。这对于分配一个包含所有内容的bl末端文件非常有用。</p>
+<p><em>外部</em> 模式可用于从驱动器指定 <code class="docutils literal notranslate"><span class="pre">.osl</span></code> 文件，然后它将自动编译成在同一个目录下的 <code class="docutils literal notranslate"><span class="pre">.osl</span></code> 文件。也可以指定一条路径到 <code class="docutils literal notranslate"><span class="pre">.osl</span></code> 文件，然后将直接使用，由用户手工完成编译。第三个选项是指定模块名称，它将在着色器搜索路径中查找。</p>
+<p>着色器的搜索地址可以在OSL脚本内所指定的地址下找到，如下：</p>
+<dl>
+<dt>Linux</dt><dd><pre class="literal-block">$HOME/.config/blender/3.6/shaders/</pre>
+</dd>
+<dt>Windows</dt><dd><pre class="literal-block">C:\Users\$user\AppData\Roaming\Blender Foundation\Blender\3.6\shaders\</pre>
+</dd>
+<dt>macOS</dt><dd><pre class="literal-block">/Users/$USER/Library/Application Support/Blender/3.6/shaders/</pre>
+</dd>
+</dl>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>为了制作方便，我们建议利用节点组包装着色器脚本节点，并连接到其他的 blend 文件。这样一来，后续可以更容易更改（增加或删除）节点的插口，而不需要更新全部文件里面的代码节点。</p>
+</div>
+</section>
+<section id="writing-shaders">
+<h2>着色器写入<a class="headerlink" href="#writing-shaders" title="Permalink to this heading"></a></h2>
+<p>For more details on how to write shaders, see the <a class="reference external" href="https://github.com/AcademySoftwareFoundation/OpenShadingLanguage/blob/main/src/doc/osl-languagespec.pdf">OSL specification</a>.
+Here is a simple example:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">shader</span><span class="w"> </span><span class="nf">simple_material</span><span class="p">(</span>
+<span class="w">    </span><span class="n">color</span><span class="w"> </span><span class="n">Diffuse_Color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">color</span><span class="p">(</span><span class="mf">0.6</span><span class="p">,</span><span class="w"> </span><span class="mf">0.8</span><span class="p">,</span><span class="w"> </span><span class="mf">0.6</span><span class="p">),</span>
+<span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">Noise_Factor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5</span><span class="p">,</span>
+<span class="w">    </span><span class="n">output</span><span class="w"> </span><span class="n">closure</span><span class="w"> </span><span class="n">color</span><span class="w"> </span><span class="n">BSDF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">diffuse</span><span class="p">(</span><span class="n">N</span><span class="p">))</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">color</span><span class="w"> </span><span class="n">material_color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Diffuse_Color</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">mix</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="n">noise</span><span class="p">(</span><span class="n">P</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mf">10.0</span><span class="p">),</span><span class="w"> </span><span class="n">Noise_Factor</span><span class="p">);</span>
+<span class="w">    </span><span class="n">BSDF</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">material_color</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">diffuse</span><span class="p">(</span><span class="n">N</span><span class="p">);</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="closures">
+<h2>闭包<a class="headerlink" href="#closures" title="Permalink to this heading"></a></h2>
+<p>OSL 不同于RSL 或 GLSL等，它没有光回路。场景中没有入射光源，而且必须由在渲染引擎本身的闭包中构建。这么一来限制挺多的，但这也使渲染引擎能够进行优化，并确保所有的着色器都能被取样。</p>
+<p>在 Cycles 中可用的闭包对应于着色器节点和接口；有关它们的作用和参数含义的详细信息，请参阅<a class="reference internal" href="shader/index.html"><span class="doc">着色器节点手册</span></a>。</p>
+<section id="bsdf">
+<h3>BSDF<a class="headerlink" href="#bsdf" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">diffuse(N)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">oren_nayar(N,</span> <span class="pre">roughness)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diffuse_ramp(N,</span> <span class="pre">colors[8])</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">phong_ramp(N,</span> <span class="pre">exponent,</span> <span class="pre">colors[8])</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">diffuse_toon(N,</span> <span class="pre">size,</span> <span class="pre">smooth)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">glossy_toon(N,</span> <span class="pre">size,</span> <span class="pre">smooth)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">translucent(N)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">reflection(N)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">refraction(N,</span> <span class="pre">ior)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">transparent()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">microfacet_ggx(N,</span> <span class="pre">roughness)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">microfacet_ggx_aniso(N,</span> <span class="pre">T,</span> <span class="pre">ax,</span> <span class="pre">ay)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">microfacet_ggx_refraction(N,</span> <span class="pre">roughness,</span> <span class="pre">ior)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">microfacet_beckmann(N,</span> <span class="pre">roughness)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">microfacet_beckmann_aniso(N,</span> <span class="pre">T,</span> <span class="pre">ax,</span> <span class="pre">ay)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">microfacet_beckmann_refraction(N,</span> <span class="pre">roughness,</span> <span class="pre">ior)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ashikhmin_shirley(N,</span> <span class="pre">T,</span> <span class="pre">ax,</span> <span class="pre">ay)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ashikhmin_velvet(N,</span> <span class="pre">roughness)</span></code></p></li>
+</ul>
+</section>
+<section id="hair">
+<h3>毛发<a class="headerlink" href="#hair" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">hair_reflection(N,</span> <span class="pre">roughnessu,</span> <span class="pre">roughnessv,</span> <span class="pre">T,</span> <span class="pre">offset)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">hair_transmission(N,</span> <span class="pre">roughnessu,</span> <span class="pre">roughnessv,</span> <span class="pre">T,</span> <span class="pre">offset)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">principled_hair(N,</span> <span class="pre">absorption,</span> <span class="pre">roughness,</span> <span class="pre">radial_roughness,</span> <span class="pre">coat,</span> <span class="pre">offset,</span> <span class="pre">IOR)</span></code></p></li>
+</ul>
+</section>
+<section id="bssrdf">
+<h3>BSSRDF<a class="headerlink" href="#bssrdf" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bssrdf_cubic(N,</span> <span class="pre">radius,</span> <span class="pre">texture_blur,</span> <span class="pre">sharpness)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bssrdf_gaussian(N,</span> <span class="pre">radius,</span> <span class="pre">texture_blur)</span></code></p></li>
+</ul>
+</section>
+<section id="volume">
+<h3>体积/音量<a class="headerlink" href="#volume" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">henyey_greenstein(g)</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">absorption()</span></code></p></li>
+</ul>
+</section>
+<section id="other">
+<h3>其他<a class="headerlink" href="#other" title="Permalink to this heading"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">emission()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">ambient_occlusion()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">holdout()</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">background()</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="attributes">
+<h2>属性<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h2>
+<p>Geometry attributes can be read through the <code class="docutils literal notranslate"><span class="pre">getattribute()</span></code> function.
+This includes UV maps, color attributes and any attributes output from geometry nodes.</p>
+<p>The following built-in attributes are available through <code class="docutils literal notranslate"><span class="pre">getattribute()</span></code> as well.</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">geom:generated</span></code></dt><dd><p>自动生成的纹理坐标，来自于未变形的网格。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">geom:uv</span></code></dt><dd><p>默认渲染UV贴图。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">geom:tangent</span></code></dt><dd><p>默认的沿表面切向矢量，于物体空间。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">geom:undisplaced</span></code></dt><dd><p>置换前的位置，于物体空间。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">geom:dupli_generated</span></code></dt><dd><p>对于实例，从instancer对象中生成坐标。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">geom:dupli_uv</span></code></dt><dd><p>对于实例来说，UV坐标来自于instancer对象。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">geom:trianglevertices</span></code></dt><dd><p>三角形的三个顶点坐标。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">geom:numpolyvertices</span></code></dt><dd><p>多边形的顶点数（通常返回值是3）。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">geom:polyvertices</span></code></dt><dd><p>多边形的顶点坐标阵列（通常返回值是3）。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">geom:name</span></code></dt><dd><p>物件名称。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">geom:is_smooth</span></code></dt><dd><p>网格面平滑或平直与否。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">geom:is_curve</span></code></dt><dd><p>物件是否为曲线。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">geom:curve_intercept</span></code></dt><dd><p>0..1 coordinate for point along the curve, from root to tip.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">geom:curve_thickness</span></code></dt><dd><p>物体空间中曲线的厚度。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">geom:curve_length</span></code></dt><dd><p>物体空间中曲线的长度。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">geom:curve_tangent_normal</span></code></dt><dd><p>线股的切向法线。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">geom:is_point</span></code></dt><dd><p>点是否为点云。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">geom:point_radius</span></code></dt><dd><p>点云中点的半径。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">geom:point_position</span></code></dt><dd><p>点云中点的中心位置。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">geom:point_random</span></code></dt><dd><p>Random number, different for every point in point cloud.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">path:ray_length</span></code></dt><dd><p>光线到达距离。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">object:random</span></code></dt><dd><p>随机数，对每个对象实例都不同。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">object:index</span></code></dt><dd><p>物体唯一实例编号。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">object:location</span></code></dt><dd><p>物件位置。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">material:index</span></code></dt><dd><p>材质的唯一索引号。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">particle:index</span></code></dt><dd><p>粒子的唯一实例编号。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">particle:age</span></code></dt><dd><p>粒子帧寿命。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">particle:lifetime</span></code></dt><dd><p>粒子在帧的总寿命。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">particle:location</span></code></dt><dd><p>粒子的位置。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">particle:size</span></code></dt><dd><p>粒子的尺寸。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">particle:velocity</span></code></dt><dd><p>粒子的速度。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">particle:angular_velocity</span></code></dt><dd><p>粒子的角速度。</p>
+</dd>
+</dl>
+</section>
+<section id="trace">
+<span id="render-shader-nodes-osl-trace"></span><h2>跟踪<a class="headerlink" href="#trace" title="Permalink to this heading"></a></h2>
+<p><span class="guilabel">仅限 CPU</span></p>
+<p>We support the <code class="docutils literal notranslate"><span class="pre">trace(point</span> <span class="pre">pos,</span> <span class="pre">vector</span> <span class="pre">dir,</span> <span class="pre">...)</span></code> function,
+to trace rays from the OSL shader. The &quot;shade&quot; parameter is not supported currently,
+but attributes can be retrieved from the object that was hit using the
+<code class="docutils literal notranslate"><span class="pre">getmessage(&quot;trace&quot;,</span> <span class="pre">..)</span></code> function. See the OSL specification for details on how to use this.</p>
+<p>这个功能不能代替照明；其主要目的是使着色器能够 &quot;探测&quot; 附近的几何形状，例如，应用可以被几何形状阻挡的投影纹理，应用更多的 &quot;磨损&quot; 来暴露几何图形，或者使其他环境遮蔽效果类似。</p>
+</section>
+<section id="metadata">
+<h2>元数据<a class="headerlink" href="#metadata" title="Permalink to this heading"></a></h2>
+<p>参数的元数据控制其在用户界面中如何显示。支持以下元数据：</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">[[</span> <span class="pre">string</span> <span class="pre">label</span> <span class="pre">=</span> <span class="pre">&quot;My</span> <span class="pre">Label&quot;</span> <span class="pre">]]</span></code></dt><dd><p>用户界面中参数的名称</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">[[</span> <span class="pre">string</span> <span class="pre">widget</span> <span class="pre">=</span> <span class="pre">&quot;null&quot;</span> <span class="pre">]]</span></code></dt><dd><p>在用户界面中隐藏参数。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">[[</span> <span class="pre">string</span> <span class="pre">widget</span> <span class="pre">=</span> <span class="pre">&quot;boolean&quot;</span> <span class="pre">]]</span></code> 和 <code class="docutils literal notranslate"><span class="pre">[[</span> <span class="pre">string</span> <span class="pre">widget</span> <span class="pre">=</span> <span class="pre">&quot;checkbox&quot;</span> <span class="pre">]]</span></code></dt><dd><p>将整型参数显示为布尔复选框。</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="groups.html" class="btn btn-neutral float-left" title="组" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../color_management.html" class="btn btn-neutral float-right" title="色彩管理" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/render/shader_nodes/osl.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/render/shader_nodes/osl.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Frender/shader_nodes/osl.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Frender/shader_nodes/osl.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

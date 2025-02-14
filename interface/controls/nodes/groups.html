@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>节点组 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/interface/controls/nodes/groups.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/js/version_switch.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../copyright.html" />
+    <link rel="next" title="节点框" href="frame.html" />
+    <link rel="prev" title="侧栏" href="sidebar.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">用户界面</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#window-system">窗口系统</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#keymap">键位映射</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#interface-controls">界面控件</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../index.html#buttons-and-controls">按钮与控件</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html#extended-controls">扩展控件</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../templates/data_block.html">数据块菜单</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../templates/list_view.html">列表视图</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../templates/color_picker.html">拾色器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../templates/color_ramp.html">颜色渐变部件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../templates/color_palette.html">调色板</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../templates/curve.html">曲线部件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../templates/operator_search.html">搜索</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">节点</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l5"><a class="reference internal" href="parts.html">节点部件</a></li>
+<li class="toctree-l5"><a class="reference internal" href="selecting.html">选择</a></li>
+<li class="toctree-l5"><a class="reference internal" href="arranging.html">排列节点</a></li>
+<li class="toctree-l5"><a class="reference internal" href="editing.html">编辑</a></li>
+<li class="toctree-l5"><a class="reference internal" href="sidebar.html">侧栏</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">节点组</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#interface">界面</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#sidebar">侧栏</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#edit-group">编辑节点组</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#make-group">制作节点组</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#ungroup">拆散</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#group-insert">插入到组</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#reusing-node-groups">重复使用节点组</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="frame.html">节点框</a></li>
+<li class="toctree-l5"><a class="reference internal" href="reroute.html">转接点</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../index.html#tools-operators">工具 &amp; 操作</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">用户界面</a></li>
+          <li class="breadcrumb-item"><a href="index.html">节点</a></li>
+      <li class="breadcrumb-item active">节点组</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="node-groups">
+<span id="bpy-types-nodegroup"></span><h1>节点组<a class="headerlink" href="#node-groups" title="Permalink to this heading"></a></h1>
+<figure class="align-right" id="id7">
+<img alt="../../../_images/interface_controls_nodes_groups_example.png" src="../../../_images/interface_controls_nodes_groups_example.png" />
+<figcaption>
+<p><span class="caption-text">节点组示例。</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>分组节点可以通过隐藏复杂性和重复使用重复的部分来简化节点树。</p>
+<p>从概念上讲，节点组允许你把一 <em>组</em> 节点当作是一个节点。它们类似于编程中的函数：它们可以被重复使用（甚至在不同的节点树中），并且可以通过改变它们的 &quot;参数&quot; 进行定制</p>
+<p>举个例子，比如说你创建了一个“木头”材质，你希望有不同的颜色。一种方法是为每一种颜色复制整个材质，但如果你这样做了，如果你以后想改变纹理的密度，你就必须再去复制所有这些副本。相反，最好把定义木材外观的节点移到一个节点组中。然后每个材质都可以重复使用这个节点组，只需要给它提供一个颜色。如果你后来想改变纹理线的密度，你只需要在节点组内做一次，而不是为每个材质做一次。</p>
+<p>节点组可以嵌套（也就是说，节点组可以包含其他节点组）。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>所有节点系统都禁止递归节点组以防止无限递归。节点组永远不能包含自身。</p>
+</div>
+<section id="interface">
+<h2>界面<a class="headerlink" href="#interface" title="Permalink to this heading"></a></h2>
+<p>当一个节点组被创建时，新的 <em>组输入</em> 和 <em>组输出</em> 节点被生成，以表示进入和离开该组的数据流。此外，来自未选择的节点的输入接口的连接将被连接到 <em>组输入</em> 节点上的新接口。同样，来自未被选中的节点的输入接口的出站连接将被连接到新的 <em>组输出</em> 节点。</p>
+<p>如果你想把一个额外的参数传入组中，必须在 <em>组输入</em> 节点上添加一个接口。要做到这一点，从 <em>组输入</em> 节点右侧的空接口拖动一个连接到需要输入的节点上所需的输入接口。关于你想在组外获得的数据，<em>组输出</em> 的过程也类似。</p>
+<section id="sidebar">
+<span id="bpy-ops-node-tree-socket-move"></span><span id="bpy-ops-node-tree-socket-remove"></span><span id="bpy-ops-node-tree-socket-add"></span><h3>侧栏<a class="headerlink" href="#sidebar" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">侧栏 ‣ 组 ‣ 输入</span>，<span class="menuselection">侧栏 ‣ 组 ‣ 输出</span></p>
+</dd>
+</dl>
+</div>
+<figure class="align-right" id="id8">
+<img alt="../../../_images/interface_controls_nodes_groups_interface-panel.png" src="../../../_images/interface_controls_nodes_groups_interface-panel.png" />
+<figcaption>
+<p><span class="caption-text">The interface panel for editing groups.</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>The Sidebar lets you add, remove, reorder, and edit the sockets of the group's input and output nodes.</p>
+<dl class="simple" id="bpy-types-nodesocketinterface-name">
+<dt>名称</dt><dd><p>The name of the socket to display in the node's interface.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-nodesocketinterface-description">
+<dt>工具提示</dt><dd><p>The message displayed when hovering over socket properties.
+Currently only supported for <a class="reference internal" href="../../../editors/geometry_node.html"><span class="doc">Geometry Node Editor</span></a>.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-nodesocketinterface-default-value">
+<dt>默认</dt><dd><p>当没有任何东西连接到接口时使用的值。</p>
+</dd>
+</dl>
+<span id="bpy-types-nodesocketinterface-min-value"></span><dl class="simple" id="bpy-types-nodesocketinterface-max-value">
+<dt>最小值，最大值</dt><dd><p>节点界面中显示的 UI 按钮的最小和最大值。注意，这不是可以通过节点的数据的最小或最大值。如果一个接口传递的值高于最大值，它仍然会不变地传入节点。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-nodesocketinterface-hide-value">
+<dt>隐藏值</dt><dd><p>即使接口没有连接，也会隐藏接口的值。</p>
+</dd>
+</dl>
+<dl id="bpy-types-nodesocketinterface-hide-in-modifier">
+<dt>在修改器中隐藏</dt><dd><p>不在几何节点修改器界面中显示输入值。这样就可以只在节点组中使用输入值，但不将其作为修改器输入。</p>
+<p>该选项仅适用于几何节点且仅针对输入接口。</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="edit-group">
+<span id="bpy-ops-node-group-edit"></span><span id="bpy-ops-node-tree-path-parent"></span><h2>编辑节点组<a class="headerlink" href="#edit-group" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id2">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">节点 ‣ 编辑组</span></p>
+</dd>
+<dt class="field-even">标题栏<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">进入父级节点树</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Tab</kbd>, <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Tab</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>选定一个节点组后，按 <kbd class="kbd docutils literal notranslate">Tab</kbd> 进入该组并查看其内容。再按 <kbd class="kbd docutils literal notranslate">Tab</kbd>（或 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Tab</kbd></kbd>）离开该组，回到其父级，这可能是顶级节点树或其他节点组。你可以参考节点编辑器左上角的面包屑导航，看看你在层次结构中的位置。</p>
+<figure class="align-default" id="id9">
+<a class="reference internal image-reference" href="../../../_images/render_cycles_optimizations_reducing-noise_glass-group.png"><img alt="../../../_images/render_cycles_optimizations_reducing-noise_glass-group.png" src="../../../_images/render_cycles_optimizations_reducing-noise_glass-group.png" style="width: 620px;" /></a>
+<figcaption>
+<p><span class="caption-text">展开后的节点组示例。</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="make-group">
+<span id="bpy-ops-node-group-make"></span><h2>制作节点组<a class="headerlink" href="#make-group" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id3">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">节点 ‣ 创建组</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">G</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>要创建一个节点组，选择你想包含的节点，然后按 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">G</kbd></kbd> 或点击 <span class="menuselection">组 ‣ 创建组</span>。节点组将有一个绿色的标题栏。所有被选中的节点现在将被包含在节点组中。节点组的默认命名是“NodeGroup”、“NodeGroup.001”等。节点组中有一个名称字段，你可以点击进入来改变组的名称。把节点组的名字改成有意义的。</p>
+<p>将节点组从一个 blend 文件附加到另一个 blend 文件时，Blender 不会区分是材质节点组还是合成节点组，因此建议使用一些命名约定，以便可以轻松区分这两种类型。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>每个节点编辑器的“添加”菜单包含一个“输出”类别，其中有“材质输出”等节点类型。这些节点类型不应该与节点组中的“组输出”节点相混淆，也不应该在节点组中使用（只能在顶级节点树中）。</p>
+</div>
+</section>
+<section id="ungroup">
+<span id="bpy-ops-node-group-ungroup"></span><h2>拆散<a class="headerlink" href="#ungroup" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id4">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">节点 ‣ 取消编组</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">G</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>移除组并将单个节点放入你的编辑器工作区。没有内部连接丢失，现在你可以将内部节点连接到工作区的其他节点。</p>
+<dl>
+<dt>分离 <kbd class="kbd docutils literal notranslate">P</kbd></dt><dd><p>将所选节点与节点组分开。</p>
+<dl class="simple">
+<dt>复制</dt><dd><p>复制到父级节点树，并保持节点组完好。</p>
+</dd>
+<dt>移动</dt><dd><p>从组中删除，移动至父级节点树。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+<section id="group-insert">
+<span id="bpy-ops-node-group-insert"></span><h2>插入到组<a class="headerlink" href="#group-insert" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id5">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">节点 ‣ 插入到组</span></p>
+</dd>
+</dl>
+</div>
+<p>Selecting a set of nodes, ending with the destination group node,
+and pressing <span class="menuselection">Node ‣ Group Insert</span> will move those nodes into that group.
+The moved nodes are collected into a group of their own to preserve their connection context,
+having their own group input and output nodes.
+The group's existing input and output nodes are updated with new sockets, if any, from the new nodes.
+The node group must be edited to contain a single <em>Group Input</em> and a single <em>Group Output</em> node.</p>
+</section>
+<section id="reusing-node-groups">
+<h2>重复使用节点组<a class="headerlink" href="#reusing-node-groups" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id6">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">添加 ‣ 组</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">A</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>现有的节点组可以在最初定义后再次放置，无论是在同一个节点树还是不同的节点树。也可以使用 <span class="menuselection">文件 ‣ 关联/追加</span> 从不同的 blend 文件中导入节点组。</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="sidebar.html" class="btn btn-neutral float-left" title="侧栏" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="frame.html" class="btn btn-neutral float-right" title="节点框" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/interface/controls/nodes/groups.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/interface/controls/nodes/groups.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Finterface/controls/nodes/groups.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Finterface/controls/nodes/groups.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

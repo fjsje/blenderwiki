@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GPU渲染 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/cycles/gpu_rendering.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="实验性功能" href="features.html" />
+    <link rel="prev" title="灯光设置" href="light_settings.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eevee/index.html">EEVEE</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Cycles</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="render_settings/index.html">渲染设置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="world_settings.html">世界设置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="object_settings/index.html">物体设置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="material_settings.html">材质设置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="light_settings.html">灯光设置</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">GPU渲染</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#rendering-technologies">渲染技术</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#cuda-nvidia">CUDA -- NVIDIA</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#optix-nvidia">OptiX -- NVIDIA</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#hip-amd">HIP -- AMD</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#oneapi-intel">oneAPI -- 英特尔</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#metal-apple-macos">Metal -- Apple (macOS)</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#limitations">局限</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#frequently-asked-questions">常见问题</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#why-is-blender-unresponsive-during-rendering">为什么在渲染过程中Blender没有反应？</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#why-does-a-scene-that-renders-on-the-cpu-not-render-on-the-gpu">为什么场景是通过CPU渲染的，而不是GPU？</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#can-multiple-gpus-be-used-for-rendering">多个GPU可以用于渲染吗？</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#would-multiple-gpus-increase-available-memory">多个GPU会增加可用内存吗？</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#what-renders-faster">哪个渲染更快？</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#error-messages">错误信息</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#error-out-of-memory">错误：内存不足</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#the-nvidia-opengl-driver-lost-connection-with-the-display-driver">The NVIDIA OpenGL driver lost connection with the display driver</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#unsupported-gnu-version">不支持的 GNU 版本</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#cuda-error-kernel-compilation-failed">CUDA错误：内核编译失败</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="features.html">实验性功能</a></li>
+<li class="toctree-l3"><a class="reference internal" href="baking.html">渲染烘焙</a></li>
+<li class="toctree-l3"><a class="reference internal" href="optimizations/index.html">渲染优化</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../workbench/index.html">工作台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cameras.html">摄像机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lights/index.html">灯光</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../materials/index.html">材质</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shader_nodes/index.html">着色节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../color_management.html">色彩管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../layers/index.html">层 &amp; 通道</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染输出</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">渲染</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Cycles</a></li>
+      <li class="breadcrumb-item active">GPU渲染</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="gpu-rendering">
+<h1>GPU渲染<a class="headerlink" href="#gpu-rendering" title="Permalink to this heading"></a></h1>
+<p><abbr title="Graphics Processing Unit 图形处理器">GPU</abbr> 渲染能够使用你的显卡进行渲染，而不是 CPU。这会加快渲染速度，因为如今 GPU 的设计旨在能够胜任大量运算方面的应用。另一方面，由于显存容量有限，它们在渲染复杂场景时也有一些限制，并且在使用相同的显卡进行显示和渲染时会出现交互性问题。</p>
+<p>To enable GPU rendering, go into the <span class="menuselection">Preferences ‣ System ‣ Cycles Render Devices</span>,
+and select either <em>CUDA</em>, <em>OptiX</em>, <em>HIP</em>, <em>oneAPI</em>, or <em>Metal</em>. Next, you must configure each scene to
+use GPU rendering in <span class="menuselection">Properties ‣ Render ‣ Device</span>.</p>
+<section id="rendering-technologies">
+<h2>渲染技术<a class="headerlink" href="#rendering-technologies" title="Permalink to this heading"></a></h2>
+<p>Blender支持不同的技术在GPU上渲染，具体取决于特定的GPU制造商和操作系统。</p>
+<section id="cuda-nvidia">
+<h3>CUDA -- NVIDIA<a class="headerlink" href="#cuda-nvidia" title="Permalink to this heading"></a></h3>
+<p><abbr title="Compute Unified Device Architecture 计算统一设备架构">CUDA</abbr> 在 Windows 和 Linux 上被支持，需要计算能力为 3.0 及以上的 Nvidia 显卡。为了确保你的 GPU 被支持，请看 <a class="reference external" href="https://developer.nvidia.com/cuda-gpus#compute">Nvidia 显卡列表</a>，其中有计算能力和支持的显卡。</p>
+</section>
+<section id="optix-nvidia">
+<span id="render-cycles-gpu-optix"></span><h3>OptiX -- NVIDIA<a class="headerlink" href="#optix-nvidia" title="Permalink to this heading"></a></h3>
+<p>OptiX is supported on Windows and Linux and requires a Nvidia graphics cards with compute capability 5.0 and higher
+and a driver version of at least 470. To make sure your GPU is supported,
+see the <a class="reference external" href="https://developer.nvidia.com/cuda-gpus#compute">list of Nvidia graphics cards</a>.</p>
+<p>OptiX takes advantage of hardware ray-tracing acceleration in RTX graphics cards, for improved performance.</p>
+</section>
+<section id="hip-amd">
+<h3>HIP -- AMD<a class="headerlink" href="#hip-amd" title="Permalink to this heading"></a></h3>
+<p><abbr title="Heterogeneous-compute Interface for Portability">HIP</abbr> is supported on Windows and Linux and requires a
+AMD graphics card with the Vega architecture or newer. Both discrete GPUs and APUs are supported.</p>
+<p>支持的GPU包括：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Radeon RX Vega Series (Excluding the Radeon VII)</p></li>
+<li><p>Radeon RX 5000 系列</p></li>
+<li><p>Radeon RX 6000 系列</p></li>
+<li><p>Radeon RX 7000 系列</p></li>
+<li><p>Radeon Pro WX 9100</p></li>
+<li><p>Radeon Pro W6000 系列</p></li>
+</ul>
+</div></blockquote>
+<p>最低驱动进程版本：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Windows：Radeon软件 21.12.1 或 Radeon PRO软件 21.Q4</p></li>
+<li><p>Linux：Radeon软件 22.10 或 ROCm 5.3</p></li>
+</ul>
+</div></blockquote>
+<p>Please refer to <a class="reference external" href="https://www.amd.com/en/graphics">AMD's website</a> for more
+information about AMD graphics cards and their architectures.</p>
+<p>On Windows, experimental hardware ray-tracing support is available with the most recent drivers. This can be enabled in the preferences. However there are currently known issues regarding hair rendering and degenerate triangle shapes.</p>
+<p>The <em>Clip</em> extension mode in <a class="reference internal" href="../shader_nodes/textures/image.html"><span class="doc">图像纹理</span></a> is not supported for HIP.</p>
+</section>
+<section id="oneapi-intel">
+<h3>oneAPI -- 英特尔<a class="headerlink" href="#oneapi-intel" title="Permalink to this heading"></a></h3>
+<p>oneAPI is a computation library that is supported on Windows and Linux and requires a
+Intel® Arc™ graphics card with the Xe HPG architecture. Hardware acceleration for ray-tracing is supported.</p>
+<p>支持的GPU包括：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>英特尔® 锐炫™ A-系列</p></li>
+</ul>
+</div></blockquote>
+<p>最低驱动进程版本：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Windows: Intel Graphics Driver XX.X.101.4314</p></li>
+<li><p>Linux: <code class="docutils literal notranslate"><span class="pre">intel-level-zero-gpu</span></code> package 1.3.25812,
+typically available through the <code class="docutils literal notranslate"><span class="pre">intel-compute-runtime</span></code> package XX.XX.25812</p></li>
+</ul>
+</div></blockquote>
+<p>关于英特尔显卡及其架构的更多信息，请参考<a class="reference external" href="https://www.intel.cn/content/www/cn/zh/products/details/discrete-gpus.html">英特尔网站</a>。</p>
+</section>
+<section id="metal-apple-macos">
+<h3>Metal -- Apple (macOS)<a class="headerlink" href="#metal-apple-macos" title="Permalink to this heading"></a></h3>
+<p>Metal is supported on Apple computers with Apple Silicon, AMD and Intel graphics cards.
+macOS 13.0 or newer is required to support all features and graphics cards.</p>
+<p><a class="reference internal" href="render_settings/sampling.html#bpy-types-cyclesrendersettings-use-light-tree"><span class="std std-ref">Light Trees</span></a> and <a class="reference internal" href="object_settings/object_data.html#bpy-types-cyclesobjectsettings-is-caustics-caster"><span class="std std-ref">Shadow Caustics</span></a> are not supported when using an AMD graphics card with Metal.</p>
+</section>
+</section>
+<section id="limitations">
+<h2>局限<a class="headerlink" href="#limitations" title="Permalink to this heading"></a></h2>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference internal" href="render_settings/sampling.html#bpy-types-cyclesrendersettings-use-guiding"><span class="std std-ref">路径引导</span></a> 不被任何 GPU 支持。</p></li>
+<li><p><a class="reference internal" href="../shader_nodes/osl.html"><span class="doc">开放着色语言</span></a> is only supported for OptiX, with some limitations listed in the documentation.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="frequently-asked-questions">
+<h2>常见问题<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this heading"></a></h2>
+<section id="why-is-blender-unresponsive-during-rendering">
+<h3>为什么在渲染过程中Blender没有反应？<a class="headerlink" href="#why-is-blender-unresponsive-during-rendering" title="Permalink to this heading"></a></h3>
+<p>On older GPU generations, graphics cards can only either render or draw the user interface.
+This can make Blender unresponsive while it is rendering.
+Heavy scenes can also make Blender unresponsive on newer GPUs, when using a lot of memory or executing expensive shaders, however this is generally less of a problem.</p>
+<p>The only complete solution for this is to use a dedicated GPU for rendering, and another for display.</p>
+</section>
+<section id="why-does-a-scene-that-renders-on-the-cpu-not-render-on-the-gpu">
+<h3>为什么场景是通过CPU渲染的，而不是GPU？<a class="headerlink" href="#why-does-a-scene-that-renders-on-the-cpu-not-render-on-the-gpu" title="Permalink to this heading"></a></h3>
+<p>可能有多种原因，但最常见的原因是你的显卡上没有足够的内存。通常情况下，GPU 只能使用 GPU 上的内存量（更多信息请参见<a class="reference internal" href="#would-multiple-gpus-increase-available-memory">多个GPU会增加可用内存吗？</a>）。这通常比 CPU 可以访问的系统内存量小得多。对于 CUDA、OptiX、HIP 和 Metal 设备，如果 GPU 内存已满，Blender 会自动尝试使用系统内存。这对性能有影响，但通常还是会比使用 CPU 渲染的速度快。</p>
+</section>
+<section id="can-multiple-gpus-be-used-for-rendering">
+<h3>多个GPU可以用于渲染吗？<a class="headerlink" href="#can-multiple-gpus-be-used-for-rendering" title="Permalink to this heading"></a></h3>
+<p>可以。打开 <span class="menuselection">偏好设置 ‣ 系统 ‣ 计算设备面板</span>，按需进行设置即可。</p>
+</section>
+<section id="would-multiple-gpus-increase-available-memory">
+<h3>多个GPU会增加可用内存吗？<a class="headerlink" href="#would-multiple-gpus-increase-available-memory" title="Permalink to this heading"></a></h3>
+<p>Typically, no, each GPU can only access its own memory.</p>
+<p>The exception is NVIDIA GPUs connected with NVLink, where multiple GPUs can share memory at a small performance cost. This is can be enabled with <a class="reference internal" href="../../editors/preferences/system.html#prefs-system-cycles-distributive-memory"><span class="std std-ref">Distributed Memory Across Devices</span></a> in the preferences.</p>
+</section>
+<section id="what-renders-faster">
+<h3>哪个渲染更快？<a class="headerlink" href="#what-renders-faster" title="Permalink to this heading"></a></h3>
+<p>取决于所使用的硬件。根据测试场景，不同的技术所需的计算时间也有差异。有关不同设备性能的最新信息，请浏览 <a class="reference external" href="https://opendata.blender.org/">Blender Open Data</a> 。</p>
+</section>
+</section>
+<section id="error-messages">
+<h2>错误信息<a class="headerlink" href="#error-messages" title="Permalink to this heading"></a></h2>
+<p>In case of problems, be sure to install the official graphics drivers from the GPU manufacturers website,
+or through the package manager on Linux.
+The graphics drivers provided by the computer manufacturer can sometimes be outdated or incomplete.</p>
+<section id="error-out-of-memory">
+<h3>错误：内存不足<a class="headerlink" href="#error-out-of-memory" title="Permalink to this heading"></a></h3>
+<p>这通常意味着GPU没有足够的显存来储存场景。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>使用较小的纹理分辨率是减少内存使用量的一种方法。比如，8k、4k、2k 和 1k 图像纹理分别占 256MB、64MB、16MB 和 4MB 的内存。</p>
+</div>
+</section>
+<section id="the-nvidia-opengl-driver-lost-connection-with-the-display-driver">
+<h3>The NVIDIA OpenGL driver lost connection with the display driver<a class="headerlink" href="#the-nvidia-opengl-driver-lost-connection-with-the-display-driver" title="Permalink to this heading"></a></h3>
+<p>如果同时使用GPU来显示与渲染，Windows系统在GPU渲染计算时间方面存在局限。如果您的场景非常复杂，那么Cycles引擎就需要占用过多的GPU时间。通过降低性能面板中的平铺尺寸值可以让此问题得到缓解，但真正的解决方案只有使用多个相对独立的显卡分别进行界面显示与渲染。</p>
+<p>Another solution can be to increase the time-out,
+although this will make the user interface less responsive when rendering heavy scenes.
+<a class="reference external" href="https://learn.microsoft.com/en-us/windows-hardware/drivers/display/timeout-detection-and-recovery">Learn More Here</a>.</p>
+</section>
+<section id="unsupported-gnu-version">
+<h3>不支持的 GNU 版本<a class="headerlink" href="#unsupported-gnu-version" title="Permalink to this heading"></a></h3>
+<p>在Linux上，根据你的GCC版本，你可能会得到这个错误。请参阅 <a class="reference external" href="https://docs.nvidia.com/cuda/archive/10.2/cuda-installation-guide-linux/index.html">Nvidia CUDA Installation Guide for Linux</a> 了解支持的GCC版本列表。对于这个错误，有两种可能的解决方案：</p>
+<dl>
+<dt>使用备用编译器</dt><dd><p>如果安装了与安装的CUDA工具包版本兼容的较旧GCC，则可以使用它而不是默认编译器。这是通过在启动Blender时设置 <code class="docutils literal notranslate"><span class="pre">CYCLES_CUDA_EXTRA_CFLAGS</span></code> 环境变量来完成的。</p>
+<p>从命令行启动Blender，如下所示：</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span><span class="nv">CYCLES_CUDA_EXTRA_CFLAGS</span><span class="o">=</span><span class="s2">&quot;-ccbin gcc-x.x&quot;</span><span class="w"> </span>blender
+</pre></div>
+</div>
+<p>(Substitute the name or path of the compatible GCC compiler).</p>
+</dd>
+<dt>删除兼容性检查</dt><dd><p>如果上述操作不成功，请删除 <code class="docutils literal notranslate"><span class="pre">/usr/local/cuda/include/host_config.h</span></code> 中的以下行：</p>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cp">#error -- unsupported GNU version! gcc x.x and up are not supported!</span>
+</pre></div>
+</div>
+<p>这将允许Cycles在第一次尝试使用GPU进行渲染时成功编译CUDA渲染内核。成功构建内核后，你可以像往常一样启动Blender，CUDA内核仍将用于渲染。</p>
+</dd>
+</dl>
+</section>
+<section id="cuda-error-kernel-compilation-failed">
+<h3>CUDA错误：内核编译失败<a class="headerlink" href="#cuda-error-kernel-compilation-failed" title="Permalink to this heading"></a></h3>
+<p>如果您有新的NVIDIA显卡尚未支持您安装的Blender版本和CUDA工具包，则可能会出现此错误。在这种情况下，Blender可能会尝试为您的显卡动态构建内核并失败。</p>
+<p>在这种情况下，您可以：</p>
+<ol class="arabic simple">
+<li><p>检查最新的 Blender 版本（官方或<a class="reference external" href="https://builder.blender.org/download/">实验版本</a>）是否支持您的显卡。</p></li>
+<li><p>如果您自己构建Blender，请尝试下载并安装更新的CUDA开发人员工具包。</p></li>
+</ol>
+<p>通常用户不需要安装CUDA工具箱，因为Blender带有预编译的内核。</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="light_settings.html" class="btn btn-neutral float-left" title="灯光设置" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="features.html" class="btn btn-neutral float-right" title="实验性功能" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/render/cycles/gpu_rendering.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/render/cycles/gpu_rendering.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Frender/cycles/gpu_rendering.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Frender/cycles/gpu_rendering.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

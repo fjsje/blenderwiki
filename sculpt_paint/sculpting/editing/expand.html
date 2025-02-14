@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>扩展 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/sculpt_paint/sculpting/editing/expand.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/js/version_switch.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../copyright.html" />
+    <link rel="next" title="纹理绘制" href="../../texture_paint/index.html" />
+    <link rel="prev" title="面组" href="face_sets.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">雕刻 &amp; 绘制</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../brush/index.html">笔刷</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../selection_visibility.html">选择 &amp; 可见性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../navigation.html">导航</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#modes">模式</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">雕刻</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction/index.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../toolbar.html">工具栏</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tools/index.html">工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tool_settings/index.html">工具设置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../controls.html">控制器</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">编辑</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="sculpt.html">雕刻</a></li>
+<li class="toctree-l5"><a class="reference internal" href="mask.html">遮罩</a></li>
+<li class="toctree-l5"><a class="reference internal" href="face_sets.html">面组</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">扩展</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#expand-mask-by-topology">按拓扑展开遮罩</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#usage">用法</a></li>
+<li class="toctree-l7"><a class="reference internal" href="#controls">控制器</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#expand-mask-by-normals">按法向展开遮罩</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#expand-face-set-by-topology">按拓扑展开面组</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#id4">用法</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="#expand-active-face-set">展开活动面组</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#id6">用法</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../texture_paint/index.html">纹理绘制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../vertex_paint/index.html">顶点绘制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../weight_paint/index.html">权重绘制</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../curves_sculpting/index.html">曲线雕刻</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">雕刻 &amp; 绘制</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">雕刻</a></li>
+          <li class="breadcrumb-item"><a href="index.html">编辑</a></li>
+      <li class="breadcrumb-item active">扩展</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="expand">
+<span id="bpy-ops-sculpt-expand"></span><span id="bpy-ops-sculpt-mask-expand"></span><h1>扩展<a class="headerlink" href="#expand" title="Permalink to this heading"></a></h1>
+<p>This is a multi-purpose modal operator to intuitively create and edit masks/face sets.
+When executed, it uniformly expand outwards a pattern from the vertex under the cursor.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>These operators are meant to be used interactively through the shortcut.</p>
+</div>
+<p>There is also a <a class="reference external" href="https://www.youtube.com/watch?v=XT7h6lmE5bc">full showcase of the Expand features and use cases</a>.</p>
+<figure class="align-default" id="id7">
+<img alt="../../../_images/sculpt-paint_sculpting_expand_example.png" src="../../../_images/sculpt-paint_sculpting_expand_example.png" />
+<figcaption>
+<p><span class="caption-text"><em>按拓扑展开遮罩</em> 的预览</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<section id="expand-mask-by-topology">
+<h2>按拓扑展开遮罩<a class="headerlink" href="#expand-mask-by-topology" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>雕刻模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">遮罩 ‣ 按拓扑展开遮罩</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">A</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>从活动顶点拓展一个遮罩。</p>
+<section id="usage">
+<h3>用法<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h3>
+<dl>
+<dt>从 A 到 B 遮罩</dt><dd><p>Start the operator and expand a mask from an origin to your mouse cursor distance.
+Then confirm with <kbd class="kbd docutils literal notranslate">LMB</kbd> or <kbd class="kbd docutils literal notranslate">Return</kbd></p>
+<p>By default the expansion will use a <em>Geodesic</em> falloff <kbd class="kbd docutils literal notranslate">1</kbd>
+to create perfectly accurate distances along the surfaces.
+Use other falloff types via <kbd class="kbd docutils literal notranslate">2</kbd>, <kbd class="kbd docutils literal notranslate">3</kbd> &amp; <kbd class="kbd docutils literal notranslate">4</kbd> to expand via
+triangles, whole faces or scene distances instead.</p>
+<figure class="align-default" id="id8">
+<img alt="../../../_images/sculpt-paint_sculpting_expand_falloff_example.png" src="../../../_images/sculpt-paint_sculpting_expand_falloff_example.png" />
+<figcaption>
+<p><span class="caption-text">The typical result when using the <em>Diagonals</em> falloff to expand along the quads of the face.</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Start Expand while pointing at an open boundary to expand from the entire boundary loop.
+This will always use the <em>Topology</em> falloff mode.</p>
+</dd>
+<dt>填充相连的网格</dt><dd><p>Move your cursor outside of the boundaries of the mesh to mask the entire connected mesh.
+This can be done repeatedly to quickly mask separate meshes.</p>
+</dd>
+<dt>填充面组</dt><dd><p>Hold <kbd class="kbd docutils literal notranslate">Ctrl</kbd> to snap to face sets under your cursor and fill them.
+Any face set that was already covered in the expansion will be filled as well.</p>
+</dd>
+<dt>自动设置变换轴心点</dt><dd><p>While using any Transform tool, the pivot point
+will automatically snap the border of an Expand result.
+This way areas (Like limbs) can be masked and then immediately rotated or otherwise transformed.</p>
+<figure class="align-default">
+<img alt="../../../_images/sculpt-paint_sculpting_expand_auto_pivot.png" src="../../../_images/sculpt-paint_sculpting_expand_auto_pivot.png" />
+</figure>
+</dd>
+<dt>图案创建</dt><dd><p>The different falloff types can be used for circular, triangular and square patterns.
+More loops can also be added/removed via <kbd class="kbd docutils literal notranslate">W</kbd> &amp; <kbd class="kbd docutils literal notranslate">Q</kbd> to repeat the pattern across the mesh.</p>
+<figure class="align-default" id="id9">
+<img alt="../../../_images/sculpt-paint_sculpting_expand_pattern1.png" src="../../../_images/sculpt-paint_sculpting_expand_pattern1.png" />
+<figcaption>
+<p><span class="caption-text">An example of using expand with mirror options,
+loops and a recursion to create wood carving patterns.</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p><a class="reference internal" href="../tool_settings/symmetry.html"><span class="doc">Mirror options</span></a>
+can also be combined with the expansion.</p>
+</div>
+<p>Linear gradients <kbd class="kbd docutils literal notranslate">G</kbd> or brush falloff gradients <kbd class="kbd docutils literal notranslate">B</kbd> will help to add slanted surfaces
+to the patterns.</p>
+<p>A &quot;Recursions&quot; with <kbd class="kbd docutils literal notranslate">R</kbd> or <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">R</kbd></kbd> will start
+a new expansion along the border of the current expansion.
+Doing this multiple times, can help for increasingly random patterns
+or advanced pattern creation.</p>
+<figure class="align-default" id="id10">
+<img alt="../../../_images/sculpt-paint_sculpting_expand_pattern2.png" src="../../../_images/sculpt-paint_sculpting_expand_pattern2.png" />
+<figcaption>
+<p><span class="caption-text">An example of using loops and gradients with multiple expanded masks.</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Remember that Expand only affects visible geometry.
+So if a pattern should only be created on a part of the mesh,
+<a class="reference internal" href="sculpt.html"><span class="doc">hide</span></a> the other geometry first.</p>
+</div>
+<p>Use the <a class="reference internal" href="../tools/mesh_filter.html"><span class="doc">Mesh Filter</span></a>
+to deform the geometry and the <a class="reference internal" href="../tools/color_filter.html"><span class="doc">Color Filter</span></a>
+to add colors, to apply the patterns on the sculpt.</p>
+</dd>
+<dt>扩展纹理</dt><dd><p>Textures can be used to affect the shape and gradients of the expanded mask.
+This feature can be combined with loops and recursion to create unique results.</p>
+<p>To use a texture, you need to assign it to your currently active brush in the
+<a class="reference internal" href="../../brush/texture.html"><span class="doc">Texture</span></a> Brush Settings. The texture can be edited/created
+in the <a class="reference internal" href="../../../render/materials/legacy_textures/index.html"><span class="doc">Texture Properties</span></a>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This texture only works when the <a class="reference internal" href="../../brush/texture.html#bpy-types-brushtextureslot-map-mode"><span class="std std-ref">Mapping</span></a> is set to <em>3D</em>.</p>
+</div>
+<p>Use <kbd class="kbd docutils literal notranslate">Y</kbd> and <kbd class="kbd docutils literal notranslate">T</kbd> to increase or decrease the affect the texture has on the edge of the mask.</p>
+</dd>
+</dl>
+</section>
+<section id="controls">
+<h3>控制器<a class="headerlink" href="#controls" title="Permalink to this heading"></a></h3>
+<dl class="field-list simple">
+<dt class="field-odd">反转<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">F</kbd> 在扩大正遮罩（值为1）或负遮罩（值为0）之间翻转。在面组的情况下，这个选项在包括遮蔽区域内的区域或遮蔽区域外的区域之间翻转</p>
+</dd>
+<dt class="field-even">切换保留状态<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">E</kbd>
+Accumulate the new mask on top of the previous one or replace it.
+For Face Sets, this will toggle between creating Face Sets boundaries
+or replacing the existing Face Sets.</p>
+</dd>
+<dt class="field-odd">移动原点<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">空格键</kbd> 移动用于计算衰减的初始顶点. .. 需要可视化技术范例</p>
+</dd>
+<dt class="field-even">测地线衰减<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">1</kbd> 使用基于 <a class="reference internal" href="../../../glossary/index.html#term-Geodesic"><span class="xref std std-term">测地线</span></a> 距离的衰减，从边缘边界到活动顶点。</p>
+</dd>
+<dt class="field-odd">拓扑衰减<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">2</kbd> 使用基于泛滥填充的渐变，使用边缘。</p>
+</dd>
+<dt class="field-even">对角线偏移<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">3</kbd> 利用多边形的对角线和边缘，在泛滥填充的基础上使用淡化。</p>
+</dd>
+<dt class="field-odd">球形衰减<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">4</kbd> 使用基于从边缘边界到活动顶点的欧几里得距离的衰减. .. 需要可视化技术范例</p>
+</dd>
+<dt class="field-even">切换渐变<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">G</kbd>
+Enables linear gradient of values from the origin to the current active vertex.</p>
+</dd>
+<dt class="field-odd">切换画笔渐变<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">B</kbd> 类似于线性渐变，但使用当前画笔 <a class="reference internal" href="../../brush/falloff.html"><span class="doc">衰减</span></a> 来定义渐变的形状. .. 需要可视化技术范例</p>
+</dd>
+<dt class="field-even">测地法递归步骤<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">R</kbd>
+Start a new expansion with a <a class="reference internal" href="../../../glossary/index.html#term-Geodesic"><span class="xref std std-term">Geodesic</span></a> falloff from the boundary of the current falloff.</p>
+</dd>
+<dt class="field-odd">拓扑递归步骤<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">R</kbd></kbd> 从当前衰减的启用顶点的边界生成一个新的拓扑全填充衰减. .. 需要可视化技术范例</p>
+</dd>
+<dt class="field-even">对齐扩展到面组<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">Ctrl</kbd> 将扩展的区域隔离到游标下设置的面的边界。</p>
+</dd>
+<dt class="field-odd">循环计数增加<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">W</kbd> 增加运行运算符的循环或迭代次数；使用四个循环会将掩码分成四个部分。</p>
+</dd>
+<dt class="field-even">循环计数减少<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">Q</kbd> 减少运行运算符的循环或迭代次数；使用四个循环会将掩码分成四个部分. .. 需要可视化技术范例</p>
+</dd>
+<dt class="field-odd">纹理失真增加<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">Y</kbd> 在使用纹理扭曲遮罩形状时增加衰减距离。</p>
+</dd>
+<dt class="field-even">纹理失真减少<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd docutils literal notranslate">T</kbd> 减少使用纹理扭曲遮罩形状时的衰减距离. .. 需要可视化技术范例</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="expand-mask-by-normals">
+<h2>按法向展开遮罩<a class="headerlink" href="#expand-mask-by-normals" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id2">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>雕刻模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">遮罩 ‣ 按法线扩展遮罩</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">A</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>Expand a mask, following the curvature of the surface.
+This operator uses the same internal operator as <a class="reference internal" href="#bpy-ops-sculpt-expand"><span class="std std-ref">扩展</span></a>
+meaning all the shortcuts and functionality works the same as that tool.</p>
+<p>This operator is especially useful for hard surface sculpting.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If one expansion does not properly fill the entire desired surface,
+use the operator repeatedly with a different starting point.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Using any of the Falloff shortcuts <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">1</kbd>-<kbd class="kbd docutils literal notranslate">4</kbd></kbd>
+will replace the curvature falloff of this operator.</p>
+</div>
+</section>
+<section id="expand-face-set-by-topology">
+<span id="face-set-expand"></span><h2>按拓扑展开面组<a class="headerlink" href="#expand-face-set-by-topology" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id3">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>雕刻模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">面组 ‣ 按拓扑展开面组</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">W</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>Expands a face set from the active vertex.
+This operator uses the same internal operator as <a class="reference internal" href="#bpy-ops-sculpt-expand"><span class="std std-ref">扩展</span></a>
+meaning all the hotkeys and functionality works the same as that tool,
+with the gradient features as the exception.</p>
+<section id="id4">
+<h3>用法<a class="headerlink" href="#id4" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>保存遮罩</dt><dd><p>Expanding Face Sets has all the same use cases as expanding masks.
+The advantage for this one is that they will be saved for repeated usage.
+Face sets can be filled any time with a mask,
+so assigning areas face sets will save you time.
+(And of course face sets can be used to
+<a class="reference internal" href="sculpt.html"><span class="doc">hide face sets</span></a>)</p>
+</dd>
+<dt>姿态笔刷的轴心点</dt><dd><p>When using the <a class="reference internal" href="../tools/pose.html"><span class="doc">Pose Brush</span></a> it is most predictable when using it with
+Face Sets to define the face set boundaries as pivot point locations.
+Face Sets can be expanded from a point or from a boundary between hidden face sets
+to create them quickly.
+Alternatively <a class="reference internal" href="face_sets.html#bpy-ops-sculpt-face-set-edit"><span class="std std-ref">Grow/Shrink Face Sets</span></a>
+or use the <a class="reference internal" href="#face-set-expand-active"><span class="std std-ref">Expand Active Face Set</span></a> to dynamically grow/shrink them.</p>
+</dd>
+<dt>布料雕刻</dt><dd><p>Tools like the <a class="reference internal" href="../tools/cloth_filter.html"><span class="doc">Cloth Filter</span></a>
+and <a class="reference internal" href="../tools/cloth.html"><span class="doc">Cloth Brush</span></a>
+work especially well when only simulating small areas at a time.
+Face Sets can very easily be created with Expand to assign areas of action.</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="expand-active-face-set">
+<span id="face-set-expand-active"></span><h2>展开活动面组<a class="headerlink" href="#expand-active-face-set" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id5">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>雕刻模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">面组 ‣ 按拓扑展开面组</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">W</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>Expands an existing face set with a geodesic falloff.
+This operator uses the same internal operator as <a class="reference internal" href="#bpy-ops-sculpt-expand"><span class="std std-ref">扩展</span></a>
+meaning all the hotkeys and functionality works the same as that tool.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Using any of the Falloff shortcuts <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">1</kbd>-<kbd class="kbd docutils literal notranslate">4</kbd></kbd>
+the operator to switch to <a class="reference internal" href="#face-set-expand"><span class="std std-ref">Expand Face Set by Topology</span></a>.</p>
+</div>
+<section id="id6">
+<h3>用法<a class="headerlink" href="#id6" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>调整面组</dt><dd><p>Resize a Face Set along the surface distances.
+It is an alternative to <a class="reference internal" href="face_sets.html#bpy-ops-sculpt-face-set-edit"><span class="std std-ref">Grow/Shrink Face Sets</span></a>
+which follows the topology instead of geodesic distances.</p>
+</dd>
+<dt>合并面组</dt><dd><p>When holding <kbd class="kbd docutils literal notranslate">Ctrl</kbd> the expansion will instead snap to other Face Sets.
+This is a fast way of joining multiple face sets into one.</p>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="face_sets.html" class="btn btn-neutral float-left" title="面组" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../../texture_paint/index.html" class="btn btn-neutral float-right" title="纹理绘制" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/sculpt_paint/sculpting/editing/expand.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/sculpt_paint/sculpting/editing/expand.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fsculpt_paint/sculpting/editing/expand.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fsculpt_paint/sculpting/editing/expand.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

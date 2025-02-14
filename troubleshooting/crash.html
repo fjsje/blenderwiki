@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>崩溃 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/troubleshooting/crash.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/js/version_switch.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="next" title="Python 错误" href="python.html" />
+    <link rel="prev" title="macOS -- 其它 GPU" href="gpu/apple/other.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">问题排查</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="startup.html">启动</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3d_view.html">3D 视图</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gpu/index.html">图形硬件</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">崩溃</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#crash-log">崩溃日志</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#windows">Windows</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#macos">macOS</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#linux">Linux</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="python.html">Python 错误</a></li>
+<li class="toctree-l2"><a class="reference internal" href="recover.html">恢复数据</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#compatibility">兼容性</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">问题排查</a></li>
+      <li class="breadcrumb-item active">崩溃</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="crashes">
+<h1>崩溃<a class="headerlink" href="#crashes" title="Permalink to this heading"></a></h1>
+<p>引起 Blender 崩溃的最常见原因：</p>
+<ul class="simple">
+<li><p>运行内存不足。</p></li>
+<li><p>图形硬件或驱动程序的问题。</p></li>
+<li><p>Blender 里的 bug。</p></li>
+</ul>
+<p>首先，你可以通过 <span class="menuselection">文件 ‣ 恢复 ‣ 自动保存...</span> 来恢复你的工作。</p>
+<p>为防止问题再次发生，您可以检查图形驱动进程是否是最新的（<a class="reference internal" href="gpu/index.html#troubleshooting-gpu-index"><span class="std std-ref">图形硬件</span></a>），升级计算机的硬件（RAM 或图形卡），并禁用一些内存占用更多的选项：</p>
+<ul class="simple">
+<li><p>减少撤销次数 <span class="menuselection">偏好设置 ‣ 系统 ‣ 内存 &amp; 限额 ‣ 撤销次数</span>。</p></li>
+<li><p>使用多重采样抗锯齿也会增加内存使用量并使显示速度变慢。</p></li>
+<li><p>在 Linux 上，窗口管理器（例如 KDE 和 Gnome）可能正在使用硬件加速效果（例如窗口阴影和透明度），这些效果正在耗尽 Blender 需要的内存。尝试禁用桌面效果或切换到轻量级窗口管理器。</p></li>
+</ul>
+<p>要检查 Blender 内存使用情况：</p>
+<ul class="simple">
+<li><p>在 Windows 上，使用任务管理器并按内存排序。</p></li>
+<li><p>在 macOS 上，使用活动 Monitor.app 并打开内存标签页。或者，运行 <code class="docutils literal notranslate"><span class="pre">top</span> <span class="pre">-o</span> <span class="pre">MEM</span></code>。</p></li>
+<li><p>在 Linux 上，运行 <code class="docutils literal notranslate"><span class="pre">top</span> <span class="pre">-o</span> <span class="pre">%MEM</span></code>。</p></li>
+</ul>
+<section id="crash-log">
+<h2>崩溃日志<a class="headerlink" href="#crash-log" title="Permalink to this heading"></a></h2>
+<p>当 Blender 崩溃时，它会写出一个文本文档，其中包含可能有助于确定崩溃原因的信息。通常，此文档写在<a class="reference internal" href="../advanced/blender_directory_layout.html#temp-dir"><span class="std std-ref">临时目录</span></a>中。</p>
+<p>此文档包含崩溃之前使用的工具的日志以及一些其他调试信息。报告有关崩溃的错误时，将此文档附加到您的报告中会很有帮助，尤其是当其他人无法重现崩溃时。</p>
+<section id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this heading"></a></h3>
+<p>在崩溃时，将根据当前加载的 blend 文档的名称写入文档，因此 <code class="docutils literal notranslate"><span class="pre">test.blend</span></code> 将创建一个名为 <code class="docutils literal notranslate"><span class="pre">test.crash.txt</span></code> 的文档。</p>
+<p>批处理脚本在 Blender 安装目录中提供，可以运行这些脚本以获取 Blender 调试日志和系统信息文本文档：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">blender_debug_log.cmd</span></code> 在大多数情况下使用。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">blender_debug_gpu.cmd</span></code> 和 <code class="docutils literal notranslate"><span class="pre">blender_debug_gpu_workaround.cmd</span></code> 记录与 GPU 相关的错误。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">blender_factory_startup.cmd</span></code> 以默认设置启动 Blender，建议用于调试。</p></li>
+</ul>
+<p>如果在 Blender 模块中发生崩溃，堆栈跟踪也会写入名为 <code class="docutils literal notranslate"><span class="pre">blender.crash.txt</span></code> 的文档中。该文档的路径可以在 <code class="docutils literal notranslate"><span class="pre">blender_debug_log.txt</span></code> 文档的末尾找到。</p>
+</section>
+<section id="macos">
+<h3>macOS<a class="headerlink" href="#macos" title="Permalink to this heading"></a></h3>
+<p>崩溃后，macOS 崩溃报告进程会在一段时间后或再次打开 Blender 时显示一个带有回溯跟踪的窗口。复制崩溃报告中的文本并将其保存在文本文档中。该文档应附加到错误报告，同时遵循其他错误报告指南。</p>
+<p>一些 <code class="docutils literal notranslate"><span class="pre">.crash</span></code> 文件也可以在 <code class="docutils literal notranslate"><span class="pre">~/Library/Logs/DiagnosticReports/</span></code> 中找到，格式名称为：<code class="docutils literal notranslate"><span class="pre">Blender_YYYY-MM-DD-HHMMSS_MACNAME.crash</span></code>。如果存在与崩溃时间相对应的报告，则该文件还可以提供有关崩溃原因的提示。或者，Console.app 可用于导航到所有 “用户报告”（请参阅应用进程中的侧栏）。</p>
+</section>
+<section id="linux">
+<h3>Linux<a class="headerlink" href="#linux" title="Permalink to this heading"></a></h3>
+<p>在崩溃时，一个名为 <code class="docutils literal notranslate"><span class="pre">blender.crash.txt</span></code> 的文档被写入 <code class="docutils literal notranslate"><span class="pre">/tmp</span></code> 目录中。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>通过从命令行运行 Blender 并使用 <code class="docutils literal notranslate"><span class="pre">--factory-startup</span> <span class="pre">--debug-all</span></code> 标志，可以获得更多日志。请参阅<a class="reference internal" href="../advanced/command_line/launch/index.html#command-line-launch-index"><span class="std std-ref">从命令行启动</span></a>和<a class="reference internal" href="../advanced/command_line/arguments.html#command-line-args"><span class="std std-ref">命令行参数</span></a>。</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="gpu/apple/other.html" class="btn btn-neutral float-left" title="macOS -- 其它 GPU" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="python.html" class="btn btn-neutral float-right" title="Python 错误" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/troubleshooting/crash.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/troubleshooting/crash.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Ftroubleshooting/crash.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Ftroubleshooting/crash.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

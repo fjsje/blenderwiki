@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>选择 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/scene_layout/object/selecting.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="编辑" href="editing/index.html" />
+    <link rel="prev" title="物体原点" href="origin.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">场景 &amp; 物体</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../scene/index.html">场景</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">物体</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="types.html">物体类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="origin.html">物体原点</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">选择</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#selections-and-the-active-object">选择项和活动物体</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#select-menu">选择菜单</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#all">全部</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#none">无</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#invert">反转</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#box-select">框选</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#circle-select">刷选</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#lasso-select">套索选择</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#select-all-by-type">按类型全选</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#select-active-camera">选择活动摄像机</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#select-mirror">选择镜像</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#select-random">随机选择</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#select-more-less">扩展选择/缩减选择</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#select-grouped">按组选择</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#select-linked">选择相连元素</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#select-pattern">按样式选择</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="editing/index.html">编辑</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tools/index.html">工具</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../collections/index.html">集合</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../view_layers/index.html">视图层</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">场景 &amp; 物体</a></li>
+          <li class="breadcrumb-item"><a href="index.html">物体</a></li>
+      <li class="breadcrumb-item active">选择</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="selecting">
+<h1>选择<a class="headerlink" href="#selecting" title="Permalink to this heading"></a></h1>
+<p>选择项决定了我们操作的对象是哪些元素。选择项作用于当前场景的可见物体。Blender 在 <em>物体模式</em> 和 <em>编辑模式</em> 中，均拥有高级选择工具。</p>
+<section id="selections-and-the-active-object">
+<span id="object-active"></span><h2>选择项和活动物体<a class="headerlink" href="#selections-and-the-active-object" title="Permalink to this heading"></a></h2>
+<p>Blender 对两种不同选择项状态有所区分：</p>
+<figure class="align-default" id="id15">
+<img alt="../../_images/scene-layout_object_selecting_color.png" src="../../_images/scene-layout_object_selecting_color.png" />
+<figcaption>
+<p><span class="caption-text">活动物体为黄色，已选择的物体为橙色，未选择的物体为黑色。</span><a class="headerlink" href="#id15" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>在 <em>物体模式</em> 中最后被选择的物件叫 “活动物体” 且它在大纲中呈黄色（其它为橙色）。任何时候最多只有一个活动物体。</p>
+<p>Blender 中的许多操作会用到活动物体作为参照物（比如关联操作）。如果你已有一个选中项，但想要使另一个物体成为活动物体，只需再用 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">鼠标左键</kbd></kbd> 选择一次。</p>
+<p>所有其它已选物体仅仅属于选择状态，你可以选择任意多个物体。为了在全部所选物体（骨骼、序列片段）上改变某个参数或者实现某个操作，可以当进行确认时，按住 <kbd class="kbd docutils literal notranslate">Alt</kbd>。</p>
+</section>
+<section id="select-menu">
+<span id="object-select-menu"></span><h2>选择菜单<a class="headerlink" href="#select-menu" title="Permalink to this heading"></a></h2>
+<section id="all">
+<span id="bpy-ops-object-select-all"></span><h3>全部<a class="headerlink" href="#all" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">选择 ‣ 全部</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">A</kbd></p>
+</dd>
+</dl>
+</div>
+<p>选择全部可选物体。</p>
+</section>
+<section id="none">
+<h3>无<a class="headerlink" href="#none" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id2">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">选择 ‣ 无</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">A</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>取消选择所有物体，但活动物体依然保持不变。</p>
+</section>
+<section id="invert">
+<h3>反转<a class="headerlink" href="#invert" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id3">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">选择 ‣ 反转</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">I</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>切换所有可见物体的选择状态。</p>
+</section>
+<section id="box-select">
+<h3>框选<a class="headerlink" href="#box-select" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id4">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">选择 ‣ 框选</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">B</kbd></p>
+</dd>
+</dl>
+</div>
+<p>交互式<a class="reference internal" href="../../interface/selecting.html#tool-select-box"><span class="std std-ref">框选</span></a>。</p>
+</section>
+<section id="circle-select">
+<h3>刷选<a class="headerlink" href="#circle-select" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id5">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">选择 ‣ 刷选</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd docutils literal notranslate">C</kbd></p>
+</dd>
+</dl>
+</div>
+<p>交互式<a class="reference internal" href="../../interface/selecting.html#tool-select-circle"><span class="std std-ref">刷选</span></a>。</p>
+</section>
+<section id="lasso-select">
+<h3>套索选择<a class="headerlink" href="#lasso-select" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id6">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">选择 ‣ 套索选择</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">鼠标左键</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>另见<a class="reference internal" href="../../interface/selecting.html#tool-select-lasso"><span class="std std-ref">套索选择</span></a>。</p>
+</section>
+<section id="select-all-by-type">
+<span id="bpy-ops-object-select-by-type"></span><h3>按类型全选<a class="headerlink" href="#select-all-by-type" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id7">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>物体模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">选择 ‣ 按类型全选</span></p>
+</dd>
+</dl>
+</div>
+<p>用此工具，可以一次性选择某一特定类型的所有物体。有关所有物体类型的描述，见<a class="reference internal" href="types.html"><span class="doc">物体类型</span></a>。</p>
+</section>
+<section id="select-active-camera">
+<span id="bpy-ops-object-select-camera"></span><h3>选择活动摄像机<a class="headerlink" href="#select-active-camera" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id8">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>物体模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">选择 ‣ 选择活动摄像机</span></p>
+</dd>
+</dl>
+</div>
+<p>选择活动摄像机，可用于在复杂场景中轻松找到活动摄像机。</p>
+</section>
+<section id="select-mirror">
+<span id="bpy-ops-object-select-mirror"></span><h3>选择镜像<a class="headerlink" href="#select-mirror" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id9">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>所有模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">选择 ‣ 选择镜像</span></p>
+</dd>
+</dl>
+</div>
+<p>根据被选物体的名称，例如，&quot;sword.L&quot; 和 &quot;sword.R&quot;，选择对应的镜像物体。</p>
+</section>
+<section id="select-random">
+<span id="bpy-ops-object-select-random"></span><h3>随机选择<a class="headerlink" href="#select-random" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id10">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>物体模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">选择 ‣ 随机选择</span></p>
+</dd>
+</dl>
+</div>
+<p>根据百分比概率随机选择未被选中的物体。可以在 <em>调整上一步操作</em> 面板中修改百分比。重要的是要注意，百分比表示选择未选中对象的可能性，而不是随机选择物体数量的百分比。</p>
+</section>
+<section id="select-more-less">
+<span id="bpy-ops-object-select-hierarchy"></span><span id="bpy-ops-object-select-less"></span><span id="bpy-ops-object-select-more"></span><h3>扩展选择/缩减选择<a class="headerlink" href="#select-more-less" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id11">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>物体模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">选择 ‣ 扩展/缩减选择</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">数字键盘加+</kbd></kbd>，<kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">数字键盘减-</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>该操作的逻辑基于层级关系。</p>
+<dl class="simple">
+<dt>更多</dt><dd><p>将选择范围扩展为所选对象的直接父级和子级。</p>
+</dd>
+<dt>小于</dt><dd><p>减少选择，弃选处在当前已选物体的父/子级边缘关系的物体。</p>
+</dd>
+<dt>父级</dt><dd><p>弃选当前所选物体并选择它们的直接父级。</p>
+</dd>
+<dt>子级</dt><dd><p>弃选当前所选物体并选择它们的直接子级。</p>
+</dd>
+<dt>扩展父级</dt><dd><p>将选择范围扩展到当前所选对象的直接父级。</p>
+</dd>
+<dt>扩展子级</dt><dd><p>将选择范围扩展到当前所选对象的直接子级。</p>
+</dd>
+</dl>
+</section>
+<section id="select-grouped">
+<span id="bpy-ops-object-select-grouped"></span><h3>按组选择<a class="headerlink" href="#select-grouped" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id12">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>物体模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">选择 ‣ 按组选择</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">G</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>用于管理多个物体间的物体与另一物体之间关系的方式有两种，一种是 <em>创建父级</em>，另一种是直接 <em>编组</em>，这些物体关系可以方便创作者们依据物体各自所属父子关系或编组来选择物体。<em>按组选择</em> 以活动物体为依据来选择其它相关联物体。</p>
+<dl class="simple">
+<dt>子级</dt><dd><p>选择活动对象的所有分层后代。</p>
+</dd>
+<dt>直接子级</dt><dd><p>选择所有活动物体的直接子级。</p>
+</dd>
+<dt>父级</dt><dd><p>选择此物体已存在的父级。</p>
+</dd>
+<dt>平级</dt><dd><p>选择与活动物体有相同父级的物体。该功能也可以用于选择所有最根部的物体（没有父级的物体）。</p>
+</dd>
+<dt>类型</dt><dd><p>选择与活动物体类型相同的物体。</p>
+</dd>
+<dt>集合</dt><dd><p>选择所有与活动物体处在相同集合的物体。如果活动物体属于多个集合，菜单将弹出选项供你选择某个集合。</p>
+</dd>
+<dt>物体钩挂</dt><dd><p>选择每一个属于活动物体的钩挂。</p>
+</dd>
+<dt>通道</dt><dd><p>选择指定到相同<a class="reference internal" href="../../render/layers/passes.html"><span class="doc">渲染通道</span></a>的物体。</p>
+</dd>
+<dt>颜色</dt><dd><p>根据相同的<a class="reference internal" href="properties/display.html#bpy-types-object-color"><span class="std std-ref">物体颜色</span></a>来选择物体。</p>
+</dd>
+<dt>插帧集</dt><dd><p>选择包含在活动<a class="reference internal" href="../../animation/keyframes/keying_sets.html"><span class="doc">插帧集</span></a>中的物体。</p>
+</dd>
+<dt>灯光类型</dt><dd><p>选择相匹配的灯光类型。</p>
+</dd>
+</dl>
+</section>
+<section id="select-linked">
+<span id="bpy-ops-object-select-linked"></span><h3>选择相连元素<a class="headerlink" href="#select-linked" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id13">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>物体模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">选择 ‣ 选择相连元素</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">L</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>选择与活动物体共享同一个数据块的所有物体。<em>选择相连元素</em> 以活动物体作为选择其它物体的根据。</p>
+<dl class="simple">
+<dt>物体数据</dt><dd><p>选择所有关联了同一物体数据的物体。例如，物体数据明确为物体的类型（网格、曲线等）和构建组成（基础元素例如顶点、控制顶点、以及它们在空间的位置）。</p>
+</dd>
+<dt>材质</dt><dd><p>选择所有已关联到同一材质数据块的物体。</p>
+</dd>
+<dt>实例集合</dt><dd><p>选择所有关联到某实例集合的物体。</p>
+</dd>
+<dt>纹理</dt><dd><p>选择所有关联到同一纹理数据块的物体。</p>
+</dd>
+<dt>粒子系统</dt><dd><p>选择所有使用了同一 <em>粒子系统</em> 的物体。</p>
+</dd>
+<dt>库</dt><dd><p>选择所有处于同一个<a class="reference internal" href="../../files/linked_libraries/index.html"><span class="doc">库</span></a>中的物体。</p>
+</dd>
+<dt>库（物体数据）</dt><dd><p>选择所有处于同一<a class="reference internal" href="../../files/linked_libraries/index.html"><span class="doc">库</span></a>且仅限于 <em>物体数据</em> 范围内的物体。</p>
+</dd>
+</dl>
+</section>
+<section id="select-pattern">
+<span id="bpy-ops-object-select-pattern"></span><h3>按样式选择<a class="headerlink" href="#select-pattern" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id14">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>物体模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">选择 ‣ 按名称...</span></p>
+</dd>
+</dl>
+</div>
+<p>Selects all objects whose name matches a given pattern.
+Supported wild-cards: * matches everything, ? matches any single character,
+[abc] matches characters in &quot;abc&quot;, and [!abc] match any character not in &quot;abc&quot;.
+As an example *house* matches any name that contains &quot;house&quot;,
+while floor* matches any name starting with &quot;floor&quot;.</p>
+<dl class="simple">
+<dt>区分大小写</dt><dd><p>可以选择匹配是否区分大小写。</p>
+</dd>
+<dt>扩选</dt><dd><p>当 <em>扩展</em> 复选框勾选时，选择项将进行扩选而不是生成新选区。</p>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="origin.html" class="btn btn-neutral float-left" title="物体原点" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="editing/index.html" class="btn btn-neutral float-right" title="编辑" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/scene_layout/object/selecting.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/scene_layout/object/selecting.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fscene_layout/object/selecting.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fscene_layout/object/selecting.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

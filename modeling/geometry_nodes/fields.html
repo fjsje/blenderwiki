@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>场 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/geometry_nodes/fields.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="实例项" href="instances.html" />
+    <link rel="prev" title="属性" href="attributes_reference.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">网格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../surfaces/index.html">面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../texts/index.html">文本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../volumes/index.html">体积（卷标）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../empties.html">空物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html">修改器</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">几何节点</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inspection.html">检视</a></li>
+<li class="toctree-l3"><a class="reference internal" href="attributes_reference.html">属性</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">场</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#field-visualization">场可视化</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#node-types">节点类型</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#data-flow-nodes">数据流节点</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#function-nodes">功能节点</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#input-nodes">输入节点</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#field-context">场上下文</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="instances.html">实例项</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#node-types">节点类型</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">建模</a></li>
+          <li class="breadcrumb-item"><a href="index.html">几何节点</a></li>
+      <li class="breadcrumb-item active">场</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="fields">
+<span id="index-0"></span><h1>场<a class="headerlink" href="#fields" title="Permalink to this heading"></a></h1>
+<p>Fundamentally, a field is a function: a set of instructions that can transform an arbitrary number
+of inputs into a single output. A field's result can then be calculated many times with different input data.
+They are used all over geometry nodes to allow calculations that have different results
+for every element (mesh vertices, faces, etc.).</p>
+<figure class="align-center" id="id2">
+<img alt="../../_images/modeling_geometry-nodes_fields_title.png" src="../../_images/modeling_geometry-nodes_fields_title.png" />
+<figcaption>
+<p><span class="caption-text">输入节点的场。</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>For example, in the figure above, the field connected to the &quot;Set Position&quot; node
+depends on two inputs, <a class="reference internal" href="geometry/read/position.html"><span class="doc">Position</span></a> and
+<a class="reference internal" href="geometry/read/input_index.html"><span class="doc">Index</span></a>, and transforms them into
+a vector using a single instruction.</p>
+<section id="field-visualization">
+<h2>场可视化<a class="headerlink" href="#field-visualization" title="Permalink to this heading"></a></h2>
+<p>接口形状用于传达哪些接口是场，哪些是常规数据。有三种可能的接口形状，每种形状都可视化其“场状态”：</p>
+<dl class="field-list simple">
+<dt class="field-odd">圆形<span class="colon">:</span></dt>
+<dd class="field-odd"><p>接口需要单个实际值，不接受场输入。对于输出接口，这意味着节点总是输出单项值。</p>
+</dd>
+<dt class="field-even">菱形<span class="colon">:</span></dt>
+<dd class="field-even"><p>接口可以接受场输入，也可以输出场。恒定的单项值可以连接到这些接口，但每个元素的输出通常不会变化。</p>
+</dd>
+<dt class="field-odd">带圆点的菱形<span class="colon">:</span></dt>
+<dd class="field-odd"><p>接口可以是一个场，但它目前是一个单项值。这很有用，因为它允许跟踪计算单项值的位置，而不是具有许多不同结果的场。这也意味着<a class="reference internal" href="inspection.html#socket-inspection"><span class="std std-ref">接口检视</span></a>将显示值而不是场输入名称。</p>
+</dd>
+</dl>
+<figure class="align-center" id="id3">
+<img alt="../../_images/modeling_geometry-nodes_fields_constant.png" src="../../_images/modeling_geometry-nodes_fields_constant.png" />
+<figcaption>
+<p><span class="caption-text">接口形状是一个带有圆点的菱形，这意味着场对于每个元素具有相同的值。每个点都将向上移动5米。</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-center" id="id4">
+<img alt="../../_images/modeling_geometry-nodes_fields_varying.png" src="../../_images/modeling_geometry-nodes_fields_varying.png" />
+<figcaption>
+<p><span class="caption-text">接口形状是菱形，场输入具有不同的输入。换句话说，对于每个元素，值可以是不同的。在这种情况下，位置将翻倍，因为每个点的偏移量是点的位置。</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Often it is desired to extract a single value from a field. While it doesn't
+make sense conceptually to simply change a field into a single value,
+the <a class="reference internal" href="geometry/sample/sample_index.html"><span class="doc">采样编号</span></a> or the
+<a class="reference internal" href="attribute/attribute_statistic.html"><span class="doc">属性统计</span></a> can
+be used to retrieve a single value from a field evaluated on a geometry.</p>
+</div>
+<p>当在支持场的两个节点接口之间进行连接时，节点连接将被绘制为虚线。如果错误地将非场接口连接到场接口，则连接将被绘制为红色实线，表明存在错误。</p>
+</section>
+<section id="node-types">
+<span id="field-node-types"></span><h2>节点类型<a class="headerlink" href="#node-types" title="Permalink to this heading"></a></h2>
+<p>节点可分为两类：通常通过几何形状的数据流节点和在每个元素的数据上运行的场节点。场节点可以是将几何数据带入节点树中的输入节点，或在该数据上操作的函数节点。</p>
+<section id="data-flow-nodes">
+<h3>数据流节点<a class="headerlink" href="#data-flow-nodes" title="Permalink to this heading"></a></h3>
+<p>具有几何输入和几何输出的节点几乎总是数据流节点。这意味着他们实际上更改了将从几何节点修改器输出的几何数据。</p>
+</section>
+<section id="function-nodes">
+<h3>功能节点<a class="headerlink" href="#function-nodes" title="Permalink to this heading"></a></h3>
+<p>具有菱形接口输入和输出的节点是场节点，并且类似于将由数据流节点评估的指令。函数节点的示例包括数学节点和更复杂的节点，比如<a class="reference internal" href="geometry/sample/geometry_proximity.html"><span class="doc">几何接近</span></a>。</p>
+</section>
+<section id="input-nodes">
+<h3>输入节点<a class="headerlink" href="#input-nodes" title="Permalink to this heading"></a></h3>
+<p>输入节点为场评估过程提供数据。它们本身没有任何含义；它们必须在数据流节点（几何体）的上下文中进行评估，才能实际输出值。输入节点的例子包括<a class="reference internal" href="geometry/read/position.html"><span class="doc">位置</span></a>和 <a class="reference internal" href="geometry/read/id.html"><span class="doc">ID</span></a> 等内置属性输入节点，以及<a class="reference internal" href="curve/read/endpoint_selection.html"><span class="doc">端点选择</span></a>等选择类节点。</p>
+<p>场输入也可能来自处理几何形状的其他节点，如<a class="reference internal" href="point/distribute_points_on_faces.html"><span class="doc">分布点于面上</span></a>，其形式为<a class="reference internal" href="attributes_reference.html#anonymous-attributes"><span class="std std-ref">匿名属性</span></a>。</p>
+</section>
+</section>
+<section id="field-context">
+<span id="id1"></span><h2>场上下文<a class="headerlink" href="#field-context" title="Permalink to this heading"></a></h2>
+<p>所有场节点在其所连接的数据流节点的上下文中工作。上下文通常由几何组件类型和属性域组成，因此它确定从输入节点检索哪些数据。</p>
+<p>一个常见的误解是，在多个地方使用的相同场节点树将输出相同的数据。这并不一定是真实的，因为将针对每个数据流节点评估场节点树，从而可能从不同或改变的几何体检索数据。</p>
+<figure class="align-center">
+<img alt="../../_images/modeling_geometry-nodes_fields_flow-1.png" src="../../_images/modeling_geometry-nodes_fields_flow-1.png" />
+</figure>
+<p>在这里，<a class="reference internal" href="geometry/write/set_position.html"><span class="doc">设置位置</span></a>节点的输入场将被评估一次。为了评估场，节点向后遍历以从场输入节点检索输入值。</p>
+<figure class="align-center">
+<img alt="../../_images/modeling_geometry-nodes_fields_flow-2.png" src="../../_images/modeling_geometry-nodes_fields_flow-2.png" />
+</figure>
+<p>当添加第二个设置位置节点时，同一个场节点树被评估两次，每个数据流节点一次。在第二个设置位置节点处，结果将不同，因为其几何输入将已经具有与第一个节点改变的位置。</p>
+<figure class="align-center">
+<img alt="../../_images/modeling_geometry-nodes_fields_flow-3.png" src="../../_images/modeling_geometry-nodes_fields_flow-3.png" />
+</figure>
+<p>但是，即使在更改几何形状后，通常也需要使用相同的场值。<a class="reference internal" href="attribute/capture_attribute.html"><span class="doc">捕捉属性</span></a>评估一个场，将结果复制到几何体上的<a class="reference internal" href="attributes_reference.html#anonymous-attributes"><span class="std std-ref">匿名属性</span></a>中。</p>
+<p>在这里，捕捉属性节点存储初始位置的副本。请注意，评估捕捉属性节点的场输入是一个完全不同的步骤。之后，设置位置节点的输入场不会使用实际位置，而是使用其匿名属性副本。</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="attributes_reference.html" class="btn btn-neutral float-left" title="属性" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="instances.html" class="btn btn-neutral float-right" title="实例项" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/modeling/geometry_nodes/fields.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/modeling/geometry_nodes/fields.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fmodeling/geometry_nodes/fields.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fmodeling/geometry_nodes/fields.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

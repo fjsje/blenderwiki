@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>面 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/scene_layout/object/properties/instancing/faces.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../../_static/js/version_switch.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../../copyright.html" />
+    <link rel="next" title="集合" href="collection.html" />
+    <link rel="prev" title="顶点" href="verts.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">场景 &amp; 物体</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../scene/index.html">场景</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">物体</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../types.html">物体类型</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../origin.html">物体原点</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../selecting.html">选择</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../editing/index.html">编辑</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">属性</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../transforms.html">变换</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../relations.html">关系</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../collections/index.html">集合</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">实例化</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="verts.html">顶点</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">面</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#basic-usage">基础用法</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#scale">比例|缩放</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#limitations-considerations">局限/注意事项</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="collection.html">集合</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../visibility.html">可见性</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../display.html">视图显示</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../line_art.html">线条画</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../tools/index.html">工具</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../collections/index.html">集合</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../view_layers/index.html">视图层</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">场景 &amp; 物体</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">物体</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">属性</a></li>
+          <li class="breadcrumb-item"><a href="index.html">实例化</a></li>
+      <li class="breadcrumb-item active">面</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="faces">
+<h1>面<a class="headerlink" href="#faces" title="Permalink to this heading"></a></h1>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>物体模式</p>
+</dd>
+<dt class="field-even">面板<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">属性编辑器 ‣ 物体属性 ‣ 实例化</span></p>
+</dd>
+</dl>
+</div>
+<p><em>实例化面</em> 是在父物体的每个面上复制物体的功能。解释这一点的最佳方法之一是通过示例说明。</p>
+<dl>
+<dt>比例|缩放</dt><dd><p>根据对应面的尺寸缩放每个实例。</p>
+<dl class="simple">
+<dt>继承缩放</dt><dd><p>缩放实例化面物体。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p><em>生成实例化面</em> 工具将关联的物体（共享网格数据）转换成实例化面。此工具在物体所在处用面生成父级物体（实例器），然后用 <em>实例化面</em> 在每个创建的面位置安置实例。</p>
+<p>可以使用<a class="reference internal" href="../../editing/apply.html#bpy-ops-object-duplicates-make-real"><span class="std std-ref">实例独立化</span></a>来实现从 <em>实例化面</em> 回到多个相关连的物体。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>示例 blend 文件</p>
+<p>在<a class="reference external" href="https://archive.blender.org/wiki/index.php/File:Manual-2.5-Duplifaces-Example01.blend">此处</a>下载本示例使用的 blend 文件。</p>
+</div>
+<section id="basic-usage">
+<h2>基础用法<a class="headerlink" href="#basic-usage" title="Permalink to this heading"></a></h2>
+<p>在此示例中将使用一个挤出 “北极” 的经纬球作为基本物体，一个立方体作为父级网格。为了设置球体父级为立方体，在 <em>物体模式</em> 中，先点 <kbd class="kbd docutils literal notranslate">鼠标左键</kbd> 选择球体，再按 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">鼠标左键</kbd></kbd> 选择立方体（顺序很重要），最后按 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">P</kbd></kbd> 设置父级。</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id2">
+<a class="reference internal image-reference" href="../../../../_images/scene-layout_object_properties_instancing_faces_cube-before.png"><img alt="../../../../_images/scene-layout_object_properties_instancing_faces_cube-before.png" src="../../../../_images/scene-layout_object_properties_instancing_faces_cube-before.png" style="width: 320px;" /></a>
+<figcaption>
+<p><span class="caption-text">一个立方体和一个球体。</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id3">
+<a class="reference internal image-reference" href="../../../../_images/scene-layout_object_properties_instancing_faces_cube-after.png"><img alt="../../../../_images/scene-layout_object_properties_instancing_faces_cube-after.png" src="../../../../_images/scene-layout_object_properties_instancing_faces_cube-after.png" style="width: 320px;" /></a>
+<figcaption>
+<p><span class="caption-text">实例化面被应用到立方体。</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<p>接着，在 <span class="menuselection">属性编辑器 ‣ 物体属性 ‣ 实例化</span> 选择 <em>面</em>。每个对应立方体面的位置都出了一个实例化的小球。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>继承属性</p>
+<p>实例化子物体的位置、方向、缩放与父物体的面相匹配，如果多个物体设置父级为立方体，他们全都将在立方体的每个表面实例化一次。但如果立方体细分了，每个子级物体将会在每个表面实例化。</p>
+</div>
+<p>父级物体和源物体都将在3D视图中以可编辑的 &quot;临时物件&quot; 显示，但它们都不会被渲染。</p>
+</section>
+<section id="scale">
+<h2>比例|缩放<a class="headerlink" href="#scale" title="Permalink to this heading"></a></h2>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id4">
+<a class="reference internal image-reference" href="../../../../_images/scene-layout_object_properties_instancing_faces_scale-enabled.png"><img alt="../../../../_images/scene-layout_object_properties_instancing_faces_scale-enabled.png" src="../../../../_images/scene-layout_object_properties_instancing_faces_scale-enabled.png" style="width: 320px;" /></a>
+<figcaption>
+<p><span class="caption-text">启用缩放。</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id5">
+<a class="reference internal image-reference" href="../../../../_images/scene-layout_object_properties_instancing_faces_scale-changed.png"><img alt="../../../../_images/scene-layout_object_properties_instancing_faces_scale-changed.png" src="../../../../_images/scene-layout_object_properties_instancing_faces_scale-changed.png" style="width: 320px;" /></a>
+<figcaption>
+<p><span class="caption-text">立方体顶部的面缩小。</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<p>为父级物体启用 <em>缩放</em> 后，子级物体会随着父级物体每个面的大小而自适应缩放。</p>
+<p>因此，通过重新缩放父级物体的面，实例化物体的尺寸将相应地改变。</p>
+</section>
+<section id="limitations-considerations">
+<h2>局限/注意事项<a class="headerlink" href="#limitations-considerations" title="Permalink to this heading"></a></h2>
+<p>实例化几何体相对于面的定位取决于子物体相对于实例器原点的位置。这可能会导致3D视图中出现一些视觉瑕疵，因为原始物体的几何图形与实例几何图形重叠或相交。一种解决方法是将实例器网格的原点移出面所在的平面。</p>
+<p>如果子级物体的几何体不对称则面的方向（由它自身的顶点顺序决定）会有影响。2.70 版本的 Blender 没有调整面的顶点顺序的工具。</p>
+<p>当然，也提供了一个控制此情况的流程。创建一个单独的四边面并开启 <em>实例化面</em> 从而你能在3D视口看到实例化集合体。如果方向不合你意，旋转该面直到你满意。通常你会愿意在编辑模式旋转，而不是物体模式，不过二者均可。</p>
+<p>如果方向正确，请复制面并将副本移动到所需位置。重复此过程，直到有足够的面。由于这些面相互贴合很常见，因此几何体将具有许多重复的顶点。使用 <span class="menuselection">顶点 ‣ 合并顶点 ‣ 按距离</span>。</p>
+<p class="rubric">示例视频</p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=diI8xJ9oo_8">一个说明这一工作流程的简短视频</a></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="verts.html" class="btn btn-neutral float-left" title="顶点" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="collection.html" class="btn btn-neutral float-right" title="集合" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/scene_layout/object/properties/instancing/faces.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/scene_layout/object/properties/instancing/faces.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fscene_layout/object/properties/instancing/faces.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fscene_layout/object/properties/instancing/faces.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

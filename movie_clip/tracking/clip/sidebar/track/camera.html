@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>摄像机 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/movie_clip/tracking/clip/sidebar/track/camera.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../../_static/jquery.js"></script>
+        <script src="../../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../../../" id="documentation_options" src="../../../../../_static/documentation_options.js"></script>
+        <script src="../../../../../_static/doctools.js"></script>
+        <script src="../../../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../../../_static/js/version_switch.js"></script>
+    <script src="../../../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../../../copyright.html" />
+    <link rel="next" title="标记" href="marker.html" />
+    <link rel="prev" title="平面追踪" href="plane_track.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../../index.html">运动追踪 &amp; 遮罩</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../../index.html">运动追踪</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../../index.html">剪辑视图</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../marker.html">跟踪标记</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../toolbar/index.html">工具栏</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../selecting.html">选择</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../editing/index.html">编辑</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="../index.html">侧栏</a><ul class="current">
+<li class="toctree-l5 current"><a class="reference internal" href="index.html">追踪</a><ul class="current">
+<li class="toctree-l6"><a class="reference internal" href="track.html">追踪</a></li>
+<li class="toctree-l6"><a class="reference internal" href="objects.html">物体面板</a></li>
+<li class="toctree-l6"><a class="reference internal" href="plane_track.html">平面追踪</a></li>
+<li class="toctree-l6 current"><a class="current reference internal" href="#">摄像机</a><ul>
+<li class="toctree-l7"><a class="reference internal" href="#lens">镜头</a></li>
+</ul>
+</li>
+<li class="toctree-l6"><a class="reference internal" href="marker.html">标记</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="../stabilization/index.html">2D稳像</a></li>
+<li class="toctree-l5"><a class="reference internal" href="../view.html">视图</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../graph.html">曲线视图</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../dope_sheet.html">动画摄影表视图</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../../masking/index.html">遮罩</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../../index.html">运动追踪 &amp; 遮罩</a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">运动追踪</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">剪辑视图</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">侧栏</a></li>
+          <li class="breadcrumb-item"><a href="index.html">追踪</a></li>
+      <li class="breadcrumb-item active">摄像机</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <p>::.. _bpy.types.MovieTrackingCamera:</p>
+<section id="camera">
+<h1>摄像机<a class="headerlink" href="#camera" title="Permalink to this heading"></a></h1>
+<p>此面板包含用于拍摄当前正在剪辑编辑器中编辑的影片的摄像机的所有设置。这里可以使用不同的预定义设置，可以从面板标题中选择。但诸如失真系数和主点等设置不包括在预设中，即使使用了摄像机预设，也应填写。</p>
+<dl class="simple" id="bpy-types-movietrackingcamera-sensor-width">
+<dt>传感器宽度</dt><dd><p>在相机的CCD传感器的宽度。这个值可以在摄像头规格上找到。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-movietrackingcamera-pixel-aspect">
+<dt>像素宽高比</dt><dd><p>是CCD传感器的像素方面。这个值可以在相机规格中找到，但也可以被猜出。例如，您知道素材应该是1920×1080，但图像本身是1280×1080。在这种情况下，像素方面是：1920/1280 = 1.5。</p>
+</dd>
+</dl>
+<section id="lens">
+<h2>镜头<a class="headerlink" href="#lens" title="Permalink to this heading"></a></h2>
+<dl class="simple" id="bpy-types-movietrackingcamera-focal-length">
+<dt>焦距</dt><dd><p>不言自明；这是电影拍摄的焦距。它可以以毫米或像素为单位设置。</p>
+</dd>
+</dl>
+<dl id="bpy-types-movietrackingcamera-principal">
+<dt>光心</dt><dd><p>是相机中使用的镜头的光学中心。在大多数情况下，它等于图像中心，但在某些特殊情况下可能会有所不同。在这种情况下，请检查相机/镜头规格。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>光学中心也被称为摄影测量学中的主点。</p>
+</div>
+</dd>
+<dt>设定中心</dt><dd><p>参见 <a class="reference internal" href="../../editing/clip.html#bpy-ops-clip-set-center-principal"><span class="std std-ref">设置主点为中心</span></a>。</p>
+</dd>
+</dl>
+<dl id="bpy-types-movietrackingcamera-distortion-model">
+<dt>镜头畸变</dt><dd><p>将扭曲的坐标转换为未扭曲的坐标的数学函数。</p>
+<dl class="field-list simple">
+<dt class="field-odd">多项式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>多项式径向失真。使用三个失真系数。K1、K2和K3。</p>
+</dd>
+<dt class="field-even">分割<span class="colon">:</span></dt>
+<dd class="field-even"><p>它定义了高失真，这使得该型号更适合带有鱼眼镜头的相机。使用两个失真系数：K1、K2。</p>
+</dd>
+<dt class="field-odd">Nuke<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Nuke合成器使用的失真模型。使用两个失真系数K1、K2。</p>
+</dd>
+<dt class="field-even">布朗<span class="colon">:</span></dt>
+<dd class="field-even"><p>布朗-康拉迪是最先进的数学镜头失真模型之一。用于建立径向和切向畸变模型。可以使用多达四个径向畸变系数。K1 - K4和最多两个切向畸变系数。P1和P2。</p>
+</dd>
+</dl>
+</dd>
+<dt>系数</dt><dd><p>系数用于补偿拍摄动画时的镜头失真。目前，这些值只能使用失真模式下可用的工具手动调整（尚无校准工具）。要执行此操作，请调整K1，直到求解最接近已知焦距（但也要考虑网格和注释以防止 &quot;不可能&quot; 失真）。</p>
+<span id="bpy-types-movietrackingcamera-nuke-k"></span><span id="bpy-types-movietrackingcamera-division-k"></span><span id="bpy-types-movietrackingcamera-k"></span><dl id="bpy-types-movietrackingcamera-brown-k">
+<dt>径向畸变系数（K1 - K4）</dt><dd><p>镜头失真模型中的系数是相互独立的。正值会产生桶状失真，而负值会产生枕状失真。用负数和正数的混合系数，你可以定义更复杂的胡子畸变或其他复杂的畸变，这些畸变不太常见，但并不罕见。</p>
+<figure class="align-default" id="id1">
+<img alt="../../../../../_images/movie-clip_tracking_clip_sidebar_track_camera_lens-distortion-k.png" src="../../../../../_images/movie-clip_tracking_clip_sidebar_track_camera_lens-distortion-k.png" />
+<figcaption>
+<p><span class="caption-text">正、负K系数的径向失真实例。</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</dd>
+</dl>
+<dl id="bpy-types-movietrackingcamera-brown-p">
+<dt>切向失真系数 (P1, P2)</dt><dd><p>独立工作，允许补偿传感器不垂直于一组镜头的情况。光学中心（也称为主点）将从传感器的中心移位（扭曲）。P1用于补偿传感器在Z（垂直）轴的旋转，而P2用于补偿传感器在X（水平）轴的旋转。这种失真可以在带有传感器稳定系统的相机中发现。</p>
+<figure class="align-default" id="id2">
+<img alt="../../../../../_images/movie-clip_tracking_clip_sidebar_track_camera_lens-distortions-p.png" src="../../../../../_images/movie-clip_tracking_clip_sidebar_track_camera_lens-distortions-p.png" />
+<figcaption>
+<p><span class="caption-text">P系数的切向失真实例。</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="plane_track.html" class="btn btn-neutral float-left" title="平面追踪" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="marker.html" class="btn btn-neutral float-right" title="标记" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/movie_clip/tracking/clip/sidebar/track/camera.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/movie_clip/tracking/clip/sidebar/track/camera.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fmovie_clip/tracking/clip/sidebar/track/camera.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fmovie_clip/tracking/clip/sidebar/track/camera.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

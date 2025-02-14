@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>属性 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/geometry_nodes/attributes_reference.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="场" href="fields.html" />
+    <link rel="prev" title="检视" href="inspection.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../meshes/index.html">网格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../surfaces/index.html">面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../texts/index.html">文本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../volumes/index.html">体积（卷标）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../empties.html">空物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html">修改器</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">几何节点</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="inspection.html">检视</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">属性</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#named-attributes">已命名属性</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#anonymous-attributes">匿名属性</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#attribute-data-types">属性数据类型</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#attribute-domains">属性域</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#boolean-domain-interpolation">布尔域插值</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#built-in-attributes">内置属性</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#naming-conventions">命名惯例</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#custom-attributes">自定义属性</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#attribute-conversion-operator">属性转换运算符</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="fields.html">场</a></li>
+<li class="toctree-l3"><a class="reference internal" href="instances.html">实例项</a></li>
+<li class="toctree-l3"><a class="reference internal" href="index.html#node-types">节点类型</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">建模</a></li>
+          <li class="breadcrumb-item"><a href="index.html">几何节点</a></li>
+      <li class="breadcrumb-item active">属性</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="attributes">
+<span id="bpy-ops-geometry-attribute-remove"></span><span id="bpy-ops-geometry-attribute-add"></span><span id="bpy-ops-object-attribute-remove"></span><span id="bpy-ops-object-attribute-add"></span><span id="index-0"></span><h1>属性<a class="headerlink" href="#attributes" title="Permalink to this heading"></a></h1>
+<p><em>属性</em> 是一个通用术语，用来描述几何数据块中每个元素所存储的数据。例如，每个顶点都可以有一个相关的数字或矢量。属性可以通过连接一个值到 <em>组输出</em> 节点来改变，但也有许多节点可以改变特定属性的值。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>属性数据类型和域在可能的情况下被隐式转换，就像节点接口一样。</p>
+</div>
+<section id="named-attributes">
+<h2>已命名属性<a class="headerlink" href="#named-attributes" title="Permalink to this heading"></a></h2>
+<p>Named attributes are created and used in other areas of Blender like shaders, painting, and UV mapping.
+In the <a class="reference internal" href="../modifiers/generate/geometry_nodes.html"><span class="doc">modifier panel</span></a>, a named attribute can
+be used for input by clicking the icon to the right of the value button. The string input input
+allows you to search and choose existing attributes from the modifier's input geometry.</p>
+<figure class="align-center" id="id4">
+<img alt="../../_images/modeling_geometry-nodes_attribute-reference_search.png" src="../../_images/modeling_geometry-nodes_attribute-reference_search.png" />
+<figcaption>
+<p><span class="caption-text">属性查找。</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>属性搜索为每个属性提供了一些上下文。菜单左侧显示属性域，然后显示属性名称。菜单右侧显示属性数据类型。</p>
+</section>
+<section id="anonymous-attributes">
+<span id="id1"></span><h2>匿名属性<a class="headerlink" href="#anonymous-attributes" title="Permalink to this heading"></a></h2>
+<figure class="align-center" id="id5">
+<img alt="../../_images/modeling_geometry-nodes_attribute-reference_attribute-field.png" src="../../_images/modeling_geometry-nodes_attribute-reference_attribute-field.png" />
+<figcaption>
+<p><span class="caption-text"><em>法线</em> 和 <em>旋转</em> 输出是属性场的示例，它们指的是存储在几何体上的属性。</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>匿名属性是存储在没有名称的几何体上的一组通用数据。通常，在 Blender 界面中公开的属性都具有名称。然而，在几何节点中，属性可以通过节点接口传递。在这些情况下，将创建 <em>属性场</em> 输出，节点使用该输出查找输入几何体中的属性数据。</p>
+<p>Anonymous attributes are still stored on the geometry like other attributes, and they are even
+automatically interpolated when the geometry changes with other nodes, except for a few cases.
+So generally, if the node link is still accessible, the attribute it references will be available
+too. However, anonymous attributes cannot be connected to a completely separate geometry
+that was created from a different source. To transfer attributes between separate geometries,
+the <a class="reference internal" href="geometry/sample/sample_index.html"><span class="doc">采样编号</span></a> or other similar nodes like the
+<a class="reference internal" href="mesh/sample/sample_nearest_surface.html"><span class="doc">采样最近的表面</span></a> can be used.</p>
+</section>
+<section id="attribute-data-types">
+<span id="id2"></span><h2>属性数据类型<a class="headerlink" href="#attribute-data-types" title="Permalink to this heading"></a></h2>
+<p>属性的类型是指存储在每个元素的数据种类。</p>
+<blockquote>
+<div><dl class="field-list simple">
+<dt class="field-odd">布尔<span class="colon">:</span></dt>
+<dd class="field-odd"><p>True or false value</p>
+</dd>
+<dt class="field-even">整数<span class="colon">:</span></dt>
+<dd class="field-even"><p>32位整数</p>
+</dd>
+<dt class="field-odd">8 位整数<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Smaller integer with a range from -128 to 127</p>
+</dd>
+<dt class="field-even">浮点<span class="colon">:</span></dt>
+<dd class="field-even"><p>浮点数值</p>
+</dd>
+<dt class="field-odd">矢量<span class="colon">:</span></dt>
+<dd class="field-odd"><p>以浮点数值表示的三维矢量</p>
+</dd>
+<dt class="field-even">二维矢量<span class="colon">:</span></dt>
+<dd class="field-even"><p>2D vector with floating-point values</p>
+</dd>
+<dt class="field-odd">颜色<span class="colon">:</span></dt>
+<dd class="field-odd"><p>RGBA color with 32-bit floating-point values</p>
+</dd>
+<dt class="field-even">字节颜色<span class="colon">:</span></dt>
+<dd class="field-even"><p>RGBA color with 8-bit positive integer values</p>
+</dd>
+</dl>
+</div></blockquote>
+<p>The above list is in the order of least to most &quot;complex&quot; (An integer can contain more data than a
+boolean, so it is more complicated). When joining separate geometries together, the more complex data
+type is preferred when there are matching names. This is particularly important when joining geometry
+with named attributes with the <a class="reference internal" href="geometry/join_geometry.html"><span class="doc">合并几何</span></a></p>
+<p>To store 2D Vectors (UV maps) and Byte Colors the
+<a class="reference internal" href="attribute/store_named_attribute.html"><span class="doc">存储已命名属性</span></a> must be
+used because there are no sockets for those types.</p>
+</section>
+<section id="attribute-domains">
+<span id="id3"></span><h2>属性域<a class="headerlink" href="#attribute-domains" title="Permalink to this heading"></a></h2>
+<p>一个属性的域指的是该属性对应的几何元素的类型。知道一个属性的域是很重要的，因为它定义了它如何在节点和着色中插值和使用。你可以使用<a class="reference internal" href="../../editors/spreadsheet.html"><span class="doc">电子表格编辑器</span></a>来确定属性的域。</p>
+<ul>
+<li><p><strong>点</strong> 域属性与空间中的单个位置相关联：</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>网格的顶点</p></li>
+<li><p>点云的点</p></li>
+<li><p>曲线控制点</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>边</strong> 域属性是与网格的边缘相关的。</p></li>
+<li><p><strong>面</strong> 域属性是与网格的面相关的。</p></li>
+<li><p><strong>面拐角</strong> 域属性是与网格的面角相关的。一个例子是UV贴图属性。</p></li>
+<li><p><strong>样条</strong> 域属性与一组相连的曲线控制点相关。</p></li>
+<li><p><strong>实例</strong> 域属性存在于几何体中的<a class="reference internal" href="instances.html"><span class="doc">实例项</span></a>。它们可以用来在几何体数据的副本上存储不同的值。实例域属性只在几何体节点中被支持。</p></li>
+</ul>
+<p>属性会自动内插到其他域中。例如，当<a class="reference internal" href="geometry/read/position.html"><span class="doc">位置节点</span></a>连接到<a class="reference internal" href="material/set_material.html"><span class="doc">设置材质</span></a>节点的选择输入时，数值会从 <em>点</em> 域插值到 <em>面</em> 域。通常情况下，域的转换使用简单的平均值，但 <em>布尔</em> 数据类型属性对插值有特殊规则：</p>
+<section id="boolean-domain-interpolation">
+<h3>布尔域插值<a class="headerlink" href="#boolean-domain-interpolation" title="Permalink to this heading"></a></h3>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 71%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>来自</p></th>
+<th class="head"><p>至</p></th>
+<th class="head"><p>转换</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>点</p></td>
+<td><p>边</p></td>
+<td><p>如果选择了边的两个顶点，则会选中边。</p></td>
+</tr>
+<tr class="row-odd"><td><p>点</p></td>
+<td><p>面</p></td>
+<td><p>如果选择了面上的所有顶点，则会选中面。</p></td>
+</tr>
+<tr class="row-even"><td><p>点</p></td>
+<td><p>拐角</p></td>
+<td><p>每个拐角的值只是其顶点处的值的副本。</p></td>
+</tr>
+<tr class="row-odd"><td><p>点</p></td>
+<td><p>样条线</p></td>
+<td><p>如果选择了样条所有控制点，则会选中样条。</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>边</p></td>
+<td><p>点</p></td>
+<td><p>如果选择了任何连接的边，则选中一个顶点。</p></td>
+</tr>
+<tr class="row-even"><td><p>边</p></td>
+<td><p>面</p></td>
+<td><p>A face is selected if all of its edges are selected</p></td>
+</tr>
+<tr class="row-odd"><td><p>边</p></td>
+<td><p>拐角</p></td>
+<td><p>如果选择了角的两个相邻边，则选中一个拐角。</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>面</p></td>
+<td><p>点</p></td>
+<td><p>如果选择了任何连接面，则选中顶点。</p></td>
+</tr>
+<tr class="row-even"><td><p>面</p></td>
+<td><p>边</p></td>
+<td><p>如果选择了任何连接的面，则选中边。</p></td>
+</tr>
+<tr class="row-odd"><td><p>面</p></td>
+<td><p>拐角</p></td>
+<td><p>每个拐角的值只是其面的值的副本。</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>拐角</p></td>
+<td><p>点</p></td>
+<td><p>如果选择了所有连接的面角，并且它不是松散的顶点，则选中一个顶点。</p></td>
+</tr>
+<tr class="row-even"><td><p>拐角</p></td>
+<td><p>边</p></td>
+<td><p>如果选择了相邻面上的所有拐角，则会选中边。</p></td>
+</tr>
+<tr class="row-odd"><td><p>拐角</p></td>
+<td><p>面</p></td>
+<td><p>如果选择了面的所有拐角，则选中面。</p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>样条线</p></td>
+<td><p>点</p></td>
+<td><p>每个点的值只是样条对应值的副本。</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="built-in-attributes">
+<span id="geometry-nodes-builtin-attributes"></span><h2>内置属性<a class="headerlink" href="#built-in-attributes" title="Permalink to this heading"></a></h2>
+<p>内置属性始终存在，无法删除。无法更改其数据类型和域。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 13%" />
+<col style="width: 63%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>域</p></th>
+<th class="head"><p>注意</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">position</span></code></p></td>
+<td><p><em>矢量</em></p></td>
+<td><p><em>点</em></p></td>
+<td><p>Built-in attribute describing vertex or point locations, in the local space of a geometry.
+Any node that changes the location of points will adjust this attribute,
+like the <a class="reference internal" href="geometry/operations/transform_geometry.html"><span class="doc">变换几何体</span></a>
+and the <a class="reference internal" href="geometry/write/set_position.html"><span class="doc">设置位置</span></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">radius</span></code></p></td>
+<td><p><em>浮点数</em></p></td>
+<td><p><em>点</em></p></td>
+<td><p>用于设置视口中点大小的点云上的内置属性。内置在曲线上，其中它控制转换为网格时每个曲线控制点的大小，或其他操作。</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">id</span></code></p></td>
+<td><p><em>整数</em></p></td>
+<td><p><em>点</em></p></td>
+<td><p>由<a class="reference internal" href="point/distribute_points_on_faces.html"><span class="doc">分布点于面上</span></a>创建，以便在输入网格的形状发生变化时提供稳定性，并在实例上用于创建运动模糊。值应为大值，无订单。此属性由生成随机性的节点使用，例如<a class="reference internal" href="utilities/random_value.html"><span class="doc">随机值</span></a>。与其他内置属性不同，此属性不是必需的，可以删除。</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">material_index</span></code></p></td>
+<td><p><em>整数</em></p></td>
+<td><p><em>面</em></p></td>
+<td><p>用于为网格中的每个面指定材质槽。</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">crease</span></code></p></td>
+<td><p><em>浮点数</em></p></td>
+<td><p><em>边</em></p></td>
+<td><p>Edge attribute used by the Subdivision Surface modifier.
+The values are limited to a range of 0 and 1.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">sharp_face</span></code></p></td>
+<td><p><em>布尔</em></p></td>
+<td><p><em>面</em></p></td>
+<td><p>Attribute determining if a face should have sharp (rather than smooth) shading enabled
+in the viewport or a render.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">resolution</span></code></p></td>
+<td><p><em>整数</em></p></td>
+<td><p><em>样条线</em></p></td>
+<td><p>确定样条线的两个控制点之间的计算点数。只有 NURBS 和贝塞尔样条具有此属性，对于多段线，值始终是一个。</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">cyclic</span></code></p></td>
+<td><p><em>布尔</em></p></td>
+<td><p><em>样条线</em></p></td>
+<td><p>确定样条是否具有连接其第一个和最后一个控制点的段。</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">handle_left</span></code></p></td>
+<td><p><em>矢量</em></p></td>
+<td><p><em>点</em></p></td>
+<td><p>描述曲线控制点的左手柄在曲线起始侧的位置。仅当曲线包含贝塞尔样条时才存在。</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">handle_right</span></code></p></td>
+<td><p><em>矢量</em></p></td>
+<td><p><em>点</em></p></td>
+<td><p>描述曲线控制点的右手柄在曲线端侧的位置。仅当曲线包含贝塞尔样条时才存在。</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="naming-conventions">
+<h2>命名惯例<a class="headerlink" href="#naming-conventions" title="Permalink to this heading"></a></h2>
+<p>默认情况下不存在这些属性，但 Blender 的某些部分隐含使用这些属性。这些属性的数据类型可以更改，就像内置属性之外的任何属性一样。但是，Blender 可能期望这些属性具有某种类型。</p>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 14%" />
+<col style="width: 14%" />
+<col style="width: 71%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>名称</p></th>
+<th class="head"><p>类型</p></th>
+<th class="head"><p>注意</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">velocity</span></code></p></td>
+<td><p><em>矢量</em></p></td>
+<td><p>用于在渲染动画时创建运动模糊。</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">rest_position</span></code></p></td>
+<td><p><em>矢量</em></p></td>
+<td><p>Holds the position of points or vertices from before a geometry is deformed procedurally.
+Can be created automatically before <a class="reference internal" href="../../animation/shape_keys/index.html"><span class="doc">Shape Keys</span></a> and
+<a class="reference internal" href="../modifiers/introduction.html"><span class="doc">Modifiers</span></a> are evaluated with the
+<a class="reference internal" href="../../animation/shape_keys/shape_keys_panel.html#bpy-types-object-add-rest-position-attribute"><span class="std std-ref">Add Rest Position</span></a> option.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">surface_uv_coordinate</span></code></p></td>
+<td><p><em>二维矢量</em></p></td>
+<td><p>Used to describe curve attachment locations on a mesh surface, typically used for hair use cases.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="custom-attributes">
+<h2>自定义属性<a class="headerlink" href="#custom-attributes" title="Permalink to this heading"></a></h2>
+<p>顶点组、UV贴图和颜色属性可用作几何节点中的属性。他们被称为他们的名字。应避免命名碰撞（例如，具有相同名称的顶点组和UV地图）。如果存在命名冲突，则在几何节点中只能访问其中一个属性。</p>
+<p>首次使用名称时，节点也可以创建具有任何其他名称的属性。</p>
+<p>请注意，如果使用像<a class="reference internal" href="geometry/join_geometry.html"><span class="doc">合并几何</span></a>这样的节点，几何节点并不总是产生诸如顶点组。同样，如果顶点组属性的数据类型从最初的 &quot;浮点&quot; 类型改变，该属性将不再是一个顶点组。</p>
+</section>
+<section id="attribute-conversion-operator">
+<span id="bpy-ops-geometry-attribute-convert"></span><h2>属性转换运算符<a class="headerlink" href="#attribute-conversion-operator" title="Permalink to this heading"></a></h2>
+<figure class="align-center">
+<img alt="../../_images/modeling_geometry-nodes_attribute-reference_convert.png" src="../../_images/modeling_geometry-nodes_attribute-reference_convert.png" />
+</figure>
+<p>在属性编辑器的 <em>属性</em> 面板中找到的此运算符可以更改属性的域或数据类型。</p>
+<p>Due to ongoing development in the area of attributes, many areas of Blender can not yet work with
+the generic (identified with a name, stored on any domain with any data type) attributes used by
+geometry nodes. That makes this operator an essential workaround in some cases where existing
+tools must be used with data generated from geometry nodes.</p>
+<dl class="simple">
+<dt>模式</dt><dd><dl class="field-list simple">
+<dt class="field-odd">泛型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>插入并转换此页面上描述的域和数据类型之间的属性。</p>
+</dd>
+<dt class="field-even">顶点组<span class="colon">:</span></dt>
+<dd class="field-even"><p>更多信息见<a class="reference internal" href="../meshes/properties/vertex_groups/index.html"><span class="doc">顶点组</span></a>。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>此运算符仅适用于 <em>原始</em> 物体数据，不包括修改器的结果，因此几何节点添加或更改的任何属性都不会受到影响。要更改在程序上生成的属性的类型，必须应用修改器。</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="inspection.html" class="btn btn-neutral float-left" title="检视" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="fields.html" class="btn btn-neutral float-right" title="场" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/modeling/geometry_nodes/attributes_reference.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/modeling/geometry_nodes/attributes_reference.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fmodeling/geometry_nodes/attributes_reference.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fmodeling/geometry_nodes/attributes_reference.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

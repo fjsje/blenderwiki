@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>渲染动画 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/output/animation.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="动画播放器" href="animation_player.html" />
+    <link rel="prev" title="扬声器" href="audio/speaker.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eevee/index.html">EEVEE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workbench/index.html">工作台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cameras.html">摄像机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lights/index.html">灯光</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../materials/index.html">材质</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shader_nodes/index.html">着色节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../color_management.html">色彩管理</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../layers/index.html">层 &amp; 通道</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">渲染输出</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties/index.html">输出属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="audio/index.html">音频渲染</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">渲染动画</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#workflow">工作流程</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#frame-sequence-workflow">帧序列工作流程</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#hints">提示</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="animation_player.html">动画播放器</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">渲染</a></li>
+          <li class="breadcrumb-item"><a href="index.html">渲染输出</a></li>
+      <li class="breadcrumb-item active">渲染动画</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="rendering-animations">
+<h1>渲染动画<a class="headerlink" href="#rendering-animations" title="Permalink to this heading"></a></h1>
+<p>渲染静止图像允许您在渲染缓冲区完成时查看并保存图像，动画是一系列图像或帧，并在渲染后自动直接保存到驱动器中。</p>
+<p>渲染帧后，您可能需要编辑剪辑，或者首先使用合成器对图像执行绿屏遮罩，消光，颜色校正，DOF等。然后将该结果送入定序器，在那里切割和混合剪辑并进行最终的覆盖。</p>
+<p>最后，您可以从序列器中渲染出来并将帧压缩为可播放的影片剪辑。</p>
+<section id="workflow">
+<h2>工作流程<a class="headerlink" href="#workflow" title="Permalink to this heading"></a></h2>
+<p>通常，您在动画中执行大量不同帧的中间渲染，以检查时间，光照，放置，材质等。在某些时候，您已准备好对要发布的完整动画进行最终渲染。</p>
+<p>制作带有或不带声音的电影或动画时，可以使用两种方法。您应该使用的方法取决于渲染影片所需的CPU时间量。您可以以所需的分辨率渲染 &quot;典型&quot; 帧，然后乘以最终将进入影片的帧数，以达到总渲染时间。</p>
+<p>如果总渲染时间是一个小时或更长时间，则需要使用 &quot;帧序列&quot; 方法。例如，如果要为胶片渲染一分钟的视频片段，则会有（每分钟60秒）X（每秒24帧）或每分钟1440帧。如果每帧渲染需要30秒，那么您将能够每分钟渲染两帧，或者需要720分钟（12小时）的渲染时间。</p>
+<p>渲染占用所有可用的CPU时间；你应该在一夜之间渲染，当不需要计算机时，或者在渲染时将Blender设置为低优先级，并处理其他事情（留意内存空间！）。</p>
+<p class="rubric">直接方法</p>
+<p>直接方法（强烈建议您使用直接方法，也不是标准做法），它将输出格式设置为 AVI 或 MOV 格式，然后单击 <em>动画</em> 将场景直接渲染为影片文档。Blender 会创建一个文档，其中包含动画的所有帧。然后，您可以使用 Blender 的 <a class="reference internal" href="../../editors/video_sequencer/index.html"><span class="doc">视频序列</span></a> 将音轨添加到动画中，并渲染为 MPEG 格式以完成电影。</p>
+<p class="rubric">帧序列</p>
+<p>帧序列是一种更稳定的方法，您可以将输出格式设置为静止格式（如 JPG、PNG 或多层格式）。单击 <em>动画</em> 将场景渲染为一组图像，其中每个图像都是序列中的一个帧。</p>
+<p>Blender为动画的每一帧创建一个文档。然后，您可以使用Blender的合成器来执行任何帧操作（后处理）。然后，您可以使用Blender的 <a class="reference internal" href="../../editors/video_sequencer/index.html"><span class="doc">视频序列</span></a> 加载最终图像序列，将音轨添加到动画中，并渲染为 MPEG 格式以完成电影。帧序列方法稍微复杂一些，占用更多的驱动器空间，但为您提供了更大的灵活性。</p>
+<p>以下是一些可帮助您选择方法的指南。</p>
+<p class="rubric">直接方法</p>
+<ul class="simple">
+<li><p>总渲染时间小于一小时的短片段。</p></li>
+<li><p>稳定的电源。</p></li>
+<li><p>其他用途不需要电脑。</p></li>
+</ul>
+<p class="rubric">帧序列方法</p>
+<ul class="simple">
+<li><p>总渲染时间超过一小时。</p></li>
+<li><p>后期制作工作所需：</p>
+<ul>
+<li><p>颜色/照明调整</p></li>
+<li><p>绿屏/蒙版更换</p></li>
+<li><p>分层/合成</p></li>
+<li><p>最终产品的多种格式和分辨率</p></li>
+</ul>
+</li>
+<li><p>压缩/编解码器所需的中间帧/调整。</p></li>
+<li><p>部件中需要精确的定时（例如，唇音同步到音轨）。</p></li>
+<li><p>可能需要中断渲染才能使用计算机，并且希望能够从中断处继续渲染。</p></li>
+</ul>
+</section>
+<section id="frame-sequence-workflow">
+<h2>帧序列工作流程<a class="headerlink" href="#frame-sequence-workflow" title="Permalink to this heading"></a></h2>
+<ol class="arabic">
+<li><p>首先准备你的动画。</p></li>
+<li><p>In the <em>Format</em> panel, choose the render size, Pixel Aspect Ratio, and the Range of Frames to use,
+as well as the frame rate, which should already be set.</p></li>
+<li><p>在 &quot;输出&quot; 面板中，将动画设置为图像，通常使用不会影响任何质量的格式。</p></li>
+<li><p>例如，也可以在 “输出” 面板中选择输出路径和文件类型 <code class="docutils literal notranslate"><span class="pre">//render/my-anim-</span></code>。</p></li>
+<li><p>确认动画范围（帧开始和结束）。</p></li>
+<li><p>保存您的 blend 文件。</p></li>
+<li><p>按 <em>动画</em> 按钮，动画完成后，使用您的文件管理器导航到输出文件夹（本例中为 <code class="docutils literal notranslate"><span class="pre">render(渲染)</span></code>）。您将看到许多附加了序列号的图像。这些是单个帧。</p></li>
+<li><p>在Blender中，打开 <a class="reference internal" href="../../video_editing/index.html"><span class="doc">视频序列器</span></a>。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>视频序列器不支持多层 EXR 文档。要渲染为视频格式，您必须跳过接下来的三个步骤，而是在 <a class="reference internal" href="../../compositing/types/input/image.html"><span class="doc">合成</span></a> 中使用 <a class="reference internal" href="../../compositing/types/input/image.html"><span class="doc">图像导入节点</span></a>。</p>
+</div>
+</li>
+<li><p>从添加菜单中选择 <em>添加图像</em>。从输出文件夹中选择要包含在动画中的所有帧。它们将作为剪辑添加到序列编辑器中。</p></li>
+<li><p>现在，您可以编辑剪辑并添加效果或保持原样。您可以添加其他剪辑，如音频条。</p></li>
+<li><p>浏览动画以检查是否已包含所有帧。</p></li>
+<li><p>在 “输出” 面板中，选择所需的容器和编解码器（例如 <code class="docutils literal notranslate"><span class="pre">MPEG</span> <span class="pre">H.264</span></code>）并对其进行配置。视频编解码器在<a class="reference internal" href="properties/output.html"><span class="doc">输出选项</span></a>中进行了描述。</p></li>
+<li><p>单击 <em>动画</em> 渲染按钮，Blender会将序列编辑器输出渲染到电影中。</p></li>
+</ol>
+</section>
+<section id="hints">
+<h2>提示<a class="headerlink" href="#hints" title="Permalink to this heading"></a></h2>
+<dl>
+<dt>您的电脑在渲染电影的过程中意外关闭！</dt><dd><p>除非您的动画在几分钟内渲染，否则最好将动画渲染为单独的图像文件。而不是直接渲染到压缩的电影文件，使用无损格式（比如 <code class="docutils literal notranslate"><span class="pre">PNG</span></code>）。</p>
+<p>如果出现问题，您可以轻松恢复，并且必须重新启动渲染，因为您已渲染的帧仍将位于输出目录中。</p>
+<p>只需禁用 <em>覆盖</em> 选项即可开始渲染中断的位置。</p>
+<p>然后，您可以使用Blender的序列编辑器从单独的帧中制作电影，或使用第三方编码软件。</p>
+</dd>
+<dt>动画预览</dt><dd><p>渲染动画序列的子集可能很有用，因为只有部分动画可能有错误。</p>
+<p>使用图像格式进行输出，您可以使用 <em>帧步长</em> 选项渲染每个第N帧。然后禁用 <em>覆盖</em> 并将 <em>帧步长</em> 设置为 1 重新渲染。</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="audio/speaker.html" class="btn btn-neutral float-left" title="扬声器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="animation_player.html" class="btn btn-neutral float-right" title="动画播放器" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/render/output/animation.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/render/output/animation.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Frender/output/animation.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Frender/output/animation.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

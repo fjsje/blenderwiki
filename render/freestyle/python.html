@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Python 脚本 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/freestyle/python.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="层 &amp; 通道" href="../layers/index.html" />
+    <link rel="prev" title="材质属性" href="material.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../eevee/index.html">EEVEE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cycles/index.html">Cycles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../workbench/index.html">工作台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cameras.html">摄像机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lights/index.html">灯光</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../materials/index.html">材质</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../shader_nodes/index.html">着色节点</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../color_management.html">色彩管理</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Freestyle</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="render.html">渲染属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="view_layer/index.html">视图层属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="material.html">材质属性</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Python 脚本</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#writing-style-modules">写作风格模块</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#selection">选择</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#chaining">链形</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#splitting">拆分</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#sorting">排序</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#stroke-creation">笔画创建</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#user-control-on-the-pipeline-definition">管道定义上的用户控件</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../layers/index.html">层 &amp; 通道</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../output/index.html">渲染输出</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">渲染</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Freestyle</a></li>
+      <li class="breadcrumb-item active">Python 脚本</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="python-scripting">
+<span id="bpy-types-freestylemodulesettings"></span><h1>Python 脚本<a class="headerlink" href="#python-scripting" title="Permalink to this heading"></a></h1>
+<p>Python 脚本模式提供完全可编程的线条样式。在这种控制模式下，所有样式操作符都以 Python 脚本的形式编写，在 Freestyle 术语中称为样式模块。样式模块的输入是视图（即一组检测到的特征边），输出是一组样式化的笔画。</p>
+<p>样式模块由五个基本运算符的连续调用组成：选择、链接、拆分、排序和笔画创建。选择运算符根据一个或多个用户定义的选择条件（谓词）标识输入要素边的子集。所选边将使用链接、分割和排序运算符进行处理，以构建特征边链。这些运算符还由用户提供的谓词和函数控制，以确定如何将特征边转换为链。最后，笔画创建运算符将链转换为风格化的描边，该运算符采用用户定义的描边着色器列表。</p>
+<p>Python样式模块作为文本数据块存储在混合文档中。外部样式模块文档首先需要在文本编辑器中加载。然后，样式模块堆栈条目中的选择菜单允许您从加载的样式模块列表中选择一个模块。</p>
+<figure class="align-default" id="id1">
+<img alt="../../_images/render_freestyle_python_scripting-mode.png" src="../../_images/render_freestyle_python_scripting-mode.png" />
+<figcaption>
+<p><span class="caption-text">在文本编辑器中加载的样式模块 <code class="docutils literal notranslate"><span class="pre">cartoon.py</span></code> 的屏幕截图（左图），以及视图层按钮（右）中 Python 脚本模式中的 Freestyle 选项。</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Blender的 Freestyle 附带了许多 Python 风格的模块，可以作为你自己风格模块写作的起点。另请参阅 Blender Python API 参考手册中的 Freestyle 部分，以获取样式模块构造的完整详细信息。</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id2">
+<img alt="../../_images/render_freestyle_python_scripting-mode-example-1.jpg" src="../../_images/render_freestyle_python_scripting-mode-example-1.jpg" />
+<figcaption>
+<p><span class="caption-text">使用 Python 脚本模式，由 T.K. 提供（<a class="reference external" href="https://archive.blender.org/wiki/index.php/File:Turning_Pages.zip">blend 文件</a>, CC0）。</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id3">
+<img alt="../../_images/render_freestyle_python_scripting-mode-example-2.png" src="../../_images/render_freestyle_python_scripting-mode-example-2.png" />
+<figcaption>
+<p><span class="caption-text">使用 Python 脚本模式，由 T.K. 提供（<a class="reference external" href="https://archive.blender.org/wiki/index.php/File:Lily_Broken_Topology.zip">blend 文件</a>, CC0）。</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+<section id="writing-style-modules">
+<h2>写作风格模块<a class="headerlink" href="#writing-style-modules" title="Permalink to this heading"></a></h2>
+<p>样式模块是一段代码，负责 Freestyle 线条绘制的风格化。样式模块的输入是一组称为视图映射的特征边。输出是一组样式化的线条，也称为笔画。样式模块的结构为操作管道，允许从视图映射内的输入边构建笔画。</p>
+<p>有五种类型的操作（与相应的运算符函数一起列出）：</p>
+<ul class="simple">
+<li><p>选择 <code class="docutils literal notranslate"><span class="pre">Operators.select()</span></code></p></li>
+<li><p>链形 <code class="docutils literal notranslate"><span class="pre">Operators.chain(),</span> <span class="pre">Operators.bidirectional_chain()</span></code></p></li>
+<li><p>拆分 <code class="docutils literal notranslate"><span class="pre">Operators.sequential_split(),</span> <span class="pre">Operators.recursive_split()</span></code></p></li>
+<li><p>排序 <code class="docutils literal notranslate"><span class="pre">Operators.sort()</span></code></p></li>
+<li><p>笔画创建 <code class="docutils literal notranslate"><span class="pre">Operators.create()</span></code></p></li>
+</ul>
+<p>输入视图映射由一组视图边缘对象填充。选择操作用于根据用户定义的选择条件（谓词）选取艺术家感兴趣的ViewEdges。链接操作采用ViewEdges的子集，并通过根据用户定义的谓词和函数连接ViewEdges来构建链。可以通过将它们分成更小的碎片（例如，在边缘发生急转弯的点）并选择其中的一小部分（例如，仅保留那些长度超过长度阈值的点）来进一步细化链。排序操作用于排列链的堆叠顺序，以在另一条线的顶部绘制一条线。通过描边创建操作（将一系列描边着色器应用于各个链），链最终转换为风格化的描边。</p>
+<p>视图边缘、链和笔触通常称为一维（1D）元素。1D 元素是一条折线，它是一系列连接的直线。一维元素的顶点通常称为 0D 元素。</p>
+<p>All the operators act on a set of active 1D elements.
+The initial active set is the set of ViewEdges in the input view map.
+The active set is updated by the operators.</p>
+<section id="selection">
+<h3>选择<a class="headerlink" href="#selection" title="Permalink to this heading"></a></h3>
+<p>选择运算符遍历活动集的每个元素，并仅保留满足特定谓词的元素。<code class="docutils literal notranslate"><span class="pre">Operators.select()</span></code> 方法将一元谓词作为参数，该谓词适用于表示 1D 元素的任何 <code class="docutils literal notranslate"><span class="pre">Interface1D</span></code>。例如：</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">Operators</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="n">QuantitativeInvisibilityUP1D</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
+</pre></div>
+</div>
+<p>此选择操作使用 <code class="docutils literal notranslate"><span class="pre">QuantitativeInvisibilityUP1D</span></code> 谓词仅选择可见的 <a href="#id1"><span class="problematic" id="id2">``</span></a>ViewEdge``（更准确地说，定量不可见度等于 0 的那些）。选择运算符旨在有选择地将样式应用于活动 1D 元素的一小部分。</p>
+<p>需要注意的是，<code class="docutils literal notranslate"><span class="pre">QuantitativeInvisibilityUP1D</span></code> 是实现测试行可见性的谓词的类，并且 <code class="docutils literal notranslate"><span class="pre">Operators.select()</span></code> 方法将谓词类的实例作为参数。给定 1D 元素的谓词测试实际上是通过调用谓词实例来完成的，即通过调用谓词类的 <code class="docutils literal notranslate"><span class="pre">__call__</span></code> 方法。换句话说，<code class="docutils literal notranslate"><span class="pre">Operators.select()</span></code> 方法将函子作为参数，而函子又将 <code class="docutils literal notranslate"><span class="pre">Interface0D</span></code> 对象作为参数。Freestyle Python API 广泛使用函子来实现谓词和函数。</p>
+</section>
+<section id="chaining">
+<h3>链形<a class="headerlink" href="#chaining" title="Permalink to this heading"></a></h3>
+<p>链接运算符作用于活动 <code class="docutils literal notranslate"><span class="pre">ViewEdge</span></code> 对象集，并确定未来笔画的拓扑结构。我们的想法是实现一个迭代器，通过沿视图边缘行进来遍历视图映射图形。迭代器定义了一个链接规则，该规则确定在给定顶点处要跟随的下一个 <code class="docutils literal notranslate"><span class="pre">ViewEdge</span></code>（请参见 <code class="docutils literal notranslate"><span class="pre">ViewEdgeIterator</span></code>）。几个这样的迭代器作为 Freestyle Python API 的一部分提供（参见 <code class="docutils literal notranslate"><span class="pre">ChainPredicateIterator</span></code> 和 <code class="docutils literal notranslate"><span class="pre">ChainSilhouetteIterator</span></code>）。自定义迭代器可以通过继承 <code class="docutils literal notranslate"><span class="pre">ViewEdgeIterator</span></code> 类来定义。链接运算符还将在 <code class="docutils literal notranslate"><span class="pre">Interface1D</span></code> 上工作的一元谓词作为参数作为停止条件。当迭代器在沿图行进期间达到满足此谓词的 <code class="docutils literal notranslate"><span class="pre">ViewEdge</span></code> 时，链接将停止。</p>
+<p>Chaining can be either unidirectional <code class="docutils literal notranslate"><span class="pre">Operators.chain()</span></code> or bidirectional <code class="docutils literal notranslate"><span class="pre">Operators.bidirectional_chain()</span></code>.
+In the latter case, the chaining will propagate in the two directions from the starting edge.</p>
+<p>下面是双向链接的代码示例：</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">Operators</span><span class="o">.</span><span class="n">bidirectional_chain</span><span class="p">(</span>
+        <span class="n">ChainSilhouetteIterator</span><span class="p">(),</span>
+        <span class="n">NotUP1D</span><span class="p">(</span><span class="n">QuantitativeInvisibilityUP1D</span><span class="p">(</span><span class="mi">0</span><span class="p">)),</span>
+        <span class="p">)</span>
+</pre></div>
+</div>
+<p>链接运算符使用 <code class="docutils literal notranslate"><span class="pre">ChainSilhouetteIterator</span></code> 作为链接规则，并在迭代器到达不可见的 <code class="docutils literal notranslate"><span class="pre">ViewEdge</span></code> 后立即停止链接。</p>
+<p>The chaining operators process the set of active <code class="docutils literal notranslate"><span class="pre">ViewEdge</span></code> objects in order.
+The active ViewEdges can be previously sorted using the <code class="docutils literal notranslate"><span class="pre">Operators.sort()</span></code> method (see below).
+It starts a chain with the first <code class="docutils literal notranslate"><span class="pre">ViewEdge</span></code> of the active set.
+All ViewEdges that have already been involved in the chaining process are marked
+(in the case of the example above, the time stamp of each <code class="docutils literal notranslate"><span class="pre">ViewEdge</span></code> is modified by default),
+in order not to process the same <code class="docutils literal notranslate"><span class="pre">ViewEdge</span></code> twice.
+Once the chaining reaches a <code class="docutils literal notranslate"><span class="pre">ViewEdge</span></code> that satisfies the stopping predicate, the chain is terminated.
+Then a new chain is started from the first unmarked <code class="docutils literal notranslate"><span class="pre">ViewEdge</span></code> in the active set.
+This operation is repeated until the last unmarked <code class="docutils literal notranslate"><span class="pre">ViewEdge</span></code> of the active set was processed.
+At the end of the chaining operation,
+the active set is set to the Chains that have just been constructed.</p>
+</section>
+<section id="splitting">
+<h3>拆分<a class="headerlink" href="#splitting" title="Permalink to this heading"></a></h3>
+<p>拆分操作用于优化每个链的拓扑。拆分按顺序或递归执行。顺序拆分基本形式的 <code class="docutils literal notranslate"><span class="pre">Operators.sequentialSplit()</span></code>，以给定的任意分辨率解析链，并在链的每个点上计算一元谓词（在 0D 元素上工作）。每次满足谓词时，链就会被拆分为两个链。在顺序分割操作结束时，活动链集将设置为新链。:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">Operators</span><span class="o">.</span><span class="n">sequentialSplit</span><span class="p">(</span><span class="n">TrueUP0D</span><span class="p">(),</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>In this example, the chain is split every 2 units.
+A more elaborated version uses two predicates instead of one: One to determine the starting
+point of the new chain and the other to determine its ending point. This second version can
+lead to a set of Chains that are disjoint or that overlap if the two predicates are different
+(see <code class="docutils literal notranslate"><span class="pre">Operators.sequentialSplit()</span></code> for more details).</p>
+<p>递归拆分 <code class="docutils literal notranslate"><span class="pre">Operators.recursiveSplit()</span></code> 以给定的分辨率计算沿链的 0D 元素上的函数，并找到给出函数最大值的点。然后，链在这一点上被分成两部分。此过程在两个新链中的每一个上递归重复，直到输入链满足用户指定的停止条件。:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">func</span> <span class="o">=</span> <span class="n">Curvature2DAngleF0D</span><span class="p">()</span>
+<span class="n">Operators</span><span class="o">.</span><span class="n">recursive_split</span><span class="p">(</span><span class="n">func</span><span class="p">,</span> <span class="n">NotUP1D</span><span class="p">(</span><span class="n">HigherLengthUP1D</span><span class="p">(</span><span class="mi">5</span><span class="p">)),</span> <span class="mi">5</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>在上面的代码示例中，链在最高 2D 曲率的点处递归拆分。在链上的点以 5 个单位的分辨率评估曲率。短于5个单位的链条将不再分裂。</p>
+</section>
+<section id="sorting">
+<h3>排序<a class="headerlink" href="#sorting" title="Permalink to this heading"></a></h3>
+<p>排序运算符 <code class="docutils literal notranslate"><span class="pre">Operators.sort()</span></code> 排列活动 1D 元素的堆叠顺序。它将用作 &quot;小于&quot; 运算符的二元谓词作为参数，对两个 1D 元素进行排序。:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">Operators</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">Length2DBP1D</span><span class="p">())</span>
+</pre></div>
+</div>
+<p>在此代码示例中，排序使用 <code class="docutils literal notranslate"><span class="pre">Length2DBP1D</span></code> 二进制谓词按 2D 长度的升序对 <code class="docutils literal notranslate"><span class="pre">Interface1D</span></code> 对象进行排序。</p>
+<p>当与因果密度相结合时，排序特别有用。实际上，因果密度在修改生成的图像时会评估其密度。如果我们希望使用这样的工具来决定在局部密度太高时删除笔画，那幺控制描边的绘制顺序非常重要。在这种情况下，我们将使用排序运算符来确保首先绘制最 &quot;重要&quot; 的线条。</p>
+</section>
+<section id="stroke-creation">
+<h3>笔画创建<a class="headerlink" href="#stroke-creation" title="Permalink to this heading"></a></h3>
+<p>最后，笔画创建运算符 <code class="docutils literal notranslate"><span class="pre">Operators.create()</span></code> 将活动的链集作为输入并构建笔画。运算符采用两个参数。第一个是一元谓词，适用于 <code class="docutils literal notranslate"><span class="pre">Interface1D</span></code>，旨在对链集进行最后选择。不满足条件的链条不会导致中风。第二个输入是着色器列表，这些着色器将负责每个构建的描边的着色。:</p>
+<div class="highlight-python3 notranslate"><div class="highlight"><pre><span></span><span class="n">shaders_list</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="n">SamplingShader</span><span class="p">(</span><span class="mf">5.0</span><span class="p">),</span>
+    <span class="n">ConstantThicknessShader</span><span class="p">(</span><span class="mi">2</span><span class="p">),</span>
+    <span class="n">ConstantColorShader</span><span class="p">(</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mf">0.2</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
+    <span class="p">]</span>
+<span class="n">Operators</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">DensityUP1D</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mf">0.1</span><span class="p">,</span> <span class="n">IntegrationType</span><span class="o">.</span><span class="n">MEAN</span><span class="p">),</span> <span class="n">shaders_list</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>在此示例中，<code class="docutils literal notranslate"><span class="pre">DensityUP1D</span></code> 谓词用于移除平均密度高于 0.1 的所有链。每个链通过重新采样转换为笔画，以便每 5 个单位有一个点，并为其分配 2 个单位的恒定厚度和深灰色恒定颜色。</p>
+</section>
+<section id="user-control-on-the-pipeline-definition">
+<h3>管道定义上的用户控件<a class="headerlink" href="#user-control-on-the-pipeline-definition" title="Permalink to this heading"></a></h3>
+<p>样式模块编写提供不同类型的用户控件，即使单个样式模块具有固定的管道结构。一个是不同管道控制结构的顺序，另一个是通过定义沿着管道作为参数传递的函子对象。</p>
+<p>可以通过对选择、链接、拆分和排序操作进行排序来定义不同的管道控制结构。笔画创建始终是结束样式模块的最后一个操作。</p>
+<p>谓词、函数、链接迭代器和描边着色器可以通过继承基类并重写适当的方法来定义。有关用户可编写脚本的构造的详细信息，请参阅以下基类的参考手册条目。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>谓词、函数、链接迭代器和描边着色器可以通过继承基类并重写适当的方法来定义。请参阅 <a class="reference external" href="https://docs.blender.org/api/3.6/freestyle.html#module-freestyle" title="(in Blender 3.6.20 Python API v3.6)"><code class="xref py py-mod docutils literal notranslate"><span class="pre">Freestyle</span> <span class="pre">python</span> <span class="pre">模块</span></code></a>，了解有关用户可编写脚本的结构的更多信息。</p>
+</div>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="material.html" class="btn btn-neutral float-left" title="材质属性" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../layers/index.html" class="btn btn-neutral float-right" title="层 &amp; 通道" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/render/freestyle/python.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/render/freestyle/python.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Frender/freestyle/python.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Frender/freestyle/python.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

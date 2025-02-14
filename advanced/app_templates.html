@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>应用模板 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/advanced/app_templates.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/js/version_switch.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="next" title="键位映射自定义" href="keymap_editing.html" />
+    <link rel="prev" title="插件教程" href="scripting/addon_tutorial.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">高级</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="command_line/index.html">命令行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="scripting/index.html">脚本与扩展 Blender</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">应用模板</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#usage">用法</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#motivation">动机</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#details">细节</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#directory-layout">目录布局</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#command-line-access">命令行访问</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#template-contents">模板内容</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#template-scripts">模板脚本</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="keymap_editing.html">键位映射自定义</a></li>
+<li class="toctree-l2"><a class="reference internal" href="limits.html">功能局限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="operators.html">操作项</a></li>
+<li class="toctree-l2"><a class="reference internal" href="blender_directory_layout.html">Blender 目录布局</a></li>
+<li class="toctree-l2"><a class="reference internal" href="appendices/index.html">附录</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">高级</a></li>
+      <li class="breadcrumb-item active">应用模板</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="application-templates">
+<span id="app-templates"></span><span id="bpy-ops-preferences-app-template-install"></span><span id="bpy-ops-wm-app-template"></span><h1>应用模板<a class="headerlink" href="#application-templates" title="Permalink to this heading"></a></h1>
+<section id="usage">
+<h2>用法<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h2>
+<p>应用模板功能让用户能够定义可重复利用的配置，选中之后即可替代默认配置，无需另外安装 Blender 或者覆盖个人设置。</p>
+<p>可以从启动画面或 <span class="menuselection">文件 ‣ 新建</span> 子菜单中选择应用模板。如果未找到模板，则菜单将不会显示在启动画面上。</p>
+<p>可以从 <a class="reference internal" href="../interface/window_system/topbar.html#topbar-blender-menu"><span class="std std-ref">Blender 菜单</span></a> 安装新的应用模板。如果您希望在重新启动 Blender 时保持当前应用进程模板处于活动状态，请保存您的偏好设置。</p>
+<section id="motivation">
+<h3>动机<a class="headerlink" href="#motivation" title="Permalink to this heading"></a></h3>
+<p>有些时候，写一个简单的脚本或者插件可能还不足以解决问题，一些用户可能希望有人可以为其替换用户设置和启动文件、安装脚本并修改键位映射。</p>
+<p>应用模板的存在意在于帮助用户快速切换到自定义配置，而无需破坏已有的设置和安装环境。这意味着人们可以在 Blender 基础上自行构建易于分发的 <em>应用</em>。</p>
+</section>
+<section id="details">
+<h3>细节<a class="headerlink" href="#details" title="Permalink to this heading"></a></h3>
+<p>应用模板需要定义其自身以下内容：</p>
+<dl class="simple">
+<dt>启动文件</dt><dd><p>加载模板后的默认文件。</p>
+</dd>
+<dt>偏好设置</dt><dd><p>应用模板中只有某些特定用户设置才会被用到：</p>
+<ul class="simple">
+<li><p>主题。</p></li>
+<li><p>插件。</p></li>
+<li><p>键位映射。</p></li>
+<li><p>视窗照明。</p></li>
+</ul>
+</dd>
+<dt>启动画面</dt><dd><p>模板可以使用自定义启动画面图像。</p>
+</dd>
+<dt>Python 脚本</dt><dd><p>模板可以与其他脚本一样访问功能，典型的操作包括：</p>
+<ul class="simple">
+<li><p>修改和替换部分用户界面。</p></li>
+<li><p>定义新的菜单、键位映射和工具。</p></li>
+<li><p>自定义模板特有插件路径。</p></li>
+</ul>
+</dd>
+</dl>
+<p>模板也有自己的用户配置，所以使用模板时保存启动文件不会覆盖默认的启动文件。</p>
+</section>
+<section id="directory-layout">
+<h3>目录布局<a class="headerlink" href="#directory-layout" title="Permalink to this heading"></a></h3>
+<p>模板文件可以放在 <code class="docutils literal notranslate"><span class="pre">scripts</span></code> 目录下两个位置之一。</p>
+<dl>
+<dt>模板位置：</dt><dd><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">{BLENDER_USER_SCRIPTS}/startup/bl_app_templates_user</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">{BLENDER_SYSTEM_SCRIPTS}/startup/bl_app_templates_system</span></code></div>
+</div>
+</dd>
+</dl>
+<p>用户配置保存在其子目录：</p>
+<dl>
+<dt>没有模板：</dt><dd><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">./config/startup.blend</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">./config/userpref.blend</span></code></div>
+</div>
+</dd>
+<dt>有模板：</dt><dd><div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">./config/{APP_TEMPLATE_ID}/startup.blend</span></code></div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">./config/{APP_TEMPLATE_ID}/userpref.blend</span></code></div>
+</div>
+</dd>
+</dl>
+<p>更多关于脚本和配置位置的细节见 <a class="reference internal" href="blender_directory_layout.html#blender-directory-layout"><span class="std std-ref">Blender 目录布局</span></a>。</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>路径问题排查</p>
+<p>创建应用程序模板时，可能会遇到找不到路径的问题。要对此进行调查，您可以记录 Blender 所有路径查找的输出。</p>
+<p>使用自定义应用程序模板加载 Blender 的命令行参数示例（使用您自己的模板名称替换 <code class="docutils literal notranslate"><span class="pre">my_app_template</span></code>）：</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>blender<span class="w"> </span>--log<span class="w"> </span><span class="s2">&quot;bke.appdir.*&quot;</span><span class="w"> </span>--log-level<span class="w"> </span>-1<span class="w"> </span>--app-template<span class="w"> </span>my_app_template
+</pre></div>
+</div>
+<p>然后，您可以检查尝试访问 <code class="docutils literal notranslate"><span class="pre">my_app_template</span></code> 的路径。</p>
+</div>
+</section>
+<section id="command-line-access">
+<h3>命令行访问<a class="headerlink" href="#command-line-access" title="Permalink to this heading"></a></h3>
+<p>使用<a class="reference internal" href="command_line/arguments.html#command-line-args"><span class="std std-ref">命令行参数</span></a>可以设置 Blender 启动器以指定的应用模板启动：</p>
+<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>blender<span class="w"> </span>--app-template<span class="w"> </span>my_template
+</pre></div>
+</div>
+</section>
+</section>
+<section id="template-contents">
+<h2>模板内容<a class="headerlink" href="#template-contents" title="Permalink to this heading"></a></h2>
+<p>应用模板可以配置以下文件，不过这是可选的。</p>
+<dl>
+<dt><code class="docutils literal notranslate"><span class="pre">startup.blend</span></code></dt><dd><p>用于该模板的初始文件。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">userpref.blend</span></code></dt><dd><p>用于该模板的初始设置文件。当被忽略的设置是与默认 Blender 配置共用的。</p>
+<p><em>（如前文所述，这仅仅是用户设置的子集。）</em></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">splash.png</span></code></dt><dd><p>初始屏幕，用于覆盖 Blender 的默认图稿（不包括标题文本）。请注意，此图像分辨率必须是 <code class="docutils literal notranslate"><span class="pre">1000x500</span></code>。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">__init__.py</span></code></dt><dd><p>Python 脚本必须包含 <code class="docutils literal notranslate"><span class="pre">register</span></code> 与 <code class="docutils literal notranslate"><span class="pre">unregister</span></code> 方法。</p>
+</dd>
+</dl>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>自带的 blend 文件 <code class="docutils literal notranslate"><span class="pre">startup.blend</span></code> 和 <code class="docutils literal notranslate"><span class="pre">userpref.blend</span></code> 视作 <em>初始设置</em>，且不会被覆盖。</p>
+<p>用户可以在使用此模板时保存自己的启动文件/偏好设置，该模板将存储在其用户配置中，但仅当模板包含自己的 <code class="docutils literal notranslate"><span class="pre">userpref.blend</span></code> 文档时。</p>
+<p>与 <em>加载初始设置</em> 一样，用户可以从文件菜单使用 <em>加载模板初始设置</em> 来恢复模板的初始设置。</p>
+</div>
+</section>
+<section id="template-scripts">
+<h2>模板脚本<a class="headerlink" href="#template-scripts" title="Permalink to this heading"></a></h2>
+<p>虽然应用进程模板可以使用 Python 脚本，但它们只能访问可用于插件和任何其他脚本的相同 API。</p>
+<p>正如上文所言，可以选择在应用模板中使用 <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code>。这样做有以下优势：</p>
+<ul>
+<li><p>无需分发 blend 文件即可更改启动文件或偏好设置。</p></li>
+<li><p>可以动态更改。</p>
+<p>比如，可以配置模板为先检查处理器、操作系统和内存，然后基于此设置参数值。</p>
+</li>
+<li><p>可以启用与模板关联的插件。</p></li>
+</ul>
+<p>激活时，将调用 <code class="docutils literal notranslate"><span class="pre">register</span></code> 函数，当选择另一个模板时，将调用 <code class="docutils literal notranslate"><span class="pre">unregister</span></code> 。</p>
+<p>由于这些只运行一次，因此必须通过处理进程对默认值进行任何更改。您可能使用的两个处理进程是：</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">bpy.app.handlers.load_factory_preferences_post</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">bpy.app.handlers.load_factory_startup_post</span></code></p></li>
+</ul>
+<p>以上两者用于自定义用户可以更改的“初始设置”，就像 Blender 在首次启动时的默认值一样。</p>
+<p>下面是一个 <code class="docutils literal notranslate"><span class="pre">__init__.py</span></code> 文件范例，定义了应用模板要使用的默认值。</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">bpy</span>
+<span class="kn">from</span> <span class="nn">bpy.app.handlers</span> <span class="kn">import</span> <span class="n">persistent</span>
+
+<span class="nd">@persistent</span>
+<span class="k">def</span> <span class="nf">load_handler_for_preferences</span><span class="p">(</span><span class="n">_</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Changing Preference Defaults!&quot;</span><span class="p">)</span>
+    <span class="kn">from</span> <span class="nn">bpy</span> <span class="kn">import</span> <span class="n">context</span>
+
+    <span class="n">prefs</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">preferences</span>
+    <span class="n">prefs</span><span class="o">.</span><span class="n">use_preferences_save</span> <span class="o">=</span> <span class="kc">False</span>
+
+    <span class="n">kc</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">window_manager</span><span class="o">.</span><span class="n">keyconfigs</span><span class="p">[</span><span class="s2">&quot;blender&quot;</span><span class="p">]</span>
+    <span class="n">kc_prefs</span> <span class="o">=</span> <span class="n">kc</span><span class="o">.</span><span class="n">preferences</span>
+    <span class="k">if</span> <span class="n">kc_prefs</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">kc_prefs</span><span class="o">.</span><span class="n">select_mouse</span> <span class="o">=</span> <span class="s1">&#39;RIGHT&#39;</span>
+        <span class="n">kc_prefs</span><span class="o">.</span><span class="n">spacebar_action</span> <span class="o">=</span> <span class="s1">&#39;SEARCH&#39;</span>
+        <span class="n">kc_prefs</span><span class="o">.</span><span class="n">use_pie_click_drag</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="n">view</span> <span class="o">=</span> <span class="n">prefs</span><span class="o">.</span><span class="n">view</span>
+    <span class="n">view</span><span class="o">.</span><span class="n">header_align</span> <span class="o">=</span> <span class="s1">&#39;BOTTOM&#39;</span>
+
+
+<span class="nd">@persistent</span>
+<span class="k">def</span> <span class="nf">load_handler_for_startup</span><span class="p">(</span><span class="n">_</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Changing Startup Defaults!&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Use smooth faces.</span>
+    <span class="k">for</span> <span class="n">mesh</span> <span class="ow">in</span> <span class="n">bpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">meshes</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">poly</span> <span class="ow">in</span> <span class="n">mesh</span><span class="o">.</span><span class="n">polygons</span><span class="p">:</span>
+            <span class="n">poly</span><span class="o">.</span><span class="n">use_smooth</span> <span class="o">=</span> <span class="kc">True</span>
+
+    <span class="c1"># Use material preview shading.</span>
+    <span class="k">for</span> <span class="n">screen</span> <span class="ow">in</span> <span class="n">bpy</span><span class="o">.</span><span class="n">data</span><span class="o">.</span><span class="n">screens</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">area</span> <span class="ow">in</span> <span class="n">screen</span><span class="o">.</span><span class="n">areas</span><span class="p">:</span>
+            <span class="k">for</span> <span class="n">space</span> <span class="ow">in</span> <span class="n">area</span><span class="o">.</span><span class="n">spaces</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">space</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s1">&#39;VIEW_3D&#39;</span><span class="p">:</span>
+                    <span class="n">space</span><span class="o">.</span><span class="n">shading</span><span class="o">.</span><span class="n">type</span> <span class="o">=</span> <span class="s1">&#39;MATERIAL&#39;</span>
+                    <span class="n">space</span><span class="o">.</span><span class="n">shading</span><span class="o">.</span><span class="n">use_scene_lights</span> <span class="o">=</span> <span class="kc">True</span>
+
+
+<span class="k">def</span> <span class="nf">register</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Registering to Change Defaults&quot;</span><span class="p">)</span>
+    <span class="n">bpy</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">handlers</span><span class="o">.</span><span class="n">load_factory_preferences_post</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">load_handler_for_preferences</span><span class="p">)</span>
+    <span class="n">bpy</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">handlers</span><span class="o">.</span><span class="n">load_factory_startup_post</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">load_handler_for_startup</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">unregister</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Unregistering to Change Defaults&quot;</span><span class="p">)</span>
+    <span class="n">bpy</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">handlers</span><span class="o">.</span><span class="n">load_factory_preferences_post</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">load_handler_for_preferences</span><span class="p">)</span>
+    <span class="n">bpy</span><span class="o">.</span><span class="n">app</span><span class="o">.</span><span class="n">handlers</span><span class="o">.</span><span class="n">load_factory_startup_post</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="n">load_handler_for_startup</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="scripting/addon_tutorial.html" class="btn btn-neutral float-left" title="插件教程" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="keymap_editing.html" class="btn btn-neutral float-right" title="键位映射自定义" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/advanced/app_templates.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/advanced/app_templates.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fadvanced/app_templates.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fadvanced/app_templates.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

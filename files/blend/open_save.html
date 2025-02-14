@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>打开 &amp; 保存 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/files/blend/open_save.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="打包数据" href="packed_data.html" />
+    <link rel="prev" title="Blender 文件" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">资产、文件 &amp; 数据系统</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Blender 文件</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">打开 &amp; 保存</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#opening-files">打开文件</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#options">选项</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#open-recent">最近打开</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#recover">恢复</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#last-session">最近的会话</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#auto-save">自动保存</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#saving-files">保存文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#save-as">另存为</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#id7">选项</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#save-copy">保存副本</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#relative-paths">相对路径</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="packed_data.html">打包数据</a></li>
+<li class="toctree-l3"><a class="reference internal" href="previews.html">Blend 文件预览</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rename.html">重命名</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../data_blocks.html">数据块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../custom_properties.html">自定义属性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../linked_libraries/index.html">关联库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../asset_libraries/index.html">资产库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../media/index.html">媒体格式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../import_export.html">导入 &amp; 导出文件</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">资产、文件 &amp; 数据系统</a></li>
+          <li class="breadcrumb-item"><a href="index.html">Blender 文件</a></li>
+      <li class="breadcrumb-item active">打开 &amp; 保存</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="opening-saving">
+<h1>打开 &amp; 保存<a class="headerlink" href="#opening-saving" title="Permalink to this heading"></a></h1>
+<p>通常使用<a class="reference internal" href="../../editors/file_browser.html"><span class="doc">文件浏览器</span></a>来完成 blend 文件的保存和打开操作。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Blend 文件的打开也可以通过将其拖入 Blender 窗口来完成。这个方法同时也允许<a class="reference internal" href="../linked_libraries/index.html"><span class="doc">关联/追加</span></a>一个文件。</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>未保存的改动</p>
+<p>默认情况下，当退出 Blender 或者打开一个新 blend 文件时，如果您有未保存的改动，会有一个弹出框询问您是否丢弃改动，或者保存改动。</p>
+<p>可以使用用户设置中<a class="reference internal" href="../../editors/preferences/save_load.html#prefs-save-load"><span class="std std-ref">保存&amp;加载</span></a>部分中的 <em>保存提示</em> 选项禁用此行为。</p>
+</div>
+<section id="opening-files">
+<span id="bpy-ops-wm-open-mainfile"></span><h2>打开文件<a class="headerlink" href="#opening-files" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">文件 ‣ 打开...</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">O</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>靠上面的文本框显示当前目录路径，下面的文本框包含选中的文件名。</p>
+<figure class="align-default" id="id9">
+<img alt="../../_images/files_blend_open-save_file-browser-open.png" src="../../_images/files_blend_open-save_file-browser-open.png" />
+<figcaption>
+<p><span class="caption-text">文件浏览器打开文件。</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<section id="options">
+<h3>选项<a class="headerlink" href="#options" title="Permalink to this heading"></a></h3>
+<dl id="file-load-ui">
+<dt>加载用户界面</dt><dd><p>被选中时，将使用保存在每个 blend 文件中的屏幕布局替换当前的布局和<a class="reference internal" href="../../interface/window_system/workspaces.html"><span class="doc">工作区</span></a>，否则忽略文件中的屏幕布局。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>如果您要使用自己默认的环境编辑 blend 文件，启动一个新的 Blender，打开文件浏览器并关闭 <em>加载用户界面</em> 按钮，然后打开所需的文件。</p>
+</div>
+</dd>
+<dt>可信任源</dt><dd><p>启用后，会自动运行包含在文件中的 Python 脚本和驱动器。只有在你自己创建的文件中才能启用此选项，或者你相信给你提供文件的人没有在文件中包含恶意代码。请参阅<a class="reference internal" href="../../advanced/scripting/security.html"><span class="doc">脚本与安全</span></a>来配置默认的信任选项。</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="open-recent">
+<span id="other-file-open-options"></span><h2>最近打开<a class="headerlink" href="#open-recent" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id2">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">文件 ‣ 打开近期文件</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">O</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>列出最近使用过的文件，点击一个即可加载。</p>
+</section>
+<section id="recover">
+<h2>恢复<a class="headerlink" href="#recover" title="Permalink to this heading"></a></h2>
+<section id="last-session">
+<span id="bpy-ops-wm-recover-last-session"></span><h3>最近的会话<a class="headerlink" href="#last-session" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id3">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">文件 ‣ 恢复 ‣ 最近的会话</span></p>
+</dd>
+</dl>
+</div>
+<p>这将加载 <code class="docutils literal notranslate"><span class="pre">quit.blend</span></code> 文件，并在退出前自动保存 Blender。此选项使您可以恢复上一个工作<a class="reference internal" href="../../glossary/index.html#term-Session"><span class="xref std std-term">会话</span></a>，例如，如果您意外关闭了 Blender。</p>
+</section>
+<section id="auto-save">
+<span id="bpy-ops-wm-recover-auto-save"></span><h3>自动保存<a class="headerlink" href="#auto-save" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id4">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">文件 ‣ 恢复 ‣ 自动保存</span></p>
+</dd>
+</dl>
+</div>
+<p>允许你打开自动的保存文件。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="../../troubleshooting/recover.html#troubleshooting-file-recovery-auto-save"><span class="std std-ref">自动保存</span></a></p>
+</div>
+</section>
+</section>
+<section id="saving-files">
+<span id="bpy-ops-wm-save-mainfile"></span><h2>保存文件<a class="headerlink" href="#saving-files" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id5">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">文件 ‣ 保存</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">S</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>保存当前 blend 文件（如果当前文件从来没有被保存过，会切换到 <em>另存为…</em>）。</p>
+<figure class="align-default" id="id10">
+<img alt="../../_images/files_blend_open-save_file-browser-save.png" src="../../_images/files_blend_open-save_file-browser-save.png" />
+<figcaption>
+<p><span class="caption-text">文件浏览器保存文件。</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="save-as">
+<span id="bpy-ops-wm-save-as-mainfile"></span><h2>另存为<a class="headerlink" href="#save-as" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id6">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">文件 ‣ 另存为…</span></p>
+</dd>
+<dt class="field-even">快捷键<span class="colon">:</span></dt>
+<dd class="field-even"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">S</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>选择一个 blend 文件的保存路径。</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>如果已存在具有相同名称的文件，则文本框会变为红色，表示将覆盖该文件。</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>使用文件名右边的 <em>加</em> 或 <em>减</em> 按钮，或者 <kbd class="kbd docutils literal notranslate">数字键盘加+</kbd>、<kbd class="kbd docutils literal notranslate">数字键盘减-</kbd> 来增加/减少在文件名末尾的数字（比如改变 <code class="docutils literal notranslate"><span class="pre">file_01.blend</span></code> 为 <code class="docutils literal notranslate"><span class="pre">file_02.blend</span></code>）。</p>
+</div>
+<section id="id7">
+<h3>选项<a class="headerlink" href="#id7" title="Permalink to this heading"></a></h3>
+<dl id="files-blend-compress">
+<dt>压缩</dt><dd><p>减少生成的 blend 文件的文件大小，但保存和加载时间较长。此选项可用于在线分发文件并节省大型项目的驱动器空间。但是，在退出 Blender 时，或者在自动保存备份文件时，它可能会导致速度减慢。有关详细信息，请参阅<a class="reference internal" href="../linked_libraries/link_append.html#files-linked-libraries-known-limitations-compression"><span class="std std-ref">压缩和内存使用</span></a>。</p>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>所使用的压缩算法是 Zstandard。它并非 Blender 独有，因此可以使用外部工具对文件进行压缩/解压缩。</p>
+</div>
+<div class="versionchanged">
+<p><span class="versionmodified changed">Changed in version 3.0: </span>在此版本之前，使用的压缩算法是 Gzip。这意味着要在 3.0 之前的版本中打开较新的 blend 文件，blend 文件必须首先在较新版本的 Blender 中保存而不进行压缩，或者使用外部 Gzip 工具进行解压缩。</p>
+</div>
+</dd>
+<dt>更新相对路径</dt><dd><p>这个选项在将文件保存到一个新位置的时候更新<a class="reference internal" href="#files-blend-relative-paths"><span class="std std-ref">相对路径</span></a>（比如一个关联的库或者是图片）。</p>
+</dd>
+<dt>保存副本</dt><dd><p>保存实际工作状态的副本，但不使保存的文件处于活动状态。</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="save-copy">
+<h2>保存副本<a class="headerlink" href="#save-copy" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id8">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">菜单<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">文件 ‣ 保存副本…</span></p>
+</dd>
+</dl>
+</div>
+<p>选择一个 blend 文件的保存路径，在保存后继续编辑原始文件。这可用于在不影响原始文件的情况下备份当前工作状态。</p>
+<p>有关选项见<a class="reference internal" href="#bpy-ops-wm-save-as-mainfile"><span class="std std-ref">另存为</span></a>。</p>
+</section>
+<section id="relative-paths">
+<span id="files-blend-relative-paths"></span><h2>相对路径<a class="headerlink" href="#relative-paths" title="Permalink to this heading"></a></h2>
+<p>许多 blend 文件都会引用外部图像或其它关联的 blend 文件。会使用路径来告诉 Blender 在哪里查找这些被引用的外部文件。如果改变外部文件的位置，引用它们的 blend 文件将会出错。</p>
+<p>当你指定一个外部文件时，默认选项是将路径变成相对路径。Blender 保存相对于引用 blend 文件的目录位置的部分路径。当您需要重新组织文件夹或移动文件时，这个选项会很有用。</p>
+<p>使用相对路径，您可以把 blend 文件移动到新位置，前提是外部关联的文件也一起移动。比如，您可将一个包含 blend 文件及其所引用的外部图像的子目录的文件夹一起发给某个人。</p>
+<p>当支持相对路径时，文件浏览器提供一个 <em>相对路径</em> 的复选框，当在文本框中输入路径时，使用双斜线（<code class="docutils literal notranslate"><span class="pre">//</span></code>）前缀来实现使用相对路径。</p>
+<p>相对路径是默认的，但是可以在 <em>用户设置</em> 的<a class="reference internal" href="../../editors/preferences/file_paths.html"><span class="doc">文件</span></a>标签页中进行更改。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>你不能在 <em>未保存</em> 的 blend 文件中使用相对路径。在关联外部文件需要前先保存当前的文件。</p>
+</div>
+<div class="admonition hint">
+<p class="admonition-title">Hint</p>
+<p>如果需要相对于其链接的资源重新定位 blend 文件，请使用 Blender 的文件<a class="reference internal" href="#bpy-ops-wm-save-mainfile"><span class="std std-ref">另存为</span></a>，该功能具有 <em>更新相对路径</em> 文件链接的选项。</p>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Blender 文件" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="packed_data.html" class="btn btn-neutral float-right" title="打包数据" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/files/blend/open_save.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/files/blend/open_save.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Ffiles/blend/open_save.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Ffiles/blend/open_save.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

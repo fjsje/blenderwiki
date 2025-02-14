@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>环切并滑移 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/editing/edge/loopcut_slide.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../../_static/jquery.js"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
+        <script src="../../../../_static/doctools.js"></script>
+        <script src="../../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../../_static/js/version_switch.js"></script>
+    <script src="../../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../../copyright.html" />
+    <link rel="next" title="边数据" href="edge_data.html" />
+    <link rel="prev" title="偏移边线并滑移" href="offset_edge_slide.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html">网格</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../structure.html">结构</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../primitives.html">基本体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tools/index.html">工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../selecting/index.html">选择</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html">编辑</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../mesh/index.html">网格工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../vertex/index.html">顶点工具</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="index.html">边工具</a><ul class="current">
+<li class="toctree-l5"><a class="reference internal" href="extrude_edges.html">挤出边线</a></li>
+<li class="toctree-l5"><a class="reference internal" href="bevel.html">边线倒角</a></li>
+<li class="toctree-l5"><a class="reference internal" href="bridge_edge_loops.html">桥接循环边</a></li>
+<li class="toctree-l5"><a class="reference internal" href="screw.html">螺旋</a></li>
+<li class="toctree-l5"><a class="reference internal" href="subdivide.html">细分</a></li>
+<li class="toctree-l5"><a class="reference internal" href="subdivide_edge_ring.html">细分并排边</a></li>
+<li class="toctree-l5"><a class="reference internal" href="unsubdivide.html">反细分</a></li>
+<li class="toctree-l5"><a class="reference internal" href="rotate_edge.html">旋转边线</a></li>
+<li class="toctree-l5"><a class="reference internal" href="edge_slide.html">边线滑移</a></li>
+<li class="toctree-l5"><a class="reference internal" href="offset_edge_slide.html">偏移边线并滑移</a></li>
+<li class="toctree-l5 current"><a class="current reference internal" href="#">环切并滑移</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#usage">用法</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#options">选项</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="edge_data.html">边数据</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="../face/index.html">面工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../uv.html">UV 工具</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../uv/index.html">UV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../mesh_analysis.html">网格分析</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../retopology.html">重拓扑</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../surfaces/index.html">面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../texts/index.html">文本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../volumes/index.html">体积（卷标）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../empties.html">空物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../modifiers/index.html">修改器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../geometry_nodes/index.html">几何节点</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">建模</a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">网格</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">编辑</a></li>
+          <li class="breadcrumb-item"><a href="index.html">边工具</a></li>
+      <li class="breadcrumb-item active">环切并滑移</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="loop-cut-and-slide">
+<span id="bpy-ops-mesh-loopcut-slide"></span><h1>环切并滑移<a class="headerlink" href="#loop-cut-and-slide" title="Permalink to this heading"></a></h1>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">边 ‣ 环切并滑移</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Ctrl</kbd>-<kbd class="kbd docutils literal notranslate">R</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p><em>环切并滑移</em> 通过插入一组新的、与选中边交叉的循环边，切分一组循环面。</p>
+<section id="usage">
+<h2>用法<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h2>
+<p>该工具是交互式的，操作分两步：</p>
+<ol class="arabic">
+<li><p>预览切线</p>
+<p>工具激活后，将光标移动到目标并排边。在鼠标移到边线上方时，预览切线将显示为紫红色。即将生成的循环边在现有面循环终止的极点断开。</p>
+</li>
+<li><p>滑动新生成的循环边</p>
+<p><kbd class="kbd docutils literal notranslate">鼠标左键</kbd> 确认滑动位置后，可以沿边线移动鼠标，确定新的循环边位置。该操作与<a class="reference internal" href="edge_slide.html#modeling-meshes-editing-edge-slide"><span class="std std-ref">边线滑移工具</span></a>是一样的。再次单击 <kbd class="kbd docutils literal notranslate">鼠标左键</kbd> 确认，切线停留在预览位置，<kbd class="kbd docutils literal notranslate">鼠标右键</kbd> 单击使切线停留在等分切割位置。</p>
+</li>
+</ol>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id2">
+<img alt="../../../../_images/modeling_meshes_tools_loop_before.png" src="../../../../_images/modeling_meshes_tools_loop_before.png" />
+<figcaption>
+<p><span class="caption-text">插入循环边之前的网格。</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id3">
+<img alt="../../../../_images/modeling_meshes_tools_loop_preview.png" src="../../../../_images/modeling_meshes_tools_loop_preview.png" />
+<figcaption>
+<p><span class="caption-text">预览循环边位置。</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id4">
+<img alt="../../../../_images/modeling_meshes_tools_loop_placement.png" src="../../../../_images/modeling_meshes_tools_loop_placement.png" />
+<figcaption>
+<p><span class="caption-text">交互式移动循环边。</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="options">
+<span id="modeling-meshes-editing-edge-loopcut-slide-options"></span><h2>选项<a class="headerlink" href="#options" title="Permalink to this heading"></a></h2>
+<p>这些选项在工具正在使用时可用，稍后在<a class="reference internal" href="../../../../interface/undo_redo.html#bpy-ops-screen-redo-last"><span class="std std-ref">调整上一步操作</span></a>面板中也可用。</p>
+<dl>
+<dt>切割次数 <kbd class="kbd docutils literal notranslate">滚轮</kbd> 或 <kbd class="kbd docutils literal notranslate">PageUp</kbd> / <kbd class="kbd docutils literal notranslate">PageDown</kbd></dt><dd><p>激活该工具，在确认循环边位置前，可以通过键入数字，<kbd class="kbd docutils literal notranslate">滚轮</kbd> 滚动或使用 <kbd class="kbd docutils literal notranslate">PageUp</kbd> 与 <kbd class="kbd docutils literal notranslate">PageDown</kbd>，以增加或减少切割次数。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>在插入多条环切循环边时，这些循环边均匀分布在原始面循环上，用户 <em>无法</em> 控制其位置。</p>
+</div>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id5">
+<img alt="../../../../_images/modeling_meshes_editing_edge_loopcut-slide_multicut.png" src="../../../../_images/modeling_meshes_editing_edge_loopcut-slide_multicut.png" />
+<figcaption>
+<p><span class="caption-text">多循环边预览。</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id6">
+<img alt="../../../../_images/modeling_meshes_editing_edge_loopcut-slide_multicut-after.png" src="../../../../_images/modeling_meshes_editing_edge_loopcut-slide_multicut-after.png" />
+<figcaption>
+<p><span class="caption-text">多重环切结果。</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>平滑度 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">滚轮</kbd></kbd></dt><dd><p>平滑是将循环边位置进行插值，使其以给定百分比相对原始循环面向外或向内偏移，类似于 <em>平滑细分</em> 工具。当不使用平滑时，新循环边的顶点依旧位于原始并排边上。这保持了细分面的平坦，也造成了几何体的失真，特别是在使用<a class="reference internal" href="../../../modifiers/generate/subdivision_surface.html"><span class="doc">表面细分</span></a>时。平滑有助于保持细分后表面的曲度。</p>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id7">
+<img alt="../../../../_images/modeling_meshes_editing_edge_loopcut-slide_unsmooth.png" src="../../../../_images/modeling_meshes_editing_edge_loopcut-slide_unsmooth.png" />
+<figcaption>
+<p><span class="caption-text">未使用平滑的环切。</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id8">
+<img alt="../../../../_images/modeling_meshes_editing_edge_loopcut-slide_smooth.png" src="../../../../_images/modeling_meshes_editing_edge_loopcut-slide_smooth.png" />
+<figcaption>
+<p><span class="caption-text">带有平滑的环切。</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+<dt>衰减</dt><dd><p><em>平滑度</em> 的衰减类型，用于改变轮廓形状。</p>
+</dd>
+<dt>系数</dt><dd><p>循环边相对于周围循环边的位置。</p>
+</dd>
+<dt>均匀 <kbd class="kbd docutils literal notranslate">E</kbd></dt><dd><p>仅适用于一次环切，用于使环切循环边的形状匹配相邻循环边。（详情请参阅<a class="reference internal" href="edge_slide.html#modeling-meshes-editing-edge-slide"><span class="std std-ref">边线滑移工具</span></a>。）</p>
+</dd>
+<dt>翻转 <kbd class="kbd docutils literal notranslate">F</kbd></dt><dd><p>当启用均匀时，该选项用于翻转至匹配另一侧循环边。（详情请参阅<a class="reference internal" href="edge_slide.html#modeling-meshes-editing-edge-slide"><span class="std std-ref">边线滑移工具</span></a>。）</p>
+</dd>
+<dt>钳制</dt><dd><p>钳制环切边于两循环边之间。</p>
+</dd>
+<dt>校正 UV</dt><dd><p>如存在对应的 UV 坐标，对其进行校正，避免图像畸变。</p>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="offset_edge_slide.html" class="btn btn-neutral float-left" title="偏移边线并滑移" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="edge_data.html" class="btn btn-neutral float-right" title="边数据" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/modeling/meshes/editing/edge/loopcut_slide.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/modeling/meshes/editing/edge/loopcut_slide.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fmodeling/meshes/editing/edge/loopcut_slide.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fmodeling/meshes/editing/edge/loopcut_slide.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

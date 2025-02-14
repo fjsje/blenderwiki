@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>画布 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/physics/dynamic_paint/canvas.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="力场" href="../forces/index.html" />
+    <link rel="prev" title="笔刷" href="brush.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">物理</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../rigid_body/index.html">刚体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cloth/index.html">布料</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../soft_body/index.html">软体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../fluid/index.html">流体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../particles/index.html">粒子系统</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">动态绘画</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="brush.html">笔刷</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">画布</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#settings">设置</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#surface">曲面</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#surface-type">表面类型</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#paint">绘制</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#displace">置换</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#waves">波浪</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#weight">权重</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#common-options">通用选项</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#cache">缓存</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#effects">效果</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#initial-color">初始颜色</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#output">输出</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#vertex">顶点</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#image-sequence">图像序列</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../forces/index.html">力场</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../collision.html">碰撞</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../baking.html">烘焙物理模拟</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../simulation_nodes.html">模拟节点</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">物理</a></li>
+          <li class="breadcrumb-item"><a href="index.html">动态绘画</a></li>
+      <li class="breadcrumb-item active">画布</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="canvas">
+<span id="bpy-types-dynamicpaintcanvassettings"></span><h1>画布<a class="headerlink" href="#canvas" title="Permalink to this heading"></a></h1>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">物理 ‣ 动态绘画</span></p>
+</dd>
+<dt class="field-even">类型<span class="colon">:</span></dt>
+<dd class="field-even"><p>画布</p>
+</dd>
+</dl>
+</div>
+<p>画布类型使对象接受来自动态画笔的画。</p>
+<section id="settings">
+<h2>设置<a class="headerlink" href="#settings" title="Permalink to this heading"></a></h2>
+<figure class="align-right" id="id7">
+<img alt="../../_images/physics_dynamic-paint_canvas_main-panel.png" src="../../_images/physics_dynamic-paint_canvas_main-panel.png" />
+<figcaption>
+<p><span class="caption-text">画布主面板。</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<dl>
+<dt>油漆表面</dt><dd><p>动态绘制表面 <a class="reference internal" href="../../interface/controls/templates/list_view.html#ui-list-view"><span class="std std-ref">列表</span></a>。这些表面基本上是油漆层，它们彼此独立地工作。您可以为它们定义单独的设置并单独烘焙它们。</p>
+<dl class="simple">
+<dt>活动状态</dt><dd><p>该复选框用于切换曲面是否处于活动状态。如果未选择，则不进行任何计算。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>您可以在下面设置表面类型并调整质量和时序设置。</p>
+<dl>
+<dt>格式</dt><dd><p>每个表面都有一定的格式和类型。格式决定了数据的存储和输出方式。</p>
+<dl class="field-list">
+<dt class="field-odd">顶点<span class="colon">:</span></dt>
+<dd class="field-odd"><p>动态绘画直接在网格顶点数据上运行。结果由点缓存存储，可以在视口中显示。但是，使用顶点级别还需要高度细分的网格才能工作。</p>
+</dd>
+<dt class="field-even">图像序列<span class="colon">:</span></dt>
+<dd class="field-even"><p>动态绘画生成具有定义分辨率的UV包装图像文件作为输出。</p>
+<dl class="simple">
+<dt>分辨率</dt><dd><p>您可以调整 <em>图像序列</em> 曲面类型的输出图像尺寸。例如，使用256将导致256×256图像输出。加倍分辨率可能会使烘焙时间翻两番，反之亦然。</p>
+</dd>
+<dt>抗锯齿</dt><dd><p><a class="reference internal" href="../../glossary/index.html#term-Anti-Aliasing"><span class="xref std std-term">抗锯齿</span></a>，使用 5× 多重采样方法平滑油漆边缘。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd>
+<dt>起始帧、结束帧</dt><dd><p>定义表面处理开始和结束帧。</p>
+</dd>
+<dt>子步长</dt><dd><p>Extra samples between frames. They are usually required when there is a very fast brush.</p>
+</dd>
+</dl>
+</section>
+<section id="surface">
+<h2>曲面<a class="headerlink" href="#surface" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id2">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>画布</p>
+</dd>
+<dt class="field-even">面板<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">物理 ‣ 动态绘画 ‣ 表面</span></p>
+</dd>
+</dl>
+</div>
+<p>从 <em>表面</em> 面板，您可以调整表面类型和相关设置。</p>
+<section id="surface-type">
+<h3>表面类型<a class="headerlink" href="#surface-type" title="Permalink to this heading"></a></h3>
+<p>每个表面都有一个 &quot;类型&quot;，用于定义用于表面的表面。</p>
+<section id="paint">
+<h4>绘制<a class="headerlink" href="#paint" title="Permalink to this heading"></a></h4>
+<figure class="align-default" id="id8">
+<a class="reference internal image-reference" href="../../_images/physics_dynamic-paint_canvas_surface-type-paint.jpg"><img alt="../../_images/physics_dynamic-paint_canvas_surface-type-paint.jpg" src="../../_images/physics_dynamic-paint_canvas_surface-type-paint.jpg" style="width: 320px;" /></a>
+<figcaption>
+<p><span class="caption-text">油漆表面。</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>油漆是输出颜色和湿度值的基本表面类型。对于顶点表面，结果将输出为颜色属性。</p>
+<p>湿度是一种黑白输出，可以显示油漆的湿度。白色是最大的湿度，黑色是完全干燥的。它通常用作渲染的遮罩。一些 &quot;油漆效果&quot; 仅影响湿漆。</p>
+<dl>
+<dt>干燥</dt><dd><p>完全禁用干燥对于无限涂抹油漆非常有用。</p>
+<dl class="simple">
+<dt>颜色干燥</dt><dd><p>当油漆颜色开始转移到表面 &quot;背景&quot; 时，它可用于定义润湿度。较低的值可用于防止涂料在干燥时变得透明，而较高的值通常会产生更好的结果。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+<section id="displace">
+<h4>置换<a class="headerlink" href="#displace" title="Permalink to this heading"></a></h4>
+<figure class="align-default" id="id9">
+<a class="reference internal image-reference" href="../../_images/physics_dynamic-paint_canvas_surface-type-displace.jpg"><img alt="../../_images/physics_dynamic-paint_canvas_surface-type-displace.jpg" src="../../_images/physics_dynamic-paint_canvas_surface-type-displace.jpg" style="width: 320px;" /></a>
+<figcaption>
+<p><span class="caption-text">置换表面。</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>这种类型的表面输出画笔对象的交叉深度。</p>
+<dl class="simple">
+<dt>递增</dt><dd><p>在现有的表面上追加新的表面。</p>
+</dd>
+<dt>置换上限</dt><dd><p>最大交叉深度水平，较大的值将被钳制到该值。</p>
+</dd>
+<dt>置换因子</dt><dd><p>交叉点深度的乘数。您可以使用它来调整最终位移强度或使用负值来绘制凸起。</p>
+</dd>
+</dl>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>如果置换输出看起来太粗糙，通常有助于在修改器堆栈中的动态绘制后添加平滑修改器。</p>
+</div>
+</section>
+<section id="waves">
+<h4>波浪<a class="headerlink" href="#waves" title="Permalink to this heading"></a></h4>
+<figure class="align-default" id="id10">
+<a class="reference internal image-reference" href="../../_images/physics_dynamic-paint_canvas_surface-type-waves.jpg"><img alt="../../_images/physics_dynamic-paint_canvas_surface-type-waves.jpg" src="../../_images/physics_dynamic-paint_canvas_surface-type-waves.jpg" style="width: 320px;" /></a>
+<figcaption>
+<p><span class="caption-text">波浪表面。</span><a class="headerlink" href="#id10" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>该表面类型产生模拟波动。像置换一样，波面也使用刷子交叉深度来定义刷子强度。</p>
+<dl class="simple">
+<dt>开放边界</dt><dd><p>允许波穿过网格 &quot;边缘&quot; 而不是反射。</p>
+</dd>
+<dt>时间比例</dt><dd><p>直接调整模拟速度而不影响模拟结果。较低的值会使模拟变慢，否则会变慢。</p>
+</dd>
+<dt>速率</dt><dd><p>影响波浪在表面上的传播速度。此设置也对应于模拟的大小。速度的一半等于表面的两倍大。</p>
+</dd>
+<dt>阻尼</dt><dd><p>随着时间的推移降低波浪强度。基本上调整波浪消失的速度。</p>
+</dd>
+<dt>弹性</dt><dd><p>调节将水拉回 &quot;零水平&quot; 的力。</p>
+</dd>
+<dt>平滑度</dt><dd><p>限制模拟点之间波浪坡度的最大陡度。这大大有助于摆脱使用具有尖锐边缘的物体（如立方体）作为画笔时出现的 &quot;噪波&quot;。默认值应该足以摆脱最尖锐的尖峰，为了得到更平滑的波浪，可以使用更高的值，但要以减少细节为代价。</p>
+</dd>
+</dl>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>在某些情况下，波动在刷子周围变得非常不稳定。它通常有助于降低波速，刷 &quot;波动因子&quot; 甚至网格/表面的分辨率。</p>
+</div>
+</section>
+<section id="weight">
+<h4>权重<a class="headerlink" href="#weight" title="Permalink to this heading"></a></h4>
+<figure class="align-default" id="id11">
+<a class="reference internal image-reference" href="../../_images/physics_dynamic-paint_canvas_surface-type-weight.jpg"><img alt="../../_images/physics_dynamic-paint_canvas_surface-type-weight.jpg" src="../../_images/physics_dynamic-paint_canvas_surface-type-weight.jpg" style="width: 320px;" /></a>
+<figcaption>
+<p><span class="caption-text">权重面。</span><a class="headerlink" href="#id11" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>这是一种仅适用于顶点格式的特殊曲面类型。它输出可由其他Blender修改器和工具使用的顶点权重组。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>通常优选使用基于 &quot;接近&quot; 的刷子用于权重表面以允许权重值之间的平滑衰减。</p>
+</div>
+</section>
+</section>
+<section id="common-options">
+<h3>通用选项<a class="headerlink" href="#common-options" title="Permalink to this heading"></a></h3>
+<p>对于每种表面类型，都有特殊设置可供调整。大多数类型都有 <em>消融</em> 和 <em>笔刷</em> 设置：</p>
+<dl class="simple">
+<dt>消融</dt><dd><p>用于在定义的 <em>时间</em> 期间使表面平滑地返回其原始状态。</p>
+</dd>
+<dt>笔刷集合</dt><dd><p>用于定义从中拾取笔刷对象的特定集合。</p>
+</dd>
+<dt>影响缩放、半径缩放</dt><dd><p>用于为每个表面单独调整笔刷设置。</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="cache">
+<h2>缓存<a class="headerlink" href="#cache" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id3">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>画布</p>
+</dd>
+<dt class="field-even">面板<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">物理 ‣ 动态绘画 ‣ 缓存</span></p>
+</dd>
+</dl>
+</div>
+<p>此面板目前仅对 <em>顶点</em> 格式曲面可见。您可以使用它来调整和烘焙点缓存。</p>
+</section>
+<section id="effects">
+<h2>效果<a class="headerlink" href="#effects" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id4">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>画布</p>
+</dd>
+<dt class="field-even">面板<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">物理 ‣ 动态绘画 ‣ 效果</span></p>
+</dd>
+</dl>
+</div>
+<p>这是 &quot;绘画&quot; 类型表面的特殊功能。它在画布表面上生成动画移动。</p>
+<dl class="simple">
+<dt>效果</dt><dd><dl class="simple">
+<dt>扩散</dt><dd><p>油漆慢慢扩散到周围的点，最终填满所有连接区域。</p>
+</dd>
+<dt>滴落</dt><dd><p>油漆在Blender力场，重力和速度指定的特定方向上移动，具有用户定义的影响。</p>
+</dd>
+<dt>收缩</dt><dd><p>涂漆区域缓慢收缩直至完全消失。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<p>对于涂抹和滴落效果，只有 &quot;湿漆&quot; 会受到影响，因此当涂料干燥时，移动会变慢，直至停止。</p>
+</section>
+<section id="initial-color">
+<h2>初始颜色<a class="headerlink" href="#initial-color" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id5">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>画布</p>
+</dd>
+<dt class="field-even">面板<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">物理 ‣ 动态绘画 ‣ 初始颜色</span></p>
+</dd>
+</dl>
+</div>
+<p>允许您定义画布的初始颜色。(Todo 2.62)</p>
+<ul class="simple">
+<li><p>无</p></li>
+<li><p>颜色</p></li>
+<li><p>UV纹理</p></li>
+<li><p>顶点颜色</p></li>
+</ul>
+</section>
+<section id="output">
+<h2>输出<a class="headerlink" href="#output" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id6">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">类型<span class="colon">:</span></dt>
+<dd class="field-odd"><p>画布</p>
+</dd>
+<dt class="field-even">面板<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">物理 ‣ 动态绘画 ‣ 输出</span></p>
+</dd>
+</dl>
+</div>
+<p>从 &quot;输出&quot; 面板，您可以调整曲面输出结果的方式。</p>
+<section id="vertex">
+<h3>顶点<a class="headerlink" href="#vertex" title="Permalink to this heading"></a></h3>
+<p>对于 <em>顶点</em> 格式曲面，您可以选择网格数据层（颜色/权重取决于曲面类型）以生成结果。您可以使用 &quot;+&quot;/&quot;-&quot; 图标添加/删除给定名称的数据层。如果找不到具有给定名称的图层，则显示为红色。</p>
+</section>
+<section id="image-sequence">
+<h3>图像序列<a class="headerlink" href="#image-sequence" title="Permalink to this heading"></a></h3>
+<p>对于 <em>图像序列</em> 曲面，您可以定义使用的UV贴图和输出文件保存目录，文件名和图像格式。</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="brush.html" class="btn btn-neutral float-left" title="笔刷" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../forces/index.html" class="btn btn-neutral float-right" title="力场" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/physics/dynamic_paint/canvas.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/physics/dynamic_paint/canvas.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fphysics/dynamic_paint/canvas.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fphysics/dynamic_paint/canvas.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

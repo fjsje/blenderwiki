@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>布尔修改器 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/modifiers/generate/booleans.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/js/version_switch.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../copyright.html" />
+    <link rel="next" title="建形修改器" href="build.html" />
+    <link rel="prev" title="倒角修改器" href="bevel.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../meshes/index.html">网格</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../surfaces/index.html">面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../texts/index.html">文本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../volumes/index.html">体积（卷标）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../empties.html">空物体</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">修改器</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../common_options.html">常见的修改器选项</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#modify">修改</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="../index.html#generate">生成</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="array.html">阵列修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="bevel.html">倒角修改器</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">布尔修改器</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#options">选项</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#solver-options">解算器选项</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="build.html">建形修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="decimate.html">精简修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="edge_split.html">拆边修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="geometry_nodes.html">几何节点修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mask.html">遮罩修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mesh_to_volume.html">网格转体积修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="mirror.html">镜像修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="multiresolution.html">多级精度修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="remesh.html">重构网格修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="screw.html">螺旋修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="skin.html">蒙皮修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="solidify.html">实体化修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="subdivision_surface.html">表面细分修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="triangulate.html">三角化修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="volume_to_mesh.html">体积到网格修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="weld.html">焊接修改器</a></li>
+<li class="toctree-l4"><a class="reference internal" href="wireframe.html">线框修改器</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#deform">形变</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../index.html#physics">物理</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../geometry_nodes/index.html">几何节点</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">建模</a></li>
+          <li class="breadcrumb-item"><a href="../index.html">修改器</a></li>
+      <li class="breadcrumb-item active">布尔修改器</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="boolean-modifier">
+<span id="bpy-types-booleanmodifier"></span><span id="index-0"></span><h1>布尔修改器<a class="headerlink" href="#boolean-modifier" title="Permalink to this heading"></a></h1>
+<p><em>布尔</em> 修改器对网格执行操作，而这些网格太复杂，无法通过手动编辑网格的步骤来实现。布尔修改器使用三个布尔运算之一，可用于从两个网格对象中创建一个网格：</p>
+<figure class="align-default" id="id1">
+<img alt="../../../_images/modeling_modifiers_generate_booleans_union-intersect-difference-examples.png" src="../../../_images/modeling_modifiers_generate_booleans_union-intersect-difference-examples.png" />
+<figcaption>
+<p><span class="caption-text">立方体和经纬球之间的交集、并集、差集。这个修改器以立方体作为目标，作用于球体上。</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>此修改器需要第二个网格对象或网格对象集合作为操作的目标（第二个操作数）。</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>只有<a class="reference internal" href="../../../glossary/index.html#term-Manifold"><span class="xref std std-term">流形</span></a>网格保证能够给出正确的结果，而其他情况（特别是 “开放” 的网格，<a class="reference internal" href="../../../glossary/index.html#term-Non-manifold"><span class="xref std std-term">非流形</span></a>但是没有任何自交）通常会工作得很好，但是在某些情况下可能会出现奇怪的问题和伪像。</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>在标记要显示边的物体后（在 <span class="menuselection">属性编辑器 ‣ 物体属性 ‣ 视图显示</span>，启用 <em>线框</em>），在移动物体时，可以看见边创建的过程。根据网状拓扑不同，还可以启用 X 射线和透明模式，并实时查看创建的拓扑结构。</p>
+</div>
+<section id="options">
+<h2>选项<a class="headerlink" href="#options" title="Permalink to this heading"></a></h2>
+<figure class="align-center" id="id2">
+<a class="reference internal image-reference" href="../../../_images/modeling_modifiers_generate_booleans_panel.png"><img alt="../../../_images/modeling_modifiers_generate_booleans_panel.png" src="../../../_images/modeling_modifiers_generate_booleans_panel.png" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-text">布尔修改器。</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<dl class="simple">
+<dt>操作</dt><dd><dl class="field-list simple">
+<dt class="field-odd">相交<span class="colon">:</span></dt>
+<dd class="field-odd"><p>目标网格和修改后的网格内部的所有内容都会被保留。如果目标是一个集合，那么只有 <em>所有</em> 的网格内部被保留。</p>
+</dd>
+<dt class="field-even">并集<span class="colon">:</span></dt>
+<dd class="field-even"><p>目标网格或集合将添加到修改后的网格中，从而删除所有内部面。</p>
+</dd>
+<dt class="field-odd">差集<span class="colon">:</span></dt>
+<dd class="field-odd"><p>从修改后的网格中减去目标网格或网格集合（保留目标网格或集合的 <em>外部</em> 的所有内容）。</p>
+</dd>
+</dl>
+</dd>
+<dt>运算对象类型</dt><dd><p>选择运算对象类型（目标）。</p>
+<dl class="field-list simple">
+<dt class="field-odd">物体<span class="colon">:</span></dt>
+<dd class="field-odd"><p>目标是一个网格物体。</p>
+</dd>
+<dt class="field-even">集合<span class="colon">:</span></dt>
+<dd class="field-even"><p>目标是一个集合。当目标是一个集合并且求解器是快速的时候，不允许进行交叉操作。</p>
+</dd>
+</dl>
+</dd>
+<dt>物体</dt><dd><p>目标网格物体的名称。</p>
+</dd>
+<dt>集合</dt><dd><p>目标集合的名称（如果解算器是“准确”，可能是空的，这在与“自身交集”选项结合时可能很有用）。</p>
+</dd>
+<dt>解算器</dt><dd><p>用来计算布尔相交的算法。</p>
+<dl class="field-list simple">
+<dt class="field-odd">快速<span class="colon">:</span></dt>
+<dd class="field-odd"><p>使用一个数学上简单的求解器，提供最佳性能；但是，这个求解器缺乏对重叠几何的支持。</p>
+</dd>
+<dt class="field-even">准确<span class="colon">:</span></dt>
+<dd class="field-even"><p>使用一个数学上复杂的求解器，提供最好的结果，并完全支持重叠的几何图形；但是，这个求解器比 <em>快速求解器</em> 慢得多。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<section id="solver-options">
+<h3>解算器选项<a class="headerlink" href="#solver-options" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>材质 <span class="guilabel">精确求解器</span></dt><dd><p>在新生面上设置材质的方法。</p>
+<dl class="field-list simple">
+<dt class="field-odd">基于编号<span class="colon">:</span></dt>
+<dd class="field-odd"><p>根据材质槽列表的顺序在新生面上设置材质。如果修改器物体上不存在材质，则面将使用相同的材质槽，如果物体没有足够的槽，则使用第一个材质槽。</p>
+</dd>
+<dt class="field-even">传递<span class="colon">:</span></dt>
+<dd class="field-even"><p>将材质从非空槽传递到结果网格，并根据需要添加新材质。对于空槽，回退到使用与操作数网格相同的材质编号。</p>
+</dd>
+</dl>
+</dd>
+<dt>自身交集 <span class="guilabel">精确解算器</span></dt><dd><p>正确计算一个或两个操作数有自交的情况，这涉及到更多的计算，使其更慢。</p>
+</dd>
+<dt>孔洞优化 <span class="guilabel">精确解算器</span></dt><dd><p>优化 <a class="reference internal" href="../../../glossary/index.html#term-Non-manifold"><span class="xref std std-term">非流形</span></a> 几何的布尔输出，代价是增加计算时间。由于对性能的影响，这个选项应该只在 <em>准确</em> 求解器对非模态几何显示出错误时才启用。</p>
+</dd>
+<dt>重叠阈值 <span class="guilabel">快速解算器</span></dt><dd><p>两个面之间的最大距离，认为它们是重叠的。这有助于解决这个求解器的局限性，如果布尔结果看起来出乎意料，可以尝试使用精确求解器。</p>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="bevel.html" class="btn btn-neutral float-left" title="倒角修改器" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="build.html" class="btn btn-neutral float-right" title="建形修改器" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/modeling/modifiers/generate/booleans.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/modeling/modifiers/generate/booleans.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fmodeling/modifiers/generate/booleans.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fmodeling/modifiers/generate/booleans.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

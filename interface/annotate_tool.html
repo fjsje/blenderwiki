@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>标注 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/interface/annotate_tool.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/js/version_switch.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="next" title="选择" href="selecting.html" />
+    <link rel="prev" title="撤销 &amp; 重做" href="undo_redo.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">用户界面</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="index.html#window-system">窗口系统</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#keymap">键位映射</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#interface-controls">界面控件</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html#tools-operators">工具 &amp; 操作</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="tool_system.html">工具系统</a></li>
+<li class="toctree-l3"><a class="reference internal" href="operators.html">操作项</a></li>
+<li class="toctree-l3"><a class="reference internal" href="undo_redo.html">撤销 &amp; 重做</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">标注</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#annotation-tools">标注工具</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#tool-settings">工具设置</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#common">通用选项</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#annotate-line">标注直线</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#annotation-layers">标注层</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#onion-skin">洋葱皮</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="selecting.html">选择</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">用户界面</a></li>
+      <li class="breadcrumb-item active">标注</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="annotations">
+<h1>标注<a class="headerlink" href="#annotations" title="Permalink to this heading"></a></h1>
+<p>标注工具在多个编辑器中可用。它可以用来为3D对象或节点设置等添加注释。下面的截图中的箭头就是一个标注。</p>
+<figure class="align-center" id="id1">
+<img alt="../_images/interface_annotate-tool_node-editor.png" src="../_images/interface_annotate-tool_node-editor.png" />
+<figcaption>
+<p><span class="caption-text">在节点编辑器里的标注工具。</span><a class="headerlink" href="#id1" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<section id="annotation-tools">
+<span id="tool-annotate"></span><h2>标注工具<a class="headerlink" href="#annotation-tools" title="Permalink to this heading"></a></h2>
+<p>标注工具可以在工具栏中激活，有以下子工具：</p>
+<dl class="simple" id="tool-annotate-freehand">
+<dt>标注</dt><dd><p>在主区域中绘制自由笔划。</p>
+</dd>
+</dl>
+<dl class="simple" id="tool-annotate-line">
+<dt>标注直线</dt><dd><p>点击并拖动以创建一条线。可选地，您可以为直线的开头和结尾选择箭头样式。</p>
+</dd>
+</dl>
+<dl class="simple" id="tool-annotate-polygon">
+<dt>标注多段线</dt><dd><p>多次点击以创建多个连接线，然后按 <kbd class="kbd docutils literal notranslate">回车</kbd> 或 <kbd class="kbd docutils literal notranslate">Esc</kbd> 确认。</p>
+</dd>
+</dl>
+<dl class="simple" id="tool-annotate-eraser">
+<dt>标注橡皮擦</dt><dd><p>点击并拖动来删除线条。橡皮擦有一个 <em>半径</em> 的设置，可以在 <span class="menuselection">工具设置</span> 中找到。</p>
+</dd>
+</dl>
+</section>
+<section id="tool-settings">
+<h2>工具设置<a class="headerlink" href="#tool-settings" title="Permalink to this heading"></a></h2>
+<section id="common">
+<h3>通用选项<a class="headerlink" href="#common" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>颜色</dt><dd><p>调整现有和新的笔画的颜色。</p>
+</dd>
+<dt>标注图层</dt><dd><p>一个弹出式菜单，显示当前层的名称，以访问<a class="reference internal" href="#annotation-layers">标注层</a>。</p>
+</dd>
+</dl>
+<span id="bpy-types-toolsettings-annotation-stroke-placement-view3d"></span><dl id="bpy-types-toolsettings-annotation-stroke-placement-view2d">
+<dt>放置</dt><dd><p>决定了标注的绘制位置。</p>
+<dl class="field-list simple">
+<dt class="field-odd">3D 游标<span class="colon">:</span></dt>
+<dd class="field-odd"><p>只在3D视口中可用。新的标注成为3D场景的一部分；它们被绘制在一个假想的平面上，这个平面穿过 <a class="reference internal" href="../editors/3dview/3d_cursor.html"><span class="doc">3D 游标</span></a> 并与你的视图对齐。</p>
+</dd>
+<dt class="field-even">曲面<span class="colon">:</span></dt>
+<dd class="field-even"><p>只在3D视口中可用。新的标注会成为三维场景的一部分；它们会被绘制到鼠标下的物体表面。如果没有表面，效果会跟选择 <em>3D游标</em> 模式相同。</p>
+</dd>
+<dt class="field-odd">图像<span class="colon">:</span></dt>
+<dd class="field-odd"><p>只在2D编辑器中可用，比如<a class="reference internal" href="../editors/image/introduction.html"><span class="doc">图像编辑器</span></a>。标注成为二维空间的一部分，意味着它们的位置和大小会随着你在编辑器中的平移和缩放而改变。</p>
+</dd>
+<dt class="field-even">视图<span class="colon">:</span></dt>
+<dd class="field-even"><p>新的标注是二维的，并被粘在屏幕上。无论你在编辑器中如何平移、旋转或缩放，它们都保持相同的位置、旋转和大小。</p>
+</dd>
+</dl>
+</dd>
+<dt>笔画防抖</dt><dd><p>通过延迟和校正点的位置来帮助减少绘画时的笔锋抖动。</p>
+<dl class="simple">
+<dt>半径</dt><dd><p>笔锋继续前，到最后一点的最小距离。</p>
+</dd>
+<dt>系数</dt><dd><p>一个平滑的因子，较高的值会产生较平滑的笔划，但绘图感就像您在拉动笔锋一样。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+<section id="annotate-line">
+<h3>标注直线<a class="headerlink" href="#annotate-line" title="Permalink to this heading"></a></h3>
+<dl class="simple">
+<dt>起始、结束样式</dt><dd><p>在线段的起点或终点使用的装饰。例如，这可以用于创建箭头以指出场景中的特定细节。</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="annotation-layers">
+<h2>标注层<a class="headerlink" href="#annotation-layers" title="Permalink to this heading"></a></h2>
+<p>当标注工具被启用时，管理多层的设置可以在 <span class="menuselection">侧栏 ‣ 视图 ‣ 标注</span> 面板中找到。</p>
+<dl class="simple" id="bpy-types-gpencillayer-annotation-opacity">
+<dt>不透明度</dt><dd><p>调整现有和新的笔画的不透明度。</p>
+</dd>
+<dt>厚（宽）度</dt><dd><p>调整线段的厚度。</p>
+</dd>
+</dl>
+<section id="onion-skin">
+<span id="bpy-types-gpencillayer-use-annotation-onion-skinning"></span><h3>洋葱皮<a class="headerlink" href="#onion-skin" title="Permalink to this heading"></a></h3>
+<p>显示当前帧之前和之后的笔画的重影图像。洋葱皮只在3D视口和序列器中起作用。请参阅蜡笔的文档，以获得对<a class="reference internal" href="../grease_pencil/properties/onion_skinning.html"><span class="doc">洋葱皮</span></a>的解释。</p>
+<span id="bpy-types-gpencillayer-annotation-onion-after-color"></span><span id="bpy-types-gpencillayer-annotation-onion-before-range"></span><span id="bpy-types-gpencillayer-annotation-onion-before-color"></span><dl class="simple" id="bpy-types-gpencillayer-annotation-onion-after-range">
+<dt>之前/之后</dt><dd><p>在虚拟帧上当前帧前后使用的颜色。数字则定义了在当前帧前后显示多少帧。</p>
+</dd>
+</dl>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="undo_redo.html" class="btn btn-neutral float-left" title="撤销 &amp; 重做" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="selecting.html" class="btn btn-neutral float-right" title="选择" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/interface/annotate_tool.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/interface/annotate_tool.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Finterface/annotate_tool.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Finterface/annotate_tool.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

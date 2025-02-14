@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>曲线编辑 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/grease_pencil/modes/edit/curve_editing.html" />
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+        <script src="../../../_static/sphinx_highlight.js"></script>
+        <script src="../../../_static/js/version_switch.js"></script>
+    <script src="../../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../../copyright.html" />
+    <link rel="next" title="蜡笔菜单" href="grease_pencil_menu.html" />
+    <link rel="prev" title="编辑工具" href="tools.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">蜡笔</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../../introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../object.html">物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../structure.html">结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../primitives.html">基本体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../selecting.html">选择</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multiframe.html">多重帧</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../properties/index.html">属性</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../modifiers/index.html">修改器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../visual_effects/index.html">视觉效果</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../materials/index.html">材质</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../animation/index.html">动画</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="../../index.html#modes">模式</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../draw/index.html">绘制模式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../sculpting/index.html">雕刻模式</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">编辑模式</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tools.html">编辑工具</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">曲线编辑</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#usage">用法</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#curve-editing-popover">Curve Editing Popover</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#curve-data">曲线数据</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#operators">操作项</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="grease_pencil_menu.html">蜡笔菜单</a></li>
+<li class="toctree-l4"><a class="reference internal" href="stroke_menu.html">笔画菜单</a></li>
+<li class="toctree-l4"><a class="reference internal" href="point_menu.html">点菜单</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../vertex_paint/index.html">顶点绘制模式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../weight_paint/index.html">权重绘制模式</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../object/index.html">物体模式</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../index.html">蜡笔</a></li>
+          <li class="breadcrumb-item"><a href="index.html">编辑模式</a></li>
+      <li class="breadcrumb-item active">曲线编辑</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="curve-editing">
+<span id="bpy-types-greasepencil-use-curve-edit"></span><h1>曲线编辑<a class="headerlink" href="#curve-editing" title="Permalink to this heading"></a></h1>
+<p>Curve Editing allows you to edit Grease Pencil strokes using Bézier curves.</p>
+<section id="usage">
+<h2>用法<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h2>
+<ol class="arabic simple">
+<li><p>Select the desired strokes to edit as curves.</p></li>
+<li><p>Activate curve editing in the 3D Viewport's header with the toggle button (Bézier curve icon).</p></li>
+<li><p>激活后，您可以：</p>
+<ul class="simple">
+<li><p>Edit the curves with the curve handles.</p></li>
+<li><p>Select strokes to automatically convert them to curves.</p></li>
+</ul>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Selecting <a class="reference internal" href="../../selecting.html"><span class="doc">points in between</span></a> is disabled while in curve editing is active.</p>
+</div>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p>The curve editing handles display can be tweaked in
+the <a class="reference internal" href="../../../editors/3dview/display/overlays.html#bpy-types-view3doverlay-display-handle"><span class="std std-ref">Overlays</span></a> popover.</p>
+</div>
+</section>
+<section id="curve-editing-popover">
+<h2>Curve Editing Popover<a class="headerlink" href="#curve-editing-popover" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">面板<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">3D 视图 ‣ 标题栏 ‣ 曲线编辑</span></p>
+</dd>
+</dl>
+</div>
+<figure class="align-default" id="id2">
+<img alt="../../../_images/grease-pencil_modes_edit_curve-editing_panel.png" src="../../../_images/grease-pencil_modes_edit_curve-editing_panel.png" />
+<figcaption>
+<p><span class="caption-text">Curve Editing popover.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<dl class="simple" id="bpy-types-greasepencil-edit-curve-resolution">
+<dt>曲线分辨率</dt><dd><p>Number of points generated along each curve segment (between two handles) if <em>Adaptive Resolution</em> is disabled.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-greasepencil-curve-edit-threshold">
+<dt>阈值</dt><dd><p>Threshold used for curve fitting. Maximum distance the fitted curve can deviate from the target stroke.
+A threshold of 0.0 will generate a curve point for every stroke point. Higher thresholds will result in higher
+approximations of the target stroke but also smoother curve.</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-greasepencil-curve-edit-corner-angle">
+<dt>拐角角度</dt><dd><p>Any detected corner with an angle above the specified amount will create a sharp (non-aligned) handle.</p>
+</dd>
+</dl>
+<dl id="bpy-types-greasepencil-use-adaptive-curve-resolution">
+<dt>自适应分辨率</dt><dd><p>When activated, the <em>Curve Resolution</em> is no longer constant for all curve segments but calculated dynamically.
+The length of each segment is approximated, then multiplied by the <em>Curve Resolution</em> and rounded down.
+This will be the number of points to generate for that segment.
+With Adaptive Resolution the points will be distribute more evenly across all the strokes.
+The <em>Curve Resolution</em> option will change the point density.</p>
+<table class="docutils align-default" id="id3">
+<caption><span class="caption-text">自适应分辨率。</span><a class="headerlink" href="#id3" title="Permalink to this table"></a></caption>
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id4">
+<a class="reference internal image-reference" href="../../../_images/grease-pencil_modes_edit_curve-editing_adaptive-resolution-off.png"><img alt="../../../_images/grease-pencil_modes_edit_curve-editing_adaptive-resolution-off.png" src="../../../_images/grease-pencil_modes_edit_curve-editing_adaptive-resolution-off.png" style="width: 320px;" /></a>
+<figcaption>
+<p><span class="caption-text">关.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id5">
+<a class="reference internal image-reference" href="../../../_images/grease-pencil_modes_edit_curve-editing_adaptive-resolution-on.png"><img alt="../../../_images/grease-pencil_modes_edit_curve-editing_adaptive-resolution-on.png" src="../../../_images/grease-pencil_modes_edit_curve-editing_adaptive-resolution-on.png" style="width: 320px;" /></a>
+<figcaption>
+<p><span class="caption-text">开.</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</dd>
+</dl>
+</section>
+<section id="curve-data">
+<h2>曲线数据<a class="headerlink" href="#curve-data" title="Permalink to this heading"></a></h2>
+<p>Once a stroke has been converted to a curve, the data will be saved to the file.
+When Curve Editing is deactivated and the curve is changed, for example using
+<a class="reference internal" href="../sculpting/introduction.html"><span class="doc">Sculpt Mode</span></a>,
+then the curve will be refitted once Curve Editing is activated again.</p>
+</section>
+<section id="operators">
+<h2>操作项<a class="headerlink" href="#operators" title="Permalink to this heading"></a></h2>
+<p>Curve editing is currently more limited than stroke editing.
+Every operation in Edit Mode for strokes and stroke points work for curves as well except for the following:</p>
+<ul class="simple">
+<li><p>复制操作</p></li>
+<li><p>复制与粘贴</p></li>
+<li><p>吸附到游标与游标到选中项</p></li>
+<li><p>翻转</p></li>
+<li><p>简化与简化固定</p></li>
+<li><p>修剪</p></li>
+<li><p>分离</p></li>
+<li><p>拆分</p></li>
+<li><p>插值</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="tools.html" class="btn btn-neutral float-left" title="编辑工具" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="grease_pencil_menu.html" class="btn btn-neutral float-right" title="蜡笔菜单" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/grease_pencil/modes/edit/curve_editing.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/grease_pencil/modes/edit/curve_editing.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fgrease_pencil/modes/edit/curve_editing.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fgrease_pencil/modes/edit/curve_editing.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

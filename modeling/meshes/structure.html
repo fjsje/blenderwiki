@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>结构 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/modeling/meshes/structure.html" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
+        <script src="../../_static/js/version_switch.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="copyright" title="Copyright" href="../../copyright.html" />
+    <link rel="next" title="基本体" href="primitives.html" />
+    <link rel="prev" title="简介" href="introduction.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">建模</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../introduction.html">简介</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">网格</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">结构</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#vertices">顶点</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#edges">边</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#faces">面</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#normals">法向</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#properties">属性</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#advanced-smooth-shading-sharp-edges">高级平滑着色与锐边</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#custom-split-normals">自定义拆边法向</a><ul>
+<li class="toctree-l6"><a class="reference internal" href="#enabling-custom-split-normals">启用自定义拆边法向</a></li>
+<li class="toctree-l6"><a class="reference internal" href="#editing-custom-split-normals">编辑自定义拆边法向</a></li>
+</ul>
+</li>
+<li class="toctree-l5"><a class="reference internal" href="#importing-custom-split-normals">导入自定义拆边法向数据</a></li>
+</ul>
+</li>
+<li class="toctree-l4"><a class="reference internal" href="#topology">拓扑</a><ul>
+<li class="toctree-l5"><a class="reference internal" href="#loops">循环</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#poles">极点</a></li>
+<li class="toctree-l5"><a class="reference internal" href="#non-manifold">非流形</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="primitives.html">基本体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tools/index.html">工具</a></li>
+<li class="toctree-l3"><a class="reference internal" href="selecting/index.html">选择</a></li>
+<li class="toctree-l3"><a class="reference internal" href="editing/index.html">编辑</a></li>
+<li class="toctree-l3"><a class="reference internal" href="properties/index.html">属性</a></li>
+<li class="toctree-l3"><a class="reference internal" href="uv/index.html">UV</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mesh_analysis.html">网格分析</a></li>
+<li class="toctree-l3"><a class="reference internal" href="retopology.html">重拓扑</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../curves/index.html">曲线</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../surfaces/index.html">面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../metas/index.html">融球</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../texts/index.html">文本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../volumes/index.html">体积（卷标）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../empties.html">空物体</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../modifiers/index.html">修改器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../geometry_nodes/index.html">几何节点</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../physics/index.html">物理</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../render/index.html">渲染</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../index.html">建模</a></li>
+          <li class="breadcrumb-item"><a href="index.html">网格</a></li>
+      <li class="breadcrumb-item active">结构</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="structure">
+<h1>结构<a class="headerlink" href="#structure" title="Permalink to this heading"></a></h1>
+<p>对于一切网格，都是由三个基本结构构成的：<em>顶点</em>、<em>边</em> 和 <em>面</em>。</p>
+<figure class="align-default" id="id4">
+<a class="reference internal image-reference" href="../../_images/modeling_meshes_structure_example.svg"><img alt="../../_images/modeling_meshes_structure_example.svg" src="../../_images/modeling_meshes_structure_example.svg" width="600px" /></a>
+<figcaption>
+<p><span class="caption-text">网格结构示例。</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<section id="vertices">
+<h2>顶点<a class="headerlink" href="#vertices" title="Permalink to this heading"></a></h2>
+<p>网格的最基本部分是顶点，它是 3D 空间中的单个点或位置。顶点在编辑模式下的 3D 视口中表示为小点。物体的顶点存储为坐标数组。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>不要将物体的<a class="reference internal" href="../../scene_layout/object/origin.html"><span class="doc">原点</span></a>误认为顶点。它看起来很相似，但更大，而且不能选中。</p>
+<figure class="align-default" id="id5">
+<img alt="../../_images/modeling_meshes_structure_cube-example.png" src="../../_images/modeling_meshes_structure_cube-example.png" />
+<figcaption>
+<p><span class="caption-text">顶点被标记为 &quot;A&quot;；&quot;B&quot; 是物体的原点。</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</div>
+</section>
+<section id="edges">
+<h2>边<a class="headerlink" href="#edges" title="Permalink to this heading"></a></h2>
+<p>边是连接两个顶点之间的直线。当你在线框视图着色方式下查看网格时边是 &quot;线&quot;。这些线条通常不会出现在渲染图像上。它们用于构造面。</p>
+</section>
+<section id="faces">
+<h2>面<a class="headerlink" href="#faces" title="Permalink to this heading"></a></h2>
+<p>面是用来构建物体的实际表面。它们是你在渲染网格时看到的东西。如果这个区域不包含面，它在渲染的图像中就会是透明的或不存在的。</p>
+<p>三个（三角面）、四个（四边面）或更多（N 边面）顶点之间的区域定义为面，每侧都有一条边，通常缩写为 <em>tris、quads 和 n-gons</em> 。</p>
+<p>三角形总是平坦的，因此易于计算。另一方面，四边形 &quot;利于形变&quot;，因此常用于动画和细分建模。</p>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://blender.stackexchange.com/questions/2931">为什么在角色动画中应该避免三角面的出现？</a></p></li>
+<li><p><a class="reference external" href="https://blender.stackexchange.com/questions/89">何时应该使用多边面，何时不应该使用？</a></p></li>
+</ul>
+</div>
+</section>
+<section id="normals">
+<span id="modeling-meshes-structure-normals"></span><h2>法向<a class="headerlink" href="#normals" title="Permalink to this heading"></a></h2>
+<p>在几何中，法向是指垂直于某种元素（通常是一个三角面或一个曲面）的方向或直线，但也可以是相对于一条直线、曲线上一点的切线或曲面上一点的相切面。</p>
+<figure class="align-default" id="id6">
+<a class="reference internal image-reference" href="../../_images/modeling_meshes_structure_viewport.png"><img alt="../../_images/modeling_meshes_structure_viewport.png" src="../../_images/modeling_meshes_structure_viewport.png" style="width: 350px;" /></a>
+<figcaption>
+<p><span class="caption-text">显示环体面法向。</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>在上图中，每条蓝线表示环体上一个面的法向。每条线都垂直于其所在的面。法向显示可以在编辑模式开启，位于<a class="reference internal" href="../../editors/3dview/display/overlays.html#mesh-display-normals"><span class="std std-ref">网格显示视图叠加面板</span></a>。</p>
+<section id="properties">
+<span id="modeling-meshes-editing-normals-properties"></span><h3>属性<a class="headerlink" href="#properties" title="Permalink to this heading"></a></h3>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">面板<span class="colon">:</span></dt>
+<dd class="field-odd"><p><span class="menuselection">属性 ‣ 物体数据 ‣ 法向</span></p>
+</dd>
+</dl>
+</div>
+<figure class="align-default" id="id7">
+<img alt="../../_images/modeling_meshes_structure_normals-panel.png" src="../../_images/modeling_meshes_structure_normals-panel.png" />
+<figcaption>
+<p><span class="caption-text">法向面板。</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<span id="bpy-types-mesh-use-auto-smooth"></span><span id="auto-smooth"></span><dl class="simple" id="bpy-types-mesh-auto-smooth-angle">
+<dt>自动平滑</dt><dd><p>Edges where an angle between the faces is smaller than specified in the <em>Angle</em> field will be smoothed,
+when shading of these parts of the mesh is set to smooth. This is an easier way to combine smooth and sharp edges.</p>
+</dd>
+</dl>
+<figure class="align-default" id="id8">
+<a class="reference internal image-reference" href="../../_images/modeling_meshes_structure_example-auto-smooth.png"><img alt="../../_images/modeling_meshes_structure_example-auto-smooth.png" src="../../_images/modeling_meshes_structure_example-auto-smooth.png" style="width: 250px;" /></a>
+<figcaption>
+<p><span class="caption-text">Example mesh with <em>Auto Smooth</em> enabled.</span><a class="headerlink" href="#id8" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<section id="advanced-smooth-shading-sharp-edges">
+<span id="modeling-meshes-normals-sharp-edge"></span><h4>高级平滑着色与锐边<a class="headerlink" href="#advanced-smooth-shading-sharp-edges" title="Permalink to this heading"></a></h4>
+<p>By default in Blender, with basic normal computing behavior, a sharp edge is always defined
+as an edge being either non-manifold, or having at least one of its faces defined as flat.</p>
+<p>Enabling the <em>Auto Smooth</em> setting adds an extra parameter to define a sharp edge,
+the <em>Angle</em> threshold between two neighbor faces, above which the edge will always be considered as sharp.</p>
+<p><em>Auto Smooth</em> also enables <em>Custom Split Normals</em> handling, which can be either defined (and edited)
+as a <a class="reference internal" href="editing/mesh/normals.html"><span class="doc">mesh data layer</span></a>, or generated on the fly by modifiers.
+In any case, when a mesh gets custom normals, they always supersede the default ones computed by <em>Auto Smooth</em>.</p>
+<p>Sharp edges may still be used by the custom normals modifiers to compute their normals,
+depending on their settings.</p>
+</section>
+</section>
+<section id="custom-split-normals">
+<span id="modeling-meshes-normals-custom"></span><h3>自定义拆边法向<a class="headerlink" href="#custom-split-normals" title="Permalink to this heading"></a></h3>
+<p><em>自定义拆边法向</em> 是一种通过使法向指向默认法向和自动计算法向以外的方向来进行微调和假着色的方式。该方式主要用于游戏开发，可以抵消一部分低多边形物体所带来的问题（最常见的例子就是低多边形树、灌木、草等。以及一些圆形的角落）。</p>
+<p>Blender 支持在 '光滑扇形' 上自定义法线，其被定义为一组共享相同顶点的相邻面并彼此以 '光滑边' 进行连接。这意味着您可以单独定义某组面拐角的法向、某部分相邻面片的法向或某顶点。</p>
+<section id="enabling-custom-split-normals">
+<h4>启用自定义拆边法向<a class="headerlink" href="#enabling-custom-split-normals" title="Permalink to this heading"></a></h4>
+<div class="refbox admonition" id="id2">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">网格 ‣ 法向 ‣ 拆分</span></p>
+</dd>
+</dl>
+</div>
+<p>Enables custom split normals.
+Also, any of the custom normal editing tools (see below) will, as a convenience,
+enable custom normals if they are not already enabled.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This has the side effect of enabling <a class="reference internal" href="#auto-smooth"><span class="std std-ref">Auto Smooth</span></a>, as that is necessary to use custom normals.
+Once you have custom normals, the angle threshold of the <em>Auto Smooth</em> behavior is disabled --
+all non-sharp-tagged edges will be considered as smooth, disregarding the angle between their faces.</p>
+</div>
+</section>
+<section id="editing-custom-split-normals">
+<h4>编辑自定义拆边法向<a class="headerlink" href="#editing-custom-split-normals" title="Permalink to this heading"></a></h4>
+<div class="refbox admonition" id="id3">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">模式<span class="colon">:</span></dt>
+<dd class="field-odd"><p>编辑模式</p>
+</dd>
+<dt class="field-even">菜单<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">网格 ‣ 法向</span></p>
+</dd>
+<dt class="field-odd">快捷键<span class="colon">:</span></dt>
+<dd class="field-odd"><p><kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Alt</kbd>-<kbd class="kbd docutils literal notranslate">N</kbd></kbd></p>
+</dd>
+</dl>
+</div>
+<p>有一些工具用于编辑自定义拆边法向。自定义法向网格编辑工具能够作用于所有法向（默认选项），或仅作用于选中项。选择一个与特定顶点或面相关联的自定义法向：</p>
+<ul class="simple">
+<li><p>使元素选择模式同时支持顶点和面（使用 <kbd class="kbd compound docutils literal notranslate"><kbd class="kbd docutils literal notranslate">Shift</kbd>-<kbd class="kbd docutils literal notranslate">鼠标左键</kbd></kbd> 以同时启用第二个选择模式）。</p></li>
+<li><p>选择一个或多个顶点，然后选择一个面。可以继续重复操作来选择更多的顶点和不同的面。如果打开编辑模式叠加层选项 <em>显示各面顶点法线为直线</em> 更容易观察这些工具。</p></li>
+</ul>
+<div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="editing/mesh/normals.html"><span class="doc">编辑法线</span></a>。</p>
+</div>
+</section>
+</section>
+<section id="importing-custom-split-normals">
+<h3>导入自定义拆边法向数据<a class="headerlink" href="#importing-custom-split-normals" title="Permalink to this heading"></a></h3>
+<p>某些工具，特别是 <abbr title="Computer-Aided Design 计算机辅助设计">CAD</abbr> 这类工具，常常会在转换为网格时生成不规则几何结构（非常薄或非常长的三角形等）。自动计算得到的法线在这类几何体上的效果常常不太好，因此能够导入和使用 CAD 工具自己生成的法向数据就显得尤为重要。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>当前，只有 <a class="reference internal" href="../../addons/import_export/scene_fbx.html"><span class="doc">FBX 导入器</span></a>和 <a class="reference internal" href="../../files/import_export/alembic.html"><span class="doc">Alembic 导入器</span></a>可用于导入自定义法向。</p>
+</div>
+</section>
+</section>
+<section id="topology">
+<h2>拓扑<a class="headerlink" href="#topology" title="Permalink to this heading"></a></h2>
+<section id="loops">
+<h3>循环<a class="headerlink" href="#loops" title="Permalink to this heading"></a></h3>
+<figure class="align-default" id="id9">
+<span id="fig-mesh-topo-loop"></span><img alt="../../_images/modeling_meshes_structure_edge-face-loops.png" src="../../_images/modeling_meshes_structure_edge-face-loops.png" />
+<figcaption>
+<p><span class="caption-text">边和面循环。</span><a class="headerlink" href="#id9" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p><em>边</em> 和 <em>面</em> 循环是形成连续 &quot;循环&quot; 的一组面或边，如上图 <a class="reference internal" href="#fig-mesh-topo-loop"><span class="std std-ref">边和面循环。</span></a> 所示。</p>
+<p>在上图中，不以极点结尾的循环是闭合的（1 和 3）。它们在同一顶点开始和结束，并将模型划分为两个分区。循环可以是处理网格的特定连续区域的快速而强大的工具，并且是有机角色动画的先决条件。有关如何在 Blender 中使用循环的详细说明，请参阅：<a class="reference internal" href="selecting/loops.html#bpy-ops-mesh-loop-multi-select"><span class="std std-ref">选择循环边</span></a>。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>请注意，循环（2 和 4）不能围绕整个模型。循环在所谓的极点上中断，因为没有从极点继续循环的路径。极点是连接到三个、五个或更多边的顶点。因此，与一条、两条或四条边连接的顶点不是极点。</p>
+</div>
+<p class="rubric" id="modeling-mesh-structure-edge-loops">边循环</p>
+<p>图 <a class="reference internal" href="#fig-mesh-topo-loop"><span class="std std-ref">边和面循环。</span></a> 中 1 和 2 为边循环。循环边上的顶点需满足：每个顶点正好有两个不在循环中，且分别位于循环两侧的相邻顶点（极点情形下的首尾端点例外）。</p>
+<p>边循环是一个重要的概念，特别是在生物（细分）建模和角色动画中。正确使用的话，可以使用相对少的顶点构造模型，使其用在细分表面和变形动画时，看起来非常自然。</p>
+<p>以有机建模中的 <a class="reference internal" href="#fig-mesh-topo-loop"><span class="std std-ref">边和面循环。</span></a> 为例：边循环是按照皮肤和底层肌肉的自然轮廓和变形线进行的。在角色移动时变形较大的区域，例如肩部或膝盖，环形结构比较密集。</p>
+<p>有关使用边循环的更多详细信息，请参阅<a class="reference internal" href="selecting/loops.html#bpy-ops-mesh-loop-multi-select"><span class="std std-ref">选择循环边</span></a>。</p>
+<p class="rubric">面循环</p>
+<p>这些是边循环的逻辑延伸，它们由两个边循环之间的面组成，如图 <a class="reference internal" href="#fig-mesh-topo-loop"><span class="std std-ref">边和面循环。</span></a> 中的循环（3 和 4）所示。请注意，对于非闭合循环（4），包含极点的面不包括在面循环中。</p>
+<p>有关使用面循环的更多详细信息，请参考<a class="reference internal" href="selecting/loops.html#modeling-meshes-selecting-face-loops"><span class="std std-ref">面循环选择</span></a>。</p>
+</section>
+<section id="poles">
+<h3>极点<a class="headerlink" href="#poles" title="Permalink to this heading"></a></h3>
+<p>参阅 <a class="reference external" href="https://blender.stackexchange.com/a/133676/55">N 极点（五星点）和 E 极点（三星点）</a>。</p>
+</section>
+<section id="non-manifold">
+<h3>非流形<a class="headerlink" href="#non-manifold" title="Permalink to this heading"></a></h3>
+<p>详见<a class="reference internal" href="../../glossary/index.html#term-Non-manifold"><span class="xref std std-term">非流形</span></a>。</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="introduction.html" class="btn btn-neutral float-left" title="简介" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="primitives.html" class="btn btn-neutral float-right" title="基本体" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/modeling/meshes/structure.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/modeling/meshes/structure.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Fmodeling/meshes/structure.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Fmodeling/meshes/structure.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>

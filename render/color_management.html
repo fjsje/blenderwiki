@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh-hans" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>色彩管理 &mdash; Blender Manual</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme_overrides.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/version_switch.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="canonical" href="https://docs.blender.org/manual/en/latest/render/color_management.html" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script src="../_static/js/version_switch.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="search" type="application/opensearchdescription+xml"
+          title="Search within Blender Manual"
+          href="../_static/opensearch.xml"/>
+<link rel="alternate" hreflang="en" href="https://docs.blender.org/manual/en/latest/" />
+<link rel="alternate" hreflang="ar" href="https://docs.blender.org/manual/ar/latest/" />
+<link rel="alternate" hreflang="de" href="https://docs.blender.org/manual/de/latest/" />
+<link rel="alternate" hreflang="es" href="https://docs.blender.org/manual/es/latest/" />
+<link rel="alternate" hreflang="fi" href="https://docs.blender.org/manual/fi/latest/" />
+<link rel="alternate" hreflang="fr" href="https://docs.blender.org/manual/fr/latest/" />
+<link rel="alternate" hreflang="id" href="https://docs.blender.org/manual/id/latest/" />
+<link rel="alternate" hreflang="it" href="https://docs.blender.org/manual/it/latest/" />
+<link rel="alternate" hreflang="ja" href="https://docs.blender.org/manual/ja/latest/" />
+<link rel="alternate" hreflang="ko" href="https://docs.blender.org/manual/ko/latest/" />
+<link rel="alternate" hreflang="nb" href="https://docs.blender.org/manual/nb/latest/" />
+<link rel="alternate" hreflang="pt" href="https://docs.blender.org/manual/pt/latest/" />
+<link rel="alternate" hreflang="ru" href="https://docs.blender.org/manual/ru/latest/" />
+<link rel="alternate" hreflang="sk" href="https://docs.blender.org/manual/sk/latest/" />
+<link rel="alternate" hreflang="sl" href="https://docs.blender.org/manual/sl/latest/" />
+<link rel="alternate" hreflang="sr" href="https://docs.blender.org/manual/sr/latest/" />
+<link rel="alternate" hreflang="uk" href="https://docs.blender.org/manual/uk/latest/" />
+<link rel="alternate" hreflang="vi" href="https://docs.blender.org/manual/vi/latest/" />
+<link rel="alternate" hreflang="zh-Hans" href="https://docs.blender.org/manual/zh-hans/latest/" />
+<link rel="alternate" hreflang="zh-Hant" href="https://docs.blender.org/manual/zh-hant/latest/" />
+<link rel="alternate" hreflang="x-default" href="https://docs.blender.org/manual/en/latest/" />
+
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="copyright" title="Copyright" href="../copyright.html" />
+    <link rel="next" title="Freestyle" href="freestyle/index.html" />
+    <link rel="prev" title="开放着色语言" href="shader_nodes/osl.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Blender 3.6 Manual
+              <img src="../_static/blender-logo.svg" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">入门</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/about/index.html">关于 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/installing/index.html">安装 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/configuration/index.html">配置 Blender</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting_started/help.html">帮助系统</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">章节</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../interface/index.html">用户界面</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../editors/index.html">编辑器</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../scene_layout/index.html">场景 &amp; 物体</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modeling/index.html">建模</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../sculpt_paint/index.html">雕刻 &amp; 绘制</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../grease_pencil/index.html">蜡笔</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animation/index.html">动画 &amp; 绑定</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../physics/index.html">物理</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">渲染</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="eevee/index.html">EEVEE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cycles/index.html">Cycles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="workbench/index.html">工作台</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cameras.html">摄像机</a></li>
+<li class="toctree-l2"><a class="reference internal" href="lights/index.html">灯光</a></li>
+<li class="toctree-l2"><a class="reference internal" href="materials/index.html">材质</a></li>
+<li class="toctree-l2"><a class="reference internal" href="shader_nodes/index.html">着色节点</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">色彩管理</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#workflow">工作流程</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#scene-linear-color-space">场景线性色彩空间</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#display-transforms">显示变换</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#image-color-spaces">图像色彩空间</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#render-settings">渲染设置</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#use-curves">使用曲线</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#image-files">图像文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#opencolorio-configuration">OpenColorIO 配置</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#default-opencolorio-configuration">默认的 OpenColorIO 配置</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="freestyle/index.html">Freestyle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="layers/index.html">层 &amp; 通道</a></li>
+<li class="toctree-l2"><a class="reference internal" href="output/index.html">渲染输出</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../compositing/index.html">合成</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../movie_clip/index.html">运动追踪 &amp; 遮罩</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../video_editing/index.html">视频编辑</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../files/index.html">资产、文件 &amp; 数据系统</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../addons/index.html">插件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../advanced/index.html">高级</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../troubleshooting/index.html">问题排查</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../glossary/index.html">词汇表</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">手册索引</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">参与</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contribute/index.html">贡献文档</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Blender 3.6 Manual</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">渲染</a></li>
+      <li class="breadcrumb-item active">色彩管理</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="color-management">
+<span id="bpy-types-colormanagedviewsettings"></span><span id="bpy-types-colormanageddisplaysettings"></span><span id="bpy-types-colormanagedsequencercolorspacesettings"></span><h1>色彩管理<a class="headerlink" href="#color-management" title="Permalink to this heading"></a></h1>
+<p>色彩管理对于创建物理上准确且在多个显示设备上看起来很棒的渲染和资源非常重要。它既用于确保管道的所有部分正确解释颜色，也用于进行曝光和颜色分级等艺术变化。</p>
+<figure class="align-right" id="id2">
+<a class="reference internal image-reference" href="../_images/render_color-management_different-exposures.jpg"><img alt="../_images/render_color-management_different-exposures.jpg" src="../_images/render_color-management_different-exposures.jpg" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-text">同一张渲染图像的不同曝光情况。</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>Blender 的颜色管理基于 <a class="reference external" href="https://opencolorio.org/">OpenColorIO</a> 库。通过在多个应用进程中使用相同的 OpenColorIO 配置，将使用相同的色彩空间和变换来获得一致的结果。</p>
+<section id="workflow">
+<h2>工作流程<a class="headerlink" href="#workflow" title="Permalink to this heading"></a></h2>
+<section id="scene-linear-color-space">
+<h3>场景线性色彩空间<a class="headerlink" href="#scene-linear-color-space" title="Permalink to this heading"></a></h3>
+<p>为了获得正确的结果，需要不同的 <a class="reference internal" href="../glossary/index.html#term-Color-Space"><span class="xref std std-term">色彩空间</span></a> 来渲染显示和存储图像。渲染与合成最好在 <em>场景线性</em> 色彩空间中完成，该空间更接近自然，并使计算在物理上更准确。</p>
+<figure class="align-center" id="id3">
+<a class="reference internal image-reference" href="../_images/render_color-management_linear-workflow.svg"><img alt="../_images/render_color-management_linear-workflow.svg" src="../_images/render_color-management_linear-workflow.svg" width="100%" /></a>
+<figcaption>
+<p><span class="caption-text">线性工作流程的一个示例。</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>如果颜色是线性的，则意味着如果实际上我们将光子数加倍，则颜色值也会加倍。换句话说，如果我们有两张照片/渲染器，每张照片/渲染器都有两个灯光中的一个，并将这些图像添加到一起，结果将与两个灯光都打开的渲染/照片相同。由此得出，这种辐射测量线性空间最适合照片级渲染和合成。</p>
+<p>然而，这些值并不直接对应于人类感知或显示设备的工作方式。而且图像文件通常存储在不同的色彩空间中。所以我们必须小心地进行这种场景线性色彩空间的正确转换。</p>
+</section>
+<section id="display-transforms">
+<h3>显示变换<a class="headerlink" href="#display-transforms" title="Permalink to this heading"></a></h3>
+<p>将场景线性颜色转换为显示涉及技术和艺术选择。</p>
+<p>正确显示渲染需要转换到显示设备色彩空间。计算机显示器与数字电影放映机或HDTV的工作方式不同，因此需要不同的转换。</p>
+<p>还有艺术选择。部分原因是显示设备无法显示全部色彩，只有有限的亮度，因此我们可以挤出颜色以适应设备的色域。除此之外，给渲染器一个特定的外观也是有用的，例如好像它们已经印在真实的相机胶片上。默认的电影转换执行此操作。</p>
+<figure class="align-center" id="id4">
+<a class="reference internal image-reference" href="../_images/render_color-management_linear-display-space.svg"><img alt="../_images/render_color-management_linear-display-space.svg" src="../_images/render_color-management_linear-display-space.svg" width="100%" /></a>
+<figcaption>
+<p><span class="caption-text">从线性空间到显示设备空间的转换。</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="image-color-spaces">
+<h3>图像色彩空间<a class="headerlink" href="#image-color-spaces" title="Permalink to this heading"></a></h3>
+<p>在加载和保存媒体格式时，记住色彩管理非常重要。诸如PNG或JPEG之类的文件格式通常将颜色存储在准备显示的色彩空间中，而不是存储在线性空间中。当它们在渲染中用作纹理时，它们需要首先转换为线性，当保存渲染以在Web上显示时，它们也需要转换为显示空间。</p>
+<p>对于生产中的中间文件，建议使用OpenEXR文件。它们始终存储在场景线性色彩空间中，不会丢失任何数据。这使它们适合存储以后可以合成，颜色分级并转换为不同输出格式的渲染。</p>
+<p>图像还可以包含实际上不是颜色的数据。例如，法线图或置换图仅包含矢量和位移。此类图像应标记为非颜色数据，以便不会在其上进行色彩空间转换。</p>
+</section>
+</section>
+<section id="render-settings">
+<span id="render-post-color-management"></span><h2>渲染设置<a class="headerlink" href="#render-settings" title="Permalink to this heading"></a></h2>
+<div class="refbox admonition" id="id1">
+<p class="admonition-title">参考</p>
+<dl class="field-list simple">
+<dt class="field-odd">编辑器<span class="colon">:</span></dt>
+<dd class="field-odd"><p>属性</p>
+</dd>
+<dt class="field-even">面板<span class="colon">:</span></dt>
+<dd class="field-even"><p><span class="menuselection">渲染属性 ‣ 色彩管理</span></p>
+</dd>
+</dl>
+</div>
+<figure class="align-right" id="id5">
+<img alt="../_images/render_color-management_panel.png" src="../_images/render_color-management_panel.png" />
+<figcaption>
+<p><span class="caption-text">色彩管理属性。</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p>这些是色彩管理设置，在整个Blender中使用。这些色彩管理设置是特定于场景的，因此可以在每个场景中自定义设置。色彩管理也可以在保存图像时被覆盖；这种行为可以在 <a class="reference internal" href="output/properties/output.html#render-output-color-management-panel"><span class="std std-ref">导出色彩管理属性</span></a> 中设置。</p>
+<dl id="bpy-types-colormanageddisplaysettings-display-device">
+<dt>显示设备</dt><dd><p>The device that the image is being viewed on.</p>
+<p>Most computer monitors are configured for the sRGB color space,
+and so when working on a computer usually this option should just be left to the default.
+It would typically be changed when viewing the image on another display device connected to the computer,
+or when writing out image files intended to be displayed on another device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">sRGB<span class="colon">:</span></dt>
+<dd class="field-odd"><p>被大多数显示器使用。</p>
+</dd>
+<dt class="field-even">XYZ<span class="colon">:</span></dt>
+<dd class="field-even"><p>Commonly used by digital projectors.</p>
+</dd>
+<dt class="field-odd">无<span class="colon">:</span></dt>
+<dd class="field-odd"><p>禁用颜色管理。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-colormanagedviewsettings-view-transform">
+<dt>查看变换</dt><dd><p>这些是在同一显示设备上查看图像的不同方式。</p>
+<dl class="field-list simple">
+<dt class="field-odd">标准<span class="colon">:</span></dt>
+<dd class="field-odd"><p>除了显示设备的转换之外，没有额外的转换。通常用于非照片级真实结果或视频编辑，其中特定外观已经烘焙到输入视频中。</p>
+</dd>
+<dt class="field-even">Filmic<span class="colon">:</span></dt>
+<dd class="field-even"><p>For photorealistic results and better handling of high dynamic range colors.
+The contrast can be adjusted by changing the <em>Look</em> option for the Filmic view transform.</p>
+</dd>
+<dt class="field-odd">Filmic Log<span class="colon">:</span></dt>
+<dd class="field-odd"><p>转换为 Filmic log 色彩空间。这可用于导出到颜色分级应用程序，或通过展平很暗和很亮的区域来检查图像。</p>
+</dd>
+<dt class="field-even">原始<span class="colon">:</span></dt>
+<dd class="field-even"><p>用于检查图像，但不用于最终输出。Raw在没有任何色彩空间转换的情况下提供图像。</p>
+</dd>
+<dt class="field-odd">假彩色<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Shows a heat map of image intensities, to visualize the dynamic range.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-colormanagedviewsettings-look">
+<dt>风格效果</dt><dd><p>从一组测量的胶片响应数据中选择艺术效果，这些数据大致模拟某些胶片类型的外观。在色彩空间转换之前应用。</p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-colormanagedviewsettings-exposure">
+<dt>曝光</dt><dd><p>Used to control the image brightness (in stops) applied before color space conversion.
+It is calculated as follows: <span class="math notranslate nohighlight">\(output\_value = render\_value × 2^{(exposure)}\)</span></p>
+</dd>
+</dl>
+<dl class="simple" id="bpy-types-colormanagedviewsettings-gamma">
+<dt>伽玛</dt><dd><p>在色彩空间转换后应用额外的伽马校正。请注意，默认显示变换已经执行了适当的转换，因此这主要作为艺术调整的附加效果。</p>
+</dd>
+</dl>
+<dl id="bpy-types-colormanagedsequencercolorspacesettings-name">
+<dt>序列编辑器</dt><dd><p><a class="reference internal" href="../editors/video_sequencer/index.html"><span class="doc">视频序列</span></a> 运行的色彩空间。默认情况下，视频序列在 sRGB 空间中运行，但也可以将其设置为在线性空间中工作，如合成节点或其他颜色空间。不同的色彩空间将为颜色校正、交叉淡入淡出和其他操作提供不同的结果。</p>
+<p>色彩空间列表取决于活动 <a class="reference internal" href="#ocio-config"><span class="std std-ref">OICO 配置</span></a>。此处详细描述了默认支持的色彩空间：<a class="reference internal" href="#ocio-config-default-color-spaces"><span class="std std-ref">默认 OpenColorIO 配置</span></a></p>
+</dd>
+</dl>
+<section id="use-curves">
+<span id="bpy-types-colormanagedviewsettings-use-curve-mapping"></span><h3>使用曲线<a class="headerlink" href="#use-curves" title="Permalink to this heading"></a></h3>
+<p>调整 RGB 曲线以在色彩空间转换之前控制图像颜色。阅读有关使用<a class="reference internal" href="../interface/controls/templates/curve.html#ui-curve-widget"><span class="std std-ref">曲线部件</span></a>的更多信息。</p>
+</section>
+</section>
+<section id="image-files">
+<h2>图像文件<a class="headerlink" href="#image-files" title="Permalink to this heading"></a></h2>
+<p>使用图像文件时，默认色彩空间通常是正确的色彩空间。如果不是这种情况，可以在图像设置中配置图像文件的色彩空间。例如，需要手动更改的常见情况是使用或烘焙法线贴图或置换贴图。这样的地图实际上不存储颜色，只是编码为颜色的数据。这些图像应标记为非色彩数据。</p>
+<p>图像数据块将始终将浮点缓冲区存储在场景线性色彩空间的内存中，而内存中的字节缓冲区和驱动器中的文档存储在指定的 <a class="reference internal" href="../editors/image/image_settings.html#bpy-types-colormanagedinputcolorspacesettings-name"><span class="std std-ref">色彩空间</span></a> 设置中。</p>
+<p>默认情况下，仅显示和保存渲染，并应用了渲染 <em>视图转换</em>。这些图像是 &quot;渲染结果&quot; 和 &quot;查看器&quot; 图像数据块，以及使用渲染动画操作符直接保存到驱动器中的文档。但是，当加载保存到中间 OpenEXR 文档的渲染时，Blender 无法自动检测到这是渲染（例如，它可能是图像纹理或置换贴图）。我们需要指定这是一个渲染，并且我们希望应用转换，使用以下两个设置：</p>
+<dl class="simple">
+<dt>预览为渲染结果</dt><dd><p>使用视图变换，曝光，伽马，RGB曲线显示图像数据块（不仅仅是渲染）。用于查看线性OpenEXR文件中的渲染帧与直接渲染时相同。</p>
+</dd>
+<dt>另存为渲染图</dt><dd><p>图像保存操作符中的选项可应用视图变换，曝光，伽玛，RGB曲线。这对于将线性OpenEXR保存为显示空间中的PNG或JPEG文件非常有用。</p>
+</dd>
+</dl>
+</section>
+<section id="opencolorio-configuration">
+<span id="ocio-config"></span><h2>OpenColorIO 配置<a class="headerlink" href="#opencolorio-configuration" title="Permalink to this heading"></a></h2>
+<p>Blender 带有标准的 OpenColorIO 配置，其中包含许多有用的显示设备和视图转换。使用的参考线性 <a class="reference internal" href="../glossary/index.html#term-Color-Space"><span class="xref std std-term">色彩空间</span></a> 是具有 Rec.709 色度和 D65 白点的线性色彩空间。</p>
+<p>然而，OpenColorIO的设计也是为了在 <a class="reference external" href="https://opencolorio.org/#supported_apps">多应用程序</a> 中提供一致的用户体验，为此，可以使用一个单一的共享配置文件。Blender会使用标准的OCIO环境变量来读取Blender默认配置以外的OpenColorIO配置。关于如何设置这样一个工作流程的更多信息，可以在 <a class="reference external" href="https://opencolorio.org/">OpenColorIO网站</a> 上找到。</p>
+<p>Blender目前使用以下色彩空间规则：</p>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">scene_linear</span></code></dt><dd><p>用于在内存中渲染，合成和存储所有浮点精度图像的色彩空间。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">data</span></code></dt><dd><p>非颜色数据的色彩空间。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">aces_interchange</span></code></dt><dd><p>ACES2065-1色彩空间。用于导出 <em>scene_linear</em> 颜色空间的色度，用于黑体发射等效果。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">color_picking</span></code></dt><dd><p>Defines the distribution of colors in color pickers. It is expected to
+be approximately perceptually linear, have the same gamut as the <em>scene_linear</em> color space,
+map 0..1 values to 0..1 values in the scene linear color space for predictable editing of materials' albedo.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">default_sequencer</span></code></dt><dd><p>序列编辑中使用默认的色彩显示空间。如未指定，则为 <em>scene_linear</em>。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">default_byte</span></code></dt><dd><p>字节精度图像和文件的默认色彩空间，如果未指定，则为 <em>texture_paint</em>。</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">default_float</span></code></dt><dd><p>浮点精度图像和文件的默认色彩空间，如未指定，则为 <em>scene_linear</em>。</p>
+</dd>
+</dl>
+<p>标准的 Blender 配置包括支持以 <a class="reference external" href="https://www.oscars.org/science-technology/sci-tech-projects/aces">ACES</a>（<a class="reference external" href="https://github.com/ampas/aces-dev">代码和文档</a>）色彩空间保存和加载图像。然而，ACES 的色域比 Rec.709 的色域要大，所以为了获得最佳效果，应该使用 ACES 特定的配置文件。OpenColorIO 提供了一个 <a class="reference external" href="https://opencolorio.readthedocs.io/en/latest/configurations/_index.html">ACES 配置</a> 文件，尽管它可能需要再做一些调整才能在生产中使用。</p>
+</section>
+<section id="default-opencolorio-configuration">
+<h2>默认的 OpenColorIO 配置<a class="headerlink" href="#default-opencolorio-configuration" title="Permalink to this heading"></a></h2>
+<dl class="simple" id="ocio-config-default-color-spaces">
+<dt>色彩空间</dt><dd><p>Blender的OCIO配置文件默认配备了在这些颜色空间中读/写文件：</p>
+<dl class="field-list simple">
+<dt class="field-odd">sRGB<span class="colon">:</span></dt>
+<dd class="field-odd"><p>使用 Rec.709 色度和 D65 白点的标准 RGB 显示空间。</p>
+</dd>
+<dt class="field-even">线性<span class="colon">:</span></dt>
+<dd class="field-even"><p>Blender's native linear space meaning there is no gamma mapping,
+using Linear Rec. 709 chromaticities and a D65 white point.</p>
+</dd>
+<dt class="field-odd">线性 ACES<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Also known as ACES2065-1, which is an ACES color space using the AP0 color primaries,
+a D60 white point and a linear transfer function.
+This color space is meant to store and transfer data with the most amount of possible color information.</p>
+</dd>
+<dt class="field-even">线性 ACEScg<span class="colon">:</span></dt>
+<dd class="field-even"><p>一个ACES色彩空间，被设计用于渲染和合成。它使用AP1颜色原色，D60白点和线性传递函数。虽然与ACES2065-1相似，但这个色彩空间的色域较小。较小的色域使它能更好地代表符合CIE 1931色度图的颜色。位于CIE 1931色度之外的颜色对于渲染和合成来说通常并不重要，因为人类的刺激无法表现这些颜色。</p>
+</dd>
+<dt class="field-odd">XYZ<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Standard linear XYZ space.</p>
+</dd>
+<dt class="field-even">非颜色<span class="colon">:</span></dt>
+<dd class="field-even"><p>Color space used for images which contains non-color data (e.g. normal maps).</p>
+</dd>
+<dt class="field-odd">原始<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Does not automatically convert to linear; same as Non-Color.</p>
+</dd>
+<dt class="field-even">Filmic Log<span class="colon">:</span></dt>
+<dd class="field-even"><p>Filmic视图变换的中间日志颜色空间。</p>
+</dd>
+<dt class="field-odd">Filmic sRGB<span class="colon">:</span></dt>
+<dd class="field-odd"><p>与 <em>sRGB</em> 类似，但使用Filmic视图转换。</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="shader_nodes/osl.html" class="btn btn-neutral float-left" title="开放着色语言" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="freestyle/index.html" class="btn btn-neutral float-right" title="Freestyle" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; <a href="../copyright.html">Copyright</a> : This page is licensed under a CC-BY-SA 4.0 Int. License.
+      <span class="lastupdated">Last updated on 02/14/2025.
+      </span></p>
+  </div>
+
+  
+<div class="footer-contribute">
+   <ul>
+      <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/render/color_management.rst"
+            class="fa fa-edit"> 查看源</a>
+      </li>
+      <!-- <li>
+         <a href="https://projects.blender.org/blender/blender-manual/src/branch/main/manual/render/color_management.rst"
+            class="fa fa-edit"> 编辑页面</a>
+      </li> -->
+      <li>
+         <a href="https://projects.blender.org/blender/documentation/issues/new?template=.gitea/issue_template/bug.yaml&field:body=%2A%2APage+Information%2A%2A%0D%0AFile%3A+%60manual%2Frender/color_management.rst%60%0D%0ABlender+Version%3A+%603.6%60%0D%0ADocumentation+Language%3A+%60zh-hans%60%0D%0A%5BPermanent+Link%5D%28https%3A%2F%2Fdocs.blender.org%2Fmanual%2Fzh-hans%2F3.6%2Frender/color_management.html%29%0D%0A%0D%0A%2A%2AShort+description+of+error%2A%2A%0D%0A%5BPlease+fill+out+a+short+description+of+the+error+here%5D%0D%0A"
+            class="fa fa-bug"> 报告本页面的问题</a>
+      </li>
+      <ul>
+</div>
+
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <div class="rst-versions" data-toggle="rst-versions" role="note" aria-label="document versions">
+	<ul id="versionwrap" role="presentation">
+		<li role="presentation">
+			<span id="version-popover" class="version-btn" tabindex="0" role="button" aria-label="versions selector"
+				aria-haspopup="true" aria-controls="version-vsnlist" aria-disabled="true">
+				3.6
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Versions</div>
+				<ul id="version-vsnlist" class="version-list" role="menu" aria-labelledby="version-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<li role="presentation">
+			<span id="lang-popover" class="version-btn" tabindex="0" role="button" aria-label="language selector"
+				aria-haspopup="true" aria-controls="version-langlist">
+				 zh-hans 
+			</span>
+			<div class="version-dialog" aria-hidden="true">
+				<div class="version-arrow" aria-hidden="true"></div>
+				<div class="version-title">Languages</div>
+				<ul id="version-langlist" class="version-list" role="menu" aria-labelledby="lang-popover"
+					aria-hidden="true">
+					<li role="presentation">Loading...</li>
+				</ul>
+			</div>
+		</li>
+		<template id="version-entry">
+			<li tabindex="-1" role="presentation"><a tabindex="-1" role="menuitem"></a></li>
+			<li class="selected" tabindex="-1" role="presentation"><span tabindex="-1" aria-current="page"></spanp></li>
+		</template>
+	</ul>
+<template id="version-warning">
+	<div class="admonition warning">
+		<p class="first admonition-title">Note</p>
+		<p class="last">
+			You are not using the most up to date version of the documentation.
+			<a href="#"></a> is the newest version.
+		</p>
+	</div>
+</template>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+    <!-- Theme Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1418081-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-1418081-1', {
+          'anonymize_ip': false,
+      });
+    </script> 
+
+</body>
+</html>
